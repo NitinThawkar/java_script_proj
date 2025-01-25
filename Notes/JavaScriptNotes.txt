@@ -1,1 +1,66 @@
 my javsript notes
+##################################################################################
+Variable 
+fullname = "devi jons";
+age = 24;
+price = 20.30;
+address = null;
+mark = undefined;
+isFollow = true;
+
+typeOf
+----------------------------------
+
+let, const & var
+
+var : Variable can be re-declared & updated. A global scope variable.
+
+let : Variable cannot be re-declared but can be updated. A block scope variable.
+
+const : Variable cannot be re-declared or updated. A block scope variable.
+
+----------------------------------
+typeOf <vriable Name> 
+Primitive Types : Number, String, Boolean, Undefined, Null, BigInt, Symbol
+btdefault its undefined
+non prenetive : object,String
+
+##################################################################################
+in javascript function can be passed as parameter.
+
+
+
+//*****************************  Arrow function  *****************************//
+//anonymous function can be used as arrow function.
+// arrow function can not be hoisted.
+// arrow function can not be used as constructor.
+// arrow function can not be used as method.
+// arrow function can not be used as getter and setter.
+// arrow function can not be used as call and apply.
+// arrow function can not be used as arguments object.
+// arrow function can not be used as yield.
+// arrow function can not be used as new.target.
+// arrow function can not be used as prototype.
+// arrow function can not be used as super.
+// arrow function can not be used as this.
+// arrow function can not be used as new.
+// arrow function can not be used as arguments.
+// arrow function can not be used as default parameters.
+// arrow function can not be used as rest parameters.
+// arrow function can not be used as computed property keys.
+// arrow function can not be used as generator methods.
+// arrow function can not be used as async functions.
+// arrow function can not be used as async generator methods.
+// arrow function can not be used as concise methods.
+// arrow function can not be used as concise generator methods.
+// arrow function can not be used as concise async methods.
+// arrow function can not be used as concise async generator methods.
+
+
+let add = (a, b) => {
+    return a + b;
+}
+
+//***************************************************************************//
+
+##################################################################################
