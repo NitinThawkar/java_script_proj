@@ -120,3 +120,20 @@ node.after( el ) //adds after the node (outside)
 ==============================================================
 
 ##################################################################################
+Lorem  press tab
+
+lorem100 >> press tab or enter
+<p>lorem20</20>
+p*5>lorem  #press enter , it will  show  paragraph
+-------------------------------------------
+
+#add html lile >> type ! >> press enter >>Generate HTML Boilerplate Code
+
+# type p pres tab >>genagrate paragraph tag
+# p.para  >> paragraph tag with para style class
+# div#city >> div tag with city id 
+# div>span  >> Generate parent and child tag  press enter
+# ul>li*3  >>Generate multiple tags
+# h1+p+div  >> Generate sibling elements
+#  <table>tr>td*3>lorem3</table>
+##################################################################################
