@@ -64,3 +64,28 @@ let add = (a, b) => {
 //***************************************************************************//
 
 ##################################################################################
+
+// higher order function is a function that takes another function as a parameter or returns a function as a result.
+
+----------------------------------------
+// map function is used to perform operation on each element of array.
+// map function return new array.
+// map function does not change original array.
+
+let num = [1,2,3,4,5,6,7,8,9,10];
+let caclulate = num.map(n => n*2);
+------------------------------------------------------
+
+// filter function is used to filter out the elements from array.
+// filter function return new array.
+// filter function does not change original array.
+// filter function takes callback function as parameter.
+// callback function takes 3 parameters element,index,array.
+// callback function return boolean value.
+
+let num = [1,2,3,4,5,6,7,8,9,10];
+let odd = num.filter(n => n%2!=0);
+let even = num.filter(n => n%2==0);
+console.log(even);
+
+##################################################################################
