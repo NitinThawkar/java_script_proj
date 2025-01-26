@@ -1,0 +1,333 @@
+#### Helping Resource 
+MDN : https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
+      https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+	  
+Git : https://github.com/NitinThawkar/Notes/blob/main/CSS%20notes/CSS%20Notes.pdf
+
+block inline : https://www.w3schools.com/html/html_blocks.asp
+
+CSS UNIT : https://www.w3schools.com/cssref/css_units.php.
+CSS       : https://www.w3schools.com/css/default.asp
+CSS Selector : https://www.w3schools.com/css/css_selectors.asp
+CSS Position : https://www.w3schools.com/css/css_positioning.asp
+###################################################
+Lorem Ipsum : <p>lorem*100</p>
+===================
+<h1 style="color: red"> Apna Text </h1>
+==============================================
+<style>
+color : red;
+}
+</style>
+-------------
+.container > div.header {
+  grid-area: header;
+  font-size:20px;
+  text-align: center;
+}
+==============================================
+Used to set the color of foreground /background
+color: red;
+
+background-color: red;
+color: rgb(255, 0, 0);
+Hex (Hexadecimal) color: #ff0000
+==============================================
+Universal Selector
+* { }
+==============================================
+Element Selector 
+h1 {}
+==============================================
+Id Selector
+#myId { }
+==============================================
+Class Selector
+.myClass { }
+==============================================
+Text Properties
+text-align : left / right / center
+text-decoration : underline / overline / line-through
+font-weight : normal / bold / bolder / lighter
+font-weight : 100-900
+font-family : arial
+font-family : arial, roboto
+==============================================
+Units in CSS
+pixels (px)
+Absolute
+96px = 1 inch
+font-size: 2px;
+--------------------------
+line-height : 2px
+line-height : 3
+line-height : normal
+-------------------------
+text-tranform : uppercase / lowercase / capitalize / none
+============================================================================================
+#####  BOX Model ##############
+Slide 23 in 
+https://github.com/NitinThawkar/Notes/blob/main/CSS%20notes/CSS%20Notes.pdf
+
+content : any thing like div, praragrph , text,button, input box
+Height
+Width
+Border
+Padding
+Margin
+-------------------
+div {
+height: 50px;
+}
+-------------------
+div {
+width: 50px;
+}
+---------------
+border-width : 2px;
+border-style : solid / dotted / dashed
+border-color : black;
+
+Shorthand >> border : 2px solid black;
+
+Border
+Used to round the corners of an element's outer border edge
+border-radius : 10px;
+border-radius : 50%;
+-------------
+Slide 29
+
+padding-left
+padding-right
+padding-top
+padding-bottom
+
+padding: 50px;
+
+top | right | bottom | left -> clockwise
+padding: 1px 2px 3px 4px;
+-----------------------------
+Slide 31 
+
+margin-right
+margin-left
+margin-top
+margin-bottom
+
+margin: 50px;
+
+margin: 1px 2px 3px 4px;
+top | right | bottom | left -> clockwise
+==============================================
+####### Display Property  #######
+
+display: inline / block / inline-block / none
+
+https://www.w3schools.com/html/html_blocks.asp
+
+# inline >> Takes only the space required by the element. (no margin/ padding) only take requred space e.g. span, button , input
+# block  >> Takes full space available in width. tahe 100% width  e.g. div,h1 etc
+# inline-block >> Similar to inline but we can set margin & padding.
+# none   >> To remove element from document flow.
+
+if we apply inline style on blocked element then we will not able to set top and bottom  margin and padding.use inline-block set that
+
+---------------------------------------------------------------
+
+Visibility
+
+visibility: hidden;
+
+Note : When visibility is set to none, space for the element is reserved.
+But for display set to none, no space is reserved or blocked for the
+element.
+-------------------------------------
+Alpha Channel opacity (value between 0 to 1)  (last parameter)
+
+color: rgba(255, 0, 0, 0.5);
+RGBA
+color: rgba(255, 0, 0, 1);
+
+==============================================
+###### Units in CSS ####
+Fixed and Relative 
+Fixed : absulute/fixed value like 2px,1cm,mm
+Relative : 50% %,em,rem
+---------------------------------------
+Percentage (%) :It is often used to define a size as relative to an element's parent object.
+width : 33% ;
+margin-left : 50% ;
+
+====================================
+https://www.w3schools.com/cssref/css_units.php
+
+em => respective to parent element  
+Rem (Root Em) => respective to root element 
+
+width : 2em;   => take double width of parent element
+margin-left : 50% ;
+
+Unit	Description	
+em	Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	Relative to the x-height of the current font (rarely used)	
+ch	Relative to the width of the "0" (zero)	
+rem	Relative to font-size of the root element	
+vw	Relative to 1% of the width of the viewport*	
+vh	Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	Relative to the parent element
+---------------------------------------------------
+<div>The font-size of the div element is set to 30px. 
+  <span>The span element inside the div element has a font-size of 0.5em, 
+         which equals to 0.5x30 = 15px
+  </span>
+</div>
+
+---------------------------------------
+==============================================
+####### position ######
+The position CSS property sets how an element is positioned in a document.
+position : static / relative /absolute/fixed/sticky
+
+#static - default position (The top, right, bottom, left, and z-index properties have no effect)
+#relative - element is relative to itself. (The top, right, bottom, left, and z-index will work)
+#absolute - positioned relative to its closest positioned ancestor(ancestor element which is non staticre lative to parent or root)). (removed from the flow)
+#fixed - positioned relative to browser. (relative to browser window)(removed from flow)
+#sticky - positioned based on user's scroll position
+----------
+e.g.
+div {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+------------------
+z-index   handle overlapping element  (by default last element alwayes on top) positive on top , negative on bottom
+It decides the stack level of elements
+Overlapping elements with a larger z-index cover those with a smaller one.
+z-index : auto (0)
+z-index : 1 / 2 / ...
+z-index : -1 / -2 / ...
+
+
+==============================================
+### Background Image /size
+Used to set an image as background
+background-image : url("image.jpeg");
+
+background-size : cover / contain / auto
+==============================================
+####CSS Flexbox Components
+slide 53
+It is a one-dimensional layout method for arranging items in rows or columns.
+A flexbox always consists of:
+
+a Flex Container - the parent (container) <div> element
+Flex Items - the items inside the container <div>
+-----------
+Before the Flexible Box Layout module, there were four layout modes:
+
+Block, for sections in a webpage
+Inline, for text
+Table, for two-dimensional table data
+Positioned, for explicit position of an element
+-----------
+.flex-container {
+  display: flex;
+}
+-----
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+-----------------------------------------
+Flexbox Direction
+It sets how flex items are placed in the flex container, along which axis and direction.
+flex-direction : row; (default) (placing element from left to right)
+flex-direction : row-reverse;
+flex-direction : column; (placing element from top to bottom)
+flex-direction : column-reverse;
+
+-----------------------------------------
+Flex Properties
+for Flex Container
+justify-content : alignment along the main axis.
+justify-content :flex-start / flex-end / centre / space-evenly /around
+
+flex-wrap : nowrap / wrap / wrap-reverse 
+align-items : alignment along the cross axis.
+align-content : alignment of space between & around the content along cross-axis
+-----------------------------------------
+Flex Properties
+for Flex Item
+align-self : alignment of individual along the cross axis.
+flex-grow : how much a flex item will grow relative to the rest of the flex items if
+space is available
+flex-shrink : how much a flex item will shrink relative to the rest of the flex items if
+space is available
+
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
+
+==============================================
