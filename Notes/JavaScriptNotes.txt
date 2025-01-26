@@ -2,6 +2,10 @@ MDN :
 https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 https://www.w3schools.com/js/js_function_parameters.asp
 
+Free Apis :(search):
+https://github.com/public-api-lists/public-api-lists?tab=readme-ov-file
+https://apilist.fun/
+
 #########################################################################
 my javsript notes
 ##################################################################################
