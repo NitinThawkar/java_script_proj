@@ -5,9 +5,10 @@
     <title>Page Title</title>
     <link rel="stylesheet" href="Styles/myStyle.css">
 
-    <script src="Scripts/MyTest.js"></script> 
-    <script src="Scripts/AsyncCallbackPromise.js"></script>
-   
+    <!-- <script src="Scripts/MyTest.js"></script> 
+    <script src="Scripts/AsyncCallbackPromise.js"></script> -->
+
+
 </head>
 
 <body>
@@ -18,11 +19,22 @@
     <p>This is a paragraph.</p>
     <p>This is a paragraph.</p>
     <p id="demo"></p>
+    <hr>
+    <p>API CALL</p>
+
+    <button id="btnAsyncCall"> Async API Call</button>
+    <button id="btnPromiseCall"> Promise API Call</button>
+
+    <p id="factparaAsync"></p>
+    <p id="factparaPromise"></p>
+    <hr>
+
     <table>tr>td*3>lorem3</table>
     <script>
-       /*debugger*/
+        /*debugger*/
         document.getElementById("demo").innerHTML = 5 + 68;
     </script>
+    <script src="Scripts/ApiCall.js"></script>
 </body>
 <script src="Test.js">  </script>
 
