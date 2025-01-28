@@ -1,0 +1,186 @@
+MDN : 
+https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+https://www.w3schools.com/js/js_function_parameters.asp
+
+Free Apis :(search):
+https://github.com/public-api-lists/public-api-lists?tab=readme-ov-file
+https://apilist.fun/
+
+#########################################################################
+my javsript notes
+##################################################################################
+Variable 
+fullname = "devi jons";
+age = 24;
+price = 20.30;
+address = null;
+mark = undefined;
+isFollow = true;
+
+typeOf
+----------------------------------
+
+let, const & var
+
+var : Variable can be re-declared & updated. A global scope variable.
+
+let : Variable cannot be re-declared but can be updated. A block scope variable.
+
+const : Variable cannot be re-declared or updated. A block scope variable.
+
+----------------------------------
+typeOf <vriable Name> 
+Primitive Types : Number, String, Boolean, Undefined, Null, BigInt, Symbol
+btdefault its undefined
+non prenetive : object,String
+
+##################################################################################
+in javascript function can be passed as parameter.
+
+
+
+//*****************************  Arrow function  *****************************//
+//anonymous function can be used as arrow function.
+// arrow function can not be hoisted.
+// arrow function can not be used as constructor.
+// arrow function can not be used as method.
+// arrow function can not be used as getter and setter.
+// arrow function can not be used as call and apply.
+// arrow function can not be used as arguments object.
+// arrow function can not be used as yield.
+// arrow function can not be used as new.target.
+// arrow function can not be used as prototype.
+// arrow function can not be used as super.
+// arrow function can not be used as this.
+// arrow function can not be used as new.
+// arrow function can not be used as arguments.
+// arrow function can not be used as default parameters.
+// arrow function can not be used as rest parameters.
+// arrow function can not be used as computed property keys.
+// arrow function can not be used as generator methods.
+// arrow function can not be used as async functions.
+// arrow function can not be used as async generator methods.
+// arrow function can not be used as concise methods.
+// arrow function can not be used as concise generator methods.
+// arrow function can not be used as concise async methods.
+// arrow function can not be used as concise async generator methods.
+
+
+let add = (a, b) => {
+    return a + b;
+}
+
+//***************************************************************************//
+
+##################################################################################
+
+// higher order function is a function that takes another function as a parameter or returns a function as a result.
+
+----------------------------------------
+// map function is used to perform operation on each element of array.
+// map function return new array.
+// map function does not change original array.
+
+let num = [1,2,3,4,5,6,7,8,9,10];
+let caclulate = num.map(n => n*2);
+------------------------------------------------------
+
+// filter function is used to filter out the elements from array.
+// filter function return new array.
+// filter function does not change original array.
+// filter function takes callback function as parameter.
+// callback function takes 3 parameters element,index,array.
+// callback function return boolean value.
+
+let num = [1,2,3,4,5,6,7,8,9,10];
+let odd = num.filter(n => n%2!=0);
+let even = num.filter(n => n%2==0);
+console.log(even);
+
+##################################################################################
+DOM Manipulation
+
+tagName : returns tag for element nodes
+
+innerText : returns the text content of the element and all its children
+
+innerHTML : returns the plain text or HTML contents in the element
+
+textContent : returns textual content even for hidden elements
+
+============================================================
+Attributes
+getAttribute( attr ) //to get the attribute value
+setAttribute( attr, value ) //to set the attribute value
+
+============================================================
+Style
+node.style
+==============================================================
+
+DOM Manipulation
+
+Insert Elements
+let el = document.createElement(“div“)
+node.append( el ) //adds at the end of node (inside)
+node.prepend( el ) //adds at the start of node (inside)
+node.before( el ) //adds before the node (outside)
+node.after( el ) //adds after the node (outside)
+==============================================================
+
+##################################################################################
+Lorem  press tab
+
+lorem100 >> press tab or enter
+<p>lorem20</20>
+p*5>lorem  #press enter , it will  show  paragraph
+-------------------------------------------
+
+#add html lile >> type ! >> press enter >>Generate HTML Boilerplate Code
+
+# type p pres tab >>genagrate paragraph tag
+# p.para  >> paragraph tag with para style class
+# div#city >> div tag with city id 
+# div>span  >> Generate parent and child tag  press enter
+# ul>li*3  >>Generate multiple tags
+# h1+p+div  >> Generate sibling elements
+#  <table>tr>td*3>lorem3</table>
+##################################################################################
+
+//###  Promises
+
+//Promise is for “eventual” completion of task. It is an object in JS.
+//It is a solution to callback hell.
+//let promise = new Promise( (resolve, reject) => { .... } )
+//Function with 2 handlers *resolve & reject are callbacks provided by JS
+
+Promises
+
+A JavaScript Promise object can be:
+
+Pending : the result is undefined
+
+Resolved : the result is a value (fulfilled)
+
+Rejected : the result is an error object
+-----------------
+resolve( result )
+
+reject( error )
+---------------
+*Promise has state (pending, fulfilled) & some
+result (result for resolve & error for reject).
+---------------
+.then( ) & .catch( )
+
+promise.then( ( res ) => { .... } )
+
+promise.catch( ( err ) ) => { .... } )
+
+##################################################################################
+Async await
+
+https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+##################################################################################
+
+
