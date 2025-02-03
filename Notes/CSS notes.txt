@@ -12,6 +12,8 @@ CSS Selector : https://www.w3schools.com/css/css_selectors.asp
 CSS Position : https://www.w3schools.com/css/css_positioning.asp
 ###################################################
 Lorem Ipsum : <p>lorem*100</p>
+
+ Short Hand command >>     tr>td*3>lorem3
 ===================
 <h1 style="color: red"> Apna Text </h1>
 ==============================================
