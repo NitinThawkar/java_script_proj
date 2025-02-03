@@ -1,6 +1,18 @@
+### Angular 
+   ng new --no-standalone
+   
+   ng new MyAngularProjNgModule --no-standalone
+   
+   ng new MyAngularProjStandAlone
 
+   ----------------
+   dom sanitaiser
 ==========================================================================
-
+### command
+ check node version > node -v
+ npm version        > npm -v
+ install  vs code
+ 
 ==========================================================================
 
 ==========================================================================
