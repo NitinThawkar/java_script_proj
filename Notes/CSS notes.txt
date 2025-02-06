@@ -14,6 +14,9 @@ CSS Position : https://www.w3schools.com/css/css_positioning.asp
 Lorem Ipsum : <p>lorem*100</p>
 
  Short Hand command >>     tr>td*3>lorem3
+============
+ <td>button#myid</td>
+ <td>button:s or button:submit</td>
 ===================
 <h1 style="color: red"> Apna Text </h1>
 ==============================================
