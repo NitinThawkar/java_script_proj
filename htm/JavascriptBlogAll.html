@@ -2363,5 +2363,2043 @@
         </div>
         </div>
     <hr><hr>
-    <hr><hr>
+    <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="414997571967399674"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        Substrings in JavaScript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-414997571967399674" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/javascript-basics.html" style="font-family: Arial, Helvetica, sans-serif;">Part 8 -&nbsp;JavaScript Basics</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/converting-strings-to-numbers-in.html">Part 9 -&nbsp;Converting strings to numbers in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/strings-in-javascript.html">Part 10 -&nbsp;Strings in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">The following are the 3 methods in JavaScript that can be used to <b>retrieve a substring from a given string</b>.</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">substring()</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">substr()</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">slice()</span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>substring() method : </b>This method has 2 parameters start and end. start parameter is required and specifies the position where to start the extraction. end parameter is optional and specifies the position where the extraction should end. The character at the end position is not included in the substring. If the end parameter is not specified, all the characters from the start position till the end of the string are extracted. If the value of start parameter is greater than the value of the end parameter, this method will swap the two arguments. This means start will be used as end and end will be used as start.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Extract the first 10 characters</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"JavaScript
+        Tutorial"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>substring<b>(</b>0,<b> </b>10<b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : JavaScript</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>If the value of start parameter is greater than the value of the end parameter, then start will be used as end and end will be used as start</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b><br></b></span>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"JavaScript
+        Tutorial"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>substring<b>(</b>10,<b>
+        </b>0<b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : JavaScript</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>substr() method :</b> This method has 2 parameters start and count. start parameter is required and specifies the position where to start the extraction. count parameter is optional and specifies the number of characters to extract. If the count parameter is not specified, all the characters from the start position till the end of the string are extracted. If count is 0 or negative, an empty string is returned.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Extract the first 10 characters</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"JavaScript
+        Tutorial"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>substr<b>(</b>0,<b> </b>10<b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : JavaScript</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>If the count parameter is not specified, all the characters from the start position till the end of the string are extracted</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"JavaScript
+        Tutorial"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>substr<b>(</b>11<b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : Tutorial</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>slice() method :</b> This method has 2 parameters start and end. start parameter is required and specifies the position where to start the extraction. end parameter is optional and specifies the position where the extraction should end. The character at the end position is not included in the substring. If the end parameter is not specified, all the characters from the start position till the end of the string are extracted.&nbsp;</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Extract the first 10 characters</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"JavaScript
+        Tutorial"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>slice<b>(</b>0,<b> </b>10<b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : JavaScript</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>If the end parameter is not specified, all the characters from the start position till the end of the string are extracted</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"JavaScript
+        Tutorial"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>slice<b>(</b>11<b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : Tutorial</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>What is the difference between substr and substring methods</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">The difference is in the second parameter. The second parameter of substring() method specifies the index position where the extraction should stop. The character at the end position is not included in the substring. The second parameter of substr() method specifies the number of characters to return.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Another difference is substr() method does not work in IE8 and earlier versions.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>What is the difference between slice and substring</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">If start parameter is greater than stop parameter, then substring will swap those 2 parameters, where as slice will not swap.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Another method that is very useful when extracting a substring is indexOf() method. This method returns the position of the first occurrence of a specified value in a string. If the specified value is not present then -1 is returned.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Example : Retrieve the index position of @ character in the email</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>str<b> </b>=<b> </b><span style="color: maroon;">"pragim@pragimtech.com"</span><b>;<o:p></o:p></b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span><b> </b>result<b> </b>=<b> </b>str<b>.</b>indexOf<b>(</b><span style="color: maroon;">"@"</span><b>);</b></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert<b>(</b>result</span><b><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></b></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : 6</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In our next video, we will discuss a simple <b>real time example of where we can use indexOf() and substring() methods</b></span>
+        <br>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=414997571967399674&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=414997571967399674&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=414997571967399674&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=414997571967399674&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=414997571967399674&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="8853998594834427772"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        JavaScript substring example
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-8853998594834427772" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/converting-strings-to-numbers-in.html" style="font-family: Arial, Helvetica, sans-serif;">Part 9 -&nbsp;Converting strings to numbers in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/strings-in-javascript.html">Part 10 -&nbsp;Strings in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/substrings-in-javascript.html">Part 11 -&nbsp;Substrings in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In this video we will discuss a <b>simple real time example of where we can use indexOf(), lastIndexOf() and substring() methods
+        </b></span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Design the web form as shown below :</b> This form allows the use to enter an email address and when they click <b>"Get email &amp; domain parts"</b> button, we should retrieve email part and domain part from the email address and display in respective textboxes.</span>
+        <br>
+        <img alt="JavaScript substring example" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjo0pC_XlL4b83CHJS7K4Hvss7hzsKfV3LD9KP4inT4ObiHCjZpnqWVYGp3DEmIkUpAxVCA5ldfTs0G8xC02F0fojvMYwSiugPOk0BkKdwhRyQBx2UmT7x-GsnOgt3nn75mv8jTczfpVKU/s1600/JavaScript+substring+example.png">
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Here is the HTML</span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;</span><span style="color: maroon;">table</span> <span style="color: red;">style</span><span style="color: blue;">="</span><span style="color: red;">border</span><span style="color: blue;">:1px solid black; </span><span style="color: red;">font-family</span><span style="color: blue;">:Arial"&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email Address <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span> <span style="color: red;">ID</span><span style="color: blue;">="txtEmailAddress"</span> <span style="color: red;">runat</span><span style="color: blue;">="server"</span> <span style="color: red;">Width</span><span style="color: blue;">="250px"&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email Part<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span> <span style="color: red;">ID</span><span style="color: blue;">="txtEmailPart"</span> <span style="color: red;">runat</span><span style="color: blue;">="server"</span> <span style="color: red;">Width</span><span style="color: blue;">="250px"&gt;&lt;/</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Domian Part<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span> <span style="color: red;">ID</span><span style="color: blue;">="txtDomainPart"</span> <span style="color: red;">runat</span><span style="color: blue;">="server"</span> <span style="color: red;">Width</span><span style="color: blue;">="250px"&gt;&lt;/</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">input</span> <span style="color: red;">type</span><span style="color: blue;">="button"</span> <span style="color: red;">value</span><span style="color: blue;">="Get email &amp; domain parts"</span> <span style="color: red;">style</span><span style="color: blue;">="</span><span style="color: red;">width</span><span style="color: blue;">:250px"/&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;/</span><span style="color: maroon;">table</span></span><span style="color: blue;"><span style="font-family: Arial, Helvetica, sans-serif;">&gt;</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>In the head section of the webform, include the following script section</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">function</span> getEmailandDomainParts() <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">var</span> emailAddress = document.getElementById(<span style="color: maroon;">"txtEmailAddress"</span>).value;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">var</span> emailPart = emailAddress.substring(0, emailAddress.indexOf(<span style="color: maroon;">"@"</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span lang="FR" style="color: blue;">var</span><span lang="FR"> </span><span lang="FR">domainPart
+        = emailAddress.substring(emailAddress.indexOf(<span style="color: maroon;">"@"</span>) + 1);<o:p></o:p></span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span lang="FR">&nbsp;&nbsp;&nbsp; </span><span lang="FR">document.getElementById(<span style="color: maroon;">"txtEmailPart"</span>).value = emailPart;<o:p></o:p></span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span lang="FR">&nbsp;&nbsp;&nbsp; </span><span lang="FR">document.getElementById(<span style="color: maroon;">"txtDomainPart"</span>).value =
+        domainPart;</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Finally set the onclick attriibute of the button to call the JavaScript function</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;</span><span style="color: maroon;">input</span> <span style="color: red;">type</span><span style="color: blue;">="button"</span> <span style="color: red;">value</span><span style="color: blue;">="Get email &amp; domain parts"</span> <span style="color: red;">style</span><span style="color: blue;">="</span><span style="color: red;">width</span><span style="color: blue;">:250px"</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: red;">onclick</span></span><span style="color: blue;"><span style="font-family: Arial, Helvetica, sans-serif;">="getEmailandDomainParts()"/&gt;</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In <a href="http://csharp-video-tutorials.blogspot.com/2014/11/substrings-in-javascript.html">Part 11</a> of <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">JavaScript Tutorial</a> we discussed <b>indexOf</b>() function. <b>lastIndexOf</b>() is also very useful function for manipulating strings.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>lastIndexOf() method returns the position of the last occurrence of a specified value in a string.</b> Since it's job is to return the last index of the specified value, this method searches the given string from the end to the beginning and returns the index of the first match it finds. This method returns -1 if the specified value is not present in the given string.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example :</b> Retrieve the last index position of dot (.) in the given string</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span lang="FR" style="color: blue;">var</span><span lang="FR"> </span><span lang="FR">url
+        = <span style="color: maroon;">"http://www.csharp-video-tutorials.blogspot.com"</span>;</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(url.lastIndexOf(<span style="color: maroon;">"."</span></span><span style="font-family: Arial, Helvetica, sans-serif;">));</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : 42</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Simple real time <b>example where lastIndexOf and substring methods can be used</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Design the web form as shown below : </b>This form allows the use to enter a web site URL and when they click <b>"Get top level domain" </b>button, we should retrieve domain name and display in "Top level domian" textbox.</span>
+        <br>
+        <img alt="JavaScript substring lastindex example" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmgdWBrlpbIa0i11o8OtsudPJS7a_07kaJe-3A6rrJk0yK3NLTCpIwDqRvQQ_Ieidhpa02uMJjdw_cfvKR9spn-9jMXlasezbA7Pvx7iKH8Fe4NTesez_NtRSwXuEZzZCfQFTFnjf8yQo/s1600/JavaScript+substring+lastindex+example.png">
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Here is the HTML</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;</span><span style="color: maroon;">table</span> <span style="color: red;">style</span><span style="color: blue;">="</span><span style="color: red;">border</span><span style="color: blue;">: 1px solid black; </span><span style="color: red;">font-family</span><span style="color: blue;">: Arial"&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Website URL<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span> <span style="color: red;">ID</span><span style="color: blue;">="txtURL"</span> <span style="color: red;">runat</span><span style="color: blue;">="server"</span> <span style="color: red;">Width</span><span style="color: blue;">="300px"&gt;&lt;/</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Top level domian<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span> <span style="color: red;">ID</span><span style="color: blue;">="txtDomian"</span> <span style="color: red;">runat</span><span style="color: blue;">="server"</span> <span style="color: red;">Width</span><span style="color: blue;">="300px"&gt;&lt;/</span><span style="color: maroon;">asp</span><span style="color: blue;">:</span><span style="color: maroon;">TextBox</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;</span><span style="color: maroon;">input</span> <span style="color: red;">type</span><span style="color: blue;">="button"</span> <span style="color: red;">value</span><span style="color: blue;">="Get top level domain"</span> <span style="color: red;">style</span><span style="color: blue;">="</span><span style="color: red;">width</span><span style="color: blue;">: 300px"</span> <span style="color: blue;">/&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">td</span><span style="color: blue;">&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">&lt;/</span><span style="color: maroon;">tr</span><span style="color: blue;">&gt;</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;/</span><span style="color: maroon;">table</span></span><span style="color: blue;"><span style="font-family: Arial, Helvetica, sans-serif;">&gt;</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>In the head section of the webform, include the following script section</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;</span><span style="color: maroon;">script</span> <span style="color: red;">type</span><span style="color: blue;">="text/javascript"&gt;</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">function</span> getDomainName() <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">var</span> url = document.getElementById(<span style="color: maroon;">"txtURL"</span>).value;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">var</span> domainName = url.substr(url.lastIndexOf(<span style="color: maroon;">"."</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById(<span style="color: maroon;">"txtDomian"</span>).value = domainName;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; }</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;/</span><span style="color: maroon;">script</span></span><span style="color: blue;"><span style="font-family: Arial, Helvetica, sans-serif;">&gt;</span><span style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></span></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Finally set the onclick attriibute of the button to call the JavaScript function</span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">&lt;</span><span style="color: maroon;">input</span><b> </b><span style="color: red;">type</span><span style="color: blue;">="button"</span><b> </b><span style="color: red;">value</span><span style="color: blue;">="Get top level domain"</span><b> </b><span style="color: red;">style</span><span style="color: blue;">="</span><span style="color: red;">width</span><span style="color: blue;">: 300px"</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>&nbsp;&nbsp;&nbsp; </b><span style="color: red;">onclick</span><span style="color: blue;">="getDomainName()"</span><b> </b></span><span style="color: blue;"><span style="font-family: Arial, Helvetica, sans-serif;">/&gt;</span></span></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8853998594834427772&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8853998594834427772&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8853998594834427772&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8853998594834427772&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8853998594834427772&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>	
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="3554306159649822433"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        Conditional statements in javascript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-3554306159649822433" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/strings-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 10 -&nbsp;Strings in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/substrings-in-javascript.html">Part 11 -&nbsp;Substrings in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/javascript-substring-example.html">Part 12 -&nbsp;JavaScript substring example</a></span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript code is executed in a linear fashion from the first line to the last line.</b> If for some reason you want to interrupt this flow and execute certain statements, only, if certain condition is met, then we use conditional statements.
+        </span>
+        <br>
+        <br>
+        
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript has the following conditional statements</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">if</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">if else</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">if else if else</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">switch</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">ternary operator - shortcut for an if...else statement</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>If example</b></span><br>
+        <span style="color: blue; font-family: Arial, Helvetica, sans-serif;">var</span><span style="font-family: Arial, Helvetica, sans-serif;"> </span><span style="font-family: Arial, Helvetica, sans-serif;">userInput</span><span style="font-family: Arial, Helvetica, sans-serif;"> </span><span style="font-family: Arial, Helvetica, sans-serif;">=</span><span style="font-family: Arial, Helvetica, sans-serif;"> </span><span style="font-family: Arial, Helvetica, sans-serif;">Number</span><span style="font-family: Arial, Helvetica, sans-serif;">(</span><span style="font-family: Arial, Helvetica, sans-serif;">prompt</span><span style="font-family: Arial, Helvetica, sans-serif;">(</span><span style="color: maroon; font-family: Arial, Helvetica, sans-serif;">"Please enter a number"</span><span style="font-family: Arial, Helvetica, sans-serif;">,</span><span style="font-family: Arial, Helvetica, sans-serif;"> </span><span style="color: maroon; font-family: Arial, Helvetica, sans-serif;">""</span><span style="font-family: Arial, Helvetica, sans-serif;">));</span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput == 1) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is One"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput == 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Two"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput == 3) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Your number
+        is Three"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput != 1 &amp;&amp; userInput
+        != 2 &amp;&amp; userInput != 3) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Your number
+        is not between 1 and 3"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <b><span style="font-family: Consolas; font-size: 14.0pt;"><br></span></b></div>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>If else if example</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput == 1) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is One"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <span style="color: blue;">if</span> (userInput == 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Two"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <span style="color: blue;">if</span> (userInput == 3) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Your number
+        is Three"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Your number
+        is not between 1 and 3"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=3554306159649822433&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=3554306159649822433&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=3554306159649822433&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=3554306159649822433&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=3554306159649822433&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="7321029656972971367"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        Switch statement in JavaScript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-7321029656972971367" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/substrings-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 11 -&nbsp;Substrings in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/javascript-substring-example.html">Part 12 -&nbsp;JavaScript substring example</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/conditional-statements-in-javascript.html">Part 13 -&nbsp;Conditional statements in javascript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>When should we use switch statement</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">To improve the readability of a program multiple <b>if else if</b> statements can be replaced with a switch statement.</span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Notice that in the following code we have several if else if statements</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput == 1) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is One"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <span style="color: blue;">if</span> (userInput == 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Two"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <span style="color: blue;">if</span> (userInput == 3) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Your number
+        is Three"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Your number
+        is not between 1 and 3"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">The above code can be rewritten using a switch statement and it greatly improves the readability&nbsp;</span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">switch</span> (userInput) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 1:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is One"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 2:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Two"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 3:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Three"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">default</span>:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is not between 1 and 3"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In general we need to have break statement after each case statement to ensure the program breaks out of the switch statement after executing statements present in a specific case.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>What happens if there is no break in a switch statement</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">If there is no break statement the execution falls automatically to next case until a break statement is encountered or end of the program is reached.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In the example below, since we don't have a break statement for case 1, when we enter 1 as the number we would get 2 alerts. First alert from case 1 and the second alert from case 2.&nbsp;</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">switch</span> (userInput) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 1:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is One"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 2:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Two"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 3:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is Three"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">default</span>:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is not between 1 and 3"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>When would you combine multiple case statements together</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">If you want the same piece of code to be executed for multiple cases you can combine them together as shown below. Case statement with no code in-between creates a single case for multiple values. A case without any code will automatically fall through to the next case.&nbsp;</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In this example <b>case 1</b> and <b>case 2 </b>will fall through and execute code for <b>case 3</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">switch</span> (userInput) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 1:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 2:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">case</span> 3:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is "</span> + userInput);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">default</span>:<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"You number
+        is not between 1 and 3"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><b style="font-family: Consolas; font-size: 14pt;"><o:p></o:p></b></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7321029656972971367&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7321029656972971367&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7321029656972971367&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7321029656972971367&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7321029656972971367&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="4066486341613193181"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        Ternary operator in JavaScript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-4066486341613193181" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/javascript-substring-example.html" style="font-family: Arial, Helvetica, sans-serif;">Part 12 -&nbsp;JavaScript substring example</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/conditional-statements-in-javascript.html">Part 13 -&nbsp;Conditional statements in javascript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/switch-statement-in-javascript.html">Part 14 -&nbsp;Switch statement in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Ternary operator</b> can be used as a shortcut for if...else... statement.
+        </span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Here is the syntax for the ternary operator</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Boolean Expression ? Statements to execute if true : Statements to execute if false</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">The following example checks if the number is even or odd. We are using if...else... statement.</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> message = <span style="color: maroon;">""</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput % 2 == 0) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; message = <span style="color: maroon;">"Your
+        number is even"</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; message = <span style="color: maroon;">"Your
+        number is odd"</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(message</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Ternary operator example</b> : In the above example if...else... statement can be replaced with the ternary operator as shown below.</span><br>
+        <br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> message = userInput % 2 ==
+        0 ? <span style="color: maroon;">"Your number is
+        even"</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;: <span style="color: maroon;">"Your number is
+        odd"</span>;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(message</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Can we have multiple statements per case with a ternary operator</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Yes, we can put the multiple statements in a bracket and separate them with a comma.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example :</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;"><br></span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a number"</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">userInput % 2 == 0&nbsp;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ?
+        (alert(<span style="color: maroon;">"Your number is even"</span>),
+        alert(<span style="color: maroon;">"Your number is "</span>
+        + userInput))</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-family: Arial, Helvetica, sans-serif;">: (alert(<span style="color: maroon;">"Your number is odd"</span>), alert(<span style="color: maroon;">"Your number is "</span> + userInput</span><span style="font-family: Arial, Helvetica, sans-serif;">));</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Multiple if..else if... statements can be replaced with ternary operator.</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">The following example displays the month name based on the month number that is provided using if...else if... statement</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a month number - 1, 2 or 3"</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> monthName = <span style="color: maroon;">""</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">if</span> (userInput == 1) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; monthName = <span style="color: maroon;">"January"</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <span style="color: blue;">if</span> (userInput == 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; monthName = <span style="color: maroon;">"February"</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <span style="color: blue;">if</span> (userInput == 3) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; monthName = <span style="color: maroon;">"March"</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">else</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; monthName = <span style="color: maroon;">"Unknown
+        month number"</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(monthName</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Ternary operator with multiple conditions example :</b> In the following example, if...else if... statements are replaced with ternary operator</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userInput = Number(prompt(<span style="color: maroon;">"Please enter a month number - 1, 2 or 3"</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> monthName = userInput == 1
+        ? <span style="color: maroon;">"January"</span> : userInput
+        == 2<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;? <span style="color: maroon;">"February"</span>
+        : userInput == 3 <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span style="font-family: Arial, Helvetica, sans-serif;">? <span style="color: maroon;">"March"</span>
+        : <span style="color: maroon;">"Unknown month number"</span>;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(monthName</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=4066486341613193181&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=4066486341613193181&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=4066486341613193181&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=4066486341613193181&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=4066486341613193181&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="6809833517937869371"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        Loops in JavaScript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-6809833517937869371" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/conditional-statements-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 13 -&nbsp;Conditional statements in javascript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/switch-statement-in-javascript.html">Part 14 -&nbsp;Switch statement in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/ternary-operator-in-javascript.html">Part 15 -&nbsp;Ternary operator in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Here are the basic <b>loops in JavaScript</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">while</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">do...while</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">for</span>
+        <br>
+        <br>
+        
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In this video we will discuss <b>while loop in JavaScript with an example</b>. The following example, prints all even numbers from 0 till the target number that the end user has provided.<br></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">while</span> (start &lt;= targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; start = start + 2;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>How does the while loop work</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. While loop checks the condition first</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. If the condition is true, statements with in the loop are executed</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">3. This process is repeated as long as the condition evaluates to true.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Failure to update the variable that participates in the condition will create a never ending or infinite loop. In the example below, notice that we have commented the line that updates start variable. As a result of this start will always be ZERO and will always be less than the target number. This mean the condition will never become false, and we have an infinite while loop.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript infinite while loop example<br></b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">while</span> (start &lt;= targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: darkgreen;">// start = start + 2;</span></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Let us now understand the <b>use of break statement in a while loop </b>with an example. We want a while loop that would to the following</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. If the target number that is provided by the end user is less than 100, then print all even numbers from ZERO until the target number</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. If the target number that is provided by the end user is greater than 100, then print all even numbers from ZERO until 100.&nbsp;</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">So, this means the loop should break once it has printed even numbers until 100.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript while loop break out example<br></b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">while</span> (start &lt;= targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; start = start + 2;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (start &gt; 100) {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; }</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>What is the use of break statement</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">If break statement is used in a switch statement, it causes the execution to break out of that switch statement. In a similar fashion, if used in a loop, the loop ends.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavasSript while loop continue example</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">continue statement tells the JavaScript interpreter to skip remaining code that is present after this statement and start the next iteration of the loop. Let us understand this with an example.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Example: The following example prints all odd numbers between 1 and 10.<br></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">while</span> (start &lt; 10) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; start = start + 1;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (start % 2 == 0) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">continue</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=6809833517937869371&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=6809833517937869371&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=6809833517937869371&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=6809833517937869371&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=6809833517937869371&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="8366727456594055914"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        do while loop in JavaScript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-8366727456594055914" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/switch-statement-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 14 -&nbsp;Switch statement in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/ternary-operator-in-javascript.html">Part 15 -&nbsp;Ternary operator in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/loops-in-javascript.html">Part 16 -&nbsp;Loops in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In this video we will discuss <b>do while loop in JavaScript with an example</b>. In <a href="http://csharp-video-tutorials.blogspot.com/2014/11/loops-in-javascript.html">Part 16</a> we discussed while loop. Please watch <a href="http://csharp-video-tutorials.blogspot.com/2014/11/loops-in-javascript.html">Part 16</a> before proceeding.
+        </span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>while loop :</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. while loop checks the condition first</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. If the condition is true, statements with in the loop are executed</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">3. This process is repeated as long as the condition evaluates to true.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>do while loop :</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. do while loop checks its condition at the end of the loop</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. This means the do...while... loop is guaranteed to execute at least one time.</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">3. In general, do...while... loops are used to present a menu to the user</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>What is the difference between while and do while in javascript</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. while loop checks the condition at the beginning, where as do...while... loop checks the condition at the end of the loop</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. do...while... loop is guaranteed to execute at least once, where as while loop is not.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>do while loop example</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> userChoice = <span style="color: maroon;">""</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">do</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">while</span> (start &lt;= targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; start = start + 2;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">do</span> <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; userChoice = prompt(<span style="color: maroon;">"Do you want to continue - Yes or No"</span>).toUpperCase();<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (userChoice != <span style="color: maroon;">"YES"</span>
+        &amp;&amp; userChoice != <span style="color: maroon;">"NO"</span>)
+        {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(<span style="color: maroon;">"Invalid
+        choice. Please say, Yes or No"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; } <span style="color: blue;">while</span> (userChoice != <span style="color: maroon;">"YES"</span>
+        &amp;&amp; userChoice != <span style="color: maroon;">"NO"</span>);<o:p></o:p></span></div>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">} <span style="color: blue;">while</span> (</span><span style="font-family: Arial, Helvetica, sans-serif;">userChoice == <span style="color: maroon;">"YES"</span></span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8366727456594055914&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8366727456594055914&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8366727456594055914&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8366727456594055914&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=8366727456594055914&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="7149264464835232801"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        For loop in JavaScript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-7149264464835232801" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/ternary-operator-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 15 -&nbsp;Ternary operator in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/loops-in-javascript.html">Part 16 -&nbsp;Loops in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/do-while-loop-in-javascript.html">Part 17 -&nbsp;do while loop in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In this video we will discuss <b>for loop in JavaScript with an example</b>.&nbsp;
+        </span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">To understand for loop, let us print even numbers starting from ZERO till a number provided by the user at runtime.&nbsp;</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">First, let us do this using a while loop. The following while loop example prints all even numbers starting from ZERO till a number provided by the user at runtime. For example if the end user provides 10 at runtime, even numbers starting from ZERO till 10 are printed.</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">while</span> (start &lt;= targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; start = start + 2;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>With while loop</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. The initialization of the variable is done at one place</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. Boolean condition is checked at another place</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">3. The variable participating in the boolean expression is updated at another place</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>For loop example :</b> With for loop all three can be done in one place. To make this clear, look at the syntax of the for loop below.</span><br>
+        <br>
+        <span style="color: blue; font-family: Arial, Helvetica, sans-serif;">for(initialization; boolean Condition; update variable)</span><br>
+        <span style="color: blue; font-family: Arial, Helvetica, sans-serif;">{</span><br>
+        <span style="color: blue; font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; statements;</span><br>
+        <span style="color: blue; font-family: Arial, Helvetica, sans-serif;">}</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Now, let us rewrite the above example using a for loop, instead of while loop</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> start = 0; start &lt;= targetNumber;
+        start = start + 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Notice that all the 3 things, i.e&nbsp;</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">1. Variable initialization</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2. Boolean condition check and&nbsp;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">3. Updating the variable participating in the boolean expression&nbsp;</span><span style="font-family: Arial, Helvetica, sans-serif;"><b>are all done at one place in the for loop. All these 3 things are optional in a for loop.</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example : </b>Variable&nbsp;initialization&nbsp;is optional in a for loop. Notice that we have moved variable intialization&nbsp;(var start = 0;) outside of the for loop head.</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (; start &lt;= targetNumber; start =
+        start + 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example :</b> Just like variable&nbsp;initialization, condition check is also optional in a for loop. Notice that we&nbsp;have moved condition check (start &gt; targetNumber) from the head of the for loop, into it's body and we used a break statement to end the loop, otherwise this could become an infinite for loop.<br></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (; ; start = start + 2) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (start &gt; targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example :</b> In this example we have moved the expression that updates the variable participating in the boolean expression (start = start + 2) from the head of the for loop, into it's body.</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> targetNumber = Number(prompt(<span style="color: maroon;">"Please enter your target number"</span>, <span style="color: maroon;">""</span>));<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> start = 0<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (; ; ) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; <span style="color: blue;">if</span> (start &gt; targetNumber) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; {<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: blue;">break</span>;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; }<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(start + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; start = start + 2;</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7149264464835232801&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7149264464835232801&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7149264464835232801&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7149264464835232801&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=7149264464835232801&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="1031903438084829924"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        Arrays in javascript
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-1031903438084829924" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/loops-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 16 -&nbsp;Loops in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/11/do-while-loop-in-javascript.html">Part 17 -&nbsp;do while loop in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/12/for-loop-in-javascript.html">Part 18 - For loop in JavaScript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Arrays are collections and are ZERO indexed. </b>This means the first element is at index ZERO and the last element is at index arrayObject.length - 1. length property of the array object returns the size of the array.
+        </span>
+        <br>
+        <br>
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>The following JavaScript code creates an empty array.</b> length property returns 0 in this case.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var </span>emptyArray = [];</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(emptyArray.length);</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :</b> 0</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Another way to create an array is by using the Array constructor as shown below. </b>In this example we are setting the length of the array to 10.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> myArray = <span style="color: blue;">new </span>Array(10);</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray.length);</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :</b> 10</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Retrieving first and last elements from the array using the array index</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> myArray = [10, 20, 30];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"First element = "</span> + myArray[0]
+        + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"Last element = "</span> + myArray[myArray.length
+        - 1] + <span style="color: maroon;">"&lt;br/&gt;"</span></span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :&nbsp;</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">First element = 10</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Last element = 30</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Populating an array in JavaScript : </b>There are several ways to populate an array in JavaScript. Let's look at those different option now.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Declaring an array first and then populating using the array index</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var </span>myArray = [];</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray[0] = 10;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray[1] = 20;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray[2] = 30;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray);</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :</b> 10, 20, 30</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Declaring and populating the array at the same time</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var </span>myArray = [10, 20, 30]; &nbsp; &nbsp; &nbsp; &nbsp;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray);</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">Output : 10, 20, 30</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Declaring an array first using the Array constructor and then populating using the array index.</b> Though the initial size is set to 3, adding a fourth element to the array will not throw an exception, because arrays in JavaScript can grow in size.</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var </span>myArray = new Array(3);</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray[0] = 10;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray[1] = 20;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray[2] = 30; &nbsp; &nbsp; &nbsp;</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray);</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :</b> 10, 20, 30</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Declaring and populating the array at the same time using the Array constructor</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var </span>myArray = <span style="color: blue;">new </span>Array(10, 20, 30);</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray);</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output : </b>10, 20, 30</span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Please note : </b>If only one number is passed to the Array constructor, then that number is used to set the size of the array. If more that one number is passed then those will be used as elements to populate the array.</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>A for loop can be used to populate and retrieve elements from the array object in JavaScript</b></span><br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Populating an array using for loop : </b>The following JavaScript code stores even numbers in the array from 0 to 10. Notice that we are using a for loop to populate the array.</span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> evenNumbersArray = [];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt;= 5; i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; evenNumbersArray[i] = i * 2;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(evenNumbersArray</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :</b> 0,2,4,6,8,10</span><br>
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Retrieving elements from the array using for loop :&nbsp;</b></span><br>
+        <br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> evenNumbersArray = [];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt;= 5; i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; evenNumbersArray[i] = i * 2;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt; evenNumbersArray.length;
+        i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(evenNumbersArray[i]
+        + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">0</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">2</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">4</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">6</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">8</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">10</span>
+        <br>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://draft.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=1031903438084829924&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://draft.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=1031903438084829924&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://draft.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=1031903438084829924&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://draft.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=1031903438084829924&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://draft.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=1031903438084829924&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        <div class="post hentry" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+        <a name="114244074023110298"></a>
+        <h3 class="post-title entry-title" itemprop="name">
+        JavaScript array push and pop methods
+        </h3>
+        <div class="post-header">
+        <div class="post-header-line-1"></div>
+        </div>
+        <div class="post-body entry-content" id="post-body-114244074023110298" itemprop="articleBody">
+        <div dir="ltr" style="text-align: left;" trbidi="on">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Suggested Videos</b></span><br>
+        <a href="http://csharp-video-tutorials.blogspot.com/2014/11/do-while-loop-in-javascript.html" style="font-family: Arial, Helvetica, sans-serif;">Part 17 -&nbsp;do while loop in JavaScript</a><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/12/for-loop-in-javascript.html">Part 18 - For loop in JavaScript</a></span>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><a href="http://csharp-video-tutorials.blogspot.com/2014/12/arrays-in-javascript.html">Part 19 -&nbsp;Arrays in javascript</a></span>
+        <br>
+        <br>
+        
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In this video we will discuss <b>push() and pop() methods in JavaScript</b>. Along the way we will also discuss shift() and unshift() methods. Let us understand these methods with examples.
+        </span>
+        <br>
+        <br>
+        
+        
+        
+        
+        
+        
+        <!-- 336 X 280 ASP -->
+        
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+        
+        
+        
+        
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">In the example below, we are populating <b>myArray</b> using a for loop and the array index. Subsequently we are using another for loop to retrieve the elements from the array. Finally we are displaying the length of the array using JavaScript alert.</span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> myArray = [];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt;= 5; i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; myArray[i] = i * 2;<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt;= 5; i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(myArray[i] +
+        <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray.length</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :&nbsp;</b></span>
+        <br>
+        <img alt="push and pop array in javascript" border="1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigFK0sO79LrsTKdePTLNLUQWKLDnoibBrjaVOnPULwNBgCR95sKilhRDQCBJHC-w0ok013wVObQ4UBc2A8YooTWuGWYzIFGwcXsdV-q-Cg-UlPzE1jHI8x4gluADEgv5qLEGA0LQRbIXg/s1600/push+and+pop+array+in+javascript.png">
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Please note : </b>Retrieving array elements using the array index, will not change the length of the array.</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript push() method</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">This method adds new items to the end of the array. This method also changes the length of the array.&nbsp;</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript pop() method</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">This method removes the last element of an array, and returns that element. This method changes the length of an array.</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example : </b>In the exampe below, we are using push() method to populate the array and pop() method to retrieve elements from the array. Notice that push() and pop() methods change the length property of the array.</span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> myArray = [];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt;= 5; i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; myArray.push(i * 2);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray.length);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">for</span> (<span style="color: blue;">var</span> i = 0; i &lt;= 5; i++) <o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">{<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">&nbsp;&nbsp;&nbsp; document.write(myArray.pop() +
+        <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">}<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">alert(myArray.length</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :&nbsp;</b></span>
+        <br>
+        <img alt="javascript array push and pop example" border="1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfOYcBIUEij-lOKvjN5a7SMHfGOfHtNC9UPG-7OC1eBFlqxpHLH-nFglJ350TO5Z5Eig7-3pqmYeprG6BBGjTY9V5sSIE3RqZZ3yTISkPptVYIicNgcVLLHVeacMk96CN4mWLWxdpPw8g/s1600/javascript+array+push+and+pop+example.png">
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript unshift() Method</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">push() method adds new items to the end of the array. To add new items to the beginning of an array, then use unshift() method. Just like push() method, unshift() method also changes the length of an array</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example :&nbsp;</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> myArray = [2, 3];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: darkgreen;">// Adds element 4 after element 3</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray.push(4);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: darkgreen;">// Adds element 1 before element 2</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">myArray.unshift(1);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"Array elements = "</span> + myArray
+        + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"Array Length = "</span> + myArray.length</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :&nbsp;</b></span>
+        <br>
+        <img alt="javascript array push example" border="1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAm2IxkKvJdhCIg-uQMtY3n1ymZe9GptUjRbNWFB27khEelYKS0DWoO3vzuvaOndXlSiZNYWL02ASXwBu1BjvJwtIAEhN59MdaKkdK5TPA-XqxvJclmw8io9ck67aOLQ2Be2dvgE4gGo0/s1600/javascript+array+push+example.png">
+        <br>
+        <br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>JavaScript shift() Method</b></span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;">pop() method removes the last element of an array, and returns that element. shift() method removes the first item of an array, and returns that item. Just like pop() method, shift() method also changes the length of an array.</span><br>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Example :&nbsp;</b></span><br>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> myArray = [1, 2, 3, 4,
+        5];<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: darkgreen;">// removes the last element i.e 5
+        from the array</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> lastElement = myArray.pop();<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"Last element = "</span> + lastElement
+        + <span style="color: maroon;">"&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: darkgreen;">// removes the first element i.e 1
+        from the array</span><o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;"><span style="color: blue;">var</span> firstElement = myArray.shift();<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"First element = "</span> + firstElement
+        + <span style="color: maroon;">"&lt;br/&gt;&lt;br/&gt;"</span>);<o:p></o:p></span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <br></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"Array elements = "</span> + myArray
+        + <span style="color: maroon;">"&lt;br/&gt;"</span>);</span></div>
+        <div class="MsoNormal" style="margin-bottom: 0.0001pt;">
+        <span style="font-family: Arial, Helvetica, sans-serif;">document.write(<span style="color: maroon;">"Array Length = "</span> + myArray.length</span><span style="font-family: Arial, Helvetica, sans-serif;">);</span><span style="font-family: Consolas; font-size: 14pt; font-weight: bold;"><o:p></o:p></span></div>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><br></span>
+        <span style="font-family: Arial, Helvetica, sans-serif;"><b>Output :&nbsp;</b></span>
+        <br>
+        <img alt="javascript array shift example" border="1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhogacPSW-Ra8DyiAyMbKbdU8nvKcFv6j2UkVR1a_lvjeXtST7Ov95_57hFh3aGI6OEAgallCQms0wYz-IWbVNELDhdxofUaRJdXZmVAa_dNXplIYJOF4Dswpdk16ZenI3KLg3EN50BHXg/s1600/javascript+array+shift+example.png">
+        <br>
+        <br>
+        <a href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b">
+        
+        </a>
+        </div>
+        <div style="clear: both;"></div>
+        </div>
+        <div class="post-footer">
+        <div class="post-footer-line post-footer-line-1"><span class="post-author vcard">
+        </span>
+        <span class="post-timestamp">
+        </span>
+        <span class="post-comment-link">
+        </span>
+        <span class="post-icons">
+        </span>
+        <div class="post-share-buttons goog-inline-block">
+        <a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=114244074023110298&amp;target=email" target="_blank" title="Email This"><span class="share-button-link-text">Email This</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=114244074023110298&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="BlogThis!"><span class="share-button-link-text">BlogThis!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=114244074023110298&amp;target=twitter" target="_blank" title="Share to X"><span class="share-button-link-text">Share to X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=114244074023110298&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Share to Facebook"><span class="share-button-link-text">Share to Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=6082652835152798567&amp;postID=114244074023110298&amp;target=pinterest" target="_blank" title="Share to Pinterest"><span class="share-button-link-text">Share to Pinterest</span></a>
+        </div>
+        </div>
+        <div class="post-footer-line post-footer-line-2"><span class="post-labels">
+        </span>
+        </div>
+        <div class="post-footer-line post-footer-line-3"><span class="post-location">
+        </span>
+        </div>
+        </div>
+        </div>
+        <hr><hr>
+        
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
+        <hr><hr>
     
