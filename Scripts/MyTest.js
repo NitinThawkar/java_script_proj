@@ -11,7 +11,7 @@ const childAge = 10;
 
 
 let rollNo = 123;
-//let rollNo = 123; // can definde same varible again for let.
+//let rollNo = 123; // can not definde same varible again for let.
 // debugger;
 addAge(age);
 UpdateChildAge(childAge);
