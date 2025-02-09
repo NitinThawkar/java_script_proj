@@ -68,7 +68,9 @@ Case 2:  commited changes (for one commit only)
 
 ----------------------------------
 Case 3:  commited changes (for many commit )
-
+		git reset <commit Hash>
+		git reset --hard  <commit Hash>
+		
 ----------------------------------
 
 
