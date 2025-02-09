@@ -1,15 +1,106 @@
 Frequntaly Used
-
-
-
-
-#################################
+===###===================###===================###===================###===================###================
 git config --list
 git clone <-Repo Link->
+git status 
 git diff  <-BranchName-> use to compaire two different commit or use to compaire two different branches or files and MORE 
 git log
 
-============================================================================
+
+===###===================###===================###===================###===================###================
+git status
+git add . or ./ or  <file Name>
+git commit -m "commit message"   OR -am 
+git commit -am "commit message"  => Add and commit
+git remote -v                  => shoving remote git repo
+git branch                     =>show local branches name 
+git push origin <branch name>  => sending changes on remote server on specific branch ;  origin= remote
+
+# show Commit details 
+git show 5b944acd2  => git show <commit id>
+
+===###===================###===================###===================###===================###================
+git push <remote-name> <local-branch-name>
+git push -u origin main  
+git push origin <branch name>  => sending local changes on remote on remote server like GIT  hub ; 
+
+git push <remote-name> <local-branch-name>
+
+===###===================###===================###===================###===================###================
+git branch                     =>show local branches name 
+git branch -M <new name> (rename branch)
+git checkout <branch name> (on which branch you want to work, use to navigate)
+git checkout -b <new branch name>  or  git checkout -b <new branch name> main  => this will create new branch from main branch
+
+// delete branch locally
+git branch -d develop4
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+===###===================###===================###===================###===================###================
+Merge Code  => ther are two ways to merge code 1] by branch merge 2] by raiseing pull request
+
+git diff <branch Name>   =>(this command can compaire 2 commits, 2 files ,2 branches and more)
+
+MERGE merge branch
+=-------------------------=-------------------------=
+case : want to merge code from  "DEV1" branch to OBM_master branch
+1] checkout "OBM_master" branch   => git checkout OBM_master 
+2]git merge DEV1
+
+===###===================###===================###===================###===================###================
+Merge Conflict resolving
+
+
+===###===================###===================###===================###===================###================
+git pull origin <branch name>  => getting changes from   remote server to local repository
+
+git pull origin main  (main is branch name)
+===###===================###===================###===================###===================###================
+UNDOING changes revert Changes
+
+Case 1:  Staged changes  (changes add but not commited)
+		git reset <file name>
+		git reset
+----------------------------------
+Case 2:  commited changes (for one commit only)
+		git reset HEAD~1
+
+----------------------------------
+Case 3:  commited changes (for many commit )
+
+----------------------------------
+
+
+################################################################################################################
+change master branch name to main branch
+
+
+if you have created folder on local machine and want to push in git hub follow these steps
+
+1. git init (go to folder and run this command in terminal)
+
+   .run this command in  and folder beame git repo after this add file make changes and commit your changes
+   .create repo e.g myGitRepo on git hub site,then follow step 2
+--------------------------------------------------------------------------------------------   
+
+2. git remote add origin <link>
+   e.g =>> git remote add origin  https://github.com/NitinThawkar/myGitRepo.git
+--------------------------------------------------------------------------------------------
+
+3. git remote -v (to verify remote) on which we will push our code
+--------------------------------------------------------------------------------------------
+
+4. git branch (to check branch)
+--------------------------------------------------------------------------------------------
+5. git branch -M main (rename branch)
+   change master branch name to main branch
+   --------------------------------------------------------------------------------------------
+6. git push origin main( if you want to use only git push , then run this command first git push -u origin main and from nest time use git fush only)
+
+
+#################################################################################################################
+
 Git Error - Unable to resolve reference refs/remotes/origin/master reference broken
 
 You can fix this error by cleaning up your local repository.
@@ -52,20 +143,6 @@ git branch -M main
 git remote add origin https://github.com/NitinThawkar/Notes.git
 git push -u origin main
 
-=====###===================================================================================
-…or push an existing repository from the command line
-git remote add origin https://github.com/NitinThawkar/Notes.git
-git branch -M main
-git push -u origin main
-
-=====###===================================================================================
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
-Import code
-
-
-git push <remote-name> <local-branch-name>
-
 ############################################################################################################################
 [working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
 
@@ -77,11 +154,8 @@ git commit -am "commit message"  => Add and commit
 git remote -v                  => shoving remote git repo
 git branch                     =>show local branches name 
 git push origin <branch name>  => sending on remote server;  origin= remote
-===###===================###===================###===================###===================###================
-git commit -m "commit message"   OR -am 
-git commit -am "commit message"  => Add and commit
 
-# shoe Commit details 
+# show Commit details 
 git show 5b944acd2  => git show <commit id>
 
 ===###===================###===================###===================###===================###================
