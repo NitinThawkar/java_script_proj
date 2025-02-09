@@ -58,18 +58,19 @@ git pull origin <branch name>  => getting changes from   remote server to local 
 git pull origin main  (main is branch name)
 ===###===================###===================###===================###===================###================
 UNDOING changes revert Changes
+git log
 
 Case 1:  Staged changes  (changes add but not commited)
 		git reset <file name>
 		git reset
 ----------------------------------
 Case 2:  commited changes (for one commit only)
-		git reset HEAD~1
+		git reset HEAD~1  (go ine commit back)
 
 ----------------------------------
 Case 3:  commited changes (for many commit )
 		git reset <commit Hash>
-		git reset --hard  <commit Hash>
+		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
 		
 ----------------------------------
 
