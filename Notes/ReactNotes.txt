@@ -1,16 +1,38 @@
+Official Doc
 
 https://react.dev/learn/installation
 
-=================================================================
+create resct app : https://create-react-app.dev/
 
 =================================================================
+react js with vite
+=================================================================
+what is vite > install vite
+install node and NPM 
+ check node version > node -v
+ npm version        > npm -v
+ install  vs code
+npm create vite
+
+go to folder and 
+and npm install
+
+npm run dev (for vite)
+npm start (for non vite)
+=================================================================
+type script with +Swc (Speedy Web Compiler)
+
+Rust-based platform for the Web
+
+SWC is an extensible Rust-based platform for the next generation of fast developer tools. It's used by tools like Next.js, Parcel, and Deno, as well as companies like Vercel, ByteDance, Tencent, Shopify, Trip.com, and more.
+
+SWC can be used for both compilation and bundling. For compilation, it takes JavaScript / TypeScript files using modern JavaScript features and outputs valid code that is supported by all major browsers.
+=================================================================
+https://vite.dev/guide/
 
 =================================================================
-
-=================================================================
-
-=================================================================
-
+### questions 
+.jxs ?
 =================================================================
 
 =================================================================

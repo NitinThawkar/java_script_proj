@@ -1,0 +1,448 @@
+Frequntaly Used
+===###===================###===================###===================###===================###================
+git config --list
+git clone <-Repo Link->
+git status 
+git diff  <-BranchName-> use to compaire two different commit or use to compaire two different branches or files and MORE 
+git log
+
+
+===###===================###===================###===================###===================###================
+git status
+git add . or ./ or  <file Name>
+git commit -m "commit message"   OR -am 
+git commit -am "commit message"  => Add and commit
+git remote -v                  => shoving remote git repo
+git branch                     =>show local branches name 
+git push origin <branch name>  => sending changes on remote server on specific branch ;  origin= remote
+
+# show Commit details 
+git show 5b944acd2  => git show <commit id>
+
+===###===================###===================###===================###===================###================
+git push <remote-name> <local-branch-name>
+git push -u origin main  
+git push origin <branch name>  => sending local changes on remote on remote server like GIT  hub ; 
+
+git push <remote-name> <local-branch-name>
+
+===###===================###===================###===================###===================###================
+git branch                     =>show local branches name 
+git branch -M <new name> (rename branch)
+git checkout <branch name> (on which branch you want to work, use to navigate)
+git checkout -b <new branch name>  or  git checkout -b <new branch name> main  => this will create new branch from main branch
+
+// delete branch locally
+git branch -d develop4
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+===###===================###===================###===================###===================###================
+Merge Code  => ther are two ways to merge code 1] by branch merge 2] by raiseing pull request
+
+git diff <branch Name>   =>(this command can compaire 2 commits, 2 files ,2 branches and more)
+
+MERGE merge branch
+=-------------------------=-------------------------=
+case : want to merge code from  "DEV1" branch to OBM_master branch
+1] checkout "OBM_master" branch   => git checkout OBM_master 
+2]git merge DEV1
+
+===###===================###===================###===================###===================###================
+Merge Conflict resolving
+
+
+===###===================###===================###===================###===================###================
+git pull origin <branch name>  => getting changes from   remote server to local repository
+
+git pull origin main  (main is branch name)
+===###===================###===================###===================###===================###================
+UNDOING changes revert Changes
+git log
+
+Case 1:  Staged changes  (changes add but not commited)
+		git reset <file name>
+		git reset
+----------------------------------
+Case 2:  commited changes (for one commit only)
+		git reset HEAD~1  (go ine commit back)
+
+----------------------------------
+Case 3:  commited changes (for many commit )
+		git reset <commit Hash>
+		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
+		
+----------------------------------
+
+
+################################################################################################################
+change master branch name to main branch
+
+
+if you have created folder on local machine and want to push in git hub follow these steps
+
+1. git init (go to folder and run this command in terminal)
+
+   .run this command in  and folder beame git repo after this add file make changes and commit your changes
+   .create repo e.g myGitRepo on git hub site,then follow step 2
+--------------------------------------------------------------------------------------------   
+
+2. git remote add origin <link>
+   e.g =>> git remote add origin  https://github.com/NitinThawkar/myGitRepo.git
+--------------------------------------------------------------------------------------------
+
+3. git remote -v (to verify remote) on which we will push our code
+--------------------------------------------------------------------------------------------
+
+4. git branch (to check branch)
+--------------------------------------------------------------------------------------------
+5. git branch -M main (rename branch)
+   change master branch name to main branch
+   --------------------------------------------------------------------------------------------
+6. git push origin main( if you want to use only git push , then run this command first git push -u origin main and from nest time use git fush only)
+
+
+#################################################################################################################
+
+Git Error - Unable to resolve reference refs/remotes/origin/master reference broken
+
+You can fix this error by cleaning up your local repository.
+git gc --prune=now
+Additionally, you can also run,
+git remote prune origin
+
+
+
+Hacky workaround I've been doing is a combination of:
+running: git gc --prune=now
+and deleteing .git/refs/remote/origin
+
+https://graphite.dev/guides/git-error-cannot-lock-ref
+============================================================================
+// delete branch locally
+git branch -d develop4
+git branch -d jthawkn_develop4
+
+// delete branch remotely
+git push origin --delete remoteBranchName
+===================================
+git pull origin develop4
+git log --pretty=oneline
+
+Quick setup — if you’ve done this kind of thing before
+ Set up in Desktop
+or
+HTTPS
+SSH
+ 
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+=====###===================================================================================
+…or create a new repository on the command line
+echo "# Notes" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/NitinThawkar/Notes.git
+git push -u origin main
+
+############################################################################################################################
+[working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
+
+===###===================###===================###===================###===================###================
+git status
+git add . or ./ or  <file Name>
+git commit -m "commit message"   OR -am 
+git commit -am "commit message"  => Add and commit
+git remote -v                  => shoving remote git repo
+git branch                     =>show local branches name 
+git push origin <branch name>  => sending on remote server;  origin= remote
+
+# show Commit details 
+git show 5b944acd2  => git show <commit id>
+
+===###===================###===================###===================###===================###================
+# get Server
+git push origin <branch name>  => sending on remote server; 
+git pull origin <branch name>  => getting from   remote server or take latest from server
+
+
+git config --list            => show all setting
+git config user.email "your name" => Set your name in variable 
+git config user.email "your email" => Set your email in variable 
+git config --global user.email  =>show set user name 
+
+Code Revert or UNDO
+
+git checkout <file name>   => revert local chnages , undo local changes  before checking 
+
+(use "git restore --staged <file>..." to unstage
+
+===###===================###===================###===================###===================###================
+git remote -v                  => shoving remote git repo
+git init 
+git remote add origin https://github.com/NitinThawkar/Notes.git
+
+#change origin name
+git remote rename origin <new name> 
+
+#remove origin Name 
+git remote rm <origin name>
+
+#Add origin 
+git remote add origin https://github.com/NitinThawkar/Notes.git
+
+===###===================###===================###===================###===================###================
+git log       => commit list
+git log -oneline   => last commit 
+git log -p -1 
+git cat-file <commitid> -p  => commit details
+
+git diff
+
+===###===================###===================###===================###===================###================
+git branch   #   https://www.nobledesktop.com/learn/git/git-branches
+
+#create branch  # https://www.nobledesktop.com/learn/git/git-branches
+git branch <branchname>
+
+#change branch ot checkout branch
+git checkout <branchname>
+
+#create branch and switch to created branch
+git checkout -b <branchname>
+
+# which branch using or pointing 
+cat .git/HEAD
+
+#delete branch first switch to another branch before delete
+git branch -d <branchname>
+
+git branch -D <branchname> => delete withour merge with parent branch
+git branch -D jthawkn_master_iso
+#rename  branch
+git branch -m <new branchname>
+
+
+#branches created by other user will showed in consol
+git fetch --all
+
+#git branch  >>To see local branch names
+To see local branch names, open your terminal and run git branch:
+
+#git branch -r  >> To see all remote branch name
+To see all remote branch names, run git branch -r
+
+#git branch -a  >> To see all local and remote branches
+To see all local and remote branches, run git branch -a:
+
+# git branch -vv or git branch -vva
+You can see detailed information such as the local or remote branches in use, commit ids, and commit messages by running git branch -vv or git branch -vva:
+
+#create branch from base  # https://stackoverflow.com/questions/4470523/create-a-branch-in-git-from-another-branch
+git checkout -b <new baranch name> <base branch name>
+git checkout -b myFeatureLoc dev4
+
+
+##to  view see parent or base branch for you local branch #  https://gist.github.com/joechrysler/6073741 # https://stackoverflow.com/questions/3161204/how-to-find-the-nearest-parent-of-a-git-branch
+#switch branch and run following code ines
+
+git show-branch -a \
+| grep '\*' \
+| grep -v `git rev-parse --abbrev-ref HEAD` \
+| head -n1 \
+| sed 's/.*\[\(.*\)\].*/\1/' \
+| sed 's/[\^~].*//'
+
+
+=====================================
+git checkout -b myFeature dev
+Creates the MyFeature branch off dev. Do your work and then
+
+git commit -am "Your message"
+Now merge your changes to dev without a fast-forward
+
+git checkout dev
+git merge --no-ff myFeature
+Now push the changes to the server
+
+##Send your Local commit changes to Remote git Reposatory
+git push origin main
+git push origin dev
+git push origin myFeature
+===###===================###===================###===================###===================###================
+MERGE merge branch
+=-------------------------=-------------------------=
+case : want to merge code from  "DEV1" branch to OBM_master branch
+1] checkout "OBM_master" branch   => git checkout OBM_master 
+2]git merge DEV1
+=-------------------------=-------------------------=
+#friends branches 
+1]git merge origin/branch or #git checkout <friends branch name >
+
+=-------------------------=-------------------------=-------------------------=-------------------------
+#merge code from "origin/master_iso" in to "jthawkn_master_iso"
+git checkout jthawkn_master_iso   => checkout branch in which you want to mearge
+git merge origin/master_iso  => branch from which you want to mearge
+git merge origin/develop4 
+git merge origin/dev4_develop_iso =>helm cook
+
+=-------------------------=-------------------------=-------------------------=-------------------------
+===###===================###===================###===================###===================###================
+ignore gitignore
+
+1] touch .gitignore   => open this firl in editor
+
+===###===================###===================###===================###===================###================
+git remove  ,git mv (move)
+
+git mv demo1.txt <new file name> 
+#git mv demo1.txt demo2.txt  # rename demo 1 to demo 2
+
+#delete file 
+git rm demo1.txt
+
+#untrach file , set file as untract
+git rm --cached demo.txt
+
+
+
+then commit
+
+===###===================###===================###===================###===================###================
+Alias making command in short from
+
+git config --global alias.st status =>  making status command as St  => type git st , it will executed status command
+git config --global alias.lt 'log -p -1' =>  making log command as lt   => type git lt , it will execute 'git log -p -1' command
+===###===================###===================###===================###===================###================
+
+Revert code changes  (stage to change Area (unstage))
+#git reset 
+
+#remove changes from file => revert all 
+git checkout .     => remove all changes  from all modified files 
+git checkout -f     => forse fully remove
+git checkout <fileName>    => remove change from specific file
+git checkout <fileName1> <fileName2>   => remove change from specific file
+
+
+#remove from stage 
+git restore --stage  <fileName>  => move file to working area OR
+git reset HEAD  <fileName>  => move file to working area 
+
+#pointing to previous commit or take code from last commited hash id 
+git checkout <Hashid/commit id>    => from here you can create different branch also
+
+#unstage
+(use "git restore --staged <file>..." to unstage
+
+#previoue branch move
+git checkout -  (hyfun)
+
+
+
+
+
+===###===================###===================###===================###===================###================
+Stash retrieve, show, list, delete & save
+
+#stash
+git stash
+git stash list
+git stash save "stash name"
+git stash show => recent stash show
+git stash show -p => recent stash show with content
+
+git stash pop  =>apply last chnages
+git stash apply <stashid>  =>apply save stash chnages
+
+#delete stash
+git stash pop  =>apply last chnages and removed from list
+git stash derop {id} =>apply last chnages and removed from list
+git stash clear => remove all from list
+
+#stash to another branch
+git stash branch <other branch name> {Stashid}
+
+
+===###===================###===================###===================###===================###================
+#Cherry pick & merge abort  # https://www.youtube.com/watch?v=QxGrGtFB2Ig&list=PLolI8AY2AS9aaHf99kGdrpRB28H5iaWHT&index=10
+
+git cherry-pick <commit id>
+git mearge --abort ==> revert all merge  for checkout branch
+
+===###===================###===================###===================###===================###================
+# Git Undo | Reset hard & mixed, revert and restore 
+
+# Git Undo 
+git reset =>staging to local
+git reset <commit id>  => remove from staging 
+git reset --hard <commit id>   => remove from staging and local/ working
+
+================
+# Git Undo  rvert code
+git reset <-HASH ID->  =>staging to local
+git reset <commit id>  => remove from staging 
+git reset --hard <commit id>   => remove from staging and local/ working revert from every places
+git reset HEAD <file name> 
+git restore --stage <filename>
+
+git revert <commitid>   
+
+===###===================###===================###===================###===================###================
+#modify commit
+
+git commit --amend  => open editor
+git commit --amend  -m "Message " 
+git config --golobal core.editor "vim" / nano
+
+
+
+===###===================###===================###===================###===================###================
+#Git submodule 
+git submodule add https://github.com/NitinThawkar/Notes.git
+git submodele update  => got to previos version  befor taking  pull from another branch
+git submodule deinit -f  shopes    => 'shopes' is a dir 
+===###===================###===================###===================###===================###================
+If a branch name includes a slash,  Git tries to create a folder. For example, if the branch name is bugfix/branch-name1, we can find the file your-directory/.git/refs/remotes/origin/bugfix/branch-name1.
+I’ve not tested it but I guess if we create another branch Bugfix/branch-name2, we can find the file your-directory/.git/refs/remotes/origin/bugfix/branch-name2. The second branch name starts with an upper case while the first one is the lower case but Git can create the file because the file name is different.
+
+However, if there are bugfix/branch-name1 and Bugfix/branch-name1 in the  repository, Git throws this error. It seems that Git is case-sensitive but Windows is not. It’s impossible to create two folders that have the same name but different cases like bugfix and BUGFIX.
+
+bugfix/branch-name1/branch1 causes this error if bugfix/branch-name1 has already existed.
+
+Check if there are two branches that have the same name with this command.
+
+git branch -a
+If the branch is found, remove one of them or rename them.
+
+Once the branch is removed, we need to update the local repository. Otherwise, the branch still remains in our repository. We need to remove branches that are no longer in the remote repository. Execute the following command. It removes all branches from the local repository that have gone from the remote repository.
+
+git fetch --prune
+Try to execute git pull or git fetch. It should work now.
+============================================================================
+the following command within your project’s directory.
+
+rm .git/refs/remotes/origin/master 
+git fetch
+Then run git pull and it should work this time.
+
+git pull
+> Already up to date.
+Note: Use the command for any branch that’s giving the error. For example, if I’m getting error for the main branch instead, I could do the following:
+
+rm .git/refs/remotes/origin/main 
+git fetch
+===###===================###===================###===================###===================###================
+Visual Studio Git Sync Error "The pull operation failed. See the Output window for details."
+
+Below steps worked.
+
+git fetch -p
+deleting the local branch and check out it again.
+But make sure you don't have any commits to sync.
+
+Worst case you can delete the local repository and clone again.
+red below articles as well. this might be useful.
+
+===###===================###===================###===================###===================###================
