@@ -43,12 +43,28 @@ Universal Selector
 ==============================================
 Element Selector 
 h1 {}
+h1, h2, p {
+  background-color: gold;
+  border: 1px solid gray;
+}
 ==============================================
 Id Selector
 #myId { }
 ==============================================
 Class Selector
 .myClass { }
+
+.intro {
+  background-color: yellow;
+}
+
+p.fancy.beige {
+  font-family: 'Courier New', monospace;
+  }
+==============================================
+
+==============================================
+
 ==============================================
 Text Properties
 text-align : left / right / center
