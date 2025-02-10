@@ -40,9 +40,17 @@ https://vite.dev/guide/
 ### questions 
 .jxs ?
 =================================================================
-1. componet name start with capital letter
+1. componet name start with capital letter, componenet return JSX
 
 2. Importing and Exporting Components
+default export
+multiple export
+named export
+
+3.pros = property
+componant will accept props
+prop is a js object datatype
+
 =================================================================
 
 =================================================================
