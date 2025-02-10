@@ -20,6 +20,12 @@ and npm install
 npm run dev (for vite)
 npm start (for non vite)
 =================================================================
+  cd my-reacy-js-proj
+  npm install
+  npm run dev
+  
+
+=================================================================
 type script with +Swc (Speedy Web Compiler)
 
 Rust-based platform for the Web
