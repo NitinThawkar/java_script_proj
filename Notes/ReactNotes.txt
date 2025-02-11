@@ -53,8 +53,12 @@ named export
 3.pros = property
 componant will accept props
 prop is a js object datatype
+props are readonly you can not modify  in betwwen 
+used for passing data from parent component to child component
 
 =================================================================
+### JSON.stringify(props)  , prop is a object
+console.log(JSON.stringify(props));
 
 =================================================================
 
