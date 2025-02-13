@@ -43,6 +43,26 @@ https://vite.dev/guide/
 
 prop, state and hook,memo ?
 =================================================================
+### comment
+
+ {/* This is a comment in React */}
+ 
+ // Types of comment  support in  react ****************************************************//
+// ConditionalRendering.jsx
+/* Hello component  Start */
+{/* This is only work in component  block in React */}
+----------------------------------------------------------------
+
+### fragment
+<></>
+
+=================================================================
+### inline style
+ <h3 style={{ color: "red" }}>
+----------------------------------------------------------------
+<comp name >.module.css
+=================================================================
+### take away
 1. componet name start with capital letter, componenet return JSX
 
 2. Importing and Exporting Components
@@ -62,8 +82,11 @@ used for passing data from parent component to child component
 console.log(JSON.stringify(props));
 
 =================================================================
-
+ <h1>{`Hello ${user}!`}</h1>
+   alert(`Name: ${inputRef.current.value}`);
 =================================================================
+### Controlled Component
+
 
 =================================================================
 =================================================================
