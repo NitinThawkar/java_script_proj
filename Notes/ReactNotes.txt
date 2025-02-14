@@ -92,7 +92,7 @@ console.log(JSON.stringify(props));
 ### Controlled Component
 a componant Control  <form> input fields with states 
 
-
+uncontrolled >> use ref >> using selector >> directly dom  referance
 =================================================================
 ### hook
 hook's are reguler functions but these function only called by react component (alwayes place inside of component)
@@ -102,6 +102,9 @@ useDispatch
 useSelector
 useparams
 useNavigate/usedLocation
+useref
+forward Ref>> depricated from vesion 19
+use 
 =================================================================
 
 
