@@ -104,9 +104,26 @@ useparams
 useNavigate/usedLocation
 useref
 forward Ref>> depricated from vesion 19
-use 
+useformStstus hoo =>
+useactionstate
 =================================================================
+next js
+router.push ()=> this will create entry in history
+router.replace ()=> this will not  create entry in history  broser back button will not work
+router.reload()  => this will reload page
 
+
+incremental site genaration  (isg)
+
+
+import {link} from "next/Link"
+import {link} from "next/Link"
+
+SWR : stale while revalidating  =>>hook develop by next team 
+npm install swr
+
+
+export get serverside prop
 
 =================================================================
 
