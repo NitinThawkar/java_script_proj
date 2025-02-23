@@ -2,7 +2,20 @@
 Ket bord short cut : https://keycombiner.com/collections/notepad/
 youtube : https://www.youtube.com/watch?v=8GWjRe-0shk&list=PL1z4RL0Mc_2XuRjFgG8Xgjc8XYTZK8QJq&index=7
 ##======================================================================================================================================
+modify shortcut
+Run >> modify shortcut/delete command
+##======================================================================================================================================
 Edit >> Line oprations
+
+view >> document map
+##======================================================================================================================================
+Insert date
+serch in plugin >> plugin demo >> 
+
+short format: Alt + Ctrl + d 
+long format : Alt + Ctrl + Shift + d
+
+Run >> modify shortcut/delete command
 
 ##======================================================================================================================================
 create duplicate
@@ -18,6 +31,9 @@ serch in plugin >> code aligment  # (ctrl  + shift + =)
 Edit >> convert to case 
 UPPERCASE >> ctrl + shift + U
 lowercase >> ctrl + U
+##======================================================================================================================================
+compaire 
+ctrl +alt+ C
 ##======================================================================================================================================
 markdown
 save document as md file    <filename>.md
@@ -158,13 +174,71 @@ WE WILL INSTALL THREE PLUGINS:
 2. NppFTP -   Notepad++  FTP plugin to connect to ftp server
 3. Preview HTML - plugin to preview HTML code right from Notepad++ (see detailed video,    • PREVIEW HTML WEBPAGE RIGHT FROM NOTEP...  )
 ##======================================================================================================================================
+Set Vertical Edge In Notepad++ to Help with Line Length
+
+WHY DO YOU NEED SET VERTICAL EDGE IN NOTEPAD++?
+
+It gives you a visual aid of width of your source code.
+For many software development teams, coding guidelines are set to limit the 
+  characters to 80 or 100.
+It is easy to read through your source code.
+Reader does not need to scroll left and right to navigate through your code.
+It makes the source code cleaner. 
+It also encourages the developer to write succinct code rather than too long lines.
+This vertical line WILL NOT SHOW UP if you print your code.
+
+WHERE IS NOTEPAD++ VERTICAL EDGE SETTINGS OPTION?
+
+It is under Settings ► Preferences ► Editing ► Vertical Edge Settings. 
+
+You can also set multiple vertical edges in Notepad++. 
 
 ##======================================================================================================================================
+VIEW TWO FILES SIDE BY SIDE IN NOTEPAD
 
+VIEW TWO FILES SIDE BY SIDE IN NOTEPAD++: How You Can Compare Contents Of Two Files Without Plugin
+==========================
+Notepad++ allows you to view/edit/compare two files side by side without any plugin. For this, you will need to use 'Move to Other View' or 'Clone to Other View' feature. There are three ways you can achieve this. 
+
+1. Right click on the file tab and "Move to other View" or "Clone to other View"
+
+2. From Menubar, View  ➜ Move/Clone Current Document.
+
+3. Drag the file tab and an Option will appear to "Move or Clone the Document"
+
+COMPARING CONTENTS OF TWO FILES SIDE BY SIDE SYNCHRONOUSLY
+===========================
+
+You can use "Synchronize Vertical/Horizontal Scrolling" from Toolbar icons. These features allow you to compare the contents of two files since you can synchronize scrolling of two files' content. 
 ##======================================================================================================================================
+CHANGE DEFAULT FONT IN NOTEPAD
 
+1. Go to Settings.
+2. Click on Style Configurator.
+3. Change Font Name Under Font Style. 
+
+SELECT MONOSPACED FONT:
+-------------------------------
+COURIER NEW
+CONSOLAS
 ##======================================================================================================================================
+ EDIT MULTIPLE LINES AT THE SAME TIME IN NOTEPAD
+ 
+ HOW TO EDIT MULTIPLE LINES AT THE SAME TIME IN NOTEPAD++
 
+
+Notepad++ provides multiple ways to edit number of lines at the same time. Here are three powerful ways to edit multiple lines at the same time.  It is a great time saver. 
+
+1. Using ALT + Mouse Method 
+
+2. Using ALT + SHIFT + Arrow keys
+
+3. Using CTRL + Mouse Selection. 
+   
+   First need to enable MULTI EDITING SETTING.
+   
+   a. Go to Settings ► Preferences ► Editing.
+   b. Check box to Enable Multi Editing Settings. 
 ##======================================================================================================================================
 
 ##======================================================================================================================================
