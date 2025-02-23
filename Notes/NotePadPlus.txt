@@ -7,6 +7,9 @@ what is notepad ++ portable version?
 modify shortcut
 Run >> modify shortcut/delete command
 ##======================================================================================================================================
+Show Unicode (Special Characters) in Noteapd
+Run >> run >> type CHARMAP  or (save)  (alt+R)
+##======================================================================================================================================
 Edit >> Line oprations
 
 view >> document map
@@ -289,6 +292,7 @@ Notepad++ provides multiple ways to edit number of lines at the same time. Here 
    a. Go to Settings ► Preferences ► Editing.
    b. Check box to Enable Multi Editing Settings. 
 ##======================================================================================================================================
+Automate Repetitive Task using Notepad++ Macro
 
 ##======================================================================================================================================
 
