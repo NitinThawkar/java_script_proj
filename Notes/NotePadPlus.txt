@@ -1,6 +1,8 @@
 ##======================================================================================================================================
 Ket bord short cut : https://keycombiner.com/collections/notepad/
 youtube : https://www.youtube.com/watch?v=8GWjRe-0shk&list=PL1z4RL0Mc_2XuRjFgG8Xgjc8XYTZK8QJq&index=7
+
+what is notepad ++ portable version?
 ##======================================================================================================================================
 modify shortcut
 Run >> modify shortcut/delete command
@@ -8,6 +10,11 @@ Run >> modify shortcut/delete command
 Edit >> Line oprations
 
 view >> document map
+
+
+Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
+----------------------
+Align By Character : Ctrl + Shift + =
 ##======================================================================================================================================
 Insert date
 serch in plugin >> plugin demo >> 
@@ -16,11 +23,52 @@ short format: Alt + Ctrl + d
 long format : Alt + Ctrl + Shift + d
 
 Run >> modify shortcut/delete command
+setting >> shortcut mapper 
+Edit >> insert
 
 ##======================================================================================================================================
 create duplicate
 Edit >> Line oprations
 select content an press #  ctrl+d
+
+Line Operations: (   • NOTEPAD++ DUPLICATE TEXT LINES: A Fas...  )
+--------------------------
+Duplicate line : ctrl + D (or a word) 
+Move Line Up   : Ctrl + Shift + Up Arrow
+Move Line Down : Ctrl + Shift + Down Arrow
+
+Search and Replace (Find)
+-------------------------------------------
+Show Find Dialog   : Ctrl + Find
+Search Next Instance : F3
+Search Previous Instance: Shift + F3
+Go to Line Number       : Ctrl + G 
+
+Column Editing (   • NOTEPAD++ COLUMN EDIT MODE: Edit Mult...  )
+------------------------
+Select Columns      : Alt + Shift + Arrow Keys 
+Select Columns      : Alt + Shift + Left Mouse 
+Bring Column Editor : Alt + C 
+
+Zooming Text (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
+----------------------
+Zoom In Text  : CTRL + MOUSE WHEEL UP
+Zoom Out Text : CTRL + MOUSE WHEEL DOWN
+
+Commenting or Uncommenting: (   • NOTEPAD++ DUPLICATE TEXT LINES: A Fas...  )
+--------------------------
+Add Single line comment   : Ctrl + K 
+Remove Single Line Comment : ctrl + Shift + K 
+
+Change Text Case to Upper/Lower/Proper Case (   • NOTEPAD++ COLUMN EDIT MODE: Edit Mult...  )
+------------------------
+Change Selected Text To Uppercase : Ctrl + Shift + U 
+Change Selected Text to Lowercase : Ctrl + U
+Proper case        : ALT + U
+
+Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
+----------------------
+Align By Character : Ctrl + Shift + =
 ##======================================================================================================================================
 how to indent html tags in notepad++  // format code
 serch in plugin >> xml tool>>  # (ctrl + Alt + shift + B)
@@ -31,6 +79,7 @@ serch in plugin >> code aligment  # (ctrl  + shift + =)
 Edit >> convert to case 
 UPPERCASE >> ctrl + shift + U
 lowercase >> ctrl + U
+Proper case        : ALT + U
 ##======================================================================================================================================
 compaire 
 ctrl +alt+ C
