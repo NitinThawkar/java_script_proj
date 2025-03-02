@@ -34,7 +34,7 @@ git switch  <branch Name> ( switch command also use  to change a branch)
 git checkout <branch name> (on which branch you want to work, use to navigate)
 git checkout -b <new branch name>  or  git checkout -b <new branch name> main  => this will create new branch from main branch
 
-// discard all changes revert all chanfes and change branch
+// discard all changes change the branch or revert all changes and change the branch
 git checkout .      (dot)
 
 
