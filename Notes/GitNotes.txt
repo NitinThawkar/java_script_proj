@@ -29,8 +29,14 @@ git push <remote-name> <local-branch-name>
 ===###===================###===================###===================###===================###================
 git branch                     =>show local branches name 
 git branch -M <new name> (rename branch)
+
+git switch  <branch Name> ( switch command also use  to change a branch)
 git checkout <branch name> (on which branch you want to work, use to navigate)
 git checkout -b <new branch name>  or  git checkout -b <new branch name> main  => this will create new branch from main branch
+
+// discard all changes revert all chanfes and change branch
+git checkout .      (dot)
+
 
 // delete branch locally
 git branch -d develop4
@@ -73,6 +79,8 @@ Case 3:  commited changes (for many commit )
 		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
 		
 ----------------------------------
+===###===================###===================###===================###===================###================
+FORK (rough copy of other user repo)
 
 
 ################################################################################################################
