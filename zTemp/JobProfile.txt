@@ -1,0 +1,68 @@
+
+Engineering Manager
+Jun 2021 - Aug 2023 2 years 3 months
+
+
+
+Objectives – On time delivery, Technical Feasibility, Product quality, Effort variance, utilization, People development, Talent retention, Productivity improvement, Cycle-time reduction, Customer satisfaction, Process compliance
+
+• Overall delivery responsibilities for the assigned product
+• Devise effort estimates / phase wise delivery plan by collaborating closely with the product management team and the product delivery team (Project manager, Technical Architect, Product owner/Feature lead)
+• Ensure adherence of quality, schedule, scope, budget and resources for all deliverables
+• Contribute to the product roadmap by working closely with the Product Management team
+• Periodically review project health with team to focus on quantitative measures for effort, schedule, cost, defects, changes, utilization, productivity and customer satisfaction. Devise corrective action plans as required and track effectively to closure
+• Ensure management of project risks and issues. Periodically monitor all mitigation and contingency plans to effectiveness
+• Periodically report status of product development and operations to senior leadership
+• Foster a culture of innovation in the team. Encourage team members for ID (Innovation Disclosures)
+• Build required capacity and capability in the team, working closely with the operations manager
+• Ensure effective resource onboarding
+• Maximize team retention
+• Competency development for lateral hires / existing resources
+• Succession planning
+• Rewards and recognitions
+===================================================================
+Project Manager
+Oct 2017 - Sep 2021 4 years
+
+
+• Primarily responsible for end-to-end planning, monitoring, control and reporting for assigned product
+• Work closely with the Engineering Manager to ensure effective management of all project constraints (i.e. scope, schedule, cost,
+quality, resources, etc.)
+• Daily project progress tracking using VSO, JIRA, facilitate daily scrum, sprint review, sprint planning sprint retrospective
+• Responsible for internal and external stakeholder management
+Estimation and planning:
+• Participate in PI/sprint planning to understand scope, effort, timelines and resource allocations
+• Devise estimates and plans to meet scope and timeline commitments
+• Effectively employ tools like MPP/EBIT/VSO for planning, task allocations and tracking
+Scope and Change Management:
+• Manage scope, analyze impact of changes on schedule/sprint goals/efforts
+Monitoring/Control/Reporting:
+• Gather project data for effort, schedule, defect and cost for measurement against agreed plan and report variances if any
+• Assist Engineering Manager/Technical Architect to conduct RCAs to devise corrective action plans and track to closure
+• Extract, analyze and report metrics and health indicators to Engineering Manager for status reporting purposes
+• Drive defect triage/analysis meetings to create a corrective plan and track to closure
+• Create VSO/JIRA dashboards showing agile metrics like cumulative burndown, velocity
+Risk Management:
+• Work closely with Engineering Manager and team in risk identification, analysis and tracking
+• Ensure all risks are documented along with probability, impact on constraints, severity, mitigation and contingency plans
+in the project risk log. Ensure periodic monitoring of risks and effectiveness of identified mitigation plans. Report risks status
+Process compliance and improvement:
+• As part of the PMCoE, ensure adoption of organization processes and templates across all projects
+• Contribute to the organization repository to strengthen processes/templates and Q-targets
+=========
+
+• Creates & reviews the test strategies with delivery manager / Project Manager to make sure that all phases of testing like unit,
+functional, performance, stress, acceptance etc. are getting covered as per project deadline
+• Works with the testers to approve the estimates for the testing tasks/stories. Owns the translation of the requirements into test case
+for the team. Responsible with the PO/Feature Lead, and the Project Manager for the overall quality of deliverables
+• Owns the answers to Technical questions related to overall testing and quality of the deliverable during sprint reviews and demo
+• Make sure that the test cases created by tester are above and beyond what the developers list as the functional/system specifications
+for their stories/tasks.
+• Reviews that the test cases written by testers include negative testing as well as happy path testing, validate test plans with Feature
+Lead and Technical Lead
+• Empowers team to prevent stories from being closed, or CRs getting deferred, or products from entering system test/ alpha test if
+serious issues are found in development output
+• Responsible for 100% review of test plan, test cases, test build & test automation script
+• Provide Technical leadership to test team and assign task to test team members
+• Responsible for hands-on testing of some features within the product, test analysis and provide modified test cases if required
+• Participate in defect triage meetings, track defects to closure and perform RCA for critical defects
