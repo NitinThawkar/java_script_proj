@@ -24,7 +24,7 @@ ctrl + 9
 Change tab >>ctrl+fn+ left up/down arrow
 
 ##======================================================================================================================================
-line position 
+line selection position 
 
 go to start of line >>ctrl+ left Arrow
 
