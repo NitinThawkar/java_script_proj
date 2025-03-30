@@ -1,3 +1,6 @@
+To enable or disable FN function keys in Windows 11,
+you'll typically need to use a combination of the FN key and another key, 
+often the Escape key (Fn + Esc), or consult your laptop manufacturer's support for specific instructions. 
 ##======================================================================================================================================
 Ket bord short cut : https://keycombiner.com/collections/notepad/
 youtube : https://www.youtube.com/watch?v=8GWjRe-0shk&list=PL1z4RL0Mc_2XuRjFgG8Xgjc8XYTZK8QJq&index=7
@@ -9,6 +12,36 @@ Run >> modify shortcut/delete command
 ##======================================================================================================================================
 Show Unicode (Special Characters) in Noteapd
 Run >> run >> type CHARMAP  or (save)  (alt+R)
+##======================================================================================================================================
+Insert Line number
+ALT+ C 
+EDIT >> column Editior 
+##======================================================================================================================================
+Tab Change tab 
+
+Ctrl + number key  >> go to that position on tab
+ctrl + 9
+Change tab >>ctrl+fn+ left up/down arrow
+
+##======================================================================================================================================
+line position 
+
+go to start of line >>ctrl+ left Arrow
+
+go to end of line  >> ctrl+ right Arrow
+
+go to start of first line >> ctrl+ fn + left Arrow
+
+go to end of last line >> ctrl+ fn + right Arrow
+
+selecting full line
+Press Shift + Home if the cursor is at the end of the line. Press Shift + End
+
+with function keys (press num lock if you want to do with number keyboard)
+Press Shift + fn + Home if the cursor is at the end of the line.  
+Press fn +Shift+ End if the cursor is at the beginning of the line 
+
+
 ##======================================================================================================================================
 Edit >> Line oprations
 
@@ -292,12 +325,27 @@ Notepad++ provides multiple ways to edit number of lines at the same time. Here 
    a. Go to Settings ► Preferences ► Editing.
    b. Check box to Enable Multi Editing Settings. 
 ##======================================================================================================================================
-Automate Repetitive Task using Notepad++ Macro
+Automate Repetitive Task using Notepad++ Macro  ( like recording)
 
 ##======================================================================================================================================
+remove html or xml tag from text
+1# go to find and replace  ctrl+H
+
+2# type <[^>]+>   and replace with keep blank
+ 
+3# keep serch mode to reguler expression  and check match new line box  and press replace all button
+
+remove empty line or remove spaces (find and replace)
+EDIT >> lineOpration  >> remove empty line  
+remove spaces (find and replace)
 
 ##======================================================================================================================================
+Add Html xml tags
+1# go to find and replace  ctrl+H  check regular expression in serch option, new line option
 
+2# type "^" and replace with your html or xml tag (repalce start of text)
+2# type "$" and replace with your html or xml tag (repalce end of text)
+4# keep serch mode to reguler expression  and check match new line box  and press replace all button
 ##======================================================================================================================================
 
 ##======================================================================================================================================

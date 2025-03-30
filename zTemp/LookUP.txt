@@ -60,7 +60,7 @@ map/mapvalues
  FlatMapValues/FlatMap 
  peek 
  merge
- lomboc
+ lomboc  (other way use )recored (in java)
  
  alt +entr => new demo(); + press 
  ctrl+ d => dullicate line
