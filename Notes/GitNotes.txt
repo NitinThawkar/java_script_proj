@@ -157,6 +157,34 @@ git branch -M main
 git remote add origin https://github.com/NitinThawkar/Notes.git
 git push -u origin main
 
+=====###===================================================================================
+…or push an existing repository from the command line
+git remote add origin https://github.com/NitinThawkar/Notes.git
+git branch -M main
+					   
+
+																						   
+													   
+															   
+				  
+git push -u origin main
+
+=====###===================================================================================
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+Import code
+
+
+git push <remote-name> <local-branch-name>
+
+																						   
+										 
+																						  
+		   
+
+
+										  
+
 ############################################################################################################################
 [working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
 
@@ -168,6 +196,9 @@ git commit -am "commit message"  => Add and commit
 git remote -v                  => shoving remote git repo
 git branch                     =>show local branches name 
 git push origin <branch name>  => sending on remote server;  origin= remote
+																											  
+										
+												  
 
 # show Commit details 
 git show 5b944acd2  => git show <commit id>
