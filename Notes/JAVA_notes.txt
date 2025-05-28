@@ -1,0 +1,7 @@
+JAva Notes
+
+and then and compose
+? function, predicate , consumer,supplier
+
+Alt +enter
+=============================================================================
