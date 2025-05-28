@@ -1,3 +1,5 @@
+<tagname style="property:value;">
+------------------------------------									
 #### Helping Resource 
 MDN : https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
       https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
@@ -292,8 +294,72 @@ space is available
 
 
 ==============================================
+==============================================
+media queries 
+more responsive with different browser / orintation
+device optin in crome dev tool
+
+// changecolor based on width
+@media (min-width : 200px) and (min-width : 300px) {
+div {
+background-color : red;
+}
+}
+==============================================
+### Transitions
+Transitions enable you to define the transition between two states of an element.
+
+to add some animation to elements
+
+timing function is how the transition should be applied
+
+show hover
+
+transition-property : property you want to transition (font-size, width etc.)
+
+transition-duration : 2s / 4ms ..
+
+transition-timing-function : ease-in / ease-out / linear / steps ..
+
+transition-delay : 2s / 4ms ..
+
+--------
+Transition Shorthand
+property name | duration | timing-function | delay
+
+transition: font-size 2s ease-in-out 0.2s;
+
+to add some animation to elements
 
 ==============================================
+### CSS Transform
+
+Used to apply 2D & 3D transformations to an element
+
+transform: rotate(45deg);
+
+scale
+
+x & y axis separately
+
+transform: scale(0.5);
+
+transform: scaleX(0.5);
+
+transform: scaleY(0.5);
+
+------------------------
+
+transform: translate(20px);
+translate
+
+transform: translateX(20px);
+
+transform: translateY(20px);
+==============================================
+
+==============================================
+nested style sheet																				 
 
 ==============================================
 
