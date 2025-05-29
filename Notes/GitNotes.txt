@@ -450,7 +450,7 @@ git restore --stage  .
 git revert <commitid>   
 
 ===###===================###===================###===================###===================###================
-#modify commit
+#modify commit add/update /merge in previous commit =>git add the git amend
 
 git commit --amend  => open editor
 git commit --amend  -m "Message " 
