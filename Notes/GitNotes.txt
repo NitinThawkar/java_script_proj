@@ -1,3 +1,29 @@
+https://www.w3schools.com/git/default.asp
+
+----------------------------------------------------
+git config
+git init
+git log
+git status
+git amend
+git stash
+git diff
+git add   
+git commit    /commit --amend  
+git remote
+git branch
+git switch
+git checkout
+git reset
+git pull
+git push
+git merge
+git fetch
+git submodule
+
+delete branch
+grep
+===###===================###===================###===================###===================###================
 Frequntaly Used
 ===###===================###===================###===================###===================###================
 git remote
