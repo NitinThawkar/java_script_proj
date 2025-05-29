@@ -17,6 +17,9 @@ print ("nitin", end="/")  => we can use space , new line  \n in end end="\n"  (t
 print ("nitin", sep="/")  =>seprate
 time.sleep(1) => import time
 pass => do nothing =>just run
+
+print (help("modules"))
+print (a ** b)
 --------------------------------------------------------
 #### slice => [start index : the end index : (step in number optional)] => end index will not include  
 
@@ -167,10 +170,102 @@ while num < 1 or num > 10:
 
 print(f"You picked the number {num}")
 =======================================================================================================
+#### modules
+print (help("modules"))
+import module name
+import math => print(math.pi)
+import math as M  => print(M.pi)
+from math import  PI  => print(pi)
+from math import  *
 
+other file name can be module name  , the type import to another file or main file accept .py extesion
+=======================================================================================================
+ #### variable scope 
+# ----- LOCAL -----
+
+def func1():
+    x = 1 #local
+    print(x)
+
+def func2():
+    x = 2 #local
+    print(x)
+
+func1()
+func2()
+
+# ----- ENCLOSED -----
+
+def func1():
+    x = 1 #enclosed
+
+    def func2():
+        print(x)
+    func2()
+
+func1()
+
+# ----- GLOBAL -----
+
+def func1():
+    print(x)
+
+def func2():
+    print(x)
+
+x = 3 #global
+
+func1()
+func2()
+
+# ----- BUILT-IN -----
+
+from math import e 
+
+def func1():
+    print(e)
+
+func1()
 =======================================================================================================
 
-=======================================================================================================
+#### __main__
+
+You can also run a script by right clicking within that script and selecting 'Run'. I forgot about that shortcut while filming this video.
+
+if __name__ == __main__: (this script can be imported OR run standalone)
+Functions and classes in this module can be reused without the main block of code executing
+
+Good practice (code is modular, helps readability, leaves no global variables, avoids unintended execution)
+
+Ex. library = Import library for functionality.
+                      When running library directly, display a help page
+
+# ---------- script1.py ----------
+# This file can run standalone or be imported
+
+def favorite_food(food):
+    print(f"Your favorite food is {food}")
+
+def main():
+    print("This is script1")
+    favorite_food("pizza")
+    print("Goodbye!")
+
+if __name__ == '__main__':
+    main()
+
+# ---------- script2.py ----------
+# This file should run only standalone
+
+from script1 import *
+
+def favorite_drink(drink):
+    print(f"Your favorite drink is {drink}")
+
+print("This is script2")
+favorite_food("sushi")
+favorite_drink("coffee")
+print('Goodbye!')
 
 =======================================================================================================
 
