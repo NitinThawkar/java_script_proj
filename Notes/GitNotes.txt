@@ -386,6 +386,9 @@ git checkout -  (hyfun)
 
 
 ===###===================###===================###===================###===================###================
+
+git desktop stash => select al files and right click on changed file check box/label
+
 Stash retrieve, show, list, delete & save
 
 #stash
