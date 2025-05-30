@@ -1,5 +1,10 @@
 ✨ 
 
+✍️ (Person writing)
+✏️ (Pencil)
+✒️ (Black pen)
+✍️ (Writing hand)
+
 API
 
 server.port=8089
