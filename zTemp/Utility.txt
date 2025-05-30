@@ -7,8 +7,9 @@
 ✍️ (Writing hand)
 
 =================================================================
-In programming, casing refers to the capitalization style used for naming variables, functions, classes, etc. Common casing styles include camel case, Pascal case, snake case, and kebab case, each with its own conventions for capitalizing words within the name. [1, 2]  
-Here's a breakdown of the most common case types: 
+In programming, casing refers to the capitalization style used for naming variables, functions, classes, etc. 
+Common casing styles include camel case, Pascal case, snake case, and kebab case
+
 
 Camel Case => myVariableName
 Pascal Case => MyVariableName
