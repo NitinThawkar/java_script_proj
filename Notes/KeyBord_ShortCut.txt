@@ -1,4 +1,4 @@
-IntelliJ Java keybord short cut
+✨ IntelliJ Java keybord short cut
 
 ALT + ENTER => on code line
 ctrl+D => duplicate lines 

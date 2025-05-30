@@ -1,11 +1,11 @@
-Official Doc
+✨  Official Doc
 
 https://react.dev/learn/installation
 
 create resct app : https://create-react-app.dev/
 
 =================================================================
-react js with vite
+✨ react js with vite
 =================================================================
 what is vite > install vite
 install node and NPM 

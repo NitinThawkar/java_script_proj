@@ -1,3 +1,4 @@
+✨ Notepad plus plus ✨
 To enable or disable FN function keys in Windows 11,
 you'll typically need to use a combination of the FN key and another key, 
 often the Escape key (Fn + Esc), or consult your laptop manufacturer's support for specific instructions. 

@@ -1,3 +1,5 @@
+✨ Linux Notes
+
 LINUX command : https://medium.com/@subhampradhan966/linux-fundamentals-and-basic-commands-30a1ea72ea11
 
 BASH : https://www.w3schools.com/bash/bash_touch.php

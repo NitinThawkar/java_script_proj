@@ -1,6 +1,4 @@
-
-
-Python Notes
+✨ Python Notes
 https://www.w3schools.com/python/python_operators.asp
 =======================================================================================================
 use # for comment 
@@ -21,7 +19,7 @@ pass => do nothing =>just run
 print (help("modules"))
 print (a ** b)
 --------------------------------------------------------
-#### slice => [start index : the end index : (step in number optional)] => end index will not include  
+#### ✨ slice => [start index : the end index : (step in number optional)] => end index will not include  
 
 => print("Hello, World!"[2:5]) => llo
 => print("abcdefghijk"[0:9:2]) => acegi
