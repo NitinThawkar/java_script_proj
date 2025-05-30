@@ -1,4 +1,4 @@
-### Angular 
+✨  ### Angular 
    ng new --no-standalone
    
    ng new MyAngularProjNgModule --no-standalone
@@ -16,11 +16,14 @@
 ==========================================================================
 https://www.w3schools.com/jsref/default.asp
 ==========================================================================
-
+https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/#io
+https://docs.spring.io/spring-boot/tutorial/index.html
 ==========================================================================
-
+Kafka
+https://kafka.apache.org/39/documentation/streams/developer-guide/
+https://kafka.apache.org/documentation/#connect
 ==========================================================================
-
+https://docs.confluent.io/kafka/kafka-apis.html
 ==========================================================================
 
 ==========================================================================

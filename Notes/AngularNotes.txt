@@ -1,3 +1,5 @@
+✨ Angular 
+
    ng new --no-standalone
    
    ng new MyAngularProjNgModule --no-standalone

@@ -1,11 +1,11 @@
-Official Doc
+✨  Official Doc
 
 https://react.dev/learn/installation
 
 create resct app : https://create-react-app.dev/
 
 =================================================================
-react js with vite
+✨ react js with vite
 =================================================================
 what is vite > install vite
 install node and NPM 
@@ -20,6 +20,12 @@ and npm install
 npm run dev (for vite)
 npm start (for non vite)
 =================================================================
+  cd my-reacy-js-proj
+  npm install
+  npm run dev
+  
+
+=================================================================
 type script with +Swc (Speedy Web Compiler)
 
 Rust-based platform for the Web
@@ -33,6 +39,98 @@ https://vite.dev/guide/
 =================================================================
 ### questions 
 .jxs ?
+
+
+prop, state and hook,memo ?
+=================================================================
+### comment
+
+ {/* This is a comment in React */}
+ 
+ // Types of comment  support in  react ****************************************************//
+// ConditionalRendering.jsx
+/* Hello component  Start */
+{/* This is only work in component  block in React */}
+----------------------------------------------------------------
+
+### fragment
+<></>
+----------------------------------------------------------------
+
+const {abcd}= value || {};  value or default , in this case empty object is defaut 
+
+e.preventDefault
+=================================================================
+### inline style
+ <h3 style={{ color: "red" }}>
+----------------------------------------------------------------
+<comp name >.module.css
+=================================================================
+### take away
+1. componet name start with capital letter, componenet return JSX
+
+2. Importing and Exporting Components
+default export
+multiple export
+named export
+
+3.prop = property
+prop are immutable
+componant will accept props
+prop is a js object datatype
+props are readonly you can not modify  in between passing 
+used for passing data from parent component to child component
+
+=================================================================
+### JSON.stringify(props)  , prop is a object
+console.log(JSON.stringify(props));
+
+=================================================================
+ <h1>{`Hello ${user}!`}</h1>
+   alert(`Name: ${inputRef.current.value}`);
+=================================================================
+### Controlled Component
+a componant Control  <form> input fields with states 
+
+uncontrolled >> use ref >> using selector >> directly dom  referance
+=================================================================
+### hook
+hook's are reguler functions but these function only called by react component (alwayes place inside of component)
+
+useState
+useDispatch
+useSelector
+useparams
+useNavigate/usedLocation
+useref
+forward Ref>> depricated from vesion 19
+useformStstus hoo =>
+useactionstate
+=================================================================
+next js
+router.push ()=> this will create entry in history
+router.replace ()=> this will not  create entry in history  broser back button will not work
+router.reload()  => this will reload page
+
+
+incremental site genaration  (isg)
+
+
+import {link} from "next/Link"
+import {link} from "next/Link"
+
+SWR : stale while revalidating  =>>hook develop by next team 
+npm install swr
+
+
+export get serverside prop
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
 =================================================================
 
 =================================================================
@@ -42,4 +140,41 @@ https://vite.dev/guide/
 =================================================================
 
 =================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
 =================================================================

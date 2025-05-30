@@ -1,0 +1,143 @@
+✨ 
+
+API
+
+server.port=8089
+management.server.port=8081
+=========================================
+
+=========================================
+Simulator  Api 
+server.port=8091
+management.server.port=8081   // 8083
+
+POST http://localhost:8091/api/v1/simulate
+=========================================
+Integration
+management.server.port=8081   //8082
+=========================================
+event
+server.port=8095
+
+management.server.port=8081
+=========================================
+
+=========================================
+
+select * from tenant_test.metrics
+select * from tenant_test.rules
+select * from tenant_test.events
+select * from tenant_test.events_2025_02
+select * from tenant_test.footprint_data
+select * from tenant_test.data_auditor_thresholds
+select * from tenant_test.devices
+select * from tenant_test.conditions
+select * from tenant_test.segments
+select * from tenant_test.flyway_schema_history
+select * from tenant_test.segment_types
+select * from tenant_test.manufacturers
+select * from tenant_test.technologies
+select * from tenant_test.assets
+
+
+==============================================
+
+INSERT INTO tenant_test.assets
+INSERT INTO tenant_test.segments
+INSERT INTO tenant_test.devices
+INSERT INTO tenant_test.metrics 
+INSERT INTO tenant_test.footprint_data
+INSERT INTO tenant_test.conditions
+INSERT INTO tenant_test.rules
+INSERT INTO tenant_test.events
+INSERT INTO tenant_test.data_auditor_thresholds
+
+======================================================
+
+https://github.com/dilipsundarraj1
+
+================
+serdes
+map/mapvalues
+ FlatMapValues/FlatMap 
+ peek 
+ merge
+ lomboc  (other way use )recored (in java)
+ 
+ alt +entr => new demo(); + press 
+ ctrl+ d => dullicate line
+ 
+ ctrl_shifr +f
+ 
+ctrl+shift+A
+ctrl+Alt+L  => indentation
+ctrl+Alt+T
+------------------------------
+service
+@component
+
+
+-------------------------------
+@restcontroller
+@requestmapping 
+@autowired
+
+@putMapping ("/{username}")
+@postmapping({username})
+@RequestBody
+@pathVariable
+-----------------------------
+@noArgconstructore >> lombog
+@data
+@trnsactional
+@Enable TransactionManagement
+
+-----------------------------
+Security
+@Configuration
+@EnableWebSecurity
+-----------------------------
+@override
+@value
+@postconstruct
+@scheduled
+@scheduling
+APP_CACHE
+-----------------------------
+Testing 
+@SpringBootTest
+@parameterisedTest
+@CsvSource
+@ArgumentSource
+@After
+@AfterAll
+@Before
+@mockBean
+@injectMock//@mock
+=====================
+
+
+
+
+
+
+
+"
+WITH    tbl AS (
+ SELECT Table_Schema, Table_Name
+ FROM   information_schema.Tables
+ WHERE  Table_Name NOT LIKE 'pg_%'
+        AND Table_Schema IN ('tenant_test')
+)
+SELECT  Table_Schema AS Schema_Name
+,       Table_Name
+,       (xpath('/row/c/text()', query_to_xml(format(
+          'SELECT count(*) AS c FROM %I.%I', Table_Schema, Table_Name
+        ), FALSE, TRUE, '')))[1]::text::int AS Records_Count
+FROM    tbl
+ORDER   BY Records_Count DESC ,table_name Asc;"
+
+
+====================
+1.3136151944117787
+

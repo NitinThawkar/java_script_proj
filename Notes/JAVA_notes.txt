@@ -1,0 +1,48 @@
+✨ JAva Notes
+
+and then and compose
+? function, predicate , consumer,supplier
+
+Alt +enter
+=============================================================================
+iterable
+itrator
+listIterator
+=============================================================================
+#########################################################################################
+## https://github.com/NitinThawkar/Notes/blob/main/JAVA/image.png
+## https://github.com/NitinThawkar/Notes/blob/main/JAVA/JAVA_notes.txt
+
+URL : https://www.w3schools.com/java/java_arraylist.asp
+      https://www.w3schools.com/java/java_ref_arraylist.asp  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//URL : https://www.w3schools.com/java/java_arraylist.asp
+       https://www.w3schools.com/java/java_ref_arraylist.asp 
+#### import java.util.ArrayList;  
+
+import java.util.ArrayList; // import the ArrayList class
+ArrayList<String> cars = new ArrayList<String>();
+
+
+
+element_data = (Object []) fields.get (list);
+
+?  .asLIst() , .set()
+? time compecity of  ArrayList
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+transient ?
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#### Stream
+Java 8 gave sone inbuild interface like function, predicate , consumer,supplier
+https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/Java8Demo.java
+
+
+Stream
+https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/StreamDemo.java
+https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/IntermediateOps.java
+https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/TerminalOps.java
+https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/LazyEvaluationDemo.java
+https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/ParallelStream.java
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

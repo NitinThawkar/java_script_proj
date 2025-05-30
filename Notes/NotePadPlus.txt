@@ -1,0 +1,378 @@
+✨ Notepad plus plus ✨
+To enable or disable FN function keys in Windows 11,
+you'll typically need to use a combination of the FN key and another key, 
+often the Escape key (Fn + Esc), or consult your laptop manufacturer's support for specific instructions. 
+##======================================================================================================================================
+Ket bord short cut : https://keycombiner.com/collections/notepad/
+youtube : https://www.youtube.com/watch?v=8GWjRe-0shk&list=PL1z4RL0Mc_2XuRjFgG8Xgjc8XYTZK8QJq&index=7
+
+what is notepad ++ portable version?
+##======================================================================================================================================
+modify shortcut
+Run >> modify shortcut/delete command
+##======================================================================================================================================
+Show Unicode (Special Characters) in Noteapd
+Run >> run >> type CHARMAP  or (save)  (alt+R)
+##======================================================================================================================================
+Insert Line number
+ALT+ C 
+EDIT >> column Editior 
+##======================================================================================================================================
+Tab Change tab 
+
+Ctrl + number key  >> go to that position on tab
+ctrl + 9
+Change tab >>ctrl+fn+ left up/down arrow
+
+##======================================================================================================================================
+line selection position 
+
+go to start of line >>ctrl+ left Arrow
+
+go to end of line  >> ctrl+ right Arrow
+
+go to start of first line >> ctrl+ fn + left Arrow
+
+go to end of last line >> ctrl+ fn + right Arrow
+
+selecting full line
+Press Shift + Home if the cursor is at the end of the line. Press Shift + End
+
+with function keys (press num lock if you want to do with number keyboard)
+Press Shift + fn + Home if the cursor is at the end of the line.  
+Press fn +Shift+ End if the cursor is at the beginning of the line 
+
+
+##======================================================================================================================================
+Edit >> Line oprations
+
+view >> document map
+
+
+Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
+----------------------
+Align By Character : Ctrl + Shift + =
+##======================================================================================================================================
+Insert date
+serch in plugin >> plugin demo >> 
+
+short format: Alt + Ctrl + d 
+long format : Alt + Ctrl + Shift + d
+
+Run >> modify shortcut/delete command
+setting >> shortcut mapper 
+Edit >> insert
+
+##======================================================================================================================================
+create duplicate
+Edit >> Line oprations
+select content an press #  ctrl+d
+
+Line Operations: (   • NOTEPAD++ DUPLICATE TEXT LINES: A Fas...  )
+--------------------------
+Duplicate line : ctrl + D (or a word) 
+Move Line Up   : Ctrl + Shift + Up Arrow
+Move Line Down : Ctrl + Shift + Down Arrow
+
+Search and Replace (Find)
+-------------------------------------------
+Show Find Dialog   : Ctrl + Find
+Search Next Instance : F3
+Search Previous Instance: Shift + F3
+Go to Line Number       : Ctrl + G 
+
+Column Editing (   • NOTEPAD++ COLUMN EDIT MODE: Edit Mult...  )
+------------------------
+Select Columns      : Alt + Shift + Arrow Keys 
+Select Columns      : Alt + Shift + Left Mouse 
+Bring Column Editor : Alt + C 
+
+Zooming Text (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
+----------------------
+Zoom In Text  : CTRL + MOUSE WHEEL UP
+Zoom Out Text : CTRL + MOUSE WHEEL DOWN
+
+Commenting or Uncommenting: (   • NOTEPAD++ DUPLICATE TEXT LINES: A Fas...  )
+--------------------------
+Add Single line comment   : Ctrl + K 
+Remove Single Line Comment : ctrl + Shift + K 
+
+Change Text Case to Upper/Lower/Proper Case (   • NOTEPAD++ COLUMN EDIT MODE: Edit Mult...  )
+------------------------
+Change Selected Text To Uppercase : Ctrl + Shift + U 
+Change Selected Text to Lowercase : Ctrl + U
+Proper case        : ALT + U
+
+Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
+----------------------
+Align By Character : Ctrl + Shift + =
+##======================================================================================================================================
+how to indent html tags in notepad++  // format code
+serch in plugin >> xml tool>>  # (ctrl + Alt + shift + B)
+serch in plugin >> code aligment  # (ctrl  + shift + =)
+
+
+##======================================================================================================================================
+Edit >> convert to case 
+UPPERCASE >> ctrl + shift + U
+lowercase >> ctrl + U
+Proper case        : ALT + U
+##======================================================================================================================================
+compaire 
+ctrl +alt+ C
+##======================================================================================================================================
+markdown
+save document as md file    <filename>.md
+plugin>>Markdown>>  serch mark down in plug in 
+##======================================================================================================================================
+BOOK MARK BOOKMARK bookmark
+1. Toggle a bookmark in notepad++       (CTRL + F2)
+2. Go to next bookmark in notepad++     (F2)
+3. Go to previous bookmark in notepad++ (SHIFT + F2)
+
+ARE BOOKMARKS SAVED ON NOTEPAD++ RESTART
+No! But you can use notepad++ sessions to save bookmarks.
+
+Can I see all my bookmarks in the file?
+Yes, using a Bookmark Panel plugin. 
+##======================================================================================================================================
+
+##======================================================================================================================================
+FIND AND REPLACE WITH NEW LINE
+==============================
+
+SEARCH FOR: any character
+REPACE WITH: \r\n
+
+WHAT IS \r\n (Carriage Return and Line Feed)?
+=============
+\r   : Carriage Return (CR) 
+\n   : Line Feed(LF) - a new line character in Unix/Mac OS X
+\r\n : Used as a new line character in Windows
+
+EXAMPLES:
+
+Notepad++ Find And Replace Space With New line
+==========================
+Apple Banana Kiwi Mango Orange 
+
+
+Find and Replace commas with New Line
+============================
+Blue, Black, Yellow, White, Red
+
+
+Specific Words with New line
+============================
+background: white
+foreground: blue
+color: red
+font: consolas
+##======================================================================================================================================
+Show Symbols Or Special Characters
+COMMON TYPES: NON-ALPHANUMERIC CHARACTERS (HIDDEN)
+==================================================
+Spaces, Tabs, Line Feed (LF), Carriage Return (CR)
+
+HOW TO VIEW THEM
+================
+1. From Menubar View ...Show Symbol ... Show All Characters
+
+2. From the toolbar icon.
+
+##======================================================================================================================================
+Sell check spelling
+1. Go to Plugins ► Plugins Admin. 
+2. Search for 'SpellCheck'
+3. Read the description. 
+4. Click Install.
+5. Notepad++ will restart. And you should be able to see DSpellCheck under the Plugins menu. 
+
+STILL, SPELL CHECK IN NOTEPAD++ NOT WORKING?
+It is possible that Notepad++ spell check may still not be working. The reason is that it still doesn't know which language to check spelling errors in! 
+
+We need to do one more step. Go to Plugins ► DSpellCheck ► Change Current Language. You need to select the language and install it (For me, it was English (United States). Once the language is installed. You will be able to see the Spelling Errors with a RED curly underline. You can right-click on spelling errors to correct the errors.
+##======================================================================================================================================
+CREATE CLICKABLE HTML LINK (HYPERLINK) 
+
+To enable or disable links that can be "clickable" in Notepad++
+
+Browse to Settings
+Browse to Preferences
+Select "Misc."
+Check "Enable" under clickable link settings.
+If you do not like an underline, check "No Underline" 
+Click Close. 
+Now, if you double click a link, it will open in a web browser.
+##======================================================================================================================================
+Settings >> preferences >> backup
+
+Discover Top 5 Best Settings for Coding in Notepad++
+
+1. AUTOMATIC BACKUP      # Settings >> preferences >> backup
+2. TABS TO SPACES        # Settings >> preferences >> language 
+3. VERTICAL EDGE SETTINGS# Settings >> preferences >>
+4. AUTO COMPLETE FEATURES# Settings >> preferences >>
+5. SETTING THEME/FONTS   # Settings >> preferences >>
+
+Automatic Backup - protects you from unexpected windows, Notepad++ crashes. It saves your changes, so that you don't lose your valuable time and text. You can also further foolproof your coding environment with simple/verbose backup settings.  
+
+Tabs to Spaces: Make sure to replaces tabs to spaces, so that it does not look funny when you pass your code to someone else, who have a different tab settings than your. 
+
+Vertical Edge settings: allows you a visual guide line to see how wide your code is. It is usually set to 80 or 100 characters, it keeps your code nice and clean. 
+
+Auto Complete Features: helps you to auto complete the word or functions. It can also auto complete the parenthesis, curly brackets and even html closing tags. 
+
+Setting Theme and Fonts: Change your Notepad++ themes and fonts from Style Configurator. 
+##======================================================================================================================================
+How to View HTML File in Firefox, Google Chrome, IE, Edge in Notepad++
+
+All you have to do is to go to 'View' ► View Current File In ► Google Chrome/Mozilla FireFox/Internet Explorer/Microsoft Edge web browsers.
+##======================================================================================================================================
+COMMENT OUT OR UNCOMMENT LINES
+
+
+We can use the Notepad++ comment feature to comment out a single line or multiple line block in Notepad using menu items or using a keyboard shortcut. 
+
+Keyboard Shortcuts
+------------------
+Single Line Comment in  Notepad++: CTRL + K
+Single Line Notepad++ Uncomment shortcut: CTRL + SHIFT + K
+
+Block Comment         : CTRL + SHIFT + Q
+
+##======================================================================================================================================
+TO ADD/INSTALL NOTEPAD++ PLUGINS (EXTENSIONS) 
+=============================================
+1. Go to Plugins ► Plugins Admin. 
+2. Plugin Admin Windows contains three tabs. 
+ 1) Available Plugins 
+ 2) Plugins that need Updates 
+ 3) Installed Plugins
+3. You can select a particular plugin and read its description to know what this plugin does. 
+4. To install plugins in Notepad++, simply Click the Install button.
+5. Notepad++ will restart so make sure you save your unsaved document. 
+6. you can see all your Notepad++ plugins under the plugins menu.
+
+WE WILL INSTALL THREE PLUGINS:
+==============================
+1. Notepad++ Explorer - File Explorer plugin
+2. NppFTP -   Notepad++  FTP plugin to connect to ftp server
+3. Preview HTML - plugin to preview HTML code right from Notepad++ (see detailed video,    • PREVIEW HTML WEBPAGE RIGHT FROM NOTEP...  )
+##======================================================================================================================================
+Set Vertical Edge In Notepad++ to Help with Line Length
+
+WHY DO YOU NEED SET VERTICAL EDGE IN NOTEPAD++?
+
+It gives you a visual aid of width of your source code.
+For many software development teams, coding guidelines are set to limit the 
+  characters to 80 or 100.
+It is easy to read through your source code.
+Reader does not need to scroll left and right to navigate through your code.
+It makes the source code cleaner. 
+It also encourages the developer to write succinct code rather than too long lines.
+This vertical line WILL NOT SHOW UP if you print your code.
+
+WHERE IS NOTEPAD++ VERTICAL EDGE SETTINGS OPTION?
+
+It is under Settings ► Preferences ► Editing ► Vertical Edge Settings. 
+
+You can also set multiple vertical edges in Notepad++. 
+
+##======================================================================================================================================
+VIEW TWO FILES SIDE BY SIDE IN NOTEPAD
+
+VIEW TWO FILES SIDE BY SIDE IN NOTEPAD++: How You Can Compare Contents Of Two Files Without Plugin
+==========================
+Notepad++ allows you to view/edit/compare two files side by side without any plugin. For this, you will need to use 'Move to Other View' or 'Clone to Other View' feature. There are three ways you can achieve this. 
+
+1. Right click on the file tab and "Move to other View" or "Clone to other View"
+
+2. From Menubar, View  ➜ Move/Clone Current Document.
+
+3. Drag the file tab and an Option will appear to "Move or Clone the Document"
+
+COMPARING CONTENTS OF TWO FILES SIDE BY SIDE SYNCHRONOUSLY
+===========================
+
+You can use "Synchronize Vertical/Horizontal Scrolling" from Toolbar icons. These features allow you to compare the contents of two files since you can synchronize scrolling of two files' content. 
+##======================================================================================================================================
+CHANGE DEFAULT FONT IN NOTEPAD
+
+1. Go to Settings.
+2. Click on Style Configurator.
+3. Change Font Name Under Font Style. 
+
+SELECT MONOSPACED FONT:
+-------------------------------
+COURIER NEW
+CONSOLAS
+##======================================================================================================================================
+ EDIT MULTIPLE LINES AT THE SAME TIME IN NOTEPAD
+ 
+ HOW TO EDIT MULTIPLE LINES AT THE SAME TIME IN NOTEPAD++
+
+
+Notepad++ provides multiple ways to edit number of lines at the same time. Here are three powerful ways to edit multiple lines at the same time.  It is a great time saver. 
+
+1. Using ALT + Mouse Method 
+
+2. Using ALT + SHIFT + Arrow keys
+
+3. Using CTRL + Mouse Selection. 
+   
+   First need to enable MULTI EDITING SETTING.
+   
+   a. Go to Settings ► Preferences ► Editing.
+   b. Check box to Enable Multi Editing Settings. 
+##======================================================================================================================================
+Automate Repetitive Task using Notepad++ Macro  ( like recording)
+
+##======================================================================================================================================
+remove html or xml tag from text
+1# go to find and replace  ctrl+H
+
+2# type <[^>]+>   and replace with keep blank
+ 
+3# keep serch mode to reguler expression  and check match new line box  and press replace all button
+
+remove empty line or remove spaces (find and replace)
+EDIT >> lineOpration  >> remove empty line  
+remove spaces (find and replace)
+
+##======================================================================================================================================
+Add Html xml tags
+1# go to find and replace  ctrl+H  check regular expression in serch option, new line option
+
+2# type "^" and replace with your html or xml tag (repalce start of text)
+2# type "$" and replace with your html or xml tag (repalce end of text)
+4# keep serch mode to reguler expression  and check match new line box  and press replace all button
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================
+
+##======================================================================================================================================

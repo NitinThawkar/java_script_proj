@@ -1,11 +1,39 @@
+✨ https://www.w3schools.com/git/default.asp
+
+----------------------------------------------------
+git config
+git init
+git log
+git status
+git amend
+git stash
+git diff
+git add   
+git commit    /commit --amend  
+git remote
+git branch
+git switch
+git checkout
+git reset
+git pull
+git push
+git merge
+git fetch
+git submodule
+
+delete branch
+grep
+===###===================###===================###===================###===================###================
 Frequntaly Used
 ===###===================###===================###===================###===================###================
+git remote
 git config --list
 git clone <-Repo Link->
 git status 
 git diff  <-BranchName-> use to compaire two different commit or use to compaire two different branches or files and MORE 
 git log
 
+git config --global alias.ch = checkout  ## now open .gitconfig file , shoercu will created for checkout command
 
 ===###===================###===================###===================###===================###================
 git status
@@ -29,8 +57,15 @@ git push <remote-name> <local-branch-name>
 ===###===================###===================###===================###===================###================
 git branch                     =>show local branches name 
 git branch -M <new name> (rename branch)
+
+git switch  <branch Name> ( switch command also use  to change a branch)
+git switch -C <new branch Name>   (create new branch and swithch to that new branch)
 git checkout <branch name> (on which branch you want to work, use to navigate)
 git checkout -b <new branch name>  or  git checkout -b <new branch name> main  => this will create new branch from main branch
+
+// discard all changes change the branch or revert all changes and change the branch
+git checkout .      (dot)
+
 
 // delete branch locally
 git branch -d develop4
@@ -73,6 +108,8 @@ Case 3:  commited changes (for many commit )
 		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
 		
 ----------------------------------
+===###===================###===================###===================###===================###================
+FORK (rough copy of other user repo)
 
 
 ################################################################################################################
@@ -146,6 +183,34 @@ git branch -M main
 git remote add origin https://github.com/NitinThawkar/Notes.git
 git push -u origin main
 
+=====###===================================================================================
+…or push an existing repository from the command line
+git remote add origin https://github.com/NitinThawkar/Notes.git
+git branch -M main
+					   
+
+																						   
+													   
+															   
+				  
+git push -u origin main
+
+=====###===================================================================================
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+Import code
+
+
+git push <remote-name> <local-branch-name>
+
+																						   
+										 
+																						  
+		   
+
+
+										  
+
 ############################################################################################################################
 [working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
 
@@ -157,6 +222,9 @@ git commit -am "commit message"  => Add and commit
 git remote -v                  => shoving remote git repo
 git branch                     =>show local branches name 
 git push origin <branch name>  => sending on remote server;  origin= remote
+																											  
+										
+												  
 
 # show Commit details 
 git show 5b944acd2  => git show <commit id>
@@ -344,22 +412,36 @@ git checkout -  (hyfun)
 
 
 ===###===================###===================###===================###===================###================
+
+git desktop stash => select al files and right click on changed file check box/label
+
 Stash retrieve, show, list, delete & save
 
 #stash
 git stash
-git stash list
+git stash --keep -index  (only stash untract file not stage files)
+git stash --include -untracked
+git stash list (show all stash)
 git stash save "stash name"
 git stash show => recent stash show
+git stash show <stash id>  #stash@{0}
 git stash show -p => recent stash show with content
 
-git stash pop  =>apply last chnages
+
+
+git stash -- <file name>   //only stash that file
+git stash -m <"any message" > -- <file name>   //only stash that file
+git stash -m "my stash" 
+
+git stash pop  =>apply last chnages apply last chnages and removed from list
 git stash apply <stashid>  =>apply save stash chnages
 
-#delete stash
+//apply
 git stash pop  =>apply last chnages and removed from list
-git stash derop {id} =>apply last chnages and removed from list
-git stash clear => remove all from list
+
+#delete stash
+git stash drop {id} =>apply last chnages and removed from list
+git stash clear => remove all stash from list
 
 #stash to another branch
 git stash branch <other branch name> {Stashid}
@@ -385,12 +467,16 @@ git reset <-HASH ID->  =>staging to local
 git reset <commit id>  => remove from staging 
 git reset --hard <commit id>   => remove from staging and local/ working revert from every places
 git reset HEAD <file name> 
-git restore --stage <filename>
+git restore <filename>  // to discard changes in working directory
+git restore --stage <filename>   // if file present in stage area and we want to restore. it will move in change area
+git restore --stage --worktree . // (dot) every thing will discard from working tree  
+git restore --stage  .
+
 
 git revert <commitid>   
 
 ===###===================###===================###===================###===================###================
-#modify commit
+#modify commit add/update /merge in previous commit =>git add the git amend
 
 git commit --amend  => open editor
 git commit --amend  -m "Message " 
