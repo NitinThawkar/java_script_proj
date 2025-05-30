@@ -47,7 +47,8 @@ const myName ="nitin";
 let myNum = 12;
 function Car() {       ✏️=>component name alwayes in cap's
 
-  {/* we can add more JS logic here */}
+  {/* we can add more JS logic here */}  
+  var abc ="qwe";
 	
   return (
   <div>
