@@ -1,0 +1,38 @@
+✨ Utility ✨ 
+=================================================================
+✨ 
+✍️ (Person writing)
+✏️ (Pencil)
+✒️ (Black pen)
+✍️ (Writing hand)
+
+=================================================================
+In programming, casing refers to the capitalization style used for naming variables, functions, classes, etc. Common casing styles include camel case, Pascal case, snake case, and kebab case, each with its own conventions for capitalizing words within the name. [1, 2]  
+Here's a breakdown of the most common case types: 
+
+Camel Case => myVariableName
+Pascal Case => MyVariableName
+Snake Case => my_variable_name
+Kebab Cas => my-variable-name
+Flat Case => myvariablename
+Upper Case => MY_VARIABLE_NAME
+
+• Camel Case: Capitalizes the first letter of each word after the first word (e.g., myVariableName). [1]  
+• Pascal Case: Capitalizes the first letter of each word (e.g., MyVariableName). [1]  
+• Snake Case: Separates words with underscores and uses lowercase letters (e.g., my_variable_name). [1]  
+• Kebab Case: Separates words with hyphens and uses lowercase letters (e.g., my-variable-name). [1]  
+• Flat Case: No capitalization or punctuation is used, simply concatenating all letters (e.g., myvariablename). [1, 3, 4]  
+• Upper Case (Constant Case): All letters are capitalized, often used for constants (e.g., MY_VARIABLE_NAME). [1, 5, 6, 7, 8]  
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
