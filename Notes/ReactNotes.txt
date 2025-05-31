@@ -7,12 +7,16 @@ Learn React https://18.react.dev/learn/sharing-state-between-components
 https://react.dev/learn/managing-state
 create resct app : https://create-react-app.dev/
 form hook : https://www.react-hook-form.com/
-#alwayes check import and export
+nest js replacement : https://remix.run/
+
+
 ==================================================================================================================================
+ChatGPT.com switched from NextJS to Remix
 ? create your own hook , custome hook ?
 
 ? State Lifting in React ?
 ? e.stopPropogation  => stop event bubbling 
+#alwayes check import and export
 ==================================================================================================================================
 Query parameter  =>   www.sj.com/employee?id= nitin
 route parameter  =>   www.sj.com/ employee/2
@@ -882,6 +886,114 @@ form hook : https://www.react-hook-form.com/
 ==================================================================================================================================
 
 ==================================================================================================================================
+✨ When to use "useRef" React Hook ✨ 
+
+https://18.react.dev/reference/react/useRef
+------------------------------------------------------------------------------
+1]keep value persist in between re-render
+2] we can directly aceess dom element using useRef
+------------------------------------------------------------------------------
+import { useState, useEffect, useRef } from 'react'
+import './App. css'
+
+function App() {
+const [count, setCount] = useState(0);
+let val = useRef(0);				✏️ 
+let btnRef = useRef();				✏️
+
+function handleIncrement() {
+val.current = val.current + 1;
+console. log("Value of val: ", val. current)
+setCount(count +1);
+
+//it runs on every render
+useEffect(() => {
+console. log("main ferse render hogya hu")
+
+return (
+<div>
+
+<button 
+ref={btnRef)						✏️ 
+onClick={handleIncrement}>			✏️
+Increment
+</button>
+<br/>
+Increment
+</button>
+<br/>
+
+<div>
+Count: {count}
+</div>
+</div>
+------------------------------------------------------------------------------
+function App() {
+function handleIncrement() {
+console. log("Value of val: ", val.current);  ✏️ IT HAVE CURRENT METHOD
+setCount(count +1);
+
+//it runs on every render
+useEffect(() => {
+console. log("main ferse render hogya hu")
+
+function changeColor() {
+btnRef.current.style.backgroundColor = "red";  ✏️ chainging dom color
+
+<br/>
+
+return (
+<div>
+
+<button
+ref={btnRef}
+onClick={handleIncrement}>
+Increment
+</button>
+<br/>
+
+<button onClick={changeColor}>
+Change Color of 1st Button
+</button>
+
+<br/>
+------------------------------------------------------------------------------
+function App() {
+// btnRef.current.style.backgroundColor = "red";
+
+const [time, setTime] = useState(0);
+
+let timerRef = useRef(null);
+
+function startTimer() {
+timerRef.current = setInterval( () => {
+setTime(time+1)
+}, 1000);
+
+function stopTimer() {
+clearInterval(timerRef.current);
+timerRef.current = null;
+
+function resetTimer()
+I
+
+return (
+<div>
+<h1>StopWatch: {time} seconds</h1>
+<button onClick={startTimer}>
+Start
+</button>
+<br/> <br/>
+
+<button onClick={stopTimer}>
+Stop
+</button>
+<br/> <br/>
+
+<button onClick={resetTimer}>
+Reset
+</button>
+------------------------------------------------------------------------------
 
 ==================================================================================================================================
 
