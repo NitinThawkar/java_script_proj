@@ -8,6 +8,7 @@ https://react.dev/learn/managing-state
 create resct app : https://create-react-app.dev/
 form hook : https://www.react-hook-form.com/
 nest js replacement : https://remix.run/
+redux : https://react-redux.js.org/introduction/getting-started
 ==================================================================================================================================
 #### command  to run project
 npm run dev
