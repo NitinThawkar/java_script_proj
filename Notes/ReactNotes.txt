@@ -14,6 +14,9 @@ create resct app : https://create-react-app.dev/
 ? State Lifting in React ?
 ? e.stopPropogation  => stop event bubbling 
 ==================================================================================================================================
+Query parameter  =>   www.sj.com/employee?id= nitin
+route parameter  =>   www.sj.com/ employee/2
+=========================================================================
 className  => use for css  (camel case)
 props      => propeties  or html element propeties
 onClick    => event  (camel case)	
@@ -32,7 +35,7 @@ e.target.value  => get any html element value  . like input ,button etc
 
 
 useEffect
-useParams
+useParams    => read query string parameter from url/route path in componenetnt
 useRef
 useReduces  => use with dispatch , like use state , define initial state
 createContex () =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
@@ -129,7 +132,7 @@ return (
 export default card
 ---------------------------------
 
-Use In App Componant
+Use In App Component
 
 function App (){
 return (<div> 
@@ -169,7 +172,7 @@ return (
 export default MyButton
 -----------------------------------------
 
-Use In App Componant Change 
+Use In App Component Change 
 
 function App (){										✏️=> App component
 const [count,setCount] = useState (0)					✏️=> use state to store count
@@ -324,7 +327,7 @@ named export
 
 3.prop = property
 prop are immutable
-componant will accept props
+component will accept props
 prop is a js object datatype
 props are readonly you can not modify  in between passing 
 used for passing data from parent component to child component
@@ -342,7 +345,7 @@ console.log(JSON.stringify(props));
    alert(`Name: ${inputRef.current.value}`);
 ==================================================================================================================================
 ### Controlled Component
-a componant Control  <form> input fields with states 
+a component Control  <form> input fields with states 
 
 uncontrolled >> use ref >> using selector >> directly dom  referance
 ==================================================================================================================================
@@ -822,7 +825,54 @@ Change Theme
 
 export default ChildC
 ==================================================================================================================================
+==================================================================================================================================
+https://reactrouter.com/start/data/routing
+✨ Routing in React ✨ 
+------------------------------------------------------------------------------
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
+const Home = () => {
+const navigate = useNavigate() ;
+function handleClick()
+navigate('/about');
+
+return (
+<div>
+Home Page
+<button onClick={handleClick}>
+Move to ABout Page
+</button>
+</div>
+
+)
+
+export default Home
+------------------------------------------------------------------------------
+//Nested routung // child
+const router = createBrowserRouter(
+
+path:"/dashboard",
+element:
+<div>
+
+<Navbar/>
+<Dashboard/>
+</div>,
+children: [
+
+path: '/courses',
+element:
+
+path: 'mock-tests',
+element :
+
+path: '/reports',
+element :
+
+]
+
+}
 ==================================================================================================================================
 
 ==================================================================================================================================
