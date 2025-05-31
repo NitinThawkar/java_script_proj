@@ -1045,7 +1045,73 @@ Double: {doubleValue}
 ------------------------------------------------------------------------------
 
 ==================================================================================================================================
+✨ #### useCallback hook ✨ 
 
+https://18.react.dev/reference/react/useCallback#reference
+------------------------------------------------------------------------------
+//React.memo -> wrap -> component -> component
+re-render tabhi hoga jab props change honge nahi toh
+re-render nahi hoga
+
+//if u r sending a function, then react.memo wont be
+able to save you from re-renderingl
+
+
+// we can avoid expencive call  by avoiding function recreation (not prevent from run like memo which store result not function logic)
+------------------------------------------------------------------------------
+import { useState } from 'react'
+import './App.css'
+import ChildComponent from './components/
+ChildComponent';
+
+function App() {
+const [count, setCount] = useState(0);
+
+//function handleClick() {
+//setCount(count+1);
+
+
+const handleClick = useCallback(() => {
+setCount(count+1);
+}, [count]);
+
+return
+
+(
+<div>
+<div>
+Count: {count}
+</div>
+<br/>
+<div>
+<button onClick={handleClick}>
+Increment
+</button>
+</div>
+<br/> <br/>
+
+----------------------------------------------
+import React from 'react'
+
+const ChildComponent = React.memo(     // ✏️  wrap funcrion in memo
+(props) => {
+
+console. log("Child Component got re-rendered
+again");
+
+return (
+<div>
+<button onClick={props.handleClick}>
+{props.buttonName}
+</button>
+</div>
+
+export default ChildComponent
+//React.memo -> wrap -> component -> component
+re-render tabhi hoga jab props change honge nahi toh
+re-render nahi hoga
+
+----------------------------------------------
 ==================================================================================================================================
 
 ==================================================================================================================================
