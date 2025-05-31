@@ -3,9 +3,33 @@ https://www.w3schools.com/react/react_components.asp
 https://react.dev/learn/installation
 
 ✨  Official Doc : create resct app : https://create-react-app.dev/
+
 ==================================================================================================================================
-className  => use for css
-props      => propeties
+? create your own hook , custome hook ?
+==================================================================================================================================
+className  => use for css  (camel case)
+props      => propeties  or html element propeties
+onClick    => event  (camel case)	
+.map()     => like for loop
+htmlFor    =>
+e,preventDefault =>
+<React.StrictMode>   => use application run in dev mode , cause to double rendaring , Remove on Prod 
+useState             => hook  to change initial value  like input  
+Destructuring Props =>
+
+<h1>{`Hello ${user}!`}</h1>  => variable subcription  (tild use here)
+
+...Values  => ... used for creating copy 
+
+e.target.value  => get any html element value  . like input ,button etc
+
+
+useEffect
+useParams
+useRef
+useReduces  => use with dispatch , like use state , define initial state
+createContex () =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
+Redux           => It Uses a centralised store, actions and reducers to manage state change predictibliy
 ==================================================================================================================================
 ✨ react js with vite
 ==================================================================================================================================
@@ -164,8 +188,15 @@ npm install swr
 export get serverside prop
 
 ==================================================================================================================================
-
+<React.StrictMode>
 ==================================================================================================================================
+Redux => use latest version redux tool kit
+run in terminal => npm install  redux react-redux  => install redux
+
+1]setup redux store
+2] wrap application (<app>) with provider 
+3]dispatch action to changes state
+4] use selector to get state
 
 ==================================================================================================================================
 
