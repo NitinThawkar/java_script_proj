@@ -219,6 +219,70 @@ p>
 export default Card
 -------------------------------------------------------------
 ==================================================================================================================================
+✨ #### Conditional Rendering in React
+
+import { useState } from 'react'
+import './App.css'
+import LogoutBtn from './componerits/LogoutBtn';
+import LoginBtn from './components/LoginBtn';
+
+function App() {
+const[isLoggedIn, setLoggedIn] = useState(false);
+
+if(isLoggedIn) {
+return (
+<LogoutBtn/>
+
+else {
+return. (
+<LoginBtn />
+
+
+-------------------------------------------------------------
+// turnary operator
+function App() {
+const[isLoggedIn, setLoggedIn] = useState(false);
+
+return
+<div>
+{ïsLoggedIn ? <LogoutBtn/> : <LoginBtn />}
+</div>
+-------------------------------------------------------------
+// logical operator
+function App() {
+const[isLoggedIn, setLoggedIn] = useState(true);
+
+return (
+<div>
+<h1> Welcome Everyone to Codehelp Web dev course</h1>
+<div>
+{isLoggedIn && <LogoutBtn />}
+</div>
+</div>
+-------------------------------------------------------------
+//early return
+
+function App() {
+const[isLoggedIn, setLoggedIn] = useState(false);
+
+if(!isLoggedIn) {
+return (
+<LoginBtn />
+
+)
+
+return (
+<div>
+<h1> Welcome Everyone to Codehelp Web dev course</h1>
+<div>
+{isLoggedIn && <LogoutBtn />}
+</div>
+</div>
+
+)
+-------------------------------------------------------------
+
+==================================================================================================================================
 export default App
 ### questions 
 .jxs ?
