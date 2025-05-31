@@ -12,6 +12,7 @@ create resct app : https://create-react-app.dev/
 ? create your own hook , custome hook ?
 
 ? State Lifting in React ?
+? e.stopPropogation  => stop event bubbling 
 ==================================================================================================================================
 className  => use for css  (camel case)
 props      => propeties  or html element propeties
@@ -392,7 +393,124 @@ create slice
 
 Terms : action ,reducer,slice,store,state
 ==================================================================================================================================
+==================================================================================
+✨  Event Handling in React 
+https://18.react.dev/learn/adding-interactivity
+--------------------------------------
+import './App.css'
 
+function App() {
+
+function handleClick()
+alert("I am Clicked");
+
+return (
+<div>
+<button onClick={handleClick}>
+Click me
+</button>
+</div>
+
+)
+
+export default App
+--------------------------------------
+return (
+<div>
+<button onClick={()=>{ alert("I got.CLicked") }}>
+Click me
+</button>
+</div>
+--------------------------------------
+function handleMouseOver() {
+alert("Para k upar mouse lekar aaye ho")
+
+return (
+<div>
+
+<p onMouseOver={handleMouseOver} style={{border:"2h}}>
+I am a Para
+</p>
+
+<button onClick={handleClick}>
+Click me
+</button>
+</div>
+--------------------------------------
+function handleInputChange() {
+console. log("Input.me.Value change hui-h.");
+
+return (
+<div>
+
+<form>
+<input type='text' onChange={handleInputChange}/>
+</form>
+--------------------------------------
+function handleInputChange(e) {
+//console. log("Input me Value change hui h ");
+console. log("Value till now: ", e. target.value);
+
+return (
+<div>
+
+<form>
+<input type='text' onChange={(e) => handleInputChange(e)}/>
+</form>
+--------------------------------------
+function handleInputChange(e) {
+//console. log("Input me Value change hui h ");
+console. log("Value till now: ", e. target.value);
+
+return (
+<div>
+
+<form>
+<input type='text' onChange={handleInputChange}/>
+</form>
+)
+--------------------------------------
+function handleSubmit(e) {
+e.preventDefault();
+//i am writing my custom behaviour down
+alert("Form Submit krdu kya ();
+
+return (
+<div>
+
+<form onSubmit={handleSubmit}>
+<input type='text' onChange={handleInputChange}/>
+<button type='submit'>Submit</button>
+</form>
+)
+--------------------------------------
+function handleSubmit(e) {
+e.preventDefault();
+//i am writing my custom behaviour down
+alert("Form Submit krdu kya ");
+
+return (
+<div>
+
+<button onClick={() => alert("Button click hua h")
+Click me
+</button>
+--------------------------------------
+export default function ColorSwitch({
+onChangeColor
+
+return (
+<button onClick={e => {
+e.stopPropagation();
+onChangeColor();
+
+Change color
+</button>
+};
+}
+--------------------------------------
+
+==================================================================================
 ==================================================================================================================================
 
 ==================================================================================================================================
