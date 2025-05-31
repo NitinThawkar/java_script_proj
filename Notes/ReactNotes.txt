@@ -4,6 +4,7 @@ https://react.dev/learn/installation
 
 ✨  Official Doc : create resct app : https://create-react-app.dev/
 
+#alwayes check import and export
 ==================================================================================================================================
 ? create your own hook , custome hook ?
 ==================================================================================================================================
@@ -30,6 +31,10 @@ useRef
 useReduces  => use with dispatch , like use state , define initial state
 createContex () =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
 Redux           => It Uses a centralised store, actions and reducers to manage state change predictibliy
+usedispatch()
+useselector ()
+useDispatch()
+
 ==================================================================================================================================
 ✨ react js with vite
 ==================================================================================================================================
@@ -99,6 +104,34 @@ function App() {
   )  ✏️=> jsx
 }
 ==================================================================================================================================
+✨ #### Props (property)
+
+
+-------------------------------------
+const Card =(props)=>{         ✏️=> We use structure props
+return (
+<div>{props.myName}
+)
+}
+export default card
+-------------------------------------
+const Card =({myName})=>{           ✏️=> We use de-structure props with {} breses  dont requird props.<property>, directly can access 
+return (
+<div>{myName}
+)
+}
+export default card
+---------------------------------
+
+Use In App Componant
+
+function App (){
+return (<div> 
+<Card Name="Nitin#"> </Card>  ✏️=> Passing "Nitin#" in Name property to Card cpmponent
+</div>)
+}
+
+==================================================================================================================================
 ### questions 
 .jxs ?
 
@@ -142,6 +175,10 @@ componant will accept props
 prop is a js object datatype
 props are readonly you can not modify  in between passing 
 used for passing data from parent component to child component
+
+
+Passing PROPS as Children and Functions
+
 
 ==================================================================================================================================
 ### JSON.stringify(props)  , prop is a object
@@ -193,11 +230,15 @@ export get serverside prop
 Redux => use latest version redux tool kit
 run in terminal => npm install  redux react-redux  => install redux
 
-1]setup redux store
+1]create ,setup redux store  and configure store 
 2] wrap application (<app>) with provider 
-3]dispatch action to changes state
-4] use selector to get state
+3]create slice
+4] register reducer in store 
+4] use selector to get state in App App.jsx and import actions
+3]dispatch action to changes state  usedispatch() in App.jsx
+create slice
 
+Terms : action ,reducer,slice,store,state
 ==================================================================================================================================
 
 ==================================================================================================================================
