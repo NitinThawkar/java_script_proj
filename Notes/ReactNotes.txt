@@ -2,11 +2,16 @@
 https://www.w3schools.com/react/react_components.asp
 https://react.dev/learn/installation
 
-✨  Official Doc : create resct app : https://create-react-app.dev/
+✨  Official Doc : 
+Learn React https://18.react.dev/learn/sharing-state-between-components
+https://react.dev/learn/managing-state
+create resct app : https://create-react-app.dev/
 
 #alwayes check import and export
 ==================================================================================================================================
 ? create your own hook , custome hook ?
+
+? State Lifting in React ?
 ==================================================================================================================================
 className  => use for css  (camel case)
 props      => propeties  or html element propeties
@@ -180,7 +185,41 @@ return (<div>
 }
 
 ==================================================================================================================================
+✨ #### Props  State Lifting in React  (child to parent )
 
+import Card from './components/Card'
+
+function App() {
+//create state
+//manage state
+//change state
+//sabhi child me state ko sync karwadunga
+const [name, setName] = useState('');
+
+return (
+<div>
+<Card title="Card1" name={name} setName={setName}/>
+<Card title="Card2"-name={name} setName={setName}/>
+{/* <p>I am inside Parent Component and Value of name is {name}</p>
+*/}
+</div
+)
+
+-------------------------------------------------------------
+import React from 'react'
+
+const Card = (props) => {
+return (
+<div>
+<input type='text' onChange={(e)=> props.setName(e.target.value)}/>
+<p>Name state variable ki value inside [props. title) : {props.name}</
+p>
+</div>
+
+export default Card
+-------------------------------------------------------------
+==================================================================================================================================
+export default App
 ### questions 
 .jxs ?
 
