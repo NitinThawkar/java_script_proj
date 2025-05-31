@@ -6,7 +6,7 @@ https://react.dev/learn/installation
 Learn React https://18.react.dev/learn/sharing-state-between-components
 https://react.dev/learn/managing-state
 create resct app : https://create-react-app.dev/
-
+form hook : https://www.react-hook-form.com/
 #alwayes check import and export
 ==================================================================================================================================
 ? create your own hook , custome hook ?
@@ -874,7 +874,9 @@ element :
 
 }
 ==================================================================================================================================
-
+✨ React Hook Form ✨
+external librery
+form hook : https://www.react-hook-form.com/
 ==================================================================================================================================
 
 ==================================================================================================================================
