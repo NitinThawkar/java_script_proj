@@ -127,11 +127,60 @@ Use In App Componant
 
 function App (){
 return (<div> 
-<Card Name="Nitin#"> </Card>  ✏️=> Passing "Nitin#" in Name property to Card cpmponent
+<Card Name="Nitin#"> <h1> asd </h1> </Card>  ✏️=> Passing "Nitin#" in Name property to Card cpmponent
+<Card children ="Hello Sachin"> hello nitin</Card>
+</div>)
+}
+---------------------------------
+const Card =(props)=>{         ✏️=> props as children
+return (
+<div>{props.children} </div>       ✏️  => props as children will return / render  whatever lines enclosed between <cadrd> from App component
+)
+}
+export default card          ✏️  =>  <h1> asd </h1>
+
+------------------------------------
+const Card =({children})=>{         ✏️=> props as children de-structure
+return (
+<div>{children}        ✏️  => props as children will return / render  whatever lines enclosed between <cadrd> from App component
+)
+}
+export default card          ✏️  =>  <h1> asd </h1>
+==================================================================================================================================
+✨ #### Props (property)   As Functions ✨ 
+
+
+
+const MyButton =(props)=>{         ✏️=> MyButton component
+return (
+<div>{props.children}          ✏️  => props as children will return / render  whatever lines enclosed between <cadrd> from App component
+
+<button onClick={props.prphandleClick}> {props.test} </button> ✏️=> prop name from app component
+
+<div>
+)
+}
+export default MyButton
+-----------------------------------------
+
+Use In App Componant Change 
+
+function App (){										✏️=> App component
+const [count,setCount] = useState (0)					✏️=> use state to store count
+
+function handleClick()									✏️=> we will send this function  in prop
+{
+setCount(count+1);
+
+} 
+
+return (<div> 
+<MyButton prphandleClick = { handleClick}  text ="click me "> <h1>{count}</h1>	<MyButton>  ✏️=> we will send this function  in prop
 </div>)
 }
 
 ==================================================================================================================================
+
 ### questions 
 .jxs ?
 
