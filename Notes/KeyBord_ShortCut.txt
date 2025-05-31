@@ -21,7 +21,9 @@ remove vertical line =>setting =>serch warp => uncheck box
 
 CTRL + click   => got to code implementation 
 ======================================================================================================
+✨ REACT ✨
 
+ES 6 => type  rafce  in component filr , create blank react component  (es 6 plugin requied)
 ======================================================================================================
 
 ======================================================================================================

@@ -740,6 +740,88 @@ button>
 
 );}
 ==================================================================================
+✨ useContext Hook   // avoid prop drelling 
+
+==================================================================================================================================
+create contex (parent)
+provider  (parent)
+consume contex (child>
+------------------------------------------------------------------------------
+import { createContext, useState } from 'react'
+import './App.css'
+import ChildA from './components/ChildA';
+
+//step1: create Context
+const UserContext = createContext();
+//step2: wrap all the child inside a provider
+//step3: pass value
+//step4: consumer .k andar jaake consume karlo
+
+function App() {
+const [user, setUser] = useState({name:"Love"});
+return (
+
+<UserContext.Provider value={user}>
+<ChildA />
+</UserContext.Provider>
+</>
+
+export default App
+export {UserContext}  //=> export contex
+------------------------------------------------------------------------------
+import React, { useContext } from 'react'
+import { UserContext } from ' .. /App'
+
+const ChildC = () => {
+const user = useContext(UserContext);
+return (
+<div>
+{user. name}
+</div>
+
+)
+
+export default ChildC
+------------------------------------------------------------------------------
+
+==================================================================================================================================
+const ThemeContext = createContext();
+I
+
+function App()
+// const [user, setUser] = useState({name:"Love"});
+const [theme, setTheme] = useState('light');
+
+return (
+
+<ThemeContext.Provider value={{theme, setTheme}}>
+<div id='container' style={{backgroundColor:theme === 'light'?
+"beige":"black"}}>
+<ChildA />
+</div>
+
+</ThemeContext.Provider>
+------------------------------------------------------------------------------
+const ChildC = () => {
+const user = useContext(UserContext);
+const {theme, setTheme} = useContext (ThemeContext);
+function toggleTheme()
+if(theme === 'light' )
+setTheme ('dark')
+else
+setTheme('light')
+
+return (
+<div>
+<button onClick={toggleTheme}>
+Change Theme
+</button>
+</div>
+
+)
+
+export default ChildC
+==================================================================================================================================
 
 ==================================================================================================================================
 
