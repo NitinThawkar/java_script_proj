@@ -24,6 +24,17 @@ CTRL + click   => got to code implementation
 ALT + left / right Arrow  => previous / next file or line  moving  navigate between files 
 
 CTRL+ I  => On code line will open Git Copilot
+
+-----------------------
+General VS Code Shortcuts (helpful for Copilot usage): 
+Ctrl+Space: Initiates code completion.
+Ctrl+K, Ctrl+/: Toggles line comments.
+Ctrl+/: Toggles line comments (available in Visual Studio 2022 version 17.11 or later).
+Ctrl+M, Ctrl+M: Toggles outlining expansion.
+Ctrl+K, Ctrl+U: Uncomments selection.
+Ctrl+K, Ctrl+K: Opens the Define Keybinding control to customize shortcuts.
+Ctrl+Shift+Space: Shows signature help.
+Alt+↑/↓: Moves line up/down.
 ======================================================================================================
 ✨ REACT ✨
 
@@ -52,15 +63,12 @@ Ctrl+Shift+Alt+L : Opens the Quick Chat to ask Copilot a quick question.
 •	Use the Alt + / shortcut to open the inline chat and refine code in the editor.
 
 ======================================================================================================
-General VS Code Shortcuts (helpful for Copilot usage): 
-Ctrl+Space: Initiates code completion.
-Ctrl+K, Ctrl+/: Toggles line comments.
-Ctrl+/: Toggles line comments (available in Visual Studio 2022 version 17.11 or later).
-Ctrl+M, Ctrl+M: Toggles outlining expansion.
-Ctrl+K, Ctrl+U: Uncomments selection.
-Ctrl+K, Ctrl+K: Opens the Define Keybinding control to customize shortcuts.
-Ctrl+Shift+Space: Shows signature help.
-Alt+↑/↓: Moves line up/down.
+✨ WINDOWS os operating sysytem ✨
+https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
+
+Windows key  + E =>  Open File Explorer.
+Windows key  + Ctrl + D  => Create another desktop.
+
 ======================================================================================================
 
 ======================================================================================================
