@@ -1,11 +1,11 @@
 ✨ Utility ✨ 
 =================================================================
-✨ 
+✨ (star)  
+✏️ (Pencil)  ☑️
 ✍️ (Person writing)
-✏️ (Pencil)
 ✒️ (Black pen)
 ✍️ (Writing hand)
-
+emoji => press Window + . (dot) special symbol char character
 =================================================================
 In programming, casing refers to the capitalization style used for naming variables, functions, classes, etc. 
 Common casing styles include camel case, Pascal case, snake case, and kebab case

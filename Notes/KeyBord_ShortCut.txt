@@ -25,7 +25,8 @@ CTRL + click   => got to code implementation
 
 ES 6 => type  rafce  in component file , create blank react component  (es 6 plugin requied)
 ======================================================================================================
-
+✨ Emoji ✨
+emoji => press Window + . (dot) special symbol char character
 ======================================================================================================
 
 ======================================================================================================

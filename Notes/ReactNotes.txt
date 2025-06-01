@@ -390,18 +390,305 @@ export get serverside prop
 ==================================================================================================================================
 <React.StrictMode>
 ==================================================================================================================================
-Redux => use latest version redux tool kit
+✨ #### Redux
+https://redux-toolkit.js.org/introduction/getting-started
+
+
+✏️ Redux => use latest version redux tool kit
 run in terminal => npm install  redux react-redux  => install redux
+
+Core Concepts of Redux
+Store - Holds state of your application
+Action - Describe the changes in the state of application
+Reducer - Actually carries out the state transition depending on the action
+
+Example Book Shop
+ShopKeeper (Reducer) <==> Shop (store)<==> Customer (action)
+
+---------------------------------------------------------------------------------
+✏️ Rules of Redux
+
+. The state of your application is stored in an object tree within a single store.
+
+{
+NumberOfBooks : 10
+
+}
+
+. only way to change the state is to emit an action, an object describing what
+happened.
+
+{ Type : "buyBook",payload: "any" }  => Action is a object. playload id optional it could be number or string 
+
+. To specify how the state tree is transformed by actions, we write pure reducer.
+---------------------------------------------------------------------------------
+✏️ Action in Redux
+
+. Actions are JavaScript object that contains information.
+. Actions are the only source of information for the store, It only tells us what has
+happened.
+. Actions have a type property and it should be defined in string constraint.
+. It is compulsory to include the type property in the object.
+
+Syntax:
+
+const Actions = {type: 'buyBook'} // Action is a object
+---------------------------------------------------------------------------------
+Actions / Action createtor
+reduxContainer > JS BookAction.js > [e)
+ purchase_book
+const purchase_book =()=>{
+return {
+type : 'buyBook'}}
+
+---------------------------------------------------------------------------------
+
+✏️ Reducers in React, Reducers is a function 
+
+. Reducers decides how the state of application changes depending upon the
+action sent to the store.
+. Reducers are the function that accepts state and action as parameter and
+returns the next state of the application.
+
+(previousState, action) => newState
+---------------------------------------------
+Reducers in React, Reducers is a function
+reduxContainer > JS BookReducer.js > [] default
+import {buy_book} from './BookTypes'
+const initialState ={
+NumberOfBooks : 20
+
+}
+
+const BookReducer = (state= initialState, action)=>{
+switch(action.type){
+case buy_book: return{
+... state, NumberOfBooks :state.initialState -1
+
+default : return state
+
+}
+
+export default BookReducer;
+
+-------------------------------------------------
+
+✏️ Redux Store
+
+. Entire Application contains Single Store.
+. It is responsible for holding application state.
+. getState() method gives access to state it holds.
+· dispatch(action) method allow state to be updated.
+. It has subscribe(listener) method as well by which we can register listeners.
+
+This method accept function (listener) as a parameter which execute anytime
+when the state in redux store changes.
+-----------
+ Redux Store
+reduxContainer > JS Store.js > 
+import {ereateStore} from 'redux';  ☑️ we can use configure store also
+import BookReducer from './BookReducer';
+
+const store = createStore(BookReducer);I
+
+export default store;
+--------------------------------------------------------------------------
+✏️ connect redux store with our application
+App.js App
+import logo from './logo.svg';
+import './App.css';
+import { Provider } from 'react-redux';      ☑️  check import 
+import store from './reduxContainer/Store';  ☑️
+
+function App() {
+return
+<Provider store={store}>  ☑️  connecting strote  thorugh props  Wrap In provider tag
+<div className="App">
+<header className="App-header">
+<img src={logo} className="App-logo" alt="logo" />
+>
+
+<p>
+Edit <code>src/App.js</code> and save to reload.
+</p>
+<a
+
+className="App-link"
+href="https://reactjs.org"
+target="_blank"
+rel="noopener noreferrer"
+
+Learn React
+</a>
+</header>
+</div>
+</Provider>
+---------------------------------------------------------------------------------
+✏️  reduxp provide by redux
+   React Redux + Hooks
+
+React Redux offers set of hooks to - subscribe to redux store and dispatch
+actions.
+
+useSelector Hook-
+
+. useSelector is a hook react-redux library provides to get hold of any state that
+is maintained in the redux store.
+
+Syntax - const xyz =useSelector(selector: Function, equalityFn ?: Function)
+
+Selector functn accepts the redux state as its argument and return a value.
+---------------------------------------
+reduxContainer > JS BookContainer.js >
+BookContainer
+
+import { useSelector } from 'react-redux'  ☑️
+
+function BookContainer() {
+const no0fBooks = useSelector(state => state.NumberOfBooks) ☑️
+return (
+<>
+<div>BookContainer</div>
+<h2>No of Books - {} </h2>
+</>
+import React from 'react'
+)
+
+export default BookContainer
+---------------------------------------
+✏️ redux useDispatch
+useDispatch() Hook
+
+. This hook returns a reference to the dispatch function from the Redux store.
+You may use it to dispatch actions as needed.
+
+Syntax - const dispatch = useDispatch() ☑️
+
+---------------------------------------
+redux useDispatch
+
+reduxContainer > JS BookContainer.js > BookContainer > [e] dispatch
+import React from 'react'
+import {useDispatch, useSelector } from 'react-redux';  ☑️
+import purchase_book from './BookAction';
+
+return
+
+function BookContainer() {
+const no0fBooks = useSelector(state => state.NumberOfBooks)
+const dispatch= useDispatch()  ☑️ referance 
+
+(
+
+<div>BookContainer</div>
+<h2>No of Books - {no0fBooks} </h2>
+<button onClick={()=>{dispatch(purchase_book())}}>Buy Book</button>  ☑️ Call Action 
+
+
+---------------------------------------------------------------------------------
+//steps:
+// create store
+// wrap app component under Provider
+// create Slice
+// register reducer in store
+
+I
 
 1]create ,setup redux store  and configure store 
 2] wrap application (<app>) with provider 
-3]create slice
+3]create slice  =>         ☑️ feture initial State initial value +  All  reducer function  present here 
 4] register reducer in store 
 4] use selector to get state in App App.jsx and import actions
 3]dispatch action to changes state  usedispatch() in App.jsx
 create slice
 
-Terms : action ,reducer,slice,store,state
+Terms : action ,
+reducer,
+slice,=> feture initial State value + reducer function  present here 
+store,
+state
+---------------------------------------------------------------------------------
+Slice  ☑️ feture initial State initial value +  All  reducer function  present here 
+import { createSlice } from '@reduxjs/toolkit'
+
+export const counterSlice = createSlice({
+name: 'counter',
+initialState: {             ☑️ feture initial State initial value 
+value: 0
+                                
+initialState: {             ☑️  All  reducer function  present here 
+reducers: {                       
+increment: state => {
+state.value += 1
+
+decrement: state => {         ☑️  All  reducer function  present here 
+state.value -= 1
+
+incrementByAmount: (state, action) => {
+state.value += action.payload
+
+// Action creators are generated for each case reducer
+function
+export const { increment, decrement, incrementByAmount } =
+counterSlice.actions
+
+export default counterSlice. reducer
+---------------------------------------------------------------------------------
+## register slice with store
+
+edux-toolkit > src > redux > JS store.js > 
+import { configureStore } from '@reduxjs/toolkit'
+import counterReducer from ' .. /features/counter/counterSlice'
+
+export const store = configureStore({
+reducer: {
+counter: counterReducer
+},})
+----------------------------------------------------------------------------------
+## Access redus store value thrugh useSelector
+
+edux-toolkit > src > JS App.jsx > App
+
+import { useDispatch, useSelector } from 'react-redux'
+import './App.css'
+import { decrement, increment } from './features/counter/
+counterSlice';
+
+function App() {
+
+const count = useSelector((state) => state.counter.value);
+const dispatch = useDispatch();
+
+function handleIncrementClick() {
+dispatch(increment());
+
+function handleDecrementClick() {
+dispatch(decrement());
+
+return (
+<div className='container'>
+<button onClick={handleIncrementClick}> + </button>
+<p>Count: {count}</p>
+<button onClick={handleDecrementClick}> - </button>
+</div>
+
+)
+
+}
+
+export default App
+
+----------------------------------------------------------------------------------
+#### Redux Thunk is a middleware library for Redux, a popular state management library for JavaScript
+applications. Redux Thunk allows you to write action creators that return functions instead of plain action
+objects. These functions can perform asynchronous operations and dispatch actions to update the Redux store.
+
+When using Redux Thunk, your action cmeators can have access to the dispatch method, allowing them to
+dispatch multiple actions, including asynchronous ones. This is useful when you need to make API calls,
+handle side effects, or delay dispatching an action.
+
+To use Redux Thunk in your Redux application, you need to apply the middleware when creating your Redux
+store.
 ==================================================================================================================================
 ==================================================================================
 ✨  Event Handling in React 
@@ -1191,16 +1478,7 @@ re-render nahi hoga
 
 ----------------------------------------------
 ==================================================================================================================================
- #### Redux Thunk is a middleware library for Redux, a popular state management library for JavaScript
-applications. Redux Thunk allows you to write action creators that return functions instead of plain action
-objects. These functions can perform asynchronous operations and dispatch actions to update the Redux store.
-
-When using Redux Thunk, your action cmeators can have access to the dispatch method, allowing them to
-dispatch multiple actions, including asynchronous ones. This is useful when you need to make API calls,
-handle side effects, or delay dispatching an action.
-
-To use Redux Thunk in your Redux application, you need to apply the middleware when creating your Redux
-store.
+ 
 ==================================================================================================================================
 ✨ ####  Reducer useReducer hook ✨
 
@@ -1377,6 +1655,9 @@ type="text"
 </div>
 );
 ==================================================================================================================================
+  
+✨ ####  Passing Complex State To Reducer ✨
+
 
 ==================================================================================================================================
 
