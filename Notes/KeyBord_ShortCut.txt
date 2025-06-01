@@ -33,6 +33,7 @@ ES 6 => type  command "rafce"  in component file , create blank react component 
 emoji => press Window + . (dot) => special symbol char character
 ======================================================================================================
 ✨ Git Copilot ✨
+https://code.visualstudio.com/docs/copilot/chat/getting-started-chat#:~:text=Open%20the%20app.,the%20code%20in%20the%20editor.
 on VS Code => CTRL+ I  => On code line will open Git Copilot
 on visual studio  => Use the Alt + / shortcut to open the inline chat and refine code in the editor.
 
