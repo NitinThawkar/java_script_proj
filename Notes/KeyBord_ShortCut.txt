@@ -1,4 +1,4 @@
-✨ IntelliJ Java keybord short cut
+✨ IntelliJ Java keybord short cut ✨
 
 ALT + ENTER => on code line
 ctrl+D => duplicate lines 
@@ -9,7 +9,7 @@ ctrl + Alt + T => wrap code in if,try,for block etc
 sout => System.out.println();
 
 ----------------------------------------------------------------------------
-IntelliJ plugin 
+✨IntelliJ plugin ✨
 rainbow bracket	
 remove vertical line =>setting =>serch warp => uncheck box
 
@@ -20,13 +20,15 @@ remove vertical line =>setting =>serch warp => uncheck box
 ✨ VS CODE ✨
 
 CTRL + click   => got to code implementation 
+
+ALT + left / right Arrow  => previous / next file or line  moving  navigate between files 
 ======================================================================================================
 ✨ REACT ✨
 
-ES 6 => type  rafce  in component file , create blank react component  (es 6 plugin requied)
+ES 6 => type  command "rafce"  in component file , create blank react component  (es 6 plugin requied)
 ======================================================================================================
 ✨ Emoji ✨
-emoji => press Window + . (dot) special symbol char character
+emoji => press Window + . (dot) => special symbol char character
 ======================================================================================================
 
 ======================================================================================================
