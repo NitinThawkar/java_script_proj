@@ -15,7 +15,7 @@ npm run dev
 ==================================================================================================================================
 ChatGPT.com switched from NextJS to Remix
 ? create your own hook , custome hook ?
-
+? Redux Thunk
 ? State Lifting in React ?
 ? e.stopPropogation  => stop event bubbling 
 #alwayes check import and export
@@ -1114,8 +1114,129 @@ re-render nahi hoga
 
 ----------------------------------------------
 ==================================================================================================================================
+ #### Redux Thunk is a middleware library for Redux, a popular state management library for JavaScript
+applications. Redux Thunk allows you to write action creators that return functions instead of plain action
+objects. These functions can perform asynchronous operations and dispatch actions to update the Redux store.
 
+When using Redux Thunk, your action cmeators can have access to the dispatch method, allowing them to
+dispatch multiple actions, including asynchronous ones. This is useful when you need to make API calls,
+handle side effects, or delay dispatching an action.
+
+To use Redux Thunk in your Redux application, you need to apply the middleware when creating your Redux
+store.
 ==================================================================================================================================
+✨ ####  Reducer useReducer hook ✨
+
+App.jsx > App
+import { useReducer, useState } from "react";
+
+function App() {
+const [state, dispatch] = useReducer(reducer, 0);
+function reducer(state, action) {
+if (action. type == "increment") {
+return state + action.payload;
+
+if (action. type == "decrement") {
+return state - action.payload;
+
+return
+<div>
+{state}
+<button onClick={() => dispatch({ type: "increment", payload: 1 }) }>
+Increment count
+</button>
+<button onClick={() => dispatch({ type: "decrement", payload: 1 }) }>
+Decrement count
+</button>
+</div>
+
+export default App;
+---------------------------------------------------------------------------
+Using Object As State In useReducer
+
+import { useReducer, useState } from "react";
+
+function App() {
+" const [state, dispatch] = useReducer(reducer, { count: 0 });
+function reducer(state, action)
+if (action. type == "increment") {
+return { ... state, count: state. count + action.payload }; // state + action.payload;
+
+if (action. type == "decrement") {
+return { ... state, count: state. count - action. payload };
+
+return
+<div>
+{state. count}
+<button onClick={() => dispatch({ type: "increment", payload: 1 }) }>
+Increment count
+</button>
+<button onClick={() => dispatch({ type: "decrement", payload: 1 }) }>
+Decrement count
+</button>
+</div>
+---------------------------------------------------------------------------
+Using Complex Object As State In useReducer
+
+import { useReducer, useState } from "react";
+function App() {
+const [state, dispatch] = useReducer(reducer, { count: 0, incrementBy: 1 });
+function reducer(state, action) {
+if (action. type == "increment") {
+return { ... state, count: state. count + state. incrementBy }; // state + action.payload;
+
+if (action. type == "decrement") {
+return { ... state, count: state. count - incrementBy };
+
+if (action. type == "setIncrement") {
+return { ... state, incrementBy: action.payload };
+
+}
+
+return (
+<div>
+{state. count}
+
+<input
+value={state. incrementBy}
+onChange={ (e) =>
+dispatch({ type: "setIncrement", payload: Number(e. target.value) })
+
+type="text"
+name=""
+id=""
+
+/>
+<button onClick={() => dispatch({ type: "increment", payload: 1 }) }>
+Increment count
+</button>
+<button onClick={() => dispatch({ type: "decrement", payload: 1 }) }>
+Decrement count
+</button>
+</div>
+}
+====================================================================================
+Spread Operator
+
+const state = {count:0}
+=>undefined
+----------------
+state
+
+=>{count: 0}
+----------------
+{ ... state}
+=>{count: 0}
+----------------
+{ ... state, count:1}
+=>{count: 1}
+----------------
+const state = {count:0,someValue:1}
+
+{ ... state, count:2}
+=>{count: 2, someValue: 1}
+----------------
+====================================================================================
 
 ==================================================================================================================================
 

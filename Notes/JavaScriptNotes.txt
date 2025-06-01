@@ -645,7 +645,26 @@ function validateCart(cart){
 5. "this" inside arrow function refers to the enclosing lexical context
 6. "this" in DOM points to the HTML element itself on which it is being used
 ================================================================================================
+Spread Operator ...
 
+const state = {count:0}
+=>undefined
+----------------
+state
+
+=>{count: 0}
+----------------
+{ ... state}
+=>{count: 0}
+----------------
+{ ... state, count:1}
+=>{count: 1}
+----------------
+const state = {count:0,someValue:1}
+
+{ ... state, count:2}
+=>{count: 2, someValue: 1}
+----------------
 ================================================================================================
 
 
