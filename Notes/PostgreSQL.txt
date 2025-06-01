@@ -1,12 +1,25 @@
 ✨ Postgre Database ✨
-
-CTRL + click   => got to code implementation 
+https://www.postgresql.org/docs
+CTRL + click   => got to code implementation  ✏️ (Pencil)  ☑️
 ======================================================================================================
+✨ Add Date / Month /Year  minute in current time
 
+▶️ select CURRENT_TIMESTAMP ,CURRENT_TIMESTAMP + (330 * interval '1 minute')
 ======================================================================================================
+✨ UUID Functions  GUID guid
+https://www.postgresql.org/docs/current/functions-uuid.html
 
+▶️ select gen_random_uuid ()
+
+ 
 ======================================================================================================
-
+✨ Casting the UUID column to ::text
+▶️  SELECT * FROM user
+WHERE id::text = 'jsdfhiureeirh' OR uid = 'jsdfhiureeirh';
+-------------------------------------------------------------------------------
+▶️  SELECT * FROM user
+WHERE id::text = '33bb9554-c616-42e6-a9c6-88d3bba4221c' 
+  OR uid = '33bb9554-c616-42e6-a9c6-88d3bba4221c';
 ======================================================================================================
 
 ======================================================================================================
