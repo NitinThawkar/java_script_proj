@@ -30,9 +30,10 @@ let : Variable cannot be re-declared but can be updated. A block scope variable.
 const : Variable cannot be re-declared or updated. A block scope variable.
 
 ----------------------------------
+datatype
 typeOf <vriable Name> 
 Primitive Types : Number, String, Boolean, Undefined, Null, BigInt, Symbol
-btdefault its undefined
+default its undefined
 non prenetive : object,String
 
 ##################################################################################
