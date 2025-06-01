@@ -44,12 +44,23 @@ help
 optimise
 test
 
+Ctrl+Alt+I       : Opens the Chat view (also found in the Copilot menu in the title bar).
+Ctrl+Shift+Alt+L : Opens the Quick Chat to ask Copilot a quick question.
+
 •	Include slash commands (i.e. /fix) at the beginning of your prompt to indicate intent.
 •	Type # to refer to code you want to include.
 •	Use the Alt + / shortcut to open the inline chat and refine code in the editor.
 
 ======================================================================================================
-
+General VS Code Shortcuts (helpful for Copilot usage): 
+Ctrl+Space: Initiates code completion.
+Ctrl+K, Ctrl+/: Toggles line comments.
+Ctrl+/: Toggles line comments (available in Visual Studio 2022 version 17.11 or later).
+Ctrl+M, Ctrl+M: Toggles outlining expansion.
+Ctrl+K, Ctrl+U: Uncomments selection.
+Ctrl+K, Ctrl+K: Opens the Define Keybinding control to customize shortcuts.
+Ctrl+Shift+Space: Shows signature help.
+Alt+↑/↓: Moves line up/down.
 ======================================================================================================
 
 ======================================================================================================
