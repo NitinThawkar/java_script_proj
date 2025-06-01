@@ -22,6 +22,8 @@ remove vertical line =>setting =>serch warp => uncheck box
 CTRL + click   => got to code implementation 
 
 ALT + left / right Arrow  => previous / next file or line  moving  navigate between files 
+
+CTRL+ I  => On code line will open Git Copilot
 ======================================================================================================
 ✨ REACT ✨
 
@@ -30,6 +32,20 @@ ES 6 => type  command "rafce"  in component file , create blank react component 
 ✨ Emoji ✨
 emoji => press Window + . (dot) => special symbol char character
 ======================================================================================================
+✨ Git Copilot ✨
+on VS Code => CTRL+ I  => On code line will open Git Copilot
+on visual studio  => Use the Alt + / shortcut to open the inline chat and refine code in the editor.
+
+doc
+explain
+fix
+help
+optimise
+test
+
+•	Include slash commands (i.e. /fix) at the beginning of your prompt to indicate intent.
+•	Type # to refer to code you want to include.
+•	Use the Alt + / shortcut to open the inline chat and refine code in the editor.
 
 ======================================================================================================
 
