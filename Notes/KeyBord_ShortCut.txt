@@ -19,13 +19,16 @@ remove vertical line =>setting =>serch warp => uncheck box
 ======================================================================================================
 ✨ VS CODE ✨
 
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+-------------------------------------------------
 CTRL + click   => got to code implementation 
 
 ALT + left / right Arrow  => previous / next file or line  moving  navigate between files 
 
 CTRL+ I  => On code line will open Git Copilot
 
------------------------
+-------------------------------------------------
 General VS Code Shortcuts (helpful for Copilot usage): 
 Ctrl+Space: Initiates code completion.
 Ctrl+K, Ctrl+/: Toggles line comments.
