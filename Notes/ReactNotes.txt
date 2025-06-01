@@ -392,7 +392,7 @@ export get serverside prop
 ==================================================================================================================================
 ✨ #### Redux
 https://redux-toolkit.js.org/introduction/getting-started
-
+https://redux-toolkit.js.org/tutorials/quick-start
 
 ✏️ Redux => use latest version redux tool kit
 run in terminal => npm install  redux react-redux  => install redux
@@ -592,7 +592,7 @@ const dispatch= useDispatch()  ☑️ referance
 // create Slice
 // register reducer in store
 
-I
+https://redux-toolkit.js.org/tutorials/quick-start
 
 1]create ,setup redux store  and configure store 
 2] wrap application (<app>) with provider 
@@ -608,6 +608,8 @@ slice,=> feture initial State value + reducer function  present here
 store,
 state
 ---------------------------------------------------------------------------------
+https://redux-toolkit.js.org/tutorials/quick-start
+
 Slice  ☑️ feture initial State initial value +  All  reducer function  present here 
 import { createSlice } from '@reduxjs/toolkit'
 
