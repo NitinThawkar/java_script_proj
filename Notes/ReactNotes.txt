@@ -349,7 +349,7 @@ console.log(JSON.stringify(props));
 
 ==================================================================================================================================
  <h1>{`Hello ${user}!`}</h1>
-   alert(`Name: ${inputRef.current.value}`);
+   alert(`Name: ${inputRef.current.value}`);   => ref have current method to acccess value
 ==================================================================================================================================
 ### Controlled Component
 a component Control  <form> input fields with states 
