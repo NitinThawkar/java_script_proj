@@ -16,6 +16,12 @@ C:/LocalCode/java_script_proj/Notes/Setup.txt
 --------------------------------------------------------
 3] go to local folder path and run 'jupyter lab'  ☑️  C:\LocalFolder\JupyterLab>jupyter lab
    lab will open in browser
+   
+--------------------------------------------------------
+✏️ Other command
+pip install matplotlib 
+pip install numpy
+   
 ================================================================
 ✨ React ✨ 
 

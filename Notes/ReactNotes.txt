@@ -1,4 +1,4 @@
-✨ React Notes ✨
+✨ React Notes ✨ ▶️
 https://www.w3schools.com/react/react_components.asp
 https://react.dev/learn/installation
 
@@ -194,6 +194,28 @@ return (<div>
 <MyButton prphandleClick = { handleClick}  text ="click me "> <h1>{count}</h1>	<MyButton>  ✏️=> we will send this function  in prop
 </div>)
 }
+==================================================================================================================================
+✨ #### Conditional rendaring 
+Function App()
+const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+return (
+<div style={{ padding: "2rem" }}>
+<h1>Welcome to chai code</h1>
+<button onClick={() => setIsLoggedIn(!isLoggedIn)}
+>Toggle login</button>
+
+<div>
+<h3>&& operator</h3>
+{isLoggedIn && <p>Welcome to chaicode video</p>}   ☑️  use this {! ! isLoggedIn && <p>Welcome to chaicode video</p>}  ▶️  to avoid short condition
+</div>
+<div>
+<h3>Ternary operator</h3>
+{isLoggedIn ? <p>Welcome to chaicode video</p>:
+"Please login"}
+</div>
+
+export default App;
 
 ==================================================================================================================================
 ✨ #### Props  State Lifting in React  (child to parent )
