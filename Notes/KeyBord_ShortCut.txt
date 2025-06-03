@@ -1,4 +1,10 @@
-✨ IntelliJ Java keybord short cut ✨
+✨ (star)  
+✏️ (Pencil)  ☑️
+✍️ (Person writing)
+✒️ (Black pen)
+✍️ (Writing hand)
+----------------------------------------------------------------------------
+✨ IntelliJ Java keybord short cut ✨   ☑️
 
 ALT + ENTER => on code line
 ctrl+D => duplicate lines 
@@ -9,7 +15,7 @@ ctrl + Alt + T => wrap code in if,try,for block etc
 sout => System.out.println();
 
 ----------------------------------------------------------------------------
-✨IntelliJ plugin ✨
+✨IntelliJ plugin ✨ 
 rainbow bracket	
 remove vertical line =>setting =>serch warp => uncheck box
 
@@ -26,7 +32,7 @@ CTRL + click   => got to code implementation
 
 ALT + left / right Arrow  => previous / next file or line  moving  navigate between files 
 
-CTRL+ I  => On code line will open Git Copilot
+CTRL+ I  => On code line will open Git Copilot   ☑️
 
 -------------------------------------------------
 General VS Code Shortcuts (helpful for Copilot usage): 
@@ -73,7 +79,57 @@ Windows key  + E =>  Open File Explorer.
 Windows key  + Ctrl + D  => Create another desktop.
 
 ======================================================================================================
+✨ JUPYTER LAB ✨
 
+1. Using the Command Palette:
+Open the command palette by pressing Ctrl+Shift+C. 
+Type "Keyboard Shortcuts" and select the option to open the keyboard shortcut editor. 
+
+2. Using the Settings Editor:
+Go to "Settings" in the JupyterLab menu, Select "Settings Editor", and Navigate to the "Keyboard Shortcuts" section. 
+----------------------------------------------------------------------------------------------------
+✏️ Shortcuts for both modes
+
+Ctrl + Enter - it executes the current cell. One of the most important shortcuts :)  ☑
+Shift+Enter - it executes the current cell and switch the focus to the cell below. If you are in the last cell, then a new code cell will be inserted at the end.
+
+Ctrl+S - it saves the notebook and checkpoint.
+
+----------------------------------------------------------------------------------------------------
+✏️ Shortcuts for command mode
+
+     Enter switch to edit mode
+h - it shows all keyboard shortcuts.
+Up - it changes the selected cell to the above cell,
+Down - it changes the selected cell to the below cell,
+a - inserts the code cell above, ☑
+b - inserts the code cell below, ☑
+x - cuts the selected cell,
+c - copies the selected cell,
+v - pastes the cell below,
+Shift+v - pastes the cell above the current cell,
+double d - deletes the selected cell, ☑
+z - undoes the cell deletion,
+y - changes the cell type to Code, ☑
+m - changes the cell type to Markdown, ☑
+r - changes the cell type to Raw,
+Shift + Space - scrolls notebook up,
+Space - scrolls notebook down,
+p - opens the command pallete. You can search for any command there and execute.
+----------------------------------------------------------------------------------------------------
+✏️ Shortcuts for edit mode
+Shortcuts for edit mode are very similar as in the most text editors in advance IDEs.
+
+Esc - exits from edit mode to command mode,  ☑
+Tab - code completion,
+Ctrl + ] - increases indentation,
+Ctrl + [ - decreases indendation,
+Ctrl + a - select all text in the code,
+Ctrl + z - undoes previous action,
+Ctrl + Home - goes to the cell start,
+Ctrl + End - goes to the cell end,
+Ctrl + Right - goes one word right,
+Ctrl + Left - goes one word left,
 ======================================================================================================
 
 

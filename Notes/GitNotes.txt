@@ -1,6 +1,9 @@
 ✨ https://www.w3schools.com/git/default.asp
 
 ----------------------------------------------------
+✨ (star)  
+✏️ (Pencil)  ☑️
+----------------------------------------------------
 git config
 git init
 git log
@@ -357,9 +360,14 @@ git merge origin/dev4_develop_iso =>helm cook
 
 =-------------------------=-------------------------=-------------------------=-------------------------
 ===###===================###===================###===================###===================###================
-ignore gitignore
+✏️ ignore gitignore
 
-1] touch .gitignore   => open this firl in editor
+1] touch .gitignore   => create .gitignore file in root folder of project  pralllel with .git, open this file in editor
+Add following in file 
+folderName /   ☑️ ignore All files and folder 
+*-checkpoint.ipynb  ☑️ ignore any file name  ends with -checkpoint.ipynb
+.gitignore  ☑ ignore '.gitignore' file
+
 
 ===###===================###===================###===================###===================###================
 git remove  ,git mv (move)
