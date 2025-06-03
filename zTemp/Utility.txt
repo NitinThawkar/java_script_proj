@@ -1,10 +1,7 @@
 ✨ Utility ✨ 
 =================================================================
-✨ (star)  
-✏️ (Pencil)  ☑️
-✍️ (Person writing)
-✒️ (Black pen)
-✍️ (Writing hand)
+ ✏️   ☑️ ✍️  ✒️  ✍️ ▶️ 
+ ✏️ (Pencil)  ☑️ ✍️ (Person writing) ✒️ (Black pen) ✍️ (Writing hand)
 emoji => press Window + . (dot) special symbol char character
 =================================================================
 In programming, casing refers to the capitalization style used for naming variables, functions, classes, etc. 

@@ -6,4 +6,67 @@
    
    ng new MyAngularProjStandAlone
 
+=================================================================================
+
+@injectable >> service >>provider
+ng Switch ngSwitch
+
+property setter 
+ngOn change
+
+type casting type script
+
+36. Angular property setter vs ngonchanges
+ 37Angular component communication
+ 38 Call child component methods and properties from parent using template reference variable
+
+custom type in Angular typescript
+? safe navigation or variable option allow null 
+base href >> for root  >> <router-outlet>
+ngchild view
+paramMap() introduce in angular 4  obsulute from anguler 2
+
+ Angular required route parameter vs optional route parameter
+ optional route is goood
+ Object.assign({}, this.employe
+ pure pipe/impure 
+ query params in url
+   [queryParams]="{'newParam': 'newValue'}" queryParamsHandling="merge"
+   required /optional/query parameters
+   this._route.snapshot.queryParamMap.get('searchTerm');
+   ## call back function which is paassed as parameter.
    
+   ---------
+   we want to delay rendering the routed component view template until all necessary data have been fetched.
+safe navigation
+
+-------
+To pre-fetch data for a route we use a route resolver. A route resolver can be implemented as a function or a service.
+loder
+ngCotent
+---------
+If the observable service is being consumed by a Resolver, the resolver service will subscribe to the Observable, we do not have to explicitly subscribe.
+----
+prefetch data >> route resolver
+========
+ngsubmit
+subject
+=======
+value chnges observable
+========
+update value and validity
+=====
+RxJs Changes History
+======
+types of module
+viewChild
+
+forChild forRoot
+@host listner
+css
+html
+java
+python
+
+https://www.youtube.com/playlist?list=PL7JmcZV0UQtVNlr8JrjNWzLPtVMjGH_Z2
+  
