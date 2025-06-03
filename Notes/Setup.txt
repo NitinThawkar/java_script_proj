@@ -1,0 +1,9 @@
+✨ Utility ✨ 
+=================================================================
+✨ (star)  
+✏️ (Pencil)  ☑️
+✍️ (Person writing)
+✒️ (Black pen)
+✍️ (Writing hand)
+emoji => press Window + . (dot) special symbol char character
+=================================================================
