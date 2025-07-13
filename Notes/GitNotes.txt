@@ -1,4 +1,5 @@
 ✨ https://www.w3schools.com/git/default.asp
+✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
 
 ----------------------------------------------------
 ✨ (star)  
@@ -12,12 +13,12 @@ git amend
 git stash
 git diff
 git add   
-git commit    /commit --amend  
+git commit    //commit --amend  
 git remote
 git branch
 git switch
 git checkout
-git reset
+git reset    // discard changes //Revert all tracked files to their state at the last commit.
 git pull
 git push
 git merge
@@ -111,6 +112,8 @@ Case 3:  commited changes (for many commit )
 		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
 		
 ----------------------------------
+To use the git reset command to discard all local changes
+git reset --hard
 ===###===================###===================###===================###===================###================
 FORK (rough copy of other user repo)
 
@@ -392,6 +395,9 @@ git config --global alias.st status =>  making status command as St  => type git
 git config --global alias.lt 'log -p -1' =>  making log command as lt   => type git lt , it will execute 'git log -p -1' command
 ===###===================###===================###===================###===================###================
 
+
+To use the git reset command to discard all local changes
+git reset --hard
 Revert code changes  (stage to change Area (unstage))
 #git reset 
 
@@ -431,7 +437,7 @@ git stash --keep -index  (only stash untract file not stage files)
 git stash --include -untracked
 git stash list (show all stash)
 git stash save "stash name"
-git stash show => recent stash show
+git stash show => recent stash show  view stashed files
 git stash show <stash id>  #stash@{0}
 git stash show -p => recent stash show with content
 

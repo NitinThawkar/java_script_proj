@@ -24,3 +24,45 @@ pip install matplotlib
 pip install numpy
    
 ======================================================================
+
+
+
+class Car: 
+def
+self.colour = colour
+self.horsepower = horsepower
+
+init_(self, colour: str, horsepower: int) -> None:
+
+volvo: Car = Car('red', 200)
+print(volvo.colour)
+print(volvo.horsepower)
+
+--------------------------------------------------------
+class Car: 
+__ init_(self, brand: str, horsepower: int) -> None:
+self.brand = brand
+self.horsepower = horsepower
+
+def drive(self) -> None:
+print(f'{self.brand} is driving!')
+
+def
+
+volvo: Car = Car('Volvo', 200)
+--------------------------------------------------------class Car: 2 usages
+
+self.brand = brand
+self.horsepower = horsepower
+
+def drive(self) -> None: 1 usage
+print(f'{self.brand} is driving!')
+
+def get_info(self) -> None: 1 usage
+print(f'{self.brand} with {self.horsepower} horsepower')
+
+volvo: Car = Car('Volvo', 200)
+volvo.drive()
+volvo.get_info()
+
+I
