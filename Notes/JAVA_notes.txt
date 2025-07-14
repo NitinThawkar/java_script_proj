@@ -67,8 +67,13 @@ Spring boot Application Contex
 @service :  depends on repository
 ------------------------------------------------------------------------
 @repository :
-==============================================================================================================================================
+------------------------------------------------------------------------
 @Autowired   : used for dependency injection ,  dependencies Autowiring in the Spring Framework is a mechanism for automatically resolving and injecting dependencies between beans. Instead of explicitly configuring every dependency in XML or Java configuration
+@Primary  :  while implimeting commaon  interface in different classes, tell which object to create .
+@Qualifire("classname")  : 
+
+------------------------------------------------------------------------
+
 ==============================================================================================================================================
 
 ==============================================================================================================================================
