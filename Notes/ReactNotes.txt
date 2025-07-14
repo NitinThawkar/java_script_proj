@@ -13,6 +13,126 @@ redux : https://react-redux.js.org/introduction/getting-started
 #### command  to run project
 npm run dev
 ==================================================================================================================================
+class based componant. function based componant
+==================================================================================================================================
+<React.StrictMode> => used for debugging in dev mode. on production it should be remove
+==================================================================================================================================
+we can write javascript code in between {}
+==================================================================================================================================
+cons name = "your name";
+numRange = [1, 4, 7];
+
+//object
+const person = {
+name: "Rob",
+message: "Hi there!",
+emoji: "@",
+seatNumbers: [1, 4, 7],
+};
+
+return (
+<div>
+<h2>Name: {name} </h2>
+<h3>Rating: {5 / 3.2} </h3>
+<p>Sumamry: {summary} </p>
+<p>Genre: {returnGenre ()} </p> calling function;
+<h2>Name: {name}, seatNumbers={seatNumbers} ,person={person}</h2> // sending array and object as props
+</div>
+)
+
+==================================================================================================================================
+Rendering Arrays Or Lists In React
+
+export default function Fruits() {
+const fruits = ["Apple", "Mango", "Banana", "Orange"]
+return (
+<div>
+
+<ul>
+{fruits.map((fruit) => (
+<li key={fruit}>{fruit}</li>           //key is acts like uniq index 
+
+</ul>
+</div>
+
+);
+-------------------------------------
+Rendering Array Of Objects In React
+
+export default function Fruits() {
+//const fruits = ["Apple", "Mango", "Banana", "Orange", "Pineapple"];
+const fruits = [
+[
+{ name: Apple", price: 10, emoji: "" },
+{ name: "Mango", price: 7, emoji: "Q" },
+{ name: "Banana", price: 2, emoji: "" },
+{ name: "Orange", price: 5, emoji: "é" },
+{ name: "Pineapple", price: 8, emoji: ">" },
+];
+
+
+<ul>
+{ fuits.map((fruit) =>
+li key={fruit.name}
+{" "}
+{fruit.emoji} {fruit.name} ${fruit.price}
+</li>
+
+</ul>
+-------------------------------------
+Rendering Components Inside A Loop
+https://www.youtube.com/watch?v=8AY4siDB3ow&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=15&pp=iAQB
+
+==================================================================================================================================
+
+
+Conditional Rendering Using Element Variables
+
+export default function ConditionalComponent()
+let message;
+tonst display = false;
+if (display) {
+message = <h1>This is message 1</h1>;
+} else {
+message = <h1>This is message 2</h1>;
+
+return message;
+---------------------------------
+Using Ternary Operators In React
+export default function ConditionalComponent()
+const display = true;
+return display ? <h1>Message 1</h1> : <h1>Message 2</h1>;
+
+---------------------------------
+export default function ConditionalComponent()
+const display = false;
+return display ? <Welcome /> : <Code />;
+
+---------------------------------
+{/* {emoji} {name} {price} */}
+{price>5 ? <h3>{emoji} {name} {price}</h3>:
+/li>
+
+-----------------------------------
+export default function Fruit({ name, price, emoji, soldout
+return
+
+<li>
+{emoji} {name} {price} {soldout ? "soldOut" : ""}
+</li>
+</>
+
+( 
+==================================================================================================================================
+
+==================================================================================================================================
+
+==================================================================================================================================
+
+==================================================================================================================================
+
+
+==================================================================================================================================
 ChatGPT.com switched from NextJS to Remix
 ? create your own hook , custome hook ?
 ? Redux Thunk
@@ -31,8 +151,40 @@ htmlFor    =>
 e,preventDefault =>
 <React.StrictMode>   => use application run in dev mode , cause to double rendaring , Remove on Prod 
 useState             => hook  to change initial value  like input  
-Destructuring Props =>
+------------------------------------------------------------------
+Props are immutable 
 
+Destructuring Props => props assinged to variables
+1]
+function Hello(props) {  // as prop key word
+console. log(props);
+const { name, message } = props;
+return (
+<div>
+
+{message} {name}
+</h1>
+</div>
+
+export default Hello;
+
+-------------------------
+2] directly destructure 
+function Hello({ name, message }) { // directly destructure  here.  remove prop keyword and in curly brases give varibles name
+return
+
+<div>
+
+<h1>
+{message} {name}
+</h1>
+</div>
+
+) ;
+
+export default Hello;
+
+------------------------------------------------------------------
 <h1>{`Hello ${user}!`}</h1>  => variable subcription  (tild use here)
 
 ...Values  => ... used for creating copy 
