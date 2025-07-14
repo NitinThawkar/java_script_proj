@@ -1,4 +1,13 @@
-✨ JAva Notes
+✨ JAVA Notes and Spring boot
+
+=============================================================================
+Types of injection
+
+1]construction injection (default use @Autowired, no need to add @Autowired)(better)
+2]setter injection (need to add @Autowired)(better)
+3]fild injection (need to add @Autowired)(less better)
+	
+=============================================================================
 
 and then and compose
 ? function, predicate , consumer,supplier
@@ -29,11 +38,11 @@ element_data = (Object []) fields.get (list);
 
 ?  .asLIst() , .set()
 ? time compecity of  ArrayList
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================
 transient ?
 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================
 #### Stream
 Java 8 gave sone inbuild interface like function, predicate , consumer,supplier
 https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/Java8Demo.java
@@ -45,4 +54,24 @@ https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/en
 https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/TerminalOps.java
 https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/LazyEvaluationDemo.java
 https://github.com/thevipulvats/java-collection-framework/blob/master/src/com/engineeringdigest/collectionframework/stream/ParallelStream.java
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+==============================================================================================================================================
+
+==============================================================================================================================================
+Spring boot Application Contex
+
+==============================================================================================================================================
+@componant : decorate on class level register in componant scan and automatically create object through depnedacy injection
+------------------------------------------------------------------------
+@bean : decorate on method level scanned in application contex
+------------------------------------------------------------------------
+@service :  depends on repository
+------------------------------------------------------------------------
+@repository :
+==============================================================================================================================================
+@Autowired   : used for dependency injection ,  dependencies Autowiring in the Spring Framework is a mechanism for automatically resolving and injecting dependencies between beans. Instead of explicitly configuring every dependency in XML or Java configuration
+==============================================================================================================================================
+
+==============================================================================================================================================
+
+==============================================================================================================================================
+
