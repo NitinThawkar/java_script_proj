@@ -12,12 +12,18 @@ redux : https://react-redux.js.org/introduction/getting-started
 ==================================================================================================================================
 #### command  to run project
 npm run dev
+--------------------------------------------------
+ const data = JSON.stringify()
 ==================================================================================================================================
 class based componant. function based componant
 ==================================================================================================================================
 <React.StrictMode> => used for debugging in dev mode. on production it should be remove
 ==================================================================================================================================
 we can write javascript code in between {}
+==================================================================================================================================
+In react use camel for event 
+onClick =>React  => onClick{functionName} => onlu use functionName dont use (). if we use () it will executed even before click
+onclick => javascript
 ==================================================================================================================================
 cons name = "your name";
 numRange = [1, 4, 7];
