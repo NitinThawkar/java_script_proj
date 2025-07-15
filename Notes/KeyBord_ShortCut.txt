@@ -146,11 +146,34 @@ Ctrl + Shif +H
 Shif + Home  => Cursor position goes to Start of line
 Shif + End  => Cursor position goes to End of line
 
-Ctrl + Shif + Home  => Cursor position goes to Start of first line Page 
-Ctrl + Shif + End  => Cursor position goes to last line end of page Page
+Ctrl + Shif + Home  => Cursor Position Goes To Start Of First Line Page 
+Ctrl + Shif + End  => Cursor Position Goes To Last Line End Of Page Page
 -------------------------------------------------------
 Test Formating
 ALT + C => Column editor
+
+-------------------------------------------------------
+Description	Keys
+File
+New	ctrl + n
+Open...	ctrl + o
+Reload from Disk	ctrl + r
+Save	ctrl + s
+Save As...	ctrl + alt + s
+Save All	ctrl + shift + s
+Close	ctrl + w
+Close All	ctrl + shift + w
+Print...	ctrl + p
+Exit	alt + f4
+Restore Recent Closed File	ctrl + shift + t
+Edit
+-------------------------------------------------------
+EDIT text
+
+UPPERCASE	ctrl + shift + u
+lowercase	ctrl + u
+Proper Case	alt + u
+Proper Case (blend)	alt + shift + u
 ======================================================================================================
 
 ======================================================================================================
