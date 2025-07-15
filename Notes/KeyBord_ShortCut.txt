@@ -172,7 +172,7 @@ EDIT text
 
 UPPERCASE	ctrl + shift + u
 lowercase	ctrl + u
-Proper Case	alt + u
+Proper Case	alt + u    => example : Cursor Position Goes To Start Of First Line Page
 Proper Case (blend)	alt + shift + u
 ======================================================================================================
 
