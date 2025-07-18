@@ -1,4 +1,6 @@
+                       ✏️   ☑️ ✍️  ✒️  ✍️ ▶️ 
 ✨ React Notes ✨ ▶️
+
 https://www.w3schools.com/react/react_components.asp
 https://react.dev/learn/installation
 
@@ -10,6 +12,12 @@ form hook : https://www.react-hook-form.com/
 nest js replacement : https://remix.run/
 redux : https://react-redux.js.org/introduction/getting-started
 ==================================================================================================================================
+### command to create project
+npm creteate vite@4.10 
+cd foodapp
+npm install
+npm run dev
+
 #### command  to run project
 npm run dev
 --------------------------------------------------
@@ -21,10 +29,340 @@ class based componant. function based componant
 ==================================================================================================================================
 we can write javascript code in between {}
 ==================================================================================================================================
+... spread operator
+    const originalArray = [1, 2, 3];
+    const copiedArray = [...originalArray]; 
+==================================================================================================================================
 In react use camel for event 
 onClick =>React  => onClick{functionName} => onlu use functionName dont use (). if we use () it will executed even before click
 onclick => javascript
+onClick{()=>functionName()} => with callback it will not executed automatic
 ==================================================================================================================================
+<input
+type="text"
+onChange={(e) => setAmount(e.target.value)}     ✏️ setting input value
+value={amount}
+name=""
+id=""
+==================================================================================================================================
+className  => camel case provided by react
+
+# inline CSS Stylesheets To Style Component
+
+const header = { color: "blue", fontSize: "140px" };
+export default function InlineComponent()
+(
+<div>
+<h1 style={header}>Inline Component</h1>
+</div>
+
+return
+
+) ;
+----------------------------------------------------------------
+CSS Stylesheets To Style Components
+
+----------------------------------------------------------------
+# CSS Modules For Styling
+
+import " .. /css/style.css";
+export default function InlineComponent() {
+return (
+<div>
+h1 className="inline-header"   =>  inline-header class name defined in css file style.css
+</div>
+);
+
+Inline Component</h1>
+
+}
+
+----------------------------------------------
+import styles from "./inlinecomponent.module.css";  => styles is variable name  this file created for each componant
+export default function InlineComponent() {
+return
+Ediva
+<h1 className={styles.header}>Inline Component</h1>  => header is calss name
+</div>
+) ;
+
+----------------------------------------------
+
+==================================================================================================================================
+event
+
+
+
+const handleButtonClick = (event) = {
+console.log(event);
+console.log(event.target);
+console.log(event.type); // "click"
+alert("Hey I am onClick Event");
+};
+------------------
+https://github.com/thapatechnical/react-19-series-thapa-technical/blob/master/src/components/EventHandling.jsx
+{/* // ? Function Components with Named Functions */
+/* Remember how we haven't called this function, if you call this
+function here then it will run without even clicking. You just need
+to pass reference and not call here. */}
+<button onClick={handleButtonClick}>click Me</button>
+<br
+<button onClick={() = handleButtonClick(event)}>click Me 2 </button>
+
+----------------------------------------
+{/* /* //? Inline Event Handlers} */}
+<button onClick={(event) => console.log(event)}>Inline Function</button>
+-------------------------------------
+{/* //? Function Components with Inline Arrow Functions */}
+<button onClick={() => alert("Hey I am inline evnt function")}>
+w
+
+Inline Arr fun
+/button>
+--------------------------------------------
+{/* {/* //? Passing Arguments to Event Handlers } */}
+{/* <button onClick={handleWelcomeUser("vinod")}>click Me</button> */}
+<button onClick={() =handleWelcomeUser("vinod")}>click Me</button>
+--------------------------------------------
+
+const handleWelcomeUser =
+console. log( Hey ${user}, Welcome );
+
+(
+
+user) = {
+
+};
+
+==================================================================================================================================
+Passing Events as Props in React | Control Parent Function Using Child Component
+
+onClickCapture
+stopPropagation
+
+https://github.com/thapatechnical/react-19-series-thapa-technical/blob/master/src/components/EventProps.jsx
+------------------------
+==================================================================================================================================
+Syntax of the useEffect hook
+
+useEffect(() => {
+function demo() {
+console. log("Demo function executed"
+
+demo ()
+}, [])
+
+-----------------------------------------------------
+export default function Search() {
+const [query, setQuery] = useState("pizza")
+// Syntax of the useEffect hook
+useEffect(() => {
+async function fetchFood()
+const res = await fetch('${URL}?query=${query}&apiKey=${API_KEY}');
+const data = await res. json()
+console. log (data)
+
+fetchFood()
+}, [query] )     => in depandacy we have added query , if any thing change in query thee it again execute api call
+return
+
+(
+==================================================================================================================================
+##  useReducer =>  have state and action that we want to dispatch  and reducer function(3 trpes)
+
+const [state_var, dispatch_action] = useReducer(reducer_func, 0);  => i si sinitial value
+
+----
+// reducer  function
+function reducer_func(state, action) {
+if (action. type == "increment") {
+return state + action.payload;
+}
+----
+< button onClick={ ()=>dispatch_action((type:"increment", payload: 1})}>Increment couny>/button>   => in call back function  have 2 argument  type and payload(data)
+
+----
+---------------------------------------------------------------
+##  Using Object As State In useReducer
+
+import { useReducer, useState } from "react";
+
+function App() {
+const [state, dispatch] = useReducer(reducer, { count: 0 });
+function reducer(state, action) {
+if (action.type == "increment") {
+return { ... state, count: state. count + action. payload }; // state + action.payload;
+}
+if (action. type == "decrement") {
+return { ... state, count: state. count - action. payload };
+}
+return (
+<div>
+{state. count}
+<button onClick={() => dispatch({ type: "increment", payload: 1 }) }>
+Increment count
+</button>
+<button onClick={() => dispatch({ type: "decrement", payload: 1}) }>
+Decrement count
+</button>
+</div>
+}
+---------------------------------------------------------------
+## Using Complex Object As State In useReducer
+
+https://youtu.be/kFe4h4HHpbA?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
+
+
+=================================================================================================================================
+## React Router (Creating Routes)
+
+npm install react-router-dom
+npm install react-router-dom@6 install version 6
+
+
+----------------------------------------------------
+import { BrowserRouter, Routes, Route } from "react-router-dom"; ✏️=> import
+import Homepage from "./pages/Homepage";
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
+
+function App() {
+return(
+<BrowserRouter>
+<Routes>
+<Route path="/" element={<Homepage />} />                          ✏️=> Homepage is componant
+<Route path="/dashboard" element={<Dashboard />} />                ✏️=> Dashboard is componant
+<Route path="*" element={<PageNotFound/>} />
+</Routes>
+</BrowserRouter>
+);
+---------------------------------------------------------
+https://youtu.be/gBH34hZdjns?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
+React Router ## Link Component In React
+import { Link } from "react-router-dom";  ✏️=> import
+export default function Homepage() {
+return (
+<div>
+This is a homepage
+<Link to="/dashboard" Dashboard</Link>  ✏️=> /dashboard is componant
+</div>
+);
+}
+---------------------------------------------------------
+React Router ##  Nesting Routes  ✏️=> import
+
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
+import Nav from "./Nav";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+
+function App() {
+return (
+
+<BrowserRouter>
+<Nav />
+
+<Routes>
+<Route path="/" element={<Homepage />} />
+<Route path="/products/: id element={<Products />}/>
+<Route path="/dashboard" element={<Dashboard >}>
+	<Route path="profile" element={<Profile />} />
+	<Route path="settings" element={<Settings />} />
+</Route>
+<Route path="*" element={<PageNotFound />} />
+</Routes>
+</BrowserRouter>
+);
+-----------------
+
+import { Link, Outlet } from "react-router-dom";
+
+export default function Dashboard() {
+return (
+<div>
+This is a dashboard
+<Outlet>  ✏️=> use this
+</div>
+);
+}
+---------------------------------------------------------
+<Route path="/" element={<Homepage />} />
+Route path="/products/: id element={<Products />}/>
+--------
+return <div>Products List
+
+import { useParams } from "react-router-dom";
+
+export default function Products() {
+const { id } = useParams ();
+return <div> my product {id} </div>
+
+
+---------------------------------------------------------
+React Router ## progrmatic by code useNavigate Hook In React
+
+import { Link, useNavigate } from "react-router-dom";
+export default function Homepage() {
+const navigate = useNavigate();
+function handleClick() {
+navigate("/dashboard/profile");
+}
+return(
+<div>
+This is a homepaget
+<button onClick={handleClick}>Go to profile page</button>
+</div>
+);
+}
+
+---------------------------------------------------------
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+export default function Homepage() {
+const [username, setUsername] = useState("");
+const navigate = useNavigate();
+function handleClick() {
+navigate("/dashboard/profile",
+}
+return (
+<div>
+This is a homepage
+<input
+type="text"
+value={username}
+onChange={(e) => setUsername(e.target.value)}
+/>
+<button onClick={handleClick}>Go to profile page</button>
+</div>
+
+state: { username } }) ;
+
+) ;
+}
+---------
+import { useLocation } from "react-router-dom";
+
+export default function Profile() {
+const location = useLocation();
+const { username } = location. state | | {};
+return <div>Profile for
+
+{username}</div>;}
+
+=================================================================================================================================
+
+=================================================================================================================================
+
+=================================================================================================================================
+
+=================================================================================================================================
+
+=================================================================================================================================
+
+=================================================================================================================================
+
+
 cons name = "your name";
 numRange = [1, 4, 7];
 
@@ -130,8 +468,92 @@ return
 
 ( 
 ==================================================================================================================================
+Props v/s State
+. Props are passed to the component.
+. State is contained inside the component.
+. Props are immutable.
+· State can be changed.
+. Props are like parameters passed to a function.
+. State is like a variable declared in function body.
 
+
+----------------------------------------------------------------------------------
+
+import { useState } from "react";   => import this 
+
+export default function Counter() {
+const [count, setCount] = useState(0);  => use setCount function to  set value in count variable
+function handleClick()
+setCount(count + 1); => use setCount function to  set value in count variable
+
+(
+<div>
+<h1> Count value is: {count}</h1>
+<button onClick={handleClick}>Increment</button>
+</div>
+--------------------------------------------------------------------------------
+Creating Multiple States In React
+
+import { useState } from "react";
+
+export default function Counter() {
+const [count, setCount] = useState(0);             => multiple state
+const [incrementBy, setIncrementBy] = useState(1);  => multiple state
+function increment() {
+setCount (count + incrementBy) ;         =>both state variabe used 
+
+function decrement() {
+setCount(count - incrementBy);
+
+function increaseIncrement() {
+setIncrementBv(incrementBv + 1):
+}
+
+<div>
+<h1> Count value is: {count}</h1>
+<button onClick={increment}>Increment</button>
+<button onClick={decrement}>Decrement</button>
+
+<h1 We are incrementing the value by: {incrementBy}</h1>
+<betton onClick={increaseIncrement}>Increase Increment</button>
+</div>
 ==================================================================================================================================
+Handling Input Fields In React
+
+export default function Form() {
+const [name, setName] = useState("Rob");
+function handleChange() {
+console. log ("Change occured')
+}
+
+return(
+<div>
+
+<form>   => use form tag
+<input onChange={handleChange} type="text" value={name} />
+</form>
+</form>
+</div>
+
+)
+};
+--------------------------------------------------------------------------
+export default function Form( )
+const [name, setName] = useState("");
+
+(
+<div>
+<form>
+<input
+onChange={(e) => setName(e.target.value)} => event value capture
+type="text"
+value={name}
+
+</form>
+</div>
+--------------------------------------------------------------------------
+
+
 
 ==================================================================================================================================
 
@@ -208,9 +630,11 @@ usedispatch()
 useselector ()
 useDispatch()
 useLayoutEffect()
+useNavigate
 
 
 useCallback
+useTransition
 useLayoutEffect
 useMemo // useEffect
 useRef
@@ -219,7 +643,7 @@ useMediaQuery
 useSession
 usePathName
 children
-
+preventdefault
 
 ==================================================================================================================================
 ✨ react js with vite
