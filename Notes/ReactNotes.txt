@@ -616,6 +616,231 @@ return <div>Profile for
 {username}</div>;}
 
 =================================================================================================================================
+✨ useContext Hook Context  // avoid prop drelling
+✨ Context API In React ✨
+https://youtu.be/aL6PBTtdt40?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
+-----------------------------------------------
+Steps Involved With Context
+. Creating context.
+· Providing context.  => wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
+. Consuming context.  =>
+· Updating context.
+
+==================================================================================================================================
+create contex (parent)
+provider  (parent)
+consume contex (child>
+------------------------------------------------------------------------------
+Creating context.
+Providing context
+import { createContext, useState } from 'react'
+import './App.css'
+import ChildA from './components/ChildA';
+
+//step1: create Context
+const UserContext = createContext();
+//step2: wrap all the child inside a provider
+//step3: pass value
+//step4: consumer .k andar jaake consume karlo
+
+function App() {
+const [user, setUser] = useState({name:"Love"});
+return (
+
+<UserContext.Provider value={user}>
+<ChildA />
+</UserContext.Provider>
+</>
+
+export default App
+export {UserContext}  //=> export contex
+------------------------------------------------------------------------------
+Consuming context
+
+import React, { useContext } from 'react'
+import { UserContext } from ' .. /App'
+
+const Child = () => {
+const user = useContext(UserContext);
+return (
+<div>
+{user. name}
+</div>
+
+)
+
+export default Child
+------------------------------------------------------------------------------
+ ## Updating context.
+ 
+ import { createContext, useState } from "react";
+import Checkout from "./Checkout";
+export const userContext = createContext();
+function App() {
+const [user, setUser] = useState("guest");
+return (
+<div>
+<input
+type="text"
+value={user}
+onChange={(e) => setUser(e.target. value)}
+/>
+<userContext.Provider xalue={{ user }}>
+<Checkout />
+</userContext.Provider>
+</div>
+
+):
+
+export default App;
+-----------
+src > Checkout.jsx > Checkout > 
+import { useContext } from "react";
+import { userContext } from "./App";
+
+export default function Checkout() {
+const {value} = useContext(userContext);
+return <div>Checkout as {value.user}</div>;
+==================================================================================================================================
+const ThemeContext = createContext();
+I
+
+function App()
+// const [user, setUser] = useState({name:"Love"});
+const [theme, setTheme] = useState('light');
+
+return (
+
+<ThemeContext.Provider value={{theme, setTheme}}>
+<div id='container' style={{backgroundColor:theme === 'light'?
+"beige":"black"}}>
+<ChildA />
+</div>
+
+</ThemeContext.Provider>
+------------------------------------------------------------------------------
+const ChildC = () => {
+const user = useContext(UserContext);
+const {theme, setTheme} = useContext (ThemeContext);
+function toggleTheme()
+if(theme === 'light' )
+setTheme ('dark')
+else
+setTheme('light')
+
+return (
+<div>
+<button onClick={toggleTheme}>
+Change Theme
+</button>
+</div>
+
+)
+
+export default ChildC
+==================================================================================================================================
+2]  Separating Context Into Its Own File In React
+------------------------------------------------------------------------------
+src > context >UserContext.jsx > UserProvider
+import { createContext } from "react";
+import { useState } from "react";
+const userContext = createContext();
+
+function UserProvider({ children }) {
+const [user, setUser] = useState("guest");
+return
+<userContext.Provider value={{ user, setUser }}>
+{children}
+</userContext.Provider>
+);
+
+export { UserProvider, userContext };
+------------------------------------------------------------------------------
+src > App.jsx > App
+>src App.jsx > App
+import { createContext, useState } from "react";
+import Checkout from "./Checkout";
+import Login from "./Login";
+import { UserProvider } from "./context/UserContext";
+
+
+function App()
+
+return (
+<div>
+<UserProvider>
+<Login />
+<Checkout />
+</UserProvider>
+</div>
+
+export default App:
+==================================================================================================================================
+
+  
+✨ ####  Using Reducer With Context Provider ✨
+------------------------------------------------
+src > context > UserContext.jsx > UserProvider > userReducer
+ 
+import { createContext, useReducer } from "react";
+import { useState } from "react";
+const userContext = createContext();
+
+function UserProvider({ children }) {
+//const [user, setUser] = useState("guest");
+function userReducer(state, action) {
+if (action. type == "login") {
+
+return action.payload;
+
+if (action. type == "logout")
+
+return "Guest";
+
+const [user, dispatch] = useReducer(userReducer, "");
+
+return (
+<userContext.Provider value={{ user, dispatch }}>
+{children}
+</userContext. Provider> 
+------------------------------------------------------------------------------------------------
+>src > Logout.jsx > Logout
+import { useContext } from "react";
+import { userContext } from "./context/UserContext";
+
+export default function Logout() {
+const { dispatch } = useContext(userContext);
+return
+<div>
+<button onClick={() => dispatch({ type: "logout", payload: "Guest" }) }>
+Logout
+</button>
+</div>
+------------------------------------------------------------------------------------------------
+src > Login.jsx > Login > handleSubmit
+Enport { userContext } trom "./context/UserContext";
+
+export default function Login() {
+const [value, setValue] = useState["");
+const { user, dispatch } = useContext(userContext);
+function handleSubmit(e) <
+e.preventDefault();
+//setUser(value);
+dispatch({ type: "login", payload: value });
+
+return (
+<div>
+<form onSubmit={handleSubmit}>
+<input
+value={value}
+onChange={(e) => setValue(e.target.value)}
+type="text"
+
+<button type="submit">Login</button>
+</form>
+</div>
+);
+==================================================================================================================================
 
 =================================================================================================================================
 
@@ -1655,165 +1880,7 @@ button>
 
 );}
 ==================================================================================
-✨ useContext Hook Context  // avoid prop drelling
-✨ Context API In React ✨
------------------------------------------------
-Steps Involved With Context
-. Creating context.
-· Providing context.  => wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
-. Consuming context.  =>
-· Updating context.
 
-==================================================================================================================================
-create contex (parent)
-provider  (parent)
-consume contex (child>
-------------------------------------------------------------------------------
-Creating context.
-Providing context
-import { createContext, useState } from 'react'
-import './App.css'
-import ChildA from './components/ChildA';
-
-//step1: create Context
-const UserContext = createContext();
-//step2: wrap all the child inside a provider
-//step3: pass value
-//step4: consumer .k andar jaake consume karlo
-
-function App() {
-const [user, setUser] = useState({name:"Love"});
-return (
-
-<UserContext.Provider value={user}>
-<ChildA />
-</UserContext.Provider>
-</>
-
-export default App
-export {UserContext}  //=> export contex
-------------------------------------------------------------------------------
-Consuming context
-
-import React, { useContext } from 'react'
-import { UserContext } from ' .. /App'
-
-const Child = () => {
-const user = useContext(UserContext);
-return (
-<div>
-{user. name}
-</div>
-
-)
-
-export default Child
-------------------------------------------------------------------------------
- ## Updating context.
- 
- import { createContext, useState } from "react";
-import Checkout from "./Checkout";
-export const userContext = createContext();
-function App() {
-const [user, setUser] = useState("guest");
-return (
-<div>
-<input
-type="text"
-value={user}
-onChange={(e) => setUser(e.target. value)}
-/>
-<userContext.Provider xalue={{ user }}>
-<Checkout />
-</userContext.Provider>
-</div>
-
-):
-
-export default App;
------------
-src > Checkout.jsx > Checkout > 
-import { useContext } from "react";
-import { userContext } from "./App";
-
-export default function Checkout() {
-const {value} = useContext(userContext);
-return <div>Checkout as {value.user}</div>;
-==================================================================================================================================
-const ThemeContext = createContext();
-I
-
-function App()
-// const [user, setUser] = useState({name:"Love"});
-const [theme, setTheme] = useState('light');
-
-return (
-
-<ThemeContext.Provider value={{theme, setTheme}}>
-<div id='container' style={{backgroundColor:theme === 'light'?
-"beige":"black"}}>
-<ChildA />
-</div>
-
-</ThemeContext.Provider>
-------------------------------------------------------------------------------
-const ChildC = () => {
-const user = useContext(UserContext);
-const {theme, setTheme} = useContext (ThemeContext);
-function toggleTheme()
-if(theme === 'light' )
-setTheme ('dark')
-else
-setTheme('light')
-
-return (
-<div>
-<button onClick={toggleTheme}>
-Change Theme
-</button>
-</div>
-
-)
-
-export default ChildC
-==================================================================================================================================
-2]  Separating Context Into Its Own File In React
-------------------------------------------------------------------------------
-src > context >UserContext.jsx > UserProvider
-import { createContext } from "react";
-import { useState } from "react";
-const userContext = createContext();
-
-function UserProvider({ children }) {
-const [user, setUser] = useState("guest");
-return
-<userContext.Provider value={{ user, setUser }}>
-{children}
-</userContext.Provider>
-);
-
-export { UserProvider, userContext };
-------------------------------------------------------------------------------
-src > App.jsx > App
->src App.jsx > App
-import { createContext, useState } from "react";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import { UserProvider } from "./context/UserContext";
-
-
-function App()
-
-return (
-<div>
-<UserProvider>
-<Login />
-<Checkout />
-</UserProvider>
-</div>
-
-export default App:
-==================================================================================================================================
 https://reactrouter.com/start/data/routing
 ✨ Routing in React ✨ 
 ------------------------------------------------------------------------------
