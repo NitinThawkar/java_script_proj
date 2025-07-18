@@ -11,6 +11,33 @@ create resct app : https://create-react-app.dev/
 form hook : https://www.react-hook-form.com/
 nest js replacement : https://remix.run/
 redux : https://react-redux.js.org/introduction/getting-started
+
+==================================================================================================================================
+useState
+useDispatch
+useSelector
+
+useNavigate/usedLocation
+useref
+forward Ref>> depricated from vesion 19
+useformStstus hoo =>
+useactionstate
+useEffect
+useParams    => read query string parameter from url/route path in componenetnt
+
+useReduces  => use with dispatch , like use state , define initial state
+createContex  =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
+Redux          => It Uses a centralised store, actions and reducers to manage state change predictibliy
+useCallback
+useTransition
+useLayoutEffect
+useMemo // useEffect
+useTheam
+useMediaQuery
+useSession
+usePathName
+children
+preventdefault
 ==================================================================================================================================
 ### command to create project
 npm creteate vite@4.10 
@@ -21,7 +48,10 @@ npm run dev
 #### command  to run project
 npm run dev
 --------------------------------------------------
+
  const data = JSON.stringify()
+JSON.stringify(props)  , prop is a object
+console.log(JSON.stringify(props));
 ==================================================================================================================================
 class based componant. function based componant
 ==================================================================================================================================
@@ -44,6 +74,241 @@ onChange={(e) => setAmount(e.target.value)}     ✏️ setting input value
 value={amount}
 name=""
 id=""
+==================================================================================================================================
+------------------------------------------------------------------
+Props are immutable 
+
+Destructuring Props => props assinged to variables
+1]
+function Hello(props) {  // as prop key word
+console. log(props);
+const { name, message } = props;
+return (
+<div>
+
+{message} {name}
+</h1>
+</div>
+
+export default Hello;
+
+-------------------------
+2] directly destructure 
+function Hello({ name, message }) { // directly destructure  here.  remove prop keyword and in curly brases give varibles name
+return
+
+<div>
+
+<h1>
+{message} {name}
+</h1>
+</div>
+
+) ;
+
+export default Hello;
+
+------------------------------------------------------------------
+<h1>{`Hello ${user}!`}</h1>  => variable subcription  (tild use here)
+
+...Values  => ... used for creating copy 
+
+e.target.value  => get any html element value  . like input ,button etc
+
+
+
+
+---------------------------------------------------------------------
+cons name = "your name";
+numRange = [1, 4, 7];
+
+//object
+const person = {
+name: "Rob",
+message: "Hi there!",
+emoji: "@",
+seatNumbers: [1, 4, 7],
+};
+
+return (
+<div>
+<h2>Name: {name} </h2>
+<h3>Rating: {5 / 3.2} </h3>
+<p>Sumamry: {summary} </p>
+<p>Genre: {returnGenre ()} </p> calling function;
+<h2>Name: {name}, seatNumbers={seatNumbers} ,person={person}</h2> // sending array and object as props
+</div>
+)
+
+==================================================================================================================================
+Rendering Arrays Or Lists In React
+
+export default function Fruits() {
+const fruits = ["Apple", "Mango", "Banana", "Orange"]
+return (
+<div>
+
+<ul>
+{fruits.map((fruit) => (
+<li key={fruit}>{fruit}</li>           //key is acts like uniq index 
+
+</ul>
+</div>
+
+);
+-------------------------------------
+Rendering Array Of Objects In React
+
+export default function Fruits() {
+//const fruits = ["Apple", "Mango", "Banana", "Orange", "Pineapple"];
+const fruits = [
+[
+{ name: Apple", price: 10, emoji: "" },
+{ name: "Mango", price: 7, emoji: "Q" },
+{ name: "Banana", price: 2, emoji: "" },
+{ name: "Orange", price: 5, emoji: "é" },
+{ name: "Pineapple", price: 8, emoji: ">" },
+];
+
+
+<ul>
+{ fuits.map((fruit) =>
+li key={fruit.name}
+{" "}
+{fruit.emoji} {fruit.name} ${fruit.price}
+</li>
+
+</ul>
+-------------------------------------
+Rendering Components Inside A Loop
+https://www.youtube.com/watch?v=8AY4siDB3ow&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=15&pp=iAQB
+
+==================================================================================================================================
+
+
+Conditional Rendering Using Element Variables
+
+export default function ConditionalComponent()
+let message;
+tonst display = false;
+if (display) {
+message = <h1>This is message 1</h1>;
+} else {
+message = <h1>This is message 2</h1>;
+
+return message;
+---------------------------------
+Using Ternary Operators In React
+export default function ConditionalComponent()
+const display = true;
+return display ? <h1>Message 1</h1> : <h1>Message 2</h1>;
+
+---------------------------------
+export default function ConditionalComponent()
+const display = false;
+return display ? <Welcome /> : <Code />;
+
+---------------------------------
+{/* {emoji} {name} {price} */}
+{price>5 ? <h3>{emoji} {name} {price}</h3>:
+/li>
+
+-----------------------------------
+export default function Fruit({ name, price, emoji, soldout
+return
+
+<li>
+{emoji} {name} {price} {soldout ? "soldOut" : ""}
+</li>
+</>
+
+( 
+==================================================================================================================================
+Props v/s State
+. Props are passed to the component.
+. State is contained inside the component.
+. Props are immutable.
+· State can be changed.
+. Props are like parameters passed to a function.
+. State is like a variable declared in function body.
+
+
+----------------------------------------------------------------------------------
+
+import { useState } from "react";   => import this 
+
+export default function Counter() {
+const [count, setCount] = useState(0);  => use setCount function to  set value in count variable
+function handleClick()
+setCount(count + 1); => use setCount function to  set value in count variable
+
+(
+<div>
+<h1> Count value is: {count}</h1>
+<button onClick={handleClick}>Increment</button>
+</div>
+--------------------------------------------------------------------------------
+Creating Multiple States In React
+
+import { useState } from "react";
+
+export default function Counter() {
+const [count, setCount] = useState(0);             => multiple state
+const [incrementBy, setIncrementBy] = useState(1);  => multiple state
+function increment() {
+setCount (count + incrementBy) ;         =>both state variabe used 
+
+function decrement() {
+setCount(count - incrementBy);
+
+function increaseIncrement() {
+setIncrementBv(incrementBv + 1):
+}
+
+<div>
+<h1> Count value is: {count}</h1>
+<button onClick={increment}>Increment</button>
+<button onClick={decrement}>Decrement</button>
+
+<h1 We are incrementing the value by: {incrementBy}</h1>
+<betton onClick={increaseIncrement}>Increase Increment</button>
+</div>
+==================================================================================================================================
+Handling Input Fields In React
+
+export default function Form() {
+const [name, setName] = useState("Rob");
+function handleChange() {
+console. log ("Change occured')
+}
+
+return(
+<div>
+
+<form>   => use form tag
+<input onChange={handleChange} type="text" value={name} />
+</form>
+</form>
+</div>
+
+)
+};
+--------------------------------------------------------------------------
+export default function Form( )
+const [name, setName] = useState("");
+
+(
+<div>
+<form>
+<input
+onChange={(e) => setName(e.target.value)} => event value capture
+type="text"
+value={name}
+
+</form>
+</div>
+--------------------------------------------------------------------------
+
 ==================================================================================================================================
 className  => camel case provided by react
 
@@ -89,7 +354,7 @@ Ediva
 ----------------------------------------------
 
 ==================================================================================================================================
-event
+## handling event
 
 
 
@@ -363,198 +628,6 @@ return <div>Profile for
 =================================================================================================================================
 
 
-cons name = "your name";
-numRange = [1, 4, 7];
-
-//object
-const person = {
-name: "Rob",
-message: "Hi there!",
-emoji: "@",
-seatNumbers: [1, 4, 7],
-};
-
-return (
-<div>
-<h2>Name: {name} </h2>
-<h3>Rating: {5 / 3.2} </h3>
-<p>Sumamry: {summary} </p>
-<p>Genre: {returnGenre ()} </p> calling function;
-<h2>Name: {name}, seatNumbers={seatNumbers} ,person={person}</h2> // sending array and object as props
-</div>
-)
-
-==================================================================================================================================
-Rendering Arrays Or Lists In React
-
-export default function Fruits() {
-const fruits = ["Apple", "Mango", "Banana", "Orange"]
-return (
-<div>
-
-<ul>
-{fruits.map((fruit) => (
-<li key={fruit}>{fruit}</li>           //key is acts like uniq index 
-
-</ul>
-</div>
-
-);
--------------------------------------
-Rendering Array Of Objects In React
-
-export default function Fruits() {
-//const fruits = ["Apple", "Mango", "Banana", "Orange", "Pineapple"];
-const fruits = [
-[
-{ name: Apple", price: 10, emoji: "" },
-{ name: "Mango", price: 7, emoji: "Q" },
-{ name: "Banana", price: 2, emoji: "" },
-{ name: "Orange", price: 5, emoji: "é" },
-{ name: "Pineapple", price: 8, emoji: ">" },
-];
-
-
-<ul>
-{ fuits.map((fruit) =>
-li key={fruit.name}
-{" "}
-{fruit.emoji} {fruit.name} ${fruit.price}
-</li>
-
-</ul>
--------------------------------------
-Rendering Components Inside A Loop
-https://www.youtube.com/watch?v=8AY4siDB3ow&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=15&pp=iAQB
-
-==================================================================================================================================
-
-
-Conditional Rendering Using Element Variables
-
-export default function ConditionalComponent()
-let message;
-tonst display = false;
-if (display) {
-message = <h1>This is message 1</h1>;
-} else {
-message = <h1>This is message 2</h1>;
-
-return message;
----------------------------------
-Using Ternary Operators In React
-export default function ConditionalComponent()
-const display = true;
-return display ? <h1>Message 1</h1> : <h1>Message 2</h1>;
-
----------------------------------
-export default function ConditionalComponent()
-const display = false;
-return display ? <Welcome /> : <Code />;
-
----------------------------------
-{/* {emoji} {name} {price} */}
-{price>5 ? <h3>{emoji} {name} {price}</h3>:
-/li>
-
------------------------------------
-export default function Fruit({ name, price, emoji, soldout
-return
-
-<li>
-{emoji} {name} {price} {soldout ? "soldOut" : ""}
-</li>
-</>
-
-( 
-==================================================================================================================================
-Props v/s State
-. Props are passed to the component.
-. State is contained inside the component.
-. Props are immutable.
-· State can be changed.
-. Props are like parameters passed to a function.
-. State is like a variable declared in function body.
-
-
-----------------------------------------------------------------------------------
-
-import { useState } from "react";   => import this 
-
-export default function Counter() {
-const [count, setCount] = useState(0);  => use setCount function to  set value in count variable
-function handleClick()
-setCount(count + 1); => use setCount function to  set value in count variable
-
-(
-<div>
-<h1> Count value is: {count}</h1>
-<button onClick={handleClick}>Increment</button>
-</div>
---------------------------------------------------------------------------------
-Creating Multiple States In React
-
-import { useState } from "react";
-
-export default function Counter() {
-const [count, setCount] = useState(0);             => multiple state
-const [incrementBy, setIncrementBy] = useState(1);  => multiple state
-function increment() {
-setCount (count + incrementBy) ;         =>both state variabe used 
-
-function decrement() {
-setCount(count - incrementBy);
-
-function increaseIncrement() {
-setIncrementBv(incrementBv + 1):
-}
-
-<div>
-<h1> Count value is: {count}</h1>
-<button onClick={increment}>Increment</button>
-<button onClick={decrement}>Decrement</button>
-
-<h1 We are incrementing the value by: {incrementBy}</h1>
-<betton onClick={increaseIncrement}>Increase Increment</button>
-</div>
-==================================================================================================================================
-Handling Input Fields In React
-
-export default function Form() {
-const [name, setName] = useState("Rob");
-function handleChange() {
-console. log ("Change occured')
-}
-
-return(
-<div>
-
-<form>   => use form tag
-<input onChange={handleChange} type="text" value={name} />
-</form>
-</form>
-</div>
-
-)
-};
---------------------------------------------------------------------------
-export default function Form( )
-const [name, setName] = useState("");
-
-(
-<div>
-<form>
-<input
-onChange={(e) => setName(e.target.value)} => event value capture
-type="text"
-value={name}
-
-</form>
-</div>
---------------------------------------------------------------------------
-
-
-
 ==================================================================================================================================
 
 ==================================================================================================================================
@@ -579,71 +652,6 @@ htmlFor    =>
 e,preventDefault =>
 <React.StrictMode>   => use application run in dev mode , cause to double rendaring , Remove on Prod 
 useState             => hook  to change initial value  like input  
-------------------------------------------------------------------
-Props are immutable 
-
-Destructuring Props => props assinged to variables
-1]
-function Hello(props) {  // as prop key word
-console. log(props);
-const { name, message } = props;
-return (
-<div>
-
-{message} {name}
-</h1>
-</div>
-
-export default Hello;
-
--------------------------
-2] directly destructure 
-function Hello({ name, message }) { // directly destructure  here.  remove prop keyword and in curly brases give varibles name
-return
-
-<div>
-
-<h1>
-{message} {name}
-</h1>
-</div>
-
-) ;
-
-export default Hello;
-
-------------------------------------------------------------------
-<h1>{`Hello ${user}!`}</h1>  => variable subcription  (tild use here)
-
-...Values  => ... used for creating copy 
-
-e.target.value  => get any html element value  . like input ,button etc
-
-
-useEffect
-useParams    => read query string parameter from url/route path in componenetnt
-useRef
-useReduces  => use with dispatch , like use state , define initial state
-createContex () =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
-Redux           => It Uses a centralised store, actions and reducers to manage state change predictibliy
-usedispatch()
-useselector ()
-useDispatch()
-useLayoutEffect()
-useNavigate
-
-
-useCallback
-useTransition
-useLayoutEffect
-useMemo // useEffect
-useRef
-useTheam
-useMediaQuery
-useSession
-usePathName
-children
-preventdefault
 
 ==================================================================================================================================
 ✨ react js with vite
@@ -975,15 +983,7 @@ uncontrolled >> use ref >> using selector >> directly dom  referance
 ### hook
 hook's are reguler functions but these function only called by react component (alwayes place inside of component)
 
-useState
-useDispatch
-useSelector
-useparams
-useNavigate/usedLocation
-useref
-forward Ref>> depricated from vesion 19
-useformStstus hoo =>
-useactionstate
+
 ==================================================================================================================================
 next js
 router.push ()=> this will create entry in history

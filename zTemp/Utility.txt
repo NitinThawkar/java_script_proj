@@ -30,7 +30,8 @@ Upper Case => MY_VARIABLE_NAME
 google crome 
 clear()  => clear console tab
 =================================================================
-
+Query parameter  ✏️=>   www.sj.com/employee?id= nitin
+route parameter  ✏️=>   www.sj.com/ employee/2
 =================================================================
 
 =================================================================
