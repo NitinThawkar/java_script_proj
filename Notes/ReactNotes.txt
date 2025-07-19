@@ -13,32 +13,7 @@ nest js replacement : https://remix.run/
 redux : https://react-redux.js.org/introduction/getting-started
 
 ==================================================================================================================================
-useState
-useDispatch
-useSelector
 
-useNavigate/usedLocation
-useref
-forward Ref>> depricated from vesion 19
-useformStstus hoo =>
-useactionstate
-useEffect
-useParams    => read query string parameter from url/route path in componenetnt
-
-useReduces  => use with dispatch , like use state , define initial state
-createContex  =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
-Redux          => It Uses a centralised store, actions and reducers to manage state change predictibliy
-useCallback
-useTransition
-useLayoutEffect
-useMemo // useEffect
-useTheam
-useMediaQuery
-useSession
-usePathName
-children
-preventdefault
-==================================================================================================================================
 ### command to create project
 npm creteate vite@4.10 
 cd foodapp
@@ -58,6 +33,99 @@ class based componant. function based componant
 <React.StrictMode> => used for debugging in dev mode. on production it should be remove
 ==================================================================================================================================
 we can write javascript code in between {}
+==================================================================================================================================
+----------------------------------------------------------------------
+use
+	Usage
+	
+	Reading context with use
+	
+	When a context is passed to use , it works similarly to useContext . While useContext must be called at the
+	
+	top level of your component, use can be called inside conditionals like if and loops like for . use is preferred
+	
+	over useContext because it is more flexible.
+----------------------------------------------------------------------
+useState
+----------------------------------------------------------------------
+useDispatch
+----------------------------------------------------------------------
+useSelector
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+useNavigate/usedLocation
+----------------------------------------------------------------------
+useref => not muted , not re-render,use in uncontrolled form ,
+----------------------------------------------------------------------
+forward Ref => passing data from parent to child componant, in child olny limited data access part render not full child componant. depricated from vesion 19 use Get Ref
+----------------------------------------------------------------------
+useformStstus hoo =>
+----------------------------------------------------------------------
+useactionstate
+----------------------------------------------------------------------
+useEffect
+----------------------------------------------------------------------
+useParams    => read query string parameter from url/route path in componenetnt
+----------------------------------------------------------------------
+useID ()    => genarating to uniq id ; const = useID ();
+			useld()
+			
+			useld is a React Hook for generating unique IDs that can be passed to accessibility
+			attributes. It helps to ensure that each instance of a component gets a unique ID,
+			which is useful for associating labels with input fields and other elements
+			
+			Syntax = const id = useId( )
+			
+			Parameters: useld does not take any parameters.
+			
+			Returns: useld returns a unique ID string associated with this particular useld call
+			
+			in this particular component.
+			
+			Note: useld should not be used to generate keys in a list.
+----------------------------------------------------------------------
+useReduces  => use with dispatch , like use state , define initial state
+----------------------------------------------------------------------
+createContex  =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
+----------------------------------------------------------------------
+Redux          => It Uses a centralised store, actions and reducers to manage state change predictibliy
+----------------------------------------------------------------------
+useCallback
+----------------------------------------------------------------------
+useTransition
+----------------------------------------------------------------------
+useLayoutEffect
+----------------------------------------------------------------------
+React.memo
+useMemo 
+useCallback
+compiler
+------------------
+React.memo(compName) => it's use for if perticulaer component render then child component should not be render. avoid unnecesary re-render of child componenet✏️parect child tree  , if parent componant render then child componant also render
+----------------------------------------------------------------------
+useMemo // useEffect
+----------------------------------------------------------------------
+useTheam
+----------------------------------------------------------------------
+useMediaQuery
+----------------------------------------------------------------------
+useSession
+----------------------------------------------------------------------
+usePathName
+----------------------------------------------------------------------
+children
+----------------------------------------------------------------------
+preventdefault => use in form to avoind default submit e.preventdefault()
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+<react.fragment>
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+Portals
+
 ==================================================================================================================================
 ... spread operator
     const originalArray = [1, 2, 3];
@@ -156,6 +224,11 @@ return (
 </div>
 
 );
+
+-------
+const fluitsList = fruits.map((fruit, index) => <h3 key={index}>{fruit}</h
+return <div>fruitsList}</div>;
+
 -------------------------------------
 Rendering Array Of Objects In React
 
@@ -620,10 +693,10 @@ return <div>Profile for
 ✨ Context API In React ✨
 https://youtu.be/aL6PBTtdt40?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
 -----------------------------------------------
-Steps Involved With Context
+4 Steps Involved With Context (context have data and function)
 . Creating context.
-· Providing context.  => wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
-. Consuming context.  =>
+· Providing context.  => provide contex to other componant that required it .wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
+. Consuming context.  => get data and function from contex
 · Updating context.
 
 ==================================================================================================================================
@@ -631,8 +704,8 @@ create contex (parent)
 provider  (parent)
 consume contex (child>
 ------------------------------------------------------------------------------
-Creating context.
-Providing context
+//Creating context.
+//Providing context
 import { createContext, useState } from 'react'
 import './App.css'
 import ChildA from './components/ChildA';
@@ -647,7 +720,7 @@ function App() {
 const [user, setUser] = useState({name:"Love"});
 return (
 
-<UserContext.Provider value={user}>
+<UserContext.Provider value={user}>   ✏️=> provide contex
 <ChildA />
 </UserContext.Provider>
 </>
@@ -655,7 +728,7 @@ return (
 export default App
 export {UserContext}  //=> export contex
 ------------------------------------------------------------------------------
-Consuming context
+step 3 Consuming context
 
 import React, { useContext } from 'react'
 import { UserContext } from ' .. /App'
@@ -671,13 +744,13 @@ return (
 
 export default Child
 ------------------------------------------------------------------------------
- ## Updating context.
+step 4 ## Updating context.
  
  import { createContext, useState } from "react";
 import Checkout from "./Checkout";
 export const userContext = createContext();
 function App() {
-const [user, setUser] = useState("guest");
+const [user, setUser] = useState("guest");  => user is data and setUser is a function
 return (
 <div>
 <input
@@ -755,8 +828,7 @@ return
 );
 
 export { UserProvider, userContext };
-------------------------------------------------------------------------------
-src > App.jsx > App
+----------------------------
 >src App.jsx > App
 import { createContext, useState } from "react";
 import Checkout from "./Checkout";
@@ -775,6 +847,32 @@ return (
 </div>
 
 export default App:
+
+----------------------------------------
+Sharing Context With Other Components In React
+}
+
+import { useContext } from "react";
+import { userContext } from "./context/UserContext";
+
+export default function Logout() {
+const { setUser } = useContext(userContext);
+return (
+<div>
+<button onClick={() => setUser("Guest")}>Logout</button>
+</div>
+);
+
+----------
+<div>
+<UserProvider>
+<Login />
+<Logout />
+<Checkout />
+</UserProvider>
+</div>
+
+
 ==================================================================================================================================
 
   
@@ -843,13 +941,63 @@ type="text"
 ==================================================================================================================================
 
 =================================================================================================================================
+memo
+
+
+import React from "react";
+function Child({ count }) {
+console. log("Child component is being rerendered");
+kdiv Child count is {count}</div>;
+
+export default React.memo(Child);
+=================================================================================================================================
+Portals
 
 =================================================================================================================================
+## useId   (thapa)
+import { useId } from "react";
 
+export const UseId = () =
+const usernameId = useId( );
+const emailId = useId( );
+cosnt passwordId = useId( );
+
+return (
+<form>
+
+<div>
+
+<label htmlFor={usernameId}> Username: </label>
+<input type="text" id={usernameId} name="name"
+</div>
+<div>
+
+<label htmlFor={passwordId}> Password: </label>
+<input type="password" id={passwordId} name="password"
 =================================================================================================================================
 
-=================================================================================================================================
+## Create Custom Hooks in React
 
+Rules for Custom Hooks
+
+Creating custom hooks in React is a powerful way to encapsulate logic and make your
+components cleaner and more maintainable.
+
+Custom hooks must start with the word use. This convention ensures
+that hooks are easily identifiable and adhere to the hook rules.
+
+2. Use Built-in Hooks: Custom hooks should utilize React's built-in hooks (e.g., useState,
+useEffect, useContext) to leverage React's state and lifecycle features.
+
+3. Avoid Side Effects Outside Hooks: Side effects (e.g., data fetching, subscriptions)
+should be managed within hooks using useEffect or other appropriate hooks.
+
+4. Keep Hooks Pure: Hooks should be free from side effects and return values or function
+that the component can use.
+
+Prefix with
+
+use:
 =================================================================================================================================
 
 
@@ -1162,6 +1310,21 @@ prop, state and hook,memo ?
 
 ### fragment
 <></>
+
+return (
+<>
+<h1>Heading</h1>
+<h2>Subheading</h2>
+</>
+);
+--------------- OR 
+return (
+<React.Fragment>
+<h1>Heading</h1>
+<h2>Subheading</h2>
+</React.Fragment>
+);
+
 ----------------------------------------------------------------
 
 const {abcd}= value || {};  value or default , in this case empty object is defaut 
