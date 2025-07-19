@@ -1,16 +1,105 @@
 ✏️  ☑️ ✍️  ✒️  ✍️ ▶️ 
 ----------------------------------------------------------------------------
-
+https://www.typescriptlang.org/
+https://www.typescriptlang.org/download/
 
 ======================================================================================================
 ✨ TYPE Script ✨
 
-
 ======================================================================================================
+▶️ Install and run
+  1]install node js and npm 
+  2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript
+  
+-----------------
+☑️use npx for window's
+    tsc --version
+npx tsc --version
+-----------------
+config file  command
+	tsc --init
+npx tsc --init
+-----------------
+compile typescript file
+in terminal type 
+npx tsc fileName.ts   ✏️=> for manual compile and run 
+npx tsc fileName.ts --watch ✏️=> for Auto compile and run
+-----------------
+======================================================================================================
+"use strict";
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
 var age : number = 20;
 ======================================================================================================
 
 ======================================================================================================
+##datatype
+Categories
+
+· Primitive Types => in build datatype
+. Object Types
+· Special Types
+· Advanced Types
+. Function Types
+----------------------------------
+// Basic Types (Primitive types and Referance type)
+// .Primitive types (number, string, boolean)
+// .Arrays
+// .Tuples
+// .Enums
+// .Any, Unknown, Void, Null, Undefined, Never
+----------------------------------
+Primitive Types
+
+· number
+· string
+. boolean
+· null
+
+· undefined
+· bigint
+· symbol
+----------------------------------
+Referance type
+[],{},()
+
+Object Type
+
+· Array
+· Tuple
+. Object (key:value)pair
+----------------------------------
+Special Types
+
+· any
+· unknown
+· void
+· never  (
+
+----------------------------------
+Advanced Types
+
+· Union
+
+. Intersection
+· Type Alias
+· Enum
+. Literal Types
+----------------------------------
+Function Types
+
+Defines the type of a function.
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
 
 ======================================================================================================
 
