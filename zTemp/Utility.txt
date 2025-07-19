@@ -33,7 +33,14 @@ clear()  => clear console tab
 Query parameter  ✏️=>   www.sj.com/employee?id= nitin
 route parameter  ✏️=>   www.sj.com/ employee/2
 =================================================================
-
+==   ✏️=> (Loose Equality):
+		Compares values after converting them to a common type if necessary. 
+		May lead to unexpected results due to type coercion. 
+		Example: "5" == 5 evaluates to true because the string "5" is converted to the number 5. 
+===  ✏️=>(Strict Equality): 
+		Compares both value and type directly, without any type conversion. 
+		Provides more predictable and reliable results. 
+		Example: "5" === 5 evaluates to false because the string "5" is not the same type as the number 5. 
 =================================================================
 
 =================================================================
