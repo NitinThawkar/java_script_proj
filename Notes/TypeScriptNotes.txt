@@ -3,38 +3,56 @@
 https://www.typescriptlang.org/
 https://www.typescriptlang.org/download/
 
+https://youtu.be/lVzb6pmel_E
 ======================================================================================================
 ✨ TYPE Script ✨
 
 ======================================================================================================
 ▶️ Install and run
   1]install node js and npm 
-  2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript
+  2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript   ( -g for globle )
   
------------------
+--------------------------------------------------------------------
 ☑️use npx for window's
     tsc --version
 npx tsc --version
------------------
+--------------------------------------------------------------------
 config file  command
 	tsc --init
 npx tsc --init
------------------
+--------------------------------------------------------------------
 compile typescript file
+
 in terminal type 
-npx tsc fileName.ts   ✏️=> for manual compile and run 
-npx tsc fileName.ts --watch ✏️=> for Auto compile and run
------------------
+npx tsc fileName.ts   			✏️=> for manual compile and run 
+npx tsc fileName.ts --watch 	✏️=> for Auto compile and run
+-------
+we can run transconpile js file with node also
+
+node <dir>/fileName.js         ✏️=> for manual transconpile .js file, append folder path if file save in any specific location
+
+--------------------------------------------------------------------
+
+npm i ts-node -g  (or) npm i -g ts-node  			✏️=> for manual compile and run  
+
 ======================================================================================================
 "use strict";
 --------------------------------------------------------------------
 
 --------------------------------------------------------------------
 var age : number = 20;
+--------------------------------------------------------------------
+if (typeof a === "string")
+a.toUpperCase();
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
+
+--------------------------------------------------------------------
 ======================================================================================================
 
 ======================================================================================================
-##datatype
+## datatype
 Categories
 
 · Primitive Types => in build datatype
