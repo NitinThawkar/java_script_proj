@@ -4,6 +4,8 @@ https://www.typescriptlang.org/
 https://www.typescriptlang.org/download/
 
 https://youtu.be/lVzb6pmel_E
+
+npm : https://www.npmjs.com/package/ts-node
 ======================================================================================================
 ✨ TYPE Script ✨
 
@@ -11,13 +13,25 @@ https://youtu.be/lVzb6pmel_E
 ▶️ Install and run
   1]install node js and npm 
   2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript   ( -g for globle )
-  
+-------------------------------------------------------------------- 
+  Installation
+# Locally in your project.
+npm install -D typescript
+npm install -D ts-node
+
+# Or globally with TypeScript.
+npm install -g typescript
+npm install -g ts-node
+
+# Depending on configuration, you may also need these
+npm install -D tslib @types/node
 --------------------------------------------------------------------
-☑️use npx for window's
+☑️use npx for window's  get typescript version
     tsc --version
 npx tsc --version
+
 --------------------------------------------------------------------
-config file  command
+create config file  command
 	tsc --init
 npx tsc --init
 --------------------------------------------------------------------
@@ -32,8 +46,10 @@ we can run transconpile js file with node also
 node <dir>/fileName.js         ✏️=> for manual transconpile .js file, append folder path if file save in any specific location
 
 --------------------------------------------------------------------
+To run ts file directly
+npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly  
 
-npm i ts-node -g  (or) npm i -g ts-node  			✏️=> for manual compile and run  
+ts-node fileName.ts run ts file directly 
 
 ======================================================================================================
 "use strict";
