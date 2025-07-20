@@ -38,13 +38,13 @@ npx tsc --init
 compile typescript file
 
 in terminal type 
-npx tsc fileName.ts   			✏️=> for manual compile and run 
+npx tsc fileName.ts   			✏️=> for manual compile and run  also create .js file
 npx tsc fileName.ts --watch 	✏️=> for Auto compile and run
 -------
 we can run transconpile js file with node also
 
 node <dir>/fileName.js         ✏️=> for manual transconpile .js file, append folder path if file save in any specific location
-
+ts-node fileName.ts 					 ✏️=> run directly
 --------------------------------------------------------------------
 To run ts file directly
 npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly  
