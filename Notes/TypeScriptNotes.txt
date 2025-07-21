@@ -474,7 +474,7 @@ let tree: Tree = {
     ]
 }
 ----------------------------------
-// intersection types
+## intersection types
 let config: { server: string; port: number } & { secure: boolean; timeout: number } = {
     server: 'localhost',
     port: 8080,
