@@ -371,13 +371,13 @@ const subtract: MathOp = (x, y) => x - y;
 console.log('add 2 numbers: ', add(1, 2));
 console.log('subtract 2 numbers: ', subtract(5, 4));
 ----------------------------------
-// type alias
+## type alias
 
 // type AliasName = TypeDefinition; // syntax
 type UserID = string;
 
 let userId: UserID = 'abc';
-
+-----------
 type Person1 = {
     name: string;
     age: number;
@@ -389,7 +389,7 @@ let person1: Person1 = {
 }
 
 console.log(person1.name);
-
+-----------
 type ID = string | number;
 
 let userId1: ID = 'abc';
