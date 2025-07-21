@@ -311,6 +311,7 @@ let a = "12"; ✏️=>Type Inference
 let a : number  = "12";  ✏️=>Type Annotations or assertions
 ----------------------------------
 ###  union types
+
 let id: string | number; // id can either be string or a number
 id = 'abc';
 id = 101;
@@ -323,7 +324,7 @@ function printId(id: string | number) {
 printId('abc');
 printId(101);
 ----------------------------------
-// type narrowing
+###  type narrowing     //✏️=>to detect specific type from union type
 function printIdFn(id: string | number) {
     if(typeof id === 'string') {
         console.log('id is a string: ', id.toUpperCase());
@@ -335,7 +336,7 @@ function printIdFn(id: string | number) {
 printIdFn(1);
 
 ----------------------------------
-// interface
+###  interface
 
 interface Person44 {
     name: string;
