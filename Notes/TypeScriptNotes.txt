@@ -401,7 +401,7 @@ interface User {
     phone?: number;
 }
    
-//✏️=>mearging type using extends
+//✏️=>  mearging type or extend other tyme  using extends we can same with type aliase  usning intrsection "&"
 // interface Customer extends User {
 //     address: string;
 // }
