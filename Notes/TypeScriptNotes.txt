@@ -400,7 +400,8 @@ interface User {
     name: string;
     phone?: number;
 }
-
+   
+//✏️=>mearging type using extends
 // interface Customer extends User {
 //     address: string;
 // }
@@ -426,8 +427,8 @@ type Vehicle = {
     make: string;
     model?: string;
 };
-
-// & -> intersection types
+----------------------------------
+// & -> intersection types (append two types)
 type Car = Vehicle & {
     isElectric?: boolean;
 };
@@ -448,7 +449,7 @@ let myCar: Car = {
 //     model: 'TATA PUNCH',
 //     isElectric: true, // error
 // };
-
+----------------------------------
 type MathOp1 = (a: number, b: number) => number;
 let add1: MathOp1 = (x, y) => x + y;
 console.log(add1(2, 2));
@@ -462,6 +463,7 @@ type Tree = {
     children?: Tree[];
 }
 
+// reccurecive
 let tree: Tree = {
     value: 'root',
     children: [
@@ -471,7 +473,7 @@ let tree: Tree = {
         }
     ]
 }
-
+----------------------------------
 // intersection types
 let config: { server: string; port: number } & { secure: boolean; timeout: number } = {
     server: 'localhost',
