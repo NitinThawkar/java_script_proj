@@ -54,6 +54,13 @@ ts-node fileName.ts run ts file directly
 ======================================================================================================
 "use strict";
 --------------------------------------------------------------------
+forEach
+-------
+
+map
+
+-------
+reduce
 
 --------------------------------------------------------------------
 var age : number = 20;
@@ -482,27 +489,6 @@ let config: { server: string; port: number } & { secure: boolean; timeout: numbe
     timeout: 5000
 };
 ----------------------------------
-
-----------------------------------
-
-----------------------------------
-
-
-======================================================================================================
-## Function
-
-function abcd( a : string ,b : number ): void {
-console. log ("hey");
-
---------------------------------------------------------------------
-
-----------------------------------
-
---------------------------------------------------------------------
-
-
-======================================================================================================
-
 // .Intersection types
 
 interface User {
@@ -519,8 +505,183 @@ admin: boolean;
 function abcd(obj: Admin){
 obj.admin
 }
+----------------------------------
+
+----------------------------------
+
+
+======================================================================================================
+### Function
+https://github.com/Nykz/typescript-course-material/blob/main/ts/functions.ts
+
+function abcd( a : string ,b : number ): void {
+console. log ("hey");
+
+--------------------------------------------------------------------
+// Regular functions
+
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+
+console.log(addNumbers(2, 6));
+
+// function expression
+const divide = function (a: number, b: number): number {
+    return a / b;
+};
+
+console.log(divide(8, 2));
+
+// arrow functions
+const multiply = (a: number, b: number): number => {
+    return a * b;
+};
+const multiply1 = (a: number, b: number): number => a * b;
+
+console.log(multiply(4, 2));
+
+// optional parameters
+function greet(username: string, greeting?: string): string {
+    // return greeting + ' ' + username;
+    // return `${greeting ? greeting : ''} ${username}`; // ternary operator
+    return greeting ? `${greeting} ${username}` : `${username}`; // ternary operator
+}
+
+console.log(greet('Nikhil'));
+
+
+// default parameters
+function greet1(username: string, greeting: string = 'Hi'): string {
+    // return greeting + ' ' + username;
+    return `${greeting} ${username}`; // ternary operator
+}
+
+console.log('Greet1: ', greet1('Nikhil', 'Hey'));
+
+// function overloading
+function getLength1(value: string): number;
+function getLength1(value: any[]): number;
+function getLength1(value: any): number {
+    return value.length;
+}
+
+console.log(getLength1('hello'));
+console.log(getLength1([1, 2, 3]));
+
+// Rest parameters
+function sum(...numbers: number[]): number {
+    // return numbers.reduce((total, num) => {
+    //     return total + num;
+    // }, 0);    //=>✏️ zero is initial value of total
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4));
+console.log(sum(5, 7, 3, 4, 10, 100));
+
+function greet12(greeting: string, ...names: string[]): void {
+    names.forEach((name) => {
+        console.log(`${greeting}, ${name}`);
+    });
+}
+
+greet12('Hello', 'Nikhil', 'Code with Technyks', 'Everyone');
+----------------------------------
+
+--------------------------------------------------------------------
+
+
 ======================================================================================================
 
+
+======================================================================================================
+### generics
+https://github.com/Nykz/typescript-course-material/blob/main/ts/generics.ts
+
+/* generics
+ Generics are a way to create components (functions, classes or interfaces)
+ that work with different types without losing type safety
+*/
+
+// generic function
+function genericIdentity<T>(arg: T): T {
+    return arg;
+}
+
+console.log(genericIdentity<number>(10));
+console.log(genericIdentity<string>('Hi'));
+console.log(genericIdentity<boolean>(true));
+
+// generic interface
+interface KeyPair<T, U> {
+    key: T;
+    value: U;
+}
+
+let keyPairValue: KeyPair<string, number> = {
+    key: 'pair',
+    value: 10
+};
+
+// generic constraints
+function getLength<T extends { length: number }>(item: T): number {
+    return item.length;
+}
+
+console.log(getLength('Hello'));
+console.log(getLength([1, 2, 3]));
+// console.log(getLength(123));
+
+// generic classes
+class Box<T> {
+    contents: T;
+
+    constructor(value: T) {
+        this.contents = value;
+    }
+
+    getContents(): T {
+        return this.contents;
+    }
+}
+
+const numberBox = new Box(100);
+console.log(numberBox.getContents());
+
+const stringBox = new Box('Hello');
+console.log(stringBox.getContents());
+
+
+class Stack<T> {
+    private items: T[] = [];
+
+    push(item: T): void {
+        this.items.push(item);
+    }
+
+    pop(): T | undefined {
+        return this.items.pop();
+    }
+
+    getStack(): T[] {
+        return this.items;
+    }
+}
+
+const numberStack = new Stack<number>();
+numberStack.push(10);
+numberStack.push(20);
+console.log(numberStack.getStack());
+console.log(numberStack.pop());
+console.log(numberStack.getStack());
+
+const stringStack = new Stack<string>();
+stringStack.push('Hi');
+stringStack.push('There');
+console.log(stringStack.getStack());
+console.log(stringStack.pop());
+console.log(stringStack.getStack());
 ======================================================================================================
 
 ======================================================================================================
