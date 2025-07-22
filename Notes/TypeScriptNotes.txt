@@ -77,6 +77,9 @@ as
 keyOf
 
 StringArray
+
+
+Partial
 --------------------------------------------------------------------
 var age : number = 20;
 -------
@@ -113,6 +116,23 @@ let a : number |boo|string  = "12";
 --------------------------------------------------------------------
 ? => optional
 --------------------------------------------------------------------
+### DOM Handling and TypeCasting html element
+ 
+ var headingEl=document.querySelector('h1');
+console. log(headingEl)
+console. log(headingEl ?. textContent)   //=> ✏️  ? check for null alos , value can be null or value or ! in the end 
+console. log(headingEl ?. classList)
+
+var headingEl=document.querySelector('h1')!; //=> ✏️ ! value defenatly present , if we dont want to check for null
+
+var headingEl=document.querySelector('h1') !;
+var anchorEl=document.querySelector('a') !;
+var anchorElClass=document.querySelector('.anchorStyle')! as HTMLAnchorElement;
+var headingElClass=document.querySelector('.headingStyle')! as HTMLHeadingElement;
+console. log(headingEl.classList)
+console. log(anchorEl.href)
+console. log(anchorElClass.href)
+console. log(headingElClass.classList)
 ======================================================================================================
 
 ======================================================================================================
