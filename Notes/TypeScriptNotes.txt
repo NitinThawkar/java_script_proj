@@ -79,7 +79,16 @@ keyOf
 StringArray
 
 
-Partial
+Partial   ✏️=> make properties optional
+
+
+readonly
+
+required
+
+pick
+
+omit 
 --------------------------------------------------------------------
 var age : number = 20;
 -------
