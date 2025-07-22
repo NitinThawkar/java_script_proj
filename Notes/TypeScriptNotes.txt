@@ -62,6 +62,21 @@ map
 -------
 reduce
 
+push
+
+pop
+
+typeof
+
+instaaceof
+
+is
+
+as
+
+keyOf
+
+StringArray
 --------------------------------------------------------------------
 var age : number = 20;
 -------
@@ -378,7 +393,7 @@ const subtract: MathOp = (x, y) => x - y;
 console.log('add 2 numbers: ', add(1, 2));
 console.log('subtract 2 numbers: ', subtract(5, 4));
 ----------------------------------
-## type alias
+## type alias  (use type keyword)
 
 // type AliasName = TypeDefinition; // syntax
 type UserID = string;
@@ -683,13 +698,308 @@ console.log(stringStack.getStack());
 console.log(stringStack.pop());
 console.log(stringStack.getStack());
 ======================================================================================================
+###  literal_types literal types
+// literal types
+
+
+// string literal
+type OrderStatus = 'delivered' | 'pending' | 'cancelled';
+let order: OrderStatus = "pending";
+
+let answer: 'yes' | 'no';
+answer = 'no';
+
+// number literal
+let count: 0 | 1 | 2;
+count = 0;
+
+// boolean literal
+let isVisible: true | false;
+isVisible = true;
+
+type LiteralType = 'hello' | 2 | 'hi' | { name: string; age: number };
+
+type Action = 'add' | 'update' | 'delete';
+
+function takeAction(action: Action) {
+    switch(action) {
+        case 'add': 
+            console.log('add function');
+            break;
+        case 'update':
+            console.log('update function');
+            break;
+        case 'delete': 
+            console.log('delete function');
+            break;
+        default: 
+            console.log('none');
+            break;
+    }
+}
+
+function printStatus(status: 'success' | 'error' | 'loading'): void {
+    console.log(`Current state is ${status}`);
+}
+
+printStatus('success');
+// printStatus('completed');
+
+
+interface ButtonConfig {
+    size: 'small' | 'medium' | 'large';
+    color: 'red' | 'green' | 'blue';
+}
+
+const btn: ButtonConfig = {
+    size: 'medium',
+    color: 'green',
+};
 
 ======================================================================================================
+### type_guard type guard (type narrowing)
+
+// type guards
+// typeof
+// instanceof
+// custom type guard fn
+
+function printID(id: string | number) {
+    if(typeof id === 'string') {
+        console.log(`id is a string: ${id}`);
+    } else {
+        console.log(`id is a number: ${id}`);
+    }
+}
+
+class Dog1 {
+    bark() {
+        console.log('Woof!');
+    }
+}
+
+class Cat1 {
+    meow() {
+        console.log('Meow!');
+    }
+}
+
+function handlePet(pet: Dog1 | Cat1) {
+    if(pet instanceof Dog1) {
+        pet.bark();
+    } else {
+        pet.meow();
+    }
+}
+
+interface Fish {
+    swim(): void;
+}
+
+interface Bird {
+    fly(): void;
+}
+
+function isFish(pet: Fish | Bird): pet is Fish {
+    return (pet as Fish).swim !== undefined;
+}
+
+function move(pet: Fish | Bird) {
+    if(isFish(pet)) {
+        pet.swim();
+    } else {
+        pet.fly();
+    }
+}
+
+
+function isString(value: any): value is string {
+    return typeof value === 'string';
+}
+
+function checkType(value: string | number) {
+    if(isString(value)) {
+        console.log('value is string');
+    } else {
+        console.log('value is number');
+    }
+}
+
+checkType(10);
+//
+
+// keyof operator
+interface Person12 {
+    name: string;
+    age: number;
+    email: string;
+}
+
+type PersonKeys = keyof Person12;
+let keys: PersonKeys = 'name';
+
 
 ======================================================================================================
+### class  and object classes
+
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(): string {
+        return `Hello, my name is ${this.name}, and I'm ${this.age} yrs old`;
+    }
+}
+
+const new_person = new Person('Diya', 19);
+console.log(new_person.greet());
+console.log(new_person.name);
+
+/* 
+access modifiers (public, private, protected)
+
+public: Accessible from anywhere. This is the default if no modifier is specified.
+private: Accessible only within the class.
+protected: Accessible within the class and its subclasses.
+*/
+
+class Car1 {
+    public make: string;
+    private model: string;
+    protected year: number;
+
+    constructor(make: string, model: string, year: number) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public getModel(): string {
+        return this.model;
+    }
+}
+
+const newCar = new Car1('Tesla', 'Model 10', 2024);
+console.log(newCar.getModel());
+// console.log(newCar.model);
+
+// inheritance
+
+class Animal { // parent class
+    
+    constructor(
+        public name: string
+    ) {}
+
+    makeSound(): void {
+        console.log('Some generic sound...');
+    }
+}
+
+class Dog extends Animal { // child class
+
+    constructor(name: string) {
+        super(name);
+    }
+
+    // makeSound(): void {
+    //     console.log('Woof! Woof!');
+    // }
+
+}
+
+const dog = new Dog('Puppy');
+dog.makeSound();
+
+// Abstract class
+
+abstract class Shape {
+    abstract getArea(): number; // abstract method, must be implemented bt subclasses
+
+    printArea(): void {
+        console.log(`The area is ${this.getArea()}`);
+    }
+}
+
+class Rectangle extends Shape {
+
+    constructor(private width: number, private height: number) {
+        super();
+    }
+
+    getArea(): number {
+        return this.width * this.height;
+    }
+
+}
+
+const rect = new Rectangle(5, 10);
+rect.printArea();
+
+// setters & getters
+
+class Circle {
+    private _radius: number;
+    strlength: number | undefined;
+
+    constructor(radius: number) {
+        this._radius = radius;
+    }
+
+    get radius(): number {
+        return this._radius;
+    }
+
+    set radius(value: number) {
+        if(value <= 0) {
+            throw new Error('Radius must be positive');
+        }
+        this._radius = value;
+    }
+}
+
+const circle = new Circle(10);
+console.log(circle.radius);
+circle.radius = 12;
+console.log(circle.radius);
+// circle.radius = -5;
+// console.log(circle.radius);
+circle.strlength = 2;
+console.log(circle!.strlength); // Non-null assertion
 
 ======================================================================================================
+### index_signature index signature
+// index signature
+/*
+An index signature in TypeScript is used to define types for objects 
+that can have properties of dynamic keys, where the keys are not 
+known in advance but you still want to enforce the type of the values. 
+Index signatures are particularly useful when working with objects 
+that act like dictionaries or maps.
+*/
 
+interface StringArray {
+    [index: number]: string;
+}
+
+let array1: StringArray = ['Code', 'with', 'Technyks'];
+console.log(array1[2]);
+
+interface Fruit {
+    [key: string]: string;
+}
+
+const fruitsArray: Fruit = {
+    apple: 'A fruit',
+    banana: 'A yellow fruit',
+};
+
+console.log(fruitsArray["banana"]);
 ======================================================================================================
 
 ======================================================================================================
