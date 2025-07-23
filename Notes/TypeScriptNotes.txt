@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------------
 https://www.typescriptlang.org/
 https://www.typescriptlang.org/download/
-
+TypeScript code : https://github.com/microsoft/TypeScript/blob/fad889283e710ee947e8412e173d2c050107a3c1/src/compiler/tsc.ts
 https://youtu.be/lVzb6pmel_E
 
 npm : https://www.npmjs.com/package/ts-node
