@@ -37,7 +37,7 @@ we can write javascript code in between {}
 https://youtu.be/wIyHSOugGGw
 passinf other componant as props call as children  AKA composition
 ----------------------------------------------------------------------
-use
+use()   (in 19 replace useEffect and Use Contex)
 	Usage
 	
 	Reading context with use
@@ -58,9 +58,9 @@ useSelector
 ----------------------------------------------------------------------
 useNavigate/usedLocation
 ----------------------------------------------------------------------
-useref => not muted , not re-render,use in uncontrolled form ,
+userefuse with forward Ref  => not muted , not re-render,use in uncontrolled form ,
 ----------------------------------------------------------------------
-forward Ref => passing data from parent to child componant, in child olny limited data access part render not full child componant. depricated from vesion 19 use Get Ref
+useref use with forward Ref => passing data from parent to child componant, in child olny limited data access part render not full child componant. depricated from vesion 19 use Get Ref
 ----------------------------------------------------------------------
 useformStstus hoo =>
 ----------------------------------------------------------------------
@@ -143,7 +143,7 @@ isActive :
 
 
 ==================================================================================================================================
-... spread operator
+... spread operator   # or use .concate() to copy array
     const originalArray = [1, 2, 3];
     const copiedArray = [...originalArray]; 
 ==================================================================================================================================
