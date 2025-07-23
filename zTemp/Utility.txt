@@ -42,7 +42,8 @@ route parameter  ✏️=>   www.sj.com/ employee/2
 		Provides more predictable and reliable results. 
 		Example: "5" === 5 evaluates to false because the string "5" is not the same type as the number 5. 
 =================================================================
-terninal  command prompt
+terninal  command prompt 
+
 press Ctrl+C again or Ctrl+D or type .exit
 =================================================================
 https://github.com/Nykz/typescript-course-material/blob/main/ts/functions.ts
