@@ -89,6 +89,36 @@ required
 pick
 
 omit 
+
+
+record
+
+exclude
+
+extract
+
+nonNullable
+
+
+returnType
+
+... args
+
+
+nonnull assertion
+
+
+type aasertion
+
+type extend  
+
+
+literal => key value pair
+
+
+What are discriminated unions in TypeScript?
+
+
 --------------------------------------------------------------------
 var age : number = 20;
 -------
@@ -1165,8 +1195,77 @@ const userCParams: UserContructorParams = ['Diya', 20];
 ======================================================================================================
 
 ======================================================================================================
+What are discriminated unions in TypeScript?
+
+Discriminated unions use a common property (discriminator) across multiple types to
+distinguish between different types within a union, allowing for more precise type narrowing.
+
+// Define the discriminated union
+type Vehicle =
+| { type: 'car'; wheels: number }
+I { type: 'bicycle'; pedals: number };
+
+// Function to describe the vehicle
+function describeVehicle(vehicle: Vehicle) {
+// TypeScript will narrow the type based on the 'type' property
+if (vehicle.type === 'car') {
+console.log('This vehicle has ${vehicle.wheels} wheels.");
+} else if (vehicle.type === 'bicycle') {
+console.log('This vehicle has ${vehicle.pedals} pedals.");
+}
+}
+
+--.
+// Example usage
+const myCar: Vehicle = { type: 'car', wheels: 4};
+const myBike: Vehicle = { type: 'bicycle', pedals: 2};
+describeVehicle(myCar); // Output: This vehicle has 4 wheels.
+describeVehicle(myBike); // Output: This vehicle has 2 pedals.
 
 ======================================================================================================
+
+Question 16 (MCQ)
+
+Which of the following would allow narrowing a type using the `in' operator in
+TypeScript?
+
+Hint: The in operator checks whether a specific property exists in an object or one of its
+prototypes. Syntax - 'propertyName' in object
+
+A. if (object.hasOwnProperty('property')) { ... }
+B. if ('property' in object) { ... }
+C. if (object.property !== undefined) { ... }
+D. if (typeof object.property !== 'undefined') { ... }
+
+
+Answer:
+B. if ('property' in object) { ... }
+
+Why ?: The `in' operator checks if a property exists in an object and
+type accordingly...
+
+type Dog = { bark: () => void };
+type Cat = { meow: () => void };
+
+function animalSound(animal: Dog | Cat) {
+if ('bark' in animal) {
+animal.bark(); // TypeScript knows animal is a Dog here
+} else {
+animal.meow(); // TypeScript knows animal is a Cat here
+
+if ('property' in object) is the correct way to narrow a type using the in operator because it
+checks whether 'property' exists in object. If the check passes, TypeScript narrows the type of
+object inside the if block, allowing access to that property with confidence.
+
+Eg.
+
+}
+
+}
+
+The in operator checks whether bark exists in animal.If true,
+TypeScript narrows the type to Dog, allowing safe access to bark().
+If false, TypeScript narrows the type to Cat, allowing access to meow().
 
 ======================================================================================================
 
