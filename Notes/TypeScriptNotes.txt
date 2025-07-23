@@ -1,4 +1,4 @@
-✏️  ☑️ ✍️  ✒️  ✍️ ▶️ 
+✏️  ☑️ ✍️  ✒️  ✍️ ▶️   ✏️=> 
 ----------------------------------------------------------------------------
 https://www.typescriptlang.org/
 https://www.typescriptlang.org/download/
@@ -6,9 +6,111 @@ https://www.typescriptlang.org/download/
 https://youtu.be/lVzb6pmel_E
 
 npm : https://www.npmjs.com/package/ts-node
+
+reserved keywords : https://github.com/microsoft/TypeScript/issues/2536
 ======================================================================================================
 ✨ TYPE Script ✨
+======================================================================================================
+reserved keywords
 
+TypeScript incorporates all JavaScript keywords and introduces its own set of keywords for type-related features and other functionalities.
+JavaScript Keywords (also used in TypeScript):
+
+break, case, catch, class, const, continue, debugger, default, delete, do, 
+else, enum, export, extends, 
+false, finally, for, function, if, import, in, instanceof, 
+new, null, return, super, switch, this, throw, true, try, typeof, 
+var, void, while, with, yield.
+
+TypeScript-Specific Keywords:
+
+abstract  ✏️=>  Used to define abstract classes and methods.
+any  ✏️=>  A type that can represent any JavaScript value, bypassing type checking.
+as  ✏️=>  Used for type assertions.
+async  ✏️=>  Used to declare asynchronous functions.
+await  ✏️=>  Used to pause execution of an async function until a Promise is resolved.
+declare  ✏️=>  Used for ambient declarations, defining types without implementing them.
+implements  ✏️=>  Used by a class to implement an interface.
+interface  ✏️=>  Used to define the structure of an object or class.
+is  ✏️=>  Used in type predicates for user-defined type guards.
+let  ✏️=>  Used to declare block-scoped variables.
+module  ✏️=>  Used to declare internal modules (namespaces).
+namespace  ✏️=>  An alternative to module for internal modules.
+never  ✏️=>  A type representing values that never occur.
+private  ✏️=>  An access modifier for class members, accessible only within the class.
+protected  ✏️=>  An access modifier for class members, accessible within the class and its subclasses.
+public  ✏️=>  An access modifier for class members, accessible from anywhere.
+readonly  ✏️=>  A modifier for properties that can only be assigned during initialization.
+require  ✏️=>  Used for CommonJS module imports.
+static  ✏️=>  Used to define static members of a class.
+type  ✏️=>  Used to create type aliases.
+unknown  ✏️=>  A safer alternative to any, requiring type checking before operations.
+## Reserved Words
+
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+enum
+export
+extends
+FALSE
+finally
+for
+function
+if
+import
+in
+instanceof
+new
+null
+return
+super
+switch
+this
+throw
+TRUE
+try
+typeof
+var
+void
+while
+with
+false
+true
+## Strict Mode Reserved Words
+as
+implements
+interface
+let
+package
+private
+protected
+public
+static
+yield
+symbol
+type
+from
+of
+## Contextual Keywords
+any
+boolean
+constructor
+declare
+get
+module
+require
+number
+set
+string
 ======================================================================================================
 ▶️ Install and run
   1]install node js and npm 
