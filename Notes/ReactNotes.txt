@@ -11,7 +11,7 @@ create resct app : https://create-react-app.dev/
 form hook : https://www.react-hook-form.com/
 nest js replacement : https://remix.run/
 redux : https://react-redux.js.org/introduction/getting-started
-
+Every React Concept Explained : https://youtu.be/wIyHSOugGGw # https://www.youtube.com/@TheCodeBootcamp/videos
 ==================================================================================================================================
 
 ### command to create project
@@ -34,6 +34,8 @@ class based componant. function based componant
 ==================================================================================================================================
 we can write javascript code in between {}
 ==================================================================================================================================
+https://youtu.be/wIyHSOugGGw
+passinf other componant as props call as children  AKA composition
 ----------------------------------------------------------------------
 use
 	Usage

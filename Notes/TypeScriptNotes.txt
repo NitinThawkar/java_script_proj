@@ -118,6 +118,9 @@ literal => key value pair
 
 What are discriminated unions in TypeScript?
 
+infer 
+
+matches
 
 --------------------------------------------------------------------
 var age : number = 20;
@@ -1268,5 +1271,52 @@ TypeScript narrows the type to Dog, allowing safe access to bark().
 If false, TypeScript narrows the type to Cat, allowing access to meow().
 
 ======================================================================================================
+
+
+Question 17 (MCQ)
+
+Which of the following is an example of using the `infer' keyword in TypeScript?
+
+A. type ReturnType<T> = T extends ( ... args: anyll) => infer R ? R ; never;
+B. type Return Type<T>= infer T extends ( ... args: anyll) => R ? R : never;
+C. type ReturnType<T> = T extends infer ( ... args: anyll) => R ? R : never;
+D. type ReturnType<T> = T matches ( ... args: anyll) => infer R ? R : never;
+
+Answer:
+
+A. type ReturnType<T>= T extends ( ... args: anyll) => infer R ? R : never; 
+
+
+-------------
+Which of the following is an example of using the `infer' keyword in TypeScript?
+
+The correct form of using infer in a conditional type is: T extends U ? infer R : never
+
+T is a type.
+U is a type pattern.
+If T matches U, we infer some type R from U.
+If the condition is met, the type R can be used in the "true" branch of the conditional
+type.
+
+
+Question 17 (MCQ)
+
+Which of the following is an example of using the `infer' keyword in TypeScript?
+
+Analyzing the Options:
+
+1. type ReturnType<T>=T extends ( ... args: anyll) => infer R ? R : never;
+This is the correct answer because it uses the infer keyword correctly to infer the
+return type R from a function type.
+
+This checks if T'is a function type. If it is, TypeScript infers R as the return type of
+the function, and returns R. Otherwise, it returns never.
+
+Eg:
+type MyFunc = (x: number) => string;
+type Result = ReturnType<MyFunc>; // Result is string
+
+In this example, T is the function (x: number) => string. The infer R part captures the
+return type R, which is string.
 
 ======================================================================================================
