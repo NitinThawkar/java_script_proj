@@ -12,12 +12,16 @@ form hook : https://www.react-hook-form.com/
 nest js replacement : https://remix.run/
 redux : https://react-redux.js.org/introduction/getting-started
 Every React Concept Explained : https://youtu.be/wIyHSOugGGw # https://www.youtube.com/@TheCodeBootcamp/videos
+
+https://www.youtube.com/@TechPrepYT/shorts
 ==================================================================================================================================
 
 ### command to create project
-create vite project => npm creteate vite@4.10 
+create vite project => npm create vite@4.10 
 
-cd foodapp
+npm create vite@latest
+
+cd foodapp # cd <project folder>
 npm install
 npm run dev
 
