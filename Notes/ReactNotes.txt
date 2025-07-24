@@ -15,7 +15,8 @@ Every React Concept Explained : https://youtu.be/wIyHSOugGGw # https://www.youtu
 ==================================================================================================================================
 
 ### command to create project
-npm creteate vite@4.10 
+create vite project => npm creteate vite@4.10 
+
 cd foodapp
 npm install
 npm run dev
