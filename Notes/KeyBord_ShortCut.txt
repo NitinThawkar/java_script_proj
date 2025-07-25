@@ -54,6 +54,23 @@ Ctrl+K, Ctrl+U: Uncomments selection.
 Ctrl+K, Ctrl+K: Opens the Define Keybinding control to customize shortcuts.
 Ctrl+Shift+Space: Shows signature help.
 Alt+↑/↓: Moves line up/down.
+
+--------------------------------------------------------------------------------------------------
+Add prettier (plugin/extension) format code
+------
+vs code  => go to file > preferances > settings  
+click on json view and add following lines 
+
+
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+------------------
+and  change formatOnSave to true 
+formatOnSave": true
 ======================================================================================================
 ✨ REACT ✨
 

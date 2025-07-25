@@ -71,3 +71,19 @@ const multiply = (a: number, b: number): number => {
 const multiply1 = (a: number, b: number): number => a * b;
 
 ================================================================= 
+Add prettier (plugin/extension) format code
+------
+vs code  => go to file > preferances > settings  
+click on json view and add following lines 
+
+
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+------------------
+and  change formatOnSave to true 
+formatOnSave": true
+=================================================================
