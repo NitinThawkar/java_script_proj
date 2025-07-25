@@ -19,7 +19,10 @@ https://www.youtube.com/@TechPrepYT/shorts
 ### command to create project
 create vite project => npm create vite@4.10 
 
+npm create vite@4.10 
+
 npm create vite@latest
+
 
 cd foodapp # cd <project folder>
 npm install
