@@ -28,7 +28,7 @@ Block Element (takes full width)
 ============================================================================================
 ✨ #####  BOX Model ##############
 Slide 23 in 
-https://github.com/NitinThawkar/Notes/blob/main/CSS%20notes/CSS%20Notes.pdf
+https://github.com/NitinThawkar/Notes/blob/WorkingBranch/CSS_notes/CSS_Notes.pdf
 ============================================================================================
 ✨  ####### Display Property  #######
 
