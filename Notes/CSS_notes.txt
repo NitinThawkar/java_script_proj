@@ -69,6 +69,13 @@ p.fancy.beige {
 
 ==============================================
 
+Padding
+Shorthand
+
+padding: 50px;
+
+padding: 1px 2px 3px 4px;
+top | right | bottom | left -> clockwise
 ==============================================
 Text Properties
 text-align : left / right / center
