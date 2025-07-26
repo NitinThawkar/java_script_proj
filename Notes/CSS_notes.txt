@@ -8,7 +8,7 @@
 MDN : https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
       https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
 	  
-Git : https://github.com/NitinThawkar/Notes/blob/main/CSS_notes/CSS_Notes.pdf
+Git : https://github.com/NitinThawkar/Notes/blob/WorkingBranch/CSS_notes/CSS_Notes.pdf
 
 block inline : https://www.w3schools.com/html/html_blocks.asp
 
