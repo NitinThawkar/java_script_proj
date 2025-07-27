@@ -1,4 +1,6 @@
-✏️  ☑️ ✍️  ✒️  ✍️ ▶️   ✏️=> 
+✨ Java Script Notes ✨
+======================================================================================================
+✏️  ☑️ ✍️  ✒️  ✍️ ▶️   ✏️=>   ✨✏️
 ----------------------------------------------------------------------------
 ✨ MDN : 
 https://developer.mozilla.org/en-US/docs/Glossary/IIFE
@@ -7,6 +9,9 @@ https://www.w3schools.com/js/js_function_parameters.asp
 Free Apis :(search):
 https://github.com/public-api-lists/public-api-lists?tab=readme-ov-file
 https://apilist.fun/
+
+JavaScript Complete Course : https://github.com/Nykz/JavaScript-Course/blob/main/functions/function.js
+
 
  JavaScript Reserved Words : https://www.w3schools.com/js/js_reserved.asp
 ======================================================================================================
@@ -51,7 +56,10 @@ mark = undefined;
 isFollow = true;
 
 typeOf
+
+isNaN(a);  // function to check nan
 ----------------------------------
+console.log(this);
 
 let, const & var
 
@@ -68,6 +76,94 @@ Primitive Types : Number, String, Boolean, Undefined, Null, BigInt, Symbol
 default its undefined
 non prenetive : object,String
 
+======================================================================================================
+/*
+Choosing the Right Loop
+* Use for - when you know the number of iterations.
+* Use while - when the number of iterations depends on a condition.
+* Use do ... while - when the code must execute at least once.
+* Use for ... in - for objects.
+* Use for ... of - for arrays, strings, or other iterables.
+
+*
+======================================================================================================
+✨✏️ for in  and for of loop
+
+// for ... in loop - Iterates over the keys/properties of an object.
+
+const fruits = ["appke", "banana", "cherry"];
+for(let fruit in fruits) {
+console. log (fruits [fruit]);
+}
+
+--------------------------------
+const fruits = ["apple", "banana", "cherry"];
+for(let index in fruits) {
+console. log(fruits[index]);
+}	
+--------------------------------
+const person1 = {
+name: 'Nikhil',
+age: 30,
+country: 'India'
+}
+for(let key in person1) {
+console. log(key, ':', person1[key]);
+
+}
+------------------------------------
+✏️ for of
+
+// for ... of loop - Iterates over values in iterable objects like arrays, strings, or
+maps.
+
+const fruits = ["apple", "banana", "cherry"];
+const fruits: string[]
+
+for(let fruit of fruits) {
+console. log('for of loop: ', fruit);
+
+}
+-----------------
+for (const [index, fruit] of fruits.entries()) {
+// The entries() method returns an iterator that contains both the index and t
+value.
+console. log('Index: ${index}, Value: ${fruit} );X
+
+}
+-------------------
+const word = "hello";
+for (let char of word) {
+console. log (char);
+
+}
+-------------------
+
+const user = new Map( [
+["Mame", "Alice"],
+["age", 25],
+["city", "Paris"]
+]};
+
+for(let [key, value] of user) {
+console. log('${key} : ${value}');
+}
+
+---------------------------
+✏️ advanced concepts in loops
+// break statement
+for(let k = 0; k <= 10; k++) {
+if(k === 5) break;
+
+console. log(k); // 1, 2,
+
+-------------------
+nested loops - loops within loops
+for(let a = 1; a <= 3; a++) {
+for(let b = 1; b <= 2; b++) { x
+console. log(`a: ${a}, b: ${b}');
+}}
+======================================================================================================
 ##################################################################################
 in javascript function can be passed as parameter.
 
@@ -108,7 +204,20 @@ let add = (a, b) => {
 
 ##################################################################################
 
+// higher-order functions & callbacks
+// a function that accepts another function as an arguement
+- higher-order function
+let array1 = [1, 2]; X
+
+function processArray(arr, callback) {
+
+}
+
+processArray(array1);
+
+-------------------------------------------------------------------------
 // higher order function is a function that takes another function as a parameter or returns a function as a result.
+
 
 ----------------------------------------
 // map function is used to perform operation on each element of array.
@@ -117,6 +226,9 @@ let add = (a, b) => {
 
 let num = [1,2,3,4,5,6,7,8,9,10];
 let caclulate = num.map(n => n*2);
+-----
+const squared = nums.map((num) => {
+return num * num;)
 ------------------------------------------------------
 
 // filter function is used to filter out the elements from array.
@@ -701,3 +813,30 @@ const state = {count:0,someValue:1}
 ================================================================================================
 
 
+try {
+// code
+let num =10/0;
+} catch(error) {
+console. log ('Execution error :: ', error) ;
+} finally {
+// Code that runs no matter what
+console. log('execution finished');
+}
+================================================================================================
+
+https://github.com/Nykz/JavaScript-Course/blob/main/functions/function.js
+
+------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/objects.js
+
+------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/arrays.js
+
+push(),map()
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
