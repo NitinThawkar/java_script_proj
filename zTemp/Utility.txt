@@ -41,6 +41,13 @@ route parameter  ✏️=>   www.sj.com/ employee/2
 		Compares both value and type directly, without any type conversion. 
 		Provides more predictable and reliable results. 
 		Example: "5" === 5 evaluates to false because the string "5" is not the same type as the number 5. 
+		
+		---------------
+// = (equal to means value only)
+let isEqual = 5 == '5'; // true (loose comparison)
+
+// == (strict equal to means value + type)
+let isStrictEqual = 5 === '5'; // false (strict comparison)
 =================================================================
 terninal  command prompt 
 
