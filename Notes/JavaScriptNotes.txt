@@ -921,3 +921,7 @@ https://github.com/Nykz/JavaScript-Course/blob/main/async_javascript/callbacks.j
 
 callback
 ------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/async_javascript/promises.js
+
+Promise
+------------------------------------------------------------------------------------------------
