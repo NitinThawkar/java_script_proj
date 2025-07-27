@@ -164,6 +164,41 @@ for(let b = 1; b <= 2; b++) { x
 console. log(`a: ${a}, b: ${b}');
 }}
 ======================================================================================================
+
+setTimeout and setInterval are both JavaScript functions used for scheduling code execution, but they differ in their execution frequency: 
+
+setTimeout: This function executes a specified function or code snippet once after a designated delay (in milliseconds). It is suitable for one-time delays or scheduling a task to occur in the future.
+
+JavaScript
+
+    setTimeout(function() {
+      console.log("This message appears after 2 seconds.");
+    }, 2000); // Executes after 2000 milliseconds (2 seconds)
+	
+-----------------------------------------------------------------------	
+setInterval: This function repeatedly executes a specified function or code snippet at fixed intervals (in milliseconds). 
+It continues to execute until explicitly stopped using clearInterval() or until the window or tab is closed. It is ideal for recurring tasks like animations, polling for data updates, or creating timers.
+JavaScript
+
+    let counter = 0;
+    const intervalId = setInterval(function() {
+      console.log("This message appears every second. Count: " + counter++);
+      if (counter >= 5) {
+        clearInterval(intervalId); // Stops the interval after 5 executions
+      }
+    }, 1000); // Executes every 1000 milliseconds (1 second)
+	
+-----------------------------------------------------------------------
+Key Differences Summarized:
+
+|----------------------------------------------------------------------------------------------------------------------------|
+|Feature			| setTimeout 										|	setInterval                                      |
+|----------------------------------------------------------------------------------------------------------------------------|
+|Repetition 		| Executes once Executes 							|	repeatedly                                       |
+|Purpose 		    | One-time delay or future task scheduling 			|	Recurring tasks or continuous execution          |
+|Stopping           | No explicit stopping needed (executes once) 		|	Requires clearInterval() to stop                 |
+|----------------------------------------------------------------------------------------------------------------------------|
+
 ##################################################################################
 in javascript function can be passed as parameter.
 
@@ -242,6 +277,11 @@ let num = [1,2,3,4,5,6,7,8,9,10];
 let odd = num.filter(n => n%2!=0);
 let even = num.filter(n => n%2==0);
 console.log(even);
+-------------------
+// filter() - filters elements based on a condition
+const ages = [18, 20, 15, 30];
+const adults = ages.filter(age => age >= 18);
+console.log(adults);
 
 ##################################################################################
 DOM Manipulation
@@ -640,6 +680,12 @@ const output = user.reduce(function(acc, curr){
 }, [ ])
 
 console.log(output);
+-------------------------------
+// reduce() - reduces an array to a single value by applying a function
+const prices = [100, 200, 300];
+const total = prices.reduce((sum, price) => sum + price, 0);
+console.log(total);
+
 ================================================================================================
 ### Callback Hell
 
@@ -824,6 +870,24 @@ console. log('execution finished');
 }
 ================================================================================================
 
+// Rest operators - collects remaining elements into an array or object
+
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5));
+
+const fruits = ["apple", "banana", "cherry", "date"];
+const [first, second, ...remainingFruits] = fruits;
+
+console.log(first); // Output: apple
+console.log(second); // Output: banana
+console.log(remainingFruits); // Output: ["cherry", "date"]
+
+
+================================================================================================
+
 https://github.com/Nykz/JavaScript-Course/blob/main/functions/function.js
 
 ------------------------------------------------------------------------------------------------
@@ -832,11 +896,28 @@ https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/objects.js
 ------------------------------------------------------------------------------------------------
 https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/arrays.js
 
-push(),map()
+push(),map(),filter(),reduce()
 ------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/destructure.js
+
+object destructuring  Array destructuring 
 
 ------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/spread_operator.js
+
+Spread operators
+------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/arrays_objects/rest_operator.js
+
+// Rest operators - collects remaining elements into an array or object
 
 ------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/tree/main/async_javascript
 
+https://github.com/Nykz/JavaScript-Course/blob/main/async_javascript/sync_async.js
+
+------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/async_javascript/callbacks.js
+
+callback
 ------------------------------------------------------------------------------------------------
