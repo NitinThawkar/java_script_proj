@@ -764,3 +764,82 @@ space is available
 ============================================================================================
 
 ============================================================================================
+https://www.youtube.com/watch?v=PVPLO3Sxbgw&list=PLFbEoEbDAzrsqB8wnal9z_Hy_OwtUkxTp&index=1&pp=iAQB
+timestamp
+00:00- intro
+01:30- What is HTML
+03:34- How HTML Works
+06:49- Setup VS Code Editor
+16:45- HTML basic structure
+24:27- What are meta tags and its importance
+29:10- HTML Headings
+32:02- HTML Comments
+34:29- HTML Paragraphs
+37:58- Links (a tag) and HTML Attributes
+44:17- Images (*img*)
+47:36- LIST
+49:54- Divisions (*div*) 
+54:34- Line Break (*br*).
+57:24- Horizontal Rule (*hr*)
+59:19- Span (*span*)
+01:02:04- Sematic HTML
+01:13:24- Forms in HTML
+01:29:53- Portfolio Website using HTML
+02:10:34- How to navigate redirect from one HTML file to another
+02:13:06- Tables HTML
+02:20:44- Advanced forms (validation, action, method) in HTML
+02:25:29- HTML Multimedia
+02:31:30- HTML entities
+02:36:03- HTML Iframes
+02:43:21- Checkboxes and Radio Buttons (using input tag in Forms)
+02:49:28- What is CSS?
+02:52:56- How CSS Works with examples
+03:15:40- Basic CSS Syntax
+03:17:30- Common CSS Properties
+04:10:10- CSS Selectors
+04:18:22- Box Model, background-image css properties
+04:32:06- CSS Units
+05:02:19- Grid Layout
+05:08:25- Flexbox Layout 
+05:14:05- Float Layout
+05:20:45- Positioning Layout
+05:31:06- Multi-Column Layout
+05:33:44- Table Layout and HTML Table
+05:38:57- Inline-Block Layout 
+05:41:58- Sitcky Layout
+05:46:03- CSS Layouts use cases
+05:49:03- CSS vs SCSS vs SASS vs LESS vs Others
+06:00:40- How to run HTML with SCSS
+06:26:38- Some shortcut trick
+06:28:29- pseudo classes - Advanced css selector
+06:43:32- pseudo elements - advanced css selector
+06:49:58- Transitions and Animations
+06:55:59- CSS Variables
+07:00:33- Advanced CSS (filters, custom checkbox, auto-fit and minmax in grid)
+07:21:20- Gradients in Text and Background
+07:31:14- Blend Mode and Clip Path in CSS
+07:36:08- Responsive design for different screens
+07:51:03- Designing Header
+08:14:24- Designing Hero Section
+08:24:47- Designing About Section
+08:41:26- Designing Skills Section and integrating icons
+09:10:36- Designing Projects Section
+09:24:09- Designing Contact Section
+09:30:44- Designing Footer
+09:35:50- Making Website Responsive
+09:48:10- What is Tailwind CSS: Why use it
+09:53:44- Tailwind CSS Basics
+10:01:43- Integrating Tailwind CSS and testing it in html
+10:11:31- Apply Flexbox, Grid Layouts using Tailwind CSS and many more
+10:26:26- Border, border-radius, shadow in Tailwind CSS
+10:32:32- Custom Styling in Tailwind CSS
+10:33:58- Setup Tailwind CSS via CLimp4 (typo preserved)
+10:46:27- Adding Earlier Portfolio Website design in the Project
+10:48:42- Design Header using Tailwind CSS
+10:59:50- Design Hero Section 
+11:07:19- Design About Section using Tailwind CSS
+11:18:18- Design Skills Section using Tailwind CSS
+11:26:02- Design Projects Section using Tailwind CSS
+11:36:55- Design Contact Section using Tailwind CSS
+11:44:29- Design Footer using Tailwind CSS
+11:49:03- Outro
