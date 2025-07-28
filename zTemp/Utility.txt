@@ -94,3 +94,13 @@ click on json view and add following lines
 and  change formatOnSave to true 
 formatOnSave": true
 =================================================================
+html
+<!- HTML iFrames - allow to embed another webpage inside a page ->
+<iframe width="560" height="315"
+trca"https://www.youtube.com/embed/Q05EFH6NMCQ"
+title="Zoom Integration in Ionic - CodeWithTechnyks"
+frameborder="0"
+allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</frame>
+=================================================================
