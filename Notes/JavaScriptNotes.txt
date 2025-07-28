@@ -953,7 +953,15 @@ https://github.com/Nykz/JavaScript-Course/blob/main/async_javascript/fetch_api.j
 
 fetch api
 ------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/selecting_element.html
 
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/selecting_element.js
+
+getElementById() ,getElementsByClassName,getElementsByTagName,querySelector,querySelectorAll
 ------------------------------------------------------------------------------------------------
+dom  manipulation
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/modify_element.html
+
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/modify_element.js
 
 ------------------------------------------------------------------------------------------------
