@@ -58,6 +58,7 @@ isFollow = true;
 typeOf
 
 let test = JSON.stringify(userData); 
+let test = JSON.parse(stringData); 
 
 isNaN(a);  // function to check nan
 
@@ -985,6 +986,32 @@ https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_deleg
 
 https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/form_handling.html
 https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_handling.js
+
+------------------------------------------------------------------------------------------------
+es6+ features
+
+https://github.com/Nykz/JavaScript-Course/tree/main/es6%2B_features
+
+https://github.com/Nykz/JavaScript-Course/blob/main/es6%2B_features/features.js
+https://github.com/Nykz/JavaScript-Course/blob/main/es6%2B_features/main.js
+------------------------------------------------------------------------------------------------
+oops 
+https://github.com/Nykz/JavaScript-Course/tree/main/oop
+
+https://github.com/Nykz/JavaScript-Course/blob/main/oop/oop_concept.js
+
+------------------------------------------------------------------------------------------------
+
+https://github.com/Nykz/JavaScript-Course/tree/main/debugging
+https://github.com/Nykz/JavaScript-Course/blob/main/debugging/using_console.js
+https://github.com/Nykz/JavaScript-Course/blob/main/debugging/debugger.js
+https://github.com/Nykz/JavaScript-Course/blob/main/debugging/debugging.html
+------------------------------------------------------------------------------------------------
+localStorage
+
+https://github.com/Nykz/JavaScript-Course/blob/main/web_storage_api/localstorage.js
+
+------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
 
