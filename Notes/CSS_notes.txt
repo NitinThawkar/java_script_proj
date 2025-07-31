@@ -29,6 +29,9 @@ Block Element (takes full width)
 ✨ #####  BOX Model ##############
 Slide 23 in 
 https://github.com/NitinThawkar/Notes/blob/WorkingBranch/CSS_notes/CSS_Notes.pdf
+Margin & padding
+margin: adds space outside an element
+padding: adds space inside an element
 ============================================================================================
 ✨  ####### Display Property  #######
 
@@ -78,6 +81,13 @@ padding: 50px;
 
 padding: 1px 2px 3px 4px;
 top | right | bottom | left -> clockwise
+
+<!-
+
+Margin & padding
+margin: adds space outside an element
+padding: adds space inside an element
+-
 ============================================================================================
 ✨  ###### Selector ######
 ✏️ Universal Selector
@@ -570,7 +580,77 @@ https://www.w3schools.com/html/html_blocks.asp
 
 if we apply inline style on blocked element then we will not able to set top and bottom  margin and padding.use inline-block set that
 
----------------------------------------------------------------
+==========================================================================================================================================
+#use for layouts
+CSS Layouts - Use Cases
+
+
+CSS Grid : Complex two-dimensional layouts (e.g .. photo galleries, dashboards).
+Flexbox : One-dimensional layouts (e.g., navigation bars, centering content).
+Float : Wrapping text around images or simple column layouts.
+Positioning : Precise placement of elements (e.g., modals, sticky headers).
+Multi-Column : Newspaper-like text layouts.
+Table : Table-like layouts without using HTML tables.
+Inline-Block : Inline elements with block-level properties.
+Sticky : Elements that stick to the viewport when scrolling.
+
+Grid Layout
+- Flexbox Layout 
+- Float Layout
+- Positioning Layout
+- Multi-Column Layout
+    e.g column-count : 2
+- Table Layout and HTML Table
+	display : table /display : row / display : cell
+- Inline-Block Layout 
+   This layout lets elements sit inline (like text) but still have block-level properties like width and height.
+   show elements in one line   display : inline-block
+- Sitcky Layout
+- CSS Layouts use cases
+
+
+Flexbox (default diection row)
+What It Is:
+
+Flexbox is a one-dimensional layout system that works either in a row or a column. It's great for aligning and
+distributing space among items in a container.
+
+
+
+.flex-container {
+  display: flex;         => 
+}
+-------------
+CSS Grid
+What It Is:
+
+CSS Grid is a two-dimensional layout system that allows you to create complex layouts with rows and
+columns. It's like a grid paper where you can place items in any cell.
+ 
+ display: grid; 
+ 
+ layout
+ ---------------
+ .flex-container {
+  display: grid;
+flot: right
+flot: right  
+}
+---------------------
+position: 
+
+ static -
+relative
+absolute
+fixed - 
+sticky 
+
+ .flex-container {
+  display: grid;
+flot: right
+position: right  
+}
+==========================================================================================================================================
 
 Visibility
 
@@ -595,7 +675,36 @@ Relative : 50% %,em,rem
 Percentage (%) :It is often used to define a size as relative to an element's parent object.
 width : 33% ;
 margin-left : 50% ;
+---------------------------------------------------
+rem	Relative to font-size of the root element define a size as relative to an element's root object
 
+html {
+font-size: 16px; /* Root font size */
+}
+P {
+font-size: 1.5rem; /*1.5*16px=24px*/.
+}
+---------------------------------------------------
+
+em	Relative to the font-size of the perent  element (2em means 2 times the size of the current font)	define a size as relative to an element's parent object
+
+div {
+font-size: 20px;
+}
+{
+font-size: 1.5em; /* 1.5 20px = 30px */
+}
+
+---------------------------------------------------
+Percentage (%) :It is often used to define a size as relative to an element's parent object
+---------------------------------------------------
+values in (%)
+font-size: 20vh 
+font-size: 20vw 
+font-size: 20vmin
+font-size: 20vmax
+
+width : 20ch
 ====================================
 https://www.w3schools.com/cssref/css_units.php
 
@@ -606,7 +715,7 @@ width : 2em;   => take double width of parent element
 margin-left : 50% ;
 
 Unit	Description	
-em	Relative to the font-size of the element (2em means 2 times the size of the current font)	
+em	Relative to the font-size of the perent element (2em means 2 times the size of the current font)	
 ex	Relative to the x-height of the current font (rarely used)	
 ch	Relative to the width of the "0" (zero)	
 rem	Relative to font-size of the root element	
@@ -615,6 +724,8 @@ vh	Relative to 1% of the height of the viewport*
 vmin	Relative to 1% of viewport's* smaller dimension	
 vmax	Relative to 1% of viewport's* larger dimension	
 %	Relative to the parent element
+fr fraction unit
+
 ---------------------------------------------------
 <div>The font-size of the div element is set to 30px. 
   <span>The span element inside the div element has a font-size of 0.5em, 
@@ -623,6 +734,7 @@ vmax	Relative to 1% of viewport's* larger dimension
 </div>
 
 ---------------------------------------
+
 ==============================================
 ####### position ######
 The position CSS property sets how an element is positioned in a document.
@@ -712,13 +824,60 @@ space is available
 ============================================================================================
 #####################################uplicate_notes
 ============================================================================================
-
+<!- HTML iFrames - allow to embed another webpage inside a page ->
+<iframe width="560" height="315"
+trca"https://www.youtube.com/embed/Q05EFH6NMCQ"
+title="Zoom Integration in Ionic - CodeWithTechnyks"
+frameborder="0"
+allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</frame>
 ============================================================================================
 
-============================================================================================
+
 
 ============================================================================================
+advantages 
+Pros of CSS:
 
+. Universal support: Works in allbrowsers.
+
+. Simple syntax: Easy to learn and use.
+
+. No compilation needed: You write it, andit works.
+
+Cons of CSS:
+
+· Repetitive code: No support for variables, functions, or reusable components.
+
+. Hard to maintain: As projects grow. CSS files can become messy andhard to
+manage.
+
+------------------------------------------------------------------------------------
+SCSS (Sassy CSS)
+
+. SCSS is a CSS pre-processor
+. It's a superset of CSS, meaning all valid CSS is also valid SCSS.
+. SCSS adds powerful features like variables, nesting, mixins, and functions, making your stylesheets more maintainable and
+easier to write.
+
+Pros of SCSS:
+
+. Variables:Store reusable values (e.g. colors, fonts).
+
+. Nesting: Write cleaner.more organized code.
+
+. Mixins: Reuse blocks of code.
+
+. Functions: Perform calculations or logic.
+
+. Modularity: Split your code into smaller, reusable files.
+
+Cons of SCSS:
+
+· Requires compilation: SCSS needs to be compiled into CSS before it can be used in a browser.
+
+. Learning curve: Slightly more complex than plain CSS.
 ============================================================================================
 
 ============================================================================================
@@ -810,6 +969,7 @@ timestamp
 05:46:03- CSS Layouts use cases
 05:49:03- CSS vs SCSS vs SASS vs LESS vs Others
 06:00:40- How to run HTML with SCSS
+06:03:00 - live server  ==========================>(imp)
 06:26:38- Some shortcut trick
 06:28:29- pseudo classes - Advanced css selector
 06:43:32- pseudo elements - advanced css selector

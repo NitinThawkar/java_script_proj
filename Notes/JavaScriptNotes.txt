@@ -61,6 +61,12 @@ let test = JSON.stringify(userData);
 
 isNaN(a);  // function to check nan
 
+// Spread ( ... ): Expands arrays or objects.
+// Rest ( ... ): Collects arguments into an array.
+const arr = [1, 2, 3];
+const copy = [ ... arr];
+const sum = ( ... args) => args.reduce((a, b)=>a +b);
+
 ----------------------------------
 console.log(this);
 
@@ -84,15 +90,15 @@ non prenetive : object,String
 Choosing the Right Loop
 * Use for - when you know the number of iterations.
 * Use while - when the number of iterations depends on a condition.
-* Use do ... while - when the code must execute at least once.
-* Use for ... in - for objects.
-* Use for ... of - for arrays, strings, or other iterables.
+* Use (do .. while) - when the code must execute at least once.
+* Use (for .. in) - for objects.
+* Use (for .. of) - for arrays, strings, or other iterables.
 
 *
 ======================================================================================================
 ✨✏️ for in  and for of loop
 
-// for ... in loop - Iterates over the keys/properties of an object.
+// (for .. in) loop - Iterates over the keys/properties of an object.
 
 const fruits = ["appke", "banana", "cherry"];
 for(let fruit in fruits) {
@@ -117,7 +123,7 @@ console. log(key, ':', person1[key]);
 ------------------------------------
 ✏️ for of
 
-// for ... of loop - Iterates over values in iterable objects like arrays, strings, or
+// (for .. of) loop - Iterates over values in iterable objects like arrays, strings, or
 maps.
 
 const fruits = ["apple", "banana", "cherry"];
@@ -965,9 +971,26 @@ https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/modify_elem
 https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/modify_element.js
 
 ------------------------------------------------------------------------------------------------
+event handling 
+addEventListener   form
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_handling.html
 
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_handling.js
 
+------------------------------------------------------------------------------------------------
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_handling.html
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_delegation.js
 
+------------------------------------------------------------------------------------------------
+
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/form_handling.html
+https://github.com/Nykz/JavaScript-Course/blob/main/dom_manipulation/event_handling.js
+
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
 =============================================================================================================
 https://www.youtube.com/watch?v=woUkblFsm40&list=PLFbEoEbDAzrsqB8wnal9z_Hy_OwtUkxTp&index=2&pp=iAQB
 Timestamp:
