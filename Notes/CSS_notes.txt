@@ -970,7 +970,7 @@ timestamp
 05:49:03- CSS vs SCSS vs SASS vs LESS vs Others
 06:00:40- How to run HTML with SCSS
 06:03:00 - live server  ==========================>(imp)
-06:26:38- Some shortcut trick
+06:26:38- Some shortcut trick ==========================>(imp)
 06:28:29- pseudo classes - Advanced css selector
 06:43:32- pseudo elements - advanced css selector
 06:49:58- Transitions and Animations
