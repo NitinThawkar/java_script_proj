@@ -1017,6 +1017,16 @@ https://github.com/Nykz/JavaScript-Course/tree/main/web_storage_api/theme_switch
 https://github.com/Nykz/JavaScript-Course/blob/main/web_storage_api/theme_switcher/practice_problem1.js
 https://github.com/Nykz/JavaScript-Course/blob/main/web_storage_api/theme_switcher/practice_problem1.html
 ------------------------------------------------------------------------------------------------
+shopping cart
+https://github.com/Nykz/JavaScript-Course/tree/main/web_storage_api/shopping_cart
+
+Network_Connection_Checking_App
+
+https://github.com/Nykz/JavaScript-Course/tree/main/Network_Connection_Checking_App
+
+Location_Based_Weather_App
+https://github.com/Nykz/JavaScript-Course/tree/main/Location_Based_Weather_App
+
 
 ------------------------------------------------------------------------------------------------
 
