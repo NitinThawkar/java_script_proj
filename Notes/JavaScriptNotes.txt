@@ -1012,7 +1012,10 @@ localStorage
 https://github.com/Nykz/JavaScript-Course/blob/main/web_storage_api/localstorage.js
 
 ------------------------------------------------------------------------------------------------
-
+theme switcher
+https://github.com/Nykz/JavaScript-Course/tree/main/web_storage_api/theme_switcher
+https://github.com/Nykz/JavaScript-Course/blob/main/web_storage_api/theme_switcher/practice_problem1.js
+https://github.com/Nykz/JavaScript-Course/blob/main/web_storage_api/theme_switcher/practice_problem1.html
 ------------------------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------------------------
