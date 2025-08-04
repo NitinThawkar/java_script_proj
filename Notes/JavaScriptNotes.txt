@@ -189,7 +189,25 @@ arr.forEach( ( val ) => {
 console.log(val);
 
 })
--------
+-----------------------------------------------------------------------
+callback examples
+
+// we will send this my_sum function as a parameter to My_calculator function
+
+function my_sum(a, b) {
+
+console.log(a + b);
+
+}
+
+function My_calculator(a, b, sumCallback) {
+sumCallback(a, b);
+
+}
+
+//calling 
+My_calculator (1, 2, sum);
+-----------------------------------------------------------------------
 ======================================================================================================
 
 setTimeout and setInterval are both JavaScript functions used for scheduling code execution, but they differ in their execution frequency: 
@@ -269,6 +287,7 @@ let add = (a, b) => {
 // higher-order functions & callbacks
 // a function that accepts another function as an arguement
 - higher-order function
+*A callback is a function passed as an argument to another function.
 let array1 = [1, 2]; X
 
 function processArray(arr, callback) {
