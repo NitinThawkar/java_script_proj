@@ -192,7 +192,7 @@ console.log(val);
 -----------------------------------------------------------------------
 callback examples
 
-// we will send this my_sum function as a parameter to My_calculator function
+// we will send this my_sum function as a parameter to My_calculator function  or  hole funcion as parameter
 
 function my_sum(a, b) {
 
@@ -207,7 +207,53 @@ sumCallback(a, b);
 
 //calling 
 My_calculator (1, 2, sum);
------------------------------------------------------------------------
+
+----------
+//callback  passing hole function as parameter
+
+calculator(1, 2, (a, b) => {
+console.log(a + b);
+});
+----------
+
+//sending  hello arrow function as callback
+const hello = () => {
+console. log("hello");
+
+}
+
+setTimeout(hello) 3000);
+
+-----------------------------------
+Callback Hell
+
+Callback Hell : Nested callbacks stacked below one another forming a pyramid structure.
+(Pyramid of Doom)
+
+This style of programming becomes difficult to understand & manage.
+------------------------------------
+
+function getData(dataId, getNextData) {
+//2s
+setTimeout(() => {
+console. log("data", dataId);
+if (getNextData)
+getNextData();
+}
+}, 2000);
+
+}
+//-- Callback Hell ..Nested callback
+getData(1, () =>{
+console. log("getting data2 .... ");
+getData(2, () =>{
+console. log ("getting data3 .... ");
+getData(3, () => {
+console. log("getting data4 .... ");
+getData(4);
+});
+});
+});
 ======================================================================================================
 
 setTimeout and setInterval are both JavaScript functions used for scheduling code execution, but they differ in their execution frequency: 
