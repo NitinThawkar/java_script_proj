@@ -1012,8 +1012,32 @@ then
 ============================================================================================
 ✨ Extend/Inheritance ✨
 
+
+.btn{
+background-color:#eee;
+padding: 10px 20px;
+border: 0;
+box-shadow: 0px 0px 2px 2px
+margin: 30px;
+color:#ccc;
+}
+
+.btn-success{
+@extend .btn;
+background-color: green;
+&: hover{
+background-color:darken(green, 10%);
+}
+}
+
 ============================================================================================
 
+.btn-success{
+background-color:green;
+	&: hover{
+		background-color : darken(green, 10%); 
+			}
+}
 ============================================================================================
 
 ============================================================================================
