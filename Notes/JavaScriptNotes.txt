@@ -94,7 +94,7 @@ Choosing the Right Loop
 * Use (do .. while) - when the code must execute at least once.
 * Use (for .. in) - for objects.
 * Use (for .. of) - for arrays, strings, or other iterables.
-
+  forEach
 *
 ======================================================================================================
 ✨✏️ for in  and for of loop
@@ -173,6 +173,23 @@ for(let a = 1; a <= 3; a++) {
 for(let b = 1; b <= 2; b++) { x
 console. log(`a: ${a}, b: ${b}');
 }}
+
+------------------------
+
+forEach Loop in Arrays
+
+syntax : arr.forEach( callBackFunction)
+
+CallbackFunction : Here, it is a function to execute for each element in the array
+
+*A callback is a function passed as an argument to another function.
+-------
+arr.forEach( ( val ) => {
+
+console.log(val);
+
+})
+-------
 ======================================================================================================
 
 setTimeout and setInterval are both JavaScript functions used for scheduling code execution, but they differ in their execution frequency: 
