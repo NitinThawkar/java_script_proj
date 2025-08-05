@@ -114,6 +114,15 @@ p.fancy.beige {
   font-family: 'Courier New', monospace;
   }
 -------------------------------------------------------------------
+Universal Selector	▶️ *{}
+ID Selector ▶️	#id {}
+Class Selector	▶️ .class {}
+Type Selector	▶️ h1, h2,h3 {}
+Adjacent Sibling Selector	▶️ h1 +p{}
+Child Selector ▶️	ul > li {}
+General Sibling Selector ▶️	h1 ~ p{}
+Descendant Selector ▶️	p a{}
+Attribute Selector	- ▶️  div[attribute="SomeValue"] {}
 ============================================================================================
  <td>button#myid</td>
  <td>button:s or button:submit</td>
