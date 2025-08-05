@@ -205,7 +205,7 @@ sumCallback(a, b);
 
 }
 
-//calling 
+//calling  execute callback
 My_calculator (1, 2, sum);
 
 ----------
