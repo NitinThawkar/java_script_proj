@@ -440,7 +440,7 @@ Pending : the result is undefined
 
 Resolved : the result is a value (fulfilled)
 
-Rejected : the result is an error object
+Rejected : the result is an error object (Rejected)
 -----------------
 resolve( result )
 
@@ -448,12 +448,44 @@ reject( error )
 ---------------
 *Promise has state (pending, fulfilled) & some
 result (result for resolve & error for reject).
----------------
+--------------------------------
+if we wnat to some other work after fullfill state of promise use (.then) method , 
 .then( ) & .catch( )
 
 promise.then( ( res ) => { .... } )
 
 promise.catch( ( err ) ) => { .... } )
+
+-------------
+
+
+const getPromise = () => {
+return new Promise((resolve, reject) => {
+console. log("I am a promise");
+// resolve("success");
+reject("network perror");
+});
+};
+
+// res and err are optional . if we dont pass it java script automatically pass it 
+let promise = getPromise();
+promise.then((res) => {
+console. log("promise fulfilled", res);
+});
+
+promise.catch((err) => {
+console. log("rejected", ērr);
+});
+------------------------------------
+// res and err are optional . if we dont pass it java script automatically pass it 
+let promise = getPromise();
+promise.then(() => {
+console. log("promise fulfilled", res);
+});
+
+promise.catch(() => {
+console. log("rejected", ērr);
+});
 
 ##################################################################################
 Async await
