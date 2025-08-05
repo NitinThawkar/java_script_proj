@@ -114,7 +114,7 @@ p.fancy.beige {
   font-family: 'Courier New', monospace;
   }
 -------------------------------------------------------------------
-Universal Selector	▶️ *{}
+Universal Selector	▶️ *{} 
 ID Selector ▶️	#id {}
 Class Selector	▶️ .class {}
 Type Selector	▶️ h1, h2,h3 {}
