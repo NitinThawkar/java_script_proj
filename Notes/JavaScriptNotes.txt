@@ -487,6 +487,92 @@ promise.catch(() => {
 console. log("rejected", ērr);
 });
 
+=============================================
+function asyncFunc1() {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+console. log("data1");
+resolv ("success") ;
+}, 40000;
+});
+}
+------
+function asyncFunc2() {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+console. log("data2");
+resolv ("success") ;
+}, 40000;
+});
+}
+------
+console. log("fetching data1 .... ");
+let p1 = asyncFunc1();
+p1.then((res) => {
+console. log(res);
+
+------
+
+console. log("fetching data2 .... ");
+let p2= asyncFunc2();
+p2.then((res) => {
+console. log(res);
+});
+===========================================================
+
+console. log("fetching data1 .... ");
+let p1 = asyncFunc1();
+p1.then((res) => {
+cansole. log (res);
+console. log("fetching data2 .... ");
+let p2= asyncFunc2();
+p2.then((res) =>
+console. log(res);
+});
+});
+===========================================================
+// without Assigning in p1 variable
+asyncFunc1().then((res) => {
+cansole. log (res);
+console. log("fetching data2 .... ");
+let p2= asyncFunc2();
+p2.then((res) =>
+console. log(res);
+});
+});
+===========================================================
+// another way to  then chaining //promise chain
+function getData(dataId) {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+console. log("data", dataId);
+resolve("success");
+}, 3000;
+});
+}
+//Promise Chain
+
+getData(1).then((res) => {
+console. log(res);
+getData(2).then(() => {
+console. log(res);
+});
+});
+===========================================================
+//promise chain
+
+getData(1)
+.then((res) => {
+return getData(2);
+})
+.then((res) => {
+return getData(3);
+
+.then((res) =>
+console. log (res);
+
+===========================================================
+
 ##################################################################################
 Async await
 
