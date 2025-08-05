@@ -1032,13 +1032,47 @@ background-color:darken(green, 10%);
 }
 
 ============================================================================================
-
+✨ ampersand symbol (&) in css ✨
+ ampersand symbol (&) is primarily used in the context of CSS Nesting, 
+ The & symbol in CSS nesting refers to the parent selector of the current nested rule.
+ 
 .btn-success{
 background-color:green;
 	&: hover{
 		background-color : darken(green, 10%); 
 			}
 }
+-----------------
+Referencing the parent element for compound selectors:
+When you want to apply styles to the parent element itself, or combine the parent selector with a pseudo-class or pseudo-element, the & is used.
+
+ .card {
+      background-color: lightgray;
+
+      /* Targets .card when it's hovered */
+      &:hover {
+        background-color: gray;
+      }
+
+      /* Targets .card with the class .active */
+      &.active {
+        border: 2px solid blue;
+      }
+    }
+	
+----------------------
+Creating contextual styles based on parent relationships:
+The & can be used to define styles that depend on the context of the parent selector, even if the parent is not directly targeted.
+
+    .button {
+      padding: 10px;
+
+      /* Targets .button when it's inside a .dark-mode container */
+      .dark-mode & {
+        color: white;
+        background-color: black;
+      }
+    }
 ============================================================================================
 
 ============================================================================================
