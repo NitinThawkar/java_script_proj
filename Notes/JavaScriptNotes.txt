@@ -576,6 +576,50 @@ console. log (res);
 ##################################################################################
 Async await
 
+function api() {
+return new Promise((resolve, reject) => {
+setTimeout(() => {
+console. log ("weather data");
+resolve(200);
+}, 2000);
+});
+}
+--------------
+
+async funckion getWeatherData() {
+await api();
+await api();
+}
+-------------------------------------------------------------------
+
+const URL = "https://cat-fact.herokuapp.com/facts";
+
+const getFacts = async () => {
+console. log("getting data..... ");
+let response = await fetch(URL);
+console. log(response);
+};
+
+------------------------
+AJAX is Asynchronous JS & XML
+
+JSON is JavaScript Object Notation
+
+json()  method : returns a second promise that resolves with the result of parsing the
+response body text as JSON. (Input is JSON, output is JS object)
+------------------------
+
+const URL = "https://cat-fact.herokuapp.com/facts";
+const factPara = document.querySelector("#fact");
+
+const getFacts = async () =>{
+console. log("getting data.. ");
+let response = await fetch(URL);
+console. log(response); //JSON format
+let data = await response.json();
+factPara.innerText = data[0].text;
+};
+
 https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 ##################################################################################
 Things learned:
