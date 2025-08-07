@@ -506,12 +506,15 @@ https://github.com/thapatechnical/react-19-series-thapa-technical/blob/master/sr
 ------------------------
 ==================================================================================================================================
 Syntax of the useEffect hook
+///useEffect(callback_function,exec callback_function,dependencies) //  any change in dependencies triggers code inside useEffect
+//useEffect(() => {}, [])
+
 
 useEffect(() => {
 function demo() {
 console. log("Demo function executed"
 
-demo ()
+demo ()    // executing call back demo function
 }, [])
 
 -----------------------------------------------------
@@ -530,18 +533,28 @@ return
 
 (
 ==================================================================================================================================
-##  useReducer =>  have state and action that we want to dispatch  and reducer function(3 trpes)
+##  useReducer =>  have state and action that we want to dispatch  and reducer function(3 types)
 
-const [state_var, dispatch_action] = useReducer(reducer_func, 0);  => i si sinitial value
+useReducer is a function which return some value 
 
+syntax
+const [state_var, dispatch_action] = useReducer(reducer_func, 0);  => 0 is a initial value
+function reducer_func(state, action) {}
+----------------------------
+//example
+const [state_var, dispatch_action] = useReducer(reducer_func, 0);  => 0 is a initial value
+function reducer_func(state, action) {}
 ----
-// reducer  function
+// reducer  function aggrigation or logic write here
 function reducer_func(state, action) {
 if (action. type == "increment") {
 return state + action.payload;
-}
+}}
 ----
-< button onClick={ ()=>dispatch_action((type:"increment", payload: 1})}>Increment couny>/button>   => in call back function  have 2 argument  type and payload(data)
+//execution
+// action object {type:"increment", payload: 1}
+
+< button onClick={ ()=>dispatch_action({type:"increment", payload: 1})}>Increment couny>/button>   => in call back function  have 2 argument  type and payload(data),payload data use any aggrigatin in reducer function
 
 ----
 ---------------------------------------------------------------
