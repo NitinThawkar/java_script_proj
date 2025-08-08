@@ -58,6 +58,9 @@ use()   (in 19 replace useEffect and Use Contex)
 ----------------------------------------------------------------------
 useState
 ----------------------------------------------------------------------
+State lifting : passing data from child to parent component
+
+----------------------------------------------------------------------
 useDispatch
 ----------------------------------------------------------------------
 useSelector
@@ -406,7 +409,53 @@ value={name}
 </form>
 </div>
 --------------------------------------------------------------------------
+==================================================================================================================================
+State lifting 
+passing data from child to parent component
 
+// Child Componant
+
+import React from 'react'
+import {useState} from 'react'
+
+function Child(props) {
+const [name, setName]= useState();
+function handleSubmit(e)
+e.preventDefault();
+props.getData(name)
+
+}
+return
+
+	(
+		<div>
+			<form onSubmit={handleSubmit}>
+			<input type='text' value={name} onChange={(e)=>{setName(e.target.value)}}></input>
+			<button>Submit</button>
+		</form>
+		
+		</div>
+	)
+}
+
+expport default child;
+-------------------------------------
+// Parent omponent Componant
+import './App.css';
+import Child from './Child';
+// Listing State up or pass data from child to parent
+
+function App(){
+	function getData(data){
+		console.log(data)
+			}
+return(
+<>
+	<Child getData={getData}/>
+
+</>
+);
+---------------------------------------
 ==================================================================================================================================
 className  => camel case provided by react
 
