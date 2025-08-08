@@ -104,3 +104,26 @@ allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen>
 </frame>
 =================================================================
+JAVA   read from local file and return json text
+----------------------
+import java.util.List;
+import java.util.TimeZone;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.IOException;
+----------------------
+@ApiResponse(responseCode = "200", content = {@Content( mediaType = "application/json")})
+    @PostMapping("/recepee")
+    public ResponseEntity<String> getMetricTrendData(@Valid @RequestBody String cont) {
+        Path filePath = Paths.get("src/main/resources/json.txt");
+
+        String content;
+        try {
+            content = Files.readString(filePath);
+        } catch (IOException e) {
+            content = "";
+        }
+        return ResponseEntity.ok().body(content);
+    }
+=================================================================
