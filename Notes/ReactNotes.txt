@@ -124,7 +124,8 @@ useSession
 ----------------------------------------------------------------------
 usePathName
 ----------------------------------------------------------------------
-children
+children => we can pass component as childeren. it means we can pass component as props (https://youtu.be/6z1qEQU-stI?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza)
+			we have used this with contex  useContex
 ----------------------------------------------------------------------
 preventdefault => use in form to avoind default submit e.preventdefault()
 ----------------------------------------------------------------------
@@ -731,11 +732,12 @@ return <div>Profile for
 https://youtu.be/aL6PBTtdt40?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
 -----------------------------------------------
 4 Steps Involved With Context (context have data and function)
-. Creating context.
+. Creating context.   =>  createContext(); method to create contex. every contex contain DATA and FUNCTION pass data or function
 · Providing context.  => provide contex to other componant that required it .wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
 . Consuming context.  => get data and function from contex
 · Updating context.
-
+------------------------------------------------------------------------------
+we will use createContext() and useContext(UserContext )   method and hook
 ==================================================================================================================================
 create contex (parent)
 provider  (parent)
@@ -743,12 +745,12 @@ consume contex (child>
 ------------------------------------------------------------------------------
 //Creating context.
 //Providing context
-import { createContext, useState } from 'react'
+import { createContext, useState } from 'react'   =>   Creating context
 import './App.css'
 import ChildA from './components/ChildA';
 
 //step1: create Context
-const UserContext = createContext();
+    const UserContext = createContext();             =>   Creating context(this is outside of componenet)
 //step2: wrap all the child inside a provider
 //step3: pass value
 //step4: consumer .k andar jaake consume karlo
@@ -781,6 +783,8 @@ return (
 
 export default Child
 ------------------------------------------------------------------------------
+
+
 step 4 ## Updating context.
  
  import { createContext, useState } from "react";
@@ -801,16 +805,16 @@ onChange={(e) => setUser(e.target. value)}
 </div>
 
 ):
-
-export default App;
+--------------------------------------------
+export default App; to Checkout component
 -----------
 src > Checkout.jsx > Checkout > 
 import { useContext } from "react";
 import { userContext } from "./App";
 
 export default function Checkout() {
-const {value} = useContext(userContext);
-return <div>Checkout as {value.user}</div>;
+const {value} = useContext(userContext);    =>every contex have DATA and FUNCTION
+return <div>Checkout as {value.user}</div>; 
 ==================================================================================================================================
 const ThemeContext = createContext();
 I
@@ -850,6 +854,7 @@ Change Theme
 export default ChildC
 ==================================================================================================================================
 2]  Separating Context Into Its Own File In React
+   #also we can see here passing componant as children to componet using props
 ------------------------------------------------------------------------------
 src > context >UserContext.jsx > UserProvider
 import { createContext } from "react";
@@ -864,7 +869,7 @@ return
 </userContext.Provider>
 );
 
-export { UserProvider, userContext };
+export { UserProvider, userContext };  => export these
 ----------------------------
 >src App.jsx > App
 import { createContext, useState } from "react";
