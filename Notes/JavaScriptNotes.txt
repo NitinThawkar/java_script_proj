@@ -47,6 +47,7 @@ short, synchronized, throws, transient, and volatile.
 #########################################################################
 my javsript notes
 ##################################################################################
+----------------------------------
 Variable 
 fullname = "devi jons";
 age = 24;
@@ -85,7 +86,19 @@ typeOf <vriable Name>
 Primitive Types : Number, String, Boolean, Undefined, Null, BigInt, Symbol
 default its undefined
 non prenetive : object,String
+-----------------------------------
 
+const currentTime = new Date();
+const time = `${currentTime. getHours ( ) } : ${currentTime. getMinutes ( )}`
+
+setTimeout(()=> console.log("hi"), 2000);
+clearTimeout();
+-------------------------
+setInterval(()=> console.log("hi"), 2000);
+clearInterval();
+-----------
+let myInterval = setInterval(()=> console.log("hi"), 2000);
+clearInterval(myInterval);
 ======================================================================================================
 /*
 Choosing the Right Loop
