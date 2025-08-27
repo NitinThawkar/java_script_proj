@@ -33,6 +33,8 @@ clear()  => clear console tab
 Query parameter  ✏️=>   www.sj.com/employee?id= nitin
 route parameter  ✏️=>   www.sj.com/ employee/2
 =================================================================
+JAVA script
+
 ==   ✏️=> (Loose Equality):
 		Compares values after converting them to a common type if necessary. 
 		May lead to unexpected results due to type coercion. 
@@ -126,4 +128,24 @@ import java.io.IOException;
         }
         return ResponseEntity.ok().body(content);
     }
+=================================================================
+TYPE SCRIPT   type script  object array
+
+const mockHabits: Habit[] =[
+{
+id: "1",
+name: "Read",
+frequency: "daily",
+completedDates: [],
+createdAt: new Date() .toISOString(),
+},
+{
+
+id: "2",
+name: "Exercise",
+frequency: "daily",
+completedDates: [],
+createdAt: new Date().toISOString(),
+}]
+
 =================================================================

@@ -61,9 +61,12 @@ useState
 State lifting : passing data from child to parent component
 
 ----------------------------------------------------------------------
-useDispatch
+useDispatch :  called redux reducers FROM Component  (useDispatch is a function) (generally dispatch called reducer function through actions)
 ----------------------------------------------------------------------
-useSelector
+useSelector  : access state values from store . it is also function. it return state data and other info 
+
+				const {items, filters} = useSelector(state => state.tasks);  => state.tasks  => tasks is a reducer name from store configrution file
+				console.log(items, 'items')
 ----------------------------------------------------------------------
 
 ----------------------------------------------------------------------
@@ -1391,7 +1394,9 @@ prop, state and hook,memo ?
 ==================================================================================================================================
 ### comment
 
- {/* This is a comment in React */}
+normal javascript commit use //
+
+ for jsx comment use =>{/* This is jsx comment in React */}
  
  // Types of comment  support in  react ****************************************************//
 // ConditionalRendering.jsx
