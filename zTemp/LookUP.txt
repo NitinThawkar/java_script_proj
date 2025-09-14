@@ -5,57 +5,6 @@
 ✒️ (Black pen)
 ✍️ (Writing hand)
 
-API
-
-server.port=8089
-management.server.port=8081
-=========================================
-
-=========================================
-Simulator  Api 
-server.port=8091
-management.server.port=8081   // 8083
-
-POST http://localhost:8091/api/v1/simulate
-=========================================
-Integration
-management.server.port=8081   //8082
-=========================================
-event
-server.port=8095
-
-management.server.port=8081
-=========================================
-
-=========================================
-
-select * from tenant_test.metrics
-select * from tenant_test.rules
-select * from tenant_test.events
-select * from tenant_test.events_2025_02
-select * from tenant_test.footprint_data
-select * from tenant_test.data_auditor_thresholds
-select * from tenant_test.devices
-select * from tenant_test.conditions
-select * from tenant_test.segments
-select * from tenant_test.flyway_schema_history
-select * from tenant_test.segment_types
-select * from tenant_test.manufacturers
-select * from tenant_test.technologies
-select * from tenant_test.assets
-
-
-==============================================
-
-INSERT INTO tenant_test.assets
-INSERT INTO tenant_test.segments
-INSERT INTO tenant_test.devices
-INSERT INTO tenant_test.metrics 
-INSERT INTO tenant_test.footprint_data
-INSERT INTO tenant_test.conditions
-INSERT INTO tenant_test.rules
-INSERT INTO tenant_test.events
-INSERT INTO tenant_test.data_auditor_thresholds
 
 ======================================================
 

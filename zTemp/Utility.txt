@@ -128,6 +128,31 @@ import java.io.IOException;
         }
         return ResponseEntity.ok().body(content);
     }
+---------------------------------------------
+
+  public ResponseEntity<String> getWeatherTrendData(@Valid @RequestBody String payload) {
+        Path filePath;
+        if (payload.contains("\"1d\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trendD.txt");
+        } else if (payload.contains("\"12h\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trend12h.txt");
+        } else if (payload.contains("\"4h\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trend4h.txt");
+        } else if (payload.contains("\"1h\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trend1h.txt");
+        } else {
+            filePath = Paths.get("C:\\Ztemp\\trend.txt");
+        }
+
+        String content;
+        try {
+            content = Files.readString(filePath);
+        } catch (IOException e) {
+            content = "";
+        }
+        return ResponseEntity.ok().body(content);
+    }
+---------------------------------------------     
 =================================================================
 TYPE SCRIPT   type script  object array
 
