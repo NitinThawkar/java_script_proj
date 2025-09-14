@@ -1,0 +1,592 @@
+✨ Python Notes
+https://www.w3schools.com/python/python_operators.asp
+=======================================================================================================
+use # for comment 
+
+=======================================================================================================
+len() => len("nitin")
+type() =>  type ("nitin") , type (12.23)
+dir ()  => dir (list)=> dir (["apple","bababa"])=>  will show all supported method of list /set/dictionaries/tuples etc
+help(list) => print (help(list))
+range (1,11,step) => pirint 1 to 10 last number exclued
+reversed(range (1,11) ) => print in decending order
+
+print ("nitin", end="/")  => we can use space , new line  \n in end end="\n"  (try to use in for)
+print ("nitin", sep="/")  =>seprate
+time.sleep(1) => import time
+pass => do nothing =>just run
+
+print (help("modules"))
+print (a ** b)
+--------------------------------------------------------
+#### ✨ slice => [start index : the end index : (step in number optional)] => end index will not include  
+
+=> print("Hello, World!"[2:5]) => llo
+=> print("abcdefghijk"[0:9:2]) => acegi
+=> print("abcdefghijk"[0:9:3]) => adg
+
+email = input("Enter your email: ") 
+username = email[:email.index("@")] 
+domain = email[email.index("@") + 1:] 
+print(f"Your username is {username} and domain is {domain}")
+--------------------------------------------------------
+=======================================================================================================
+Python Notes
+=======================================================================================================
+#### Type casting
+age = float(age)
+print(age)
+
+gpa = int(gpa)
+print(gpa)
+
+student = str(student)
+print(student)
+
+name = bool(name)
+print(name)
+=======================================================================================================
+#### Python input() Function
+
+print('Enter your name:')
+x = input()
+print('Hello, ' + x)
+----------------------------
+x = input('Enter your name:')
+print('Hello, ' + x)
+
+=======================================================================================================
+Logical and , or, NOT 
+
+
+if b > a:
+  print(x > 3 and x < 10)
+  
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+elif a and  b:
+  print("a and b are equal")
+elif a or b:
+  print("a and b are equal")
+elif a or b:
+  print("a and b are equal")
+  
+else:
+  print("a is greater than b")
+  
+=======================================================================================================
+# conditional expression = A one-line shortcut for the if-else statement (ternary operator) 
+# Print or assign one of two values based on a condition # X if condition else Y
+num = 5
+a = 6
+b = 7
+age = 13
+temperature = 20
+user_role = "guest"
+
+print("Positive" if num > 0 else "Negative")
+result = "EVEN" if num % 2 == 0 else "ODD"
+max_num = a if a > b else b
+min_num = a if a < b else b
+status = "Adult" if age >= 18 else "Child"
+weather = "HOT" if temperature > 20 else "COLD"
+access_level = "Full Access" if user_role == "admin" else "Limited Access"
+=======================================================================================================
+#### string method
+https://www.w3schools.com/python/python_strings_methods.asp
+
+slice => [start index : the end index : (step in number optional)] => end index will not include  
+=> print("Hello, World!"[2:5]) => llo
+=> print("abcdefghijk"[0:9:2]) => acegi
+=> print("abcdefghijk"[0:9:3]) => adg
+
+
+=======================================================================================================
+#### format specifiers
+
+# format specifiers = {:flags} format a value based on what flags are inserted
+
+# .(number)f = round to that many decimal places  i.e.   price : 
+# :(number) = allocate that many spaces 
+# :0(number) = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# := = place sign to leftmost position
+# :  = insert a space before positive numbers
+# :, = comma separator
+# :% = percentage format
+
+price1 = 3.14159
+price2 = -987.65
+price3 = 12.34
+print(f"price1 is: ${price1:.2f}")  =>.2f number of dcimal  => 3.14
+print(f"price2 is: ${price2:}")
+print(f"price3 is: ${price3:}")
+=======================================================================================================
+#### While loops
+# ---------------- EXAMPLE 1 ----------------
+
+name = input("Enter your name: ")
+
+while name == "":
+   print("You did not enter your name!")
+   name = input("Enter your name: ")
+
+print(f"Hello {name}")
+
+# ---------------- EXAMPLE 2 ----------------
+
+age = int(input("Enter your age: "))
+
+while age < 0:
+   print("Age can't be negative")
+   age = int(input("Enter your age: "))
+
+print(f"You are {age} years old")
+
+
+# ---------------- EXAMPLE 3 ----------------
+
+food = input("Enter a food you like (q to quit): ")
+
+while not food == "q":
+   print(f"You like {food}")
+   food = input("Enter another food you like (q to quit): ")
+
+print("bye")
+
+# ---------------- EXAMPLE 4 ----------------
+
+num = int(input("Enter a # between 1 - 10: "))
+
+while num < 1 or num > 10:
+    print(f"{num} is not valid")
+    num = int(input("Enter a # between 1 - 10: "))
+
+print(f"You picked the number {num}")
+=======================================================================================================
+#### modules
+print (help("modules"))
+import module name
+import math => print(math.pi)
+import math as M  => print(M.pi)
+from math import  PI  => print(pi)
+from math import  *
+
+other file name can be module name  , the type import to another file or main file accept .py extesion
+=======================================================================================================
+ #### variable scope 
+# ----- LOCAL -----
+
+def func1():
+    x = 1 #local
+    print(x)
+
+def func2():
+    x = 2 #local
+    print(x)
+
+func1()
+func2()
+
+# ----- ENCLOSED -----
+
+def func1():
+    x = 1 #enclosed
+
+    def func2():
+        print(x)
+    func2()
+
+func1()
+
+# ----- GLOBAL -----
+
+def func1():
+    print(x)
+
+def func2():
+    print(x)
+
+x = 3 #global
+
+func1()
+func2()
+
+# ----- BUILT-IN -----
+
+from math import e 
+
+def func1():
+    print(e)
+
+func1()
+=======================================================================================================
+
+#### __main__
+
+You can also run a script by right clicking within that script and selecting 'Run'. I forgot about that shortcut while filming this video.
+
+if __name__ == __main__: (this script can be imported OR run standalone)
+Functions and classes in this module can be reused without the main block of code executing
+
+Good practice (code is modular, helps readability, leaves no global variables, avoids unintended execution)
+
+Ex. library = Import library for functionality.
+                      When running library directly, display a help page
+
+# ---------- script1.py ----------
+# This file can run standalone or be imported
+
+def favorite_food(food):
+    print(f"Your favorite food is {food}")
+
+def main():
+    print("This is script1")
+    favorite_food("pizza")
+    print("Goodbye!")
+
+if __name__ == '__main__':
+    main()
+
+# ---------- script2.py ----------
+# This file should run only standalone
+
+from script1 import *
+
+def favorite_drink(drink):
+    print(f"Your favorite drink is {drink}")
+
+print("This is script2")
+favorite_food("sushi")
+favorite_drink("coffee")
+print('Goodbye!')
+
+=======================================================================================================
+names: list[str] = ['Bob', 'Luigi', 'James' , 'Anna']
+
+
+=======================================================================
+
+#
+
+I
+
+long_names: list[str] =
+
+names: list[str] = ['Bob', 'Luigi', 'James', 'Anna']
+
+# long_names: list[str] = []
+# for name in names:
+if len(name) > 4:
+long_names.append(name)
+
+[name.for.name in. names if len(name)>4]
+
+print(long_names)
+
+=======================================================================
+172.29.239.34
+31816
+-------------------------------------------------------------------------
+
+X = 1
+while x <= 500:
+print("Hello.world", x)
+x += 1
+
+-------------------------------------------------------------------------
+turnary
+
+-------------------------------------------------------------------------
+
+
+
+#
+
+### sequences - string, list, tuple  (store in same order)
+### mappings - dictionary
+### sets - set, frozenset
+
+#### string - Ordered, immutable sequences of characters
+- "Hello world"
+
+-------------------------------------------------------------------------
+List - Ordered, mutable collections that can contain mixed data types
+- [1, 'hello', 3.14, True]
+
+Tuple - Ordered, immutable collections similar to lists
+- (1, 'hello', 3.14, True)
+
+Dictionary - Unordered (pre-3.7) python version  / insertion-ordered (3.7+) key-value
+
+- {'name' : 'Alice', 'age' : 25, 'city': 'New York'}
+
+ set - Unordered collection of unique element
+- {1, 2, 3, 4}
+
+ frozenset - Immutable version of a set
+
+-------------------------------------------------------------------------
+A built -in DS (data structure ) that stores an ordered, mutable collection of items
+List can an hold items of any type, including other lists
+
+orderd : Items have a defined order and can be accessed by their index.
+mutable : You can change, add, or remove items after the list has been create
+heterogeneous: A single list can contain elements of different data types.
+iterable e: Lists can be looped over using for loops or comprehensions.
+
+
+-------------------------------------------------------------------------
+my_list = [1, 2, 3, 4, 5]
+mixed_list = [1, "hello", 3.14, True]
+nested = [[1, 2], [3, 4]]
+
+
+# Empty list
+empty = []
+
+# List of strings
+colors = ["red", "green", "blue"]
+
+# List of booleans
+flags = [True, False, True]
+
+# List of mixed types
+info = ["Alice", 30, 5.5, False]
+
+# List inside a list (nested)
+matrix = [[1, 2], [3, 4], [5, 6]]
+
+
+lst = list() # [] using list constructure or function
+
+lst = list(10)
+lst = list('nitin')
+
+mySet = {10,20,30,40,50}
+lst = list(mySet)
+
+
+lst = list(range (10))
+
+
+-------------------------------------------------------------------------
+a = [[1,2], [3, 4]]
+b = a[:]
+b [0] [0] = 99
+print(id(a[0]),id(b[0]))
+print(b)
+print(a)
+
+import copy
+b = copy.deepcopy(a)
+print(id(a[0]), id(b[0]))
+b [0] [0] = 99
+print(b)
+-------------------------------------------------------------------------
+def longer_than_4(string):
+return len(string) > 4
+
+strings = ["my", "world", "apple", "pear"]
+filtered = filter(lambda x: len(x > 4), strings)
+print(list(filtered))
+------------------------------------------------------------------
+numbers = {1, 4.5, 5, 23, 2}
+print(sum(numbers, start= -10))
+print(sum(numbers, start= 10))
+------------------------------------------------------------------
+numbers = [4, 5, 2, 3, -1, 0, 9]
+sorted_nums = sorted(numbers, reverse=True)
+
+print(sorted_nums)
+------------------------------------------------------------------
+people = [
+{"name": "Alice", "age": 30},
+{"name": "Bob", "age": 25},
+{"name": "Charlie", "age": 35},
+{"name": "David", "age": 20},
+
+sorted_people = sorted(people, key=lambda person: person ["age"])
+
+print(sorted_people)
+======================================================================================= 
+tasks = ["Write report", "Attend meeting", "Review code", "Submit timesheet"]
+
+for index in range(len(tasks)):
+task = tasks [index]
+print(f"{index + 1}. {task}")
+------------------------------------------------------------------
+tasks = ["Write report", "Attend meeting", "Review code", "Submit timesheet"]
+
+for index, task in enumerate(tasks):
+print(f"{index + 1}. {task}")
+=======================================================================================
+zip 
+names = ["Alice", "Bob", "Charlie", "David"]
+ages = [30, 25, 35, 20]
+
+for idx in range(min(len(names), len(ages))):
+name = names [idx]
+age = ages [idx]
+print(f"{name} is {age} years old")
+------------------------------------------------------------------
+names = ["Alice", "Bob", "Charlie", "David", "Tim"]
+ages = [30, 25, 35, 20]
+
+combined = list(zip(names, ages))
+print(combined)
+
+for name, age in combined:
+print(f"{name} is {age} years old")
+------------------------------------------------------------------
+=======================================================================================
+
+file = open("test.txt", "w")
+file.write("hello world\nmy name is tim")
+file.close()
+
+I
+------------------------------------------------------------------
+# automatically closed file 
+with open("test.txt", "w") as file:
+file.write("here")
+I
+------------------------------------------------------------------
+with open("test.txt", "r") as file:
+text = file. read ()
+print(text)
+
+------------------------------------------------------------------
+with open("test.txt", "a") as file:
+file.write("\n new addition )
+=======================================================================================
+
+=======================================================================================
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+=======================================================================================================
+
+   [⭐ = project]
+#1   (00:00:00) python tutorial for beginners 🐍
+#2   (00:05:49) variables ❎
+#3   (00:16:05) type casting 💱
+#4   (00:21:15) user input ⌨
+#5   (00:32:42) ⭐ madlibs game 📖
+#6   (00:37:55) arithmetic & math 📐
+#7   (00:51:46) if statements 🤔
+#8   (01:00:06) ⭐ calculator program 🧮
+#9   (01:05:59) ⭐ weight conversion program 🏋
+#10 (01:09:59) ⭐ temperature conversion program 🌡
+#11 (01:13:58) logical operators 🌦
+#12 (01:21:28) conditional expressions ❓
+#13 (01:27:03) string methods 〰
+#14 (01:39:08) string indexing ✂
+#15 (01:46:35) format specifiers 💬
+#16 (01:51:55) while loops ♾
+#17 (01:58:53) ⭐ compound interest calculator 💵
+#18 (02:06:28) for loops 🔁
+#19 (02:11:33) ⭐ countdown timer program ⌛
+#20 (02:17:28) nested loops ➿
+#21 (02:23:03) lists, sets, and tuples 🍎
+#22 (02:38:08) ⭐ shopping cart program 🛒
+#23 (02:45:21) 2D collections ⬜
+#24 (02:53:59) ⭐ quiz game 💯
+#25 (03:03:27) dictionaries 📙
+#26 (03:11:33) ⭐ concession stand program 🍿
+#27 (03:19:42) random numbers 🎲
+#28 (03:24:16) ⭐ number guessing game 🔢
+#29 (03:32:37) ⭐ rock, paper, scissors game 🗿
+#30 (03:42:06) ⭐ dice roller program ⚂
+#31 (03:52:12) functions 📞
+#32 (04:02:50) default arguments 👍
+#33 (04:08:56) keyword arguments 🗝
+#34 (04:15:40) *args & **kwargs 📦
+#35 (04:30:33) iterables 
+#36 (04:37:04) membership operators 
+#37 (04:45:56) list comprehensions 📃
+#38 (04:56:17) match-case statements 📆
+#39 (05:02:13) modules 📨
+#40 (05:08:51) scope resolution 
+#41 (05:14:22) if name == 'main': 📥
+#42 (05:23:34) ⭐ banking program 
+#43 (05:38:34) ⭐ slot machine 
+#44 (05:58:45) ⭐ encryption program 🔐
+#45 (06:07:26) ⭐ hangman game 
+#46 (06:32:32) python object oriented programming 
+#47 (06:44:50) class variables 🎓
+#48 (06:53:06) inheritance 
+#49 (07:00:02) multiple inheritance 
+#50 (07:08:04) super() 🔴
+#51 (07:21:10) polymorphism 
+#52 (07:29:15) duck typing 🦆
+#53 (07:33:34) static methods ⚡
+#54 (07:39:31) class methods 
+#55 (07:46:16) magic methods 🌟
+#56 (07:59:51) @property 
+#57 (08:07:33) decorators 
+#58 (08:14:57) exception handling 🚦
+#59 (08:20:46) file detection 
+#60 (08:27:47) writing files 
+#61 (08:41:33) reading files 
+#62 (08:48:29) dates & times 📅
+#63 (08:54:46) ⭐ alarm clock 
+#64 (09:05:03) multithreading 🧵
+#65 (09:13:45) request API data 
+#66 (09:22:19) PyQt5 GUI intro 
+#67 (09:31:27) PyQt5 labels 🏷
+#68 (09:40:23) PyQt5 images 
+#69 (09:46:28) PyQt5 layout managers 
+#70 (09:53:07) PyQt5 buttons 
+#71 (10:00:12) PyQt5 checkboxes ✅
+#72 (10:06:42) PyQt5 radio buttons 
+#73 (10:15:55) PyQt5 line edits 💬
+#74 (10:21:55) PyQt5 CSS styles 
+#75 (10:32:48) ⭐ digital clock program 
+#76 (10:48:38) ⭐ stopwatch program ⏱
+#77 (11:06:05) ⭐ weather API app 
+

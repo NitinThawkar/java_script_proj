@@ -1,0 +1,1463 @@
+✏️  ☑️ ✍️  ✒️  ✍️ ▶️   ✏️=> 
+----------------------------------------------------------------------------
+https://www.typescriptlang.org/
+https://www.typescriptlang.org/download/
+TypeScript code : https://github.com/microsoft/TypeScript/blob/fad889283e710ee947e8412e173d2c050107a3c1/src/compiler/tsc.ts
+https://youtu.be/lVzb6pmel_E
+
+npm : https://www.npmjs.com/package/ts-node
+
+reserved keywords : https://github.com/microsoft/TypeScript/issues/2536
+======================================================================================================
+✨ TYPE Script ✨
+======================================================================================================
+reserved keywords
+
+TypeScript incorporates all JavaScript keywords and introduces its own set of keywords for type-related features and other functionalities.
+JavaScript Keywords (also used in TypeScript):
+
+break, case, catch, class, const, continue, debugger, default, delete, do, 
+else, enum, export, extends, 
+false, finally, for, function, if, import, in, instanceof, 
+new, null, return, super, switch, this, throw, true, try, typeof, 
+var, void, while, with, yield.
+
+TypeScript-Specific Keywords:
+
+abstract  ✏️=>  Used to define abstract classes and methods.
+any  ✏️=>  A type that can represent any JavaScript value, bypassing type checking.
+as  ✏️=>  Used for type assertions.
+async  ✏️=>  Used to declare asynchronous functions.
+await  ✏️=>  Used to pause execution of an async function until a Promise is resolved.
+declare  ✏️=>  Used for ambient declarations, defining types without implementing them.
+implements  ✏️=>  Used by a class to implement an interface.
+interface  ✏️=>  Used to define the structure of an object or class.
+is  ✏️=>  Used in type predicates for user-defined type guards.
+let  ✏️=>  Used to declare block-scoped variables.
+module  ✏️=>  Used to declare internal modules (namespaces).
+namespace  ✏️=>  An alternative to module for internal modules.
+never  ✏️=>  A type representing values that never occur.
+private  ✏️=>  An access modifier for class members, accessible only within the class.
+protected  ✏️=>  An access modifier for class members, accessible within the class and its subclasses.
+public  ✏️=>  An access modifier for class members, accessible from anywhere.
+readonly  ✏️=>  A modifier for properties that can only be assigned during initialization.
+require  ✏️=>  Used for CommonJS module imports.
+static  ✏️=>  Used to define static members of a class.
+type  ✏️=>  Used to create type aliases.
+unknown  ✏️=>  A safer alternative to any, requiring type checking before operations.
+## Reserved Words
+
+break
+case
+catch
+class
+const
+continue
+debugger
+default
+delete
+do
+else
+enum
+export
+extends
+FALSE
+finally
+for
+function
+if
+import
+in
+instanceof
+new
+null
+return
+super
+switch
+this
+throw
+TRUE
+try
+typeof
+var
+void
+while
+with
+false
+true
+## Strict Mode Reserved Words
+as
+implements
+interface
+let
+package
+private
+protected
+public
+static
+yield
+symbol
+type
+from
+of
+## Contextual Keywords
+any
+boolean
+constructor
+declare
+get
+module
+require
+number
+set
+string
+======================================================================================================
+▶️ Install and run
+  1]install node js and npm 
+  2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript   ( -g for globle )
+-------------------------------------------------------------------- 
+  Installation
+# Locally in your project.
+npm install -D typescript
+npm install -D ts-node
+
+# Or globally with TypeScript.
+npm install -g typescript
+npm install -g ts-node
+
+# Depending on configuration, you may also need these
+npm install -D tslib @types/node
+--------------------------------------------------------------------
+☑️use npx for window's  get typescript version
+    tsc --version
+npx tsc --version
+
+--------------------------------------------------------------------
+create config file  command
+	tsc --init
+npx tsc --init
+--------------------------------------------------------------------
+compile typescript file
+
+in terminal type 
+npx tsc fileName.ts   			✏️=> for manual compile and run  also create .js file
+npx tsc fileName.ts --watch 	✏️=> for Auto compile and run
+-------
+we can run transconpile js file with node also
+
+node <dir>/fileName.js         ✏️=> for manual transconpile .js file, append folder path if file save in any specific location
+ts-node fileName.ts 					 ✏️=> run directly
+--------------------------------------------------------------------
+To run ts file directly
+npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly  
+
+ts-node fileName.ts run ts file directly 
+
+======================================================================================================
+"use strict";
+--------------------------------------------------------------------
+forEach
+-------
+
+map
+
+-------
+reduce
+
+push
+
+pop
+
+typeof
+
+instaaceof
+
+is
+
+as
+
+keyOf
+
+StringArray
+
+
+Partial   ✏️=> make properties optional
+
+
+readonly
+
+required
+
+pick
+
+omit 
+
+
+record
+
+exclude
+
+extract
+
+nonNullable
+
+
+returnType
+
+... args
+
+
+nonnull assertion
+
+
+type aasertion
+
+type extend  
+
+
+literal => key value pair
+
+
+What are discriminated unions in TypeScript?
+
+infer 
+
+matches
+
+--------------------------------------------------------------------
+var age : number = 20;
+-------
+let numArray: number[] = [1, 2, 3, 4];
+let charArray: string[] = ['a', ''];
+-------
+✏️=> object is a type
+let obj: object = {
+name: 'Abc',
+age: 10};
+
+obj = { ... obj, phone: 12333444 };
+console.log(obj);
+
+-------
+let obj: {name : string,age number} = {
+name: 'Abc',
+age: 10};
+
+--------------------------------------------------------------------
+if (typeof a === "string")
+a.toUpperCase();
+
+
+--------------------------------------------------------------------
+// Type Inference
+// .Understanding type inference
+// ·Type annotations
+
+let a = "12"; ✏️=>Type Inference
+
+let a : number  = "12";  ✏️=>Type Annotations
+let a : number |boo|string  = "12"; 
+--------------------------------------------------------------------
+? => optional
+--------------------------------------------------------------------
+### DOM Handling and TypeCasting html element
+ 
+ var headingEl=document.querySelector('h1');
+console. log(headingEl)
+console. log(headingEl ?. textContent)   //=> ✏️  ? check for null alos , value can be null or value or ! in the end 
+console. log(headingEl ?. classList)
+
+var headingEl=document.querySelector('h1')!; //=> ✏️ ! value defenatly present , if we dont want to check for null
+
+var headingEl=document.querySelector('h1') !;
+var anchorEl=document.querySelector('a') !;
+var anchorElClass=document.querySelector('.anchorStyle')! as HTMLAnchorElement;
+var headingElClass=document.querySelector('.headingStyle')! as HTMLHeadingElement;
+console. log(headingEl.classList)
+console. log(anchorEl.href)
+console. log(anchorElClass.href)
+console. log(headingElClass.classList)
+======================================================================================================
+
+======================================================================================================
+## datatype
+
+https://github.com/Nykz/typescript-course-material/blob/main/ts/index.ts
+
+Categories
+
+· Primitive Types => in build datatype
+. Object Types
+· Special Types
+· Advanced Types
+. Function Types
+----------------------------------
+// Basic Types (Primitive types and Referance type)
+// .Primitive types (number, string, boolean)
+// .Arrays
+// .Tuples
+// .Enums
+// .Any, Unknown, Void, Null, Undefined, Never
+----------------------------------
+Primitive Types
+
+· number
+· string
+. boolean
+· null
+
+· undefined
+· bigint
+· symbol
+----------------------------------
+Referance type
+[],{},()
+
+Object Type
+
+· Array
+· Tuple
+. Object (key:value)pair
+----------------------------------
+Special Types
+
+· any
+· unknown
+· void
+· never  (
+
+----------------------------------
+Advanced Types
+
+· Union
+
+. Intersection
+· Type Alias
+· Enum
+. Literal Types
+----------------------------------
+Function Types
+
+Defines the type of a function.
+----------------------------------
+let a: string | null;    ✏️=> accept string or null
+a = "harsh";
+a = null;
+----------------------------------
+// let a1: number = 1;
+// a1 = 10;
+
+// function add1(a: number, b: number): number {
+//     return a + b; // type checking
+// }
+
+// const y = add1(1, a1);
+// console.log(y);
+
+// a1 = y;
+// console.log(a1);
+------------------------------------------------------------------------------------------------------
+### Basic types datatype
+
+let num: number = 1234_564_5646;
+let num1: bigint = 12344354355464566456636666456345655436n;
+console.log('num: ', num);
+console.log('num1: ', num1);
+----------------------------------
+let character: string = 'Code with Technyks';
+let isAvailable: boolean = true;
+----------------------------------
+let val: null = null;
+
+----------------------------------
+### undefined
+
+// let user;
+// console.log(user); // undefined
+----------------------------------
+### object 
+let obj: { name: string, age: number } = {
+    name: 'Abc', 
+    age: 10
+};
+
+obj = { ...obj, age: 44, name: 'abc1' };
+console.log(obj);
+----------------------------------
+### any type
+let numVal: any;
+numVal = 1;
+numVal = 'a';
+
+function testAnyType(val: any) {
+    console.log(val);
+}
+----------------------------------
+### Arrays
+let numArray: number[] = [1, 2, 3, 4];
+let charArray: string[] = ['a', 'b'];
+// charArray.forEach(val => val.includes('a'));
+// numArray.forEach(val => val.toFixed(2));
+----------------------------------
+### tuples
+
+let arr: [number, string] = [1, 'Alice'];
+
+let coordinates3D: [number, number, number] = [10, 20, 30]; // (x, y, z) axis
+
+// localhost:4200?name=Technyks&phone=1234567890
+let userData: [string, number] = ['Technyks', 1234567890];
+
+let response: [number, string] = [200, "Success"]; // http-response
+//response.push(0); // drawback of tuple in ts
+// console.log('response: ', response);
+----------------------------------
+
+### enum
+
+// PascalCase
+enum Color {
+    // APP_NAME = 'my_app_name',
+    Red = 'red',
+    Green = 'green',
+    Blue = 'blue'
+}
+
+console.log(Color.Blue);
+
+let color: Color = Color.Green;
+console.log(color);
+------------
+// const Small = 1;
+// const Medium = 2;
+// const Large = 3;
+
+// let size = Medium;
+
+// enum Size {
+//     Small = 1,
+//     Medium,
+//     Large
+// }
+
+const enum Size {
+    Small = 1,
+    Medium,
+    Large
+}
+
+let size: Size = Size.Large;
+console.log('size: ', size);
+----------------------------------
+###  unknown type
+
+let notSure: unknown = 'a';
+
+if(typeof(notSure) === 'number') {
+    notSure.toFixed(2);
+} else if(typeof(notSure) === 'string') {
+    notSure.length;
+}
+----------------------------------
+###  never type
+
+function infiniteLoop(): never {
+    while(true) {
+        // do something endlessly
+        console.log(1);
+    }
+}
+
+function throwError(message: string): never {
+    throw new Error(message);
+}
+
+// throwError('Something weng wrong');
+----------------------------------
+###  void type
+
+function logMessage(message: string): void {
+    console.log(message);
+    // return undefined;
+}
+
+----------------------------------
+###  type inference
+let username = 'Nikhil'; // typescript infers the type as string
+
+// type assertions
+let someValue: any = 'Hello world';
+let strLength: number = (someValue as string).length;   ✏️=> assertions with as keyword
+console.log(strLength);
+
+
+
+let a = "12"; ✏️=>Type Inference
+
+let a : number  = "12";  ✏️=>Type Annotations or assertions
+----------------------------------
+###  union types
+
+let id: string | number; // id can either be string or a number
+id = 'abc';
+id = 101;
+// id = true;
+
+function printId(id: string | number) {
+    console.log(`id: ${ id }`); // 'id: ' + id
+}
+
+printId('abc');
+printId(101);
+----------------------------------
+###  type narrowing     //✏️=>to detect specific type from union type
+function printIdFn(id: string | number) {
+    if(typeof id === 'string') {
+        console.log('id is a string: ', id.toUpperCase());
+    } else {
+        console.log(`id is a number: ${ id }`); // 'id: ' + id
+    }
+}
+// printIdFn('xyz');
+printIdFn(1);
+
+----------------------------------
+###  interface
+
+interface Person44 {
+    name: string;
+    age: number;
+    greet(): void
+    // greet: () => void
+}
+
+// function greet() {
+//     console.log('Hi');
+// }
+
+let person: Person44 = {
+    name: 'abc',
+    age: 10,
+    greet() {
+        console.log('Hi');
+    },
+    // greet
+};
+
+person.greet();
+----------------------------------
+// interface with Function types
+interface MathOp {
+    (a: number, b: number): number;
+}
+
+const add: MathOp = (x, y) => x + y;
+const subtract: MathOp = (x, y) => x - y;
+
+console.log('add 2 numbers: ', add(1, 2));
+console.log('subtract 2 numbers: ', subtract(5, 4));
+----------------------------------
+## type alias  (use type keyword)
+
+// type AliasName = TypeDefinition; // syntax
+type UserID = string;
+
+let userId: UserID = 'abc';
+-----------
+type Person1 = {
+    name: string;
+    age: number;
+};
+
+let person1: Person1 = {
+    name: 'abc',
+    age: 12
+}
+
+console.log(person1.name);
+-----------
+type ID = string | number;
+
+let userId1: ID = 'abc';
+let orderId: ID = 101;
+----------------------------------
+// interface vs type alias
+interface User {
+    name: string;
+    phone?: number;
+}
+   
+//✏️=>  mearging type or extend other tyme  using extends we can same with type aliase  usning intrsection "&"
+// interface Customer extends User {
+//     address: string;
+// }
+
+// let myCustomer: Customer = {
+//     name: 'X',
+//     phone: 122314345,
+//     address: 'abc',
+// };
+
+interface User {
+    address: string;
+}
+
+let myCustomer: User = {
+    name: 'X',
+    // phone: 122314345,
+    address: 'abc',
+};
+
+
+type Vehicle = {
+    make: string;
+    model?: string;
+};
+----------------------------------
+// & -> intersection types (append two types)
+type Car = Vehicle & {
+    isElectric?: boolean;
+};
+
+let myCar: Car = {
+    make: 'TATA',
+    // model: 'TATA PUNCH',
+    // isElectric: true
+};
+
+// type Vehicle = {
+//     isElectric: boolean,
+// };
+// error duplicate type identifier
+
+// let myCar: Vehicle = {
+//     make: 'TATA',
+//     model: 'TATA PUNCH',
+//     isElectric: true, // error
+// };
+----------------------------------
+type MathOp1 = (a: number, b: number) => number;
+let add1: MathOp1 = (x, y) => x + y;
+console.log(add1(2, 2));
+
+type Status = "active" | "inactive" | "pending";
+
+let userStatus: Status = 'active';
+
+type Tree = {
+    value: string;
+    children?: Tree[];
+}
+
+// reccurecive
+let tree: Tree = {
+    value: 'root',
+    children: [
+        {
+            value: 'child1',
+            // children: [{ value: 'grandChild', children: [] }]
+        }
+    ]
+}
+----------------------------------
+## intersection types
+let config: { server: string; port: number } & { secure: boolean; timeout: number } = {
+    server: 'localhost',
+    port: 8080,
+    secure: true,
+    timeout: 5000
+};
+----------------------------------
+// .Intersection types
+
+interface User {
+name: string;
+email: string;
+password: string;
+}
+
+interface Admin extends User {
+admin: boolean;
+
+}
+
+function abcd(obj: Admin){
+obj.admin
+}
+----------------------------------
+
+----------------------------------
+
+
+======================================================================================================
+### Function
+https://github.com/Nykz/typescript-course-material/blob/main/ts/functions.ts
+
+function abcd( a : string ,b : number ): void {
+console. log ("hey");
+
+--------------------------------------------------------------------
+// Regular functions
+
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+
+console.log(addNumbers(2, 6));
+
+// function expression
+const divide = function (a: number, b: number): number {
+    return a / b;
+};
+
+console.log(divide(8, 2));
+
+// arrow functions
+const multiply = (a: number, b: number): number => {
+    return a * b;
+};
+const multiply1 = (a: number, b: number): number => a * b;
+
+console.log(multiply(4, 2));
+
+// optional parameters
+function greet(username: string, greeting?: string): string {
+    // return greeting + ' ' + username;
+    // return `${greeting ? greeting : ''} ${username}`; // ternary operator
+    return greeting ? `${greeting} ${username}` : `${username}`; // ternary operator
+}
+
+console.log(greet('Nikhil'));
+
+
+// default parameters
+function greet1(username: string, greeting: string = 'Hi'): string {
+    // return greeting + ' ' + username;
+    return `${greeting} ${username}`; // ternary operator
+}
+
+console.log('Greet1: ', greet1('Nikhil', 'Hey'));
+
+// function overloading
+function getLength1(value: string): number;
+function getLength1(value: any[]): number;
+function getLength1(value: any): number {
+    return value.length;
+}
+
+console.log(getLength1('hello'));
+console.log(getLength1([1, 2, 3]));
+
+// Rest parameters
+function sum(...numbers: number[]): number {
+    // return numbers.reduce((total, num) => {
+    //     return total + num;
+    // }, 0);    //=>✏️ zero is initial value of total
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4));
+console.log(sum(5, 7, 3, 4, 10, 100));
+
+function greet12(greeting: string, ...names: string[]): void {
+    names.forEach((name) => {
+        console.log(`${greeting}, ${name}`);
+    });
+}
+
+greet12('Hello', 'Nikhil', 'Code with Technyks', 'Everyone');
+----------------------------------
+
+--------------------------------------------------------------------
+
+
+======================================================================================================
+
+
+======================================================================================================
+### generics
+https://github.com/Nykz/typescript-course-material/blob/main/ts/generics.ts
+
+/* generics
+ Generics are a way to create components (functions, classes or interfaces)
+ that work with different types without losing type safety
+*/
+
+// generic function
+function genericIdentity<T>(arg: T): T {
+    return arg;
+}
+
+console.log(genericIdentity<number>(10));
+console.log(genericIdentity<string>('Hi'));
+console.log(genericIdentity<boolean>(true));
+
+// generic interface
+interface KeyPair<T, U> {
+    key: T;
+    value: U;
+}
+
+let keyPairValue: KeyPair<string, number> = {
+    key: 'pair',
+    value: 10
+};
+
+// generic constraints
+function getLength<T extends { length: number }>(item: T): number {
+    return item.length;
+}
+
+console.log(getLength('Hello'));
+console.log(getLength([1, 2, 3]));
+// console.log(getLength(123));
+
+// generic classes
+class Box<T> {
+    contents: T;
+
+    constructor(value: T) {
+        this.contents = value;
+    }
+
+    getContents(): T {
+        return this.contents;
+    }
+}
+
+const numberBox = new Box(100);
+console.log(numberBox.getContents());
+
+const stringBox = new Box('Hello');
+console.log(stringBox.getContents());
+
+
+class Stack<T> {
+    private items: T[] = [];
+
+    push(item: T): void {
+        this.items.push(item);
+    }
+
+    pop(): T | undefined {
+        return this.items.pop();
+    }
+
+    getStack(): T[] {
+        return this.items;
+    }
+}
+
+const numberStack = new Stack<number>();
+numberStack.push(10);
+numberStack.push(20);
+console.log(numberStack.getStack());
+console.log(numberStack.pop());
+console.log(numberStack.getStack());
+
+const stringStack = new Stack<string>();
+stringStack.push('Hi');
+stringStack.push('There');
+console.log(stringStack.getStack());
+console.log(stringStack.pop());
+console.log(stringStack.getStack());
+======================================================================================================
+###  literal_types literal types
+// literal types
+
+
+// string literal
+type OrderStatus = 'delivered' | 'pending' | 'cancelled';
+let order: OrderStatus = "pending";
+
+let answer: 'yes' | 'no';
+answer = 'no';
+
+// number literal
+let count: 0 | 1 | 2;
+count = 0;
+
+// boolean literal
+let isVisible: true | false;
+isVisible = true;
+
+type LiteralType = 'hello' | 2 | 'hi' | { name: string; age: number };
+
+type Action = 'add' | 'update' | 'delete';
+
+function takeAction(action: Action) {
+    switch(action) {
+        case 'add': 
+            console.log('add function');
+            break;
+        case 'update':
+            console.log('update function');
+            break;
+        case 'delete': 
+            console.log('delete function');
+            break;
+        default: 
+            console.log('none');
+            break;
+    }
+}
+
+function printStatus(status: 'success' | 'error' | 'loading'): void {
+    console.log(`Current state is ${status}`);
+}
+
+printStatus('success');
+// printStatus('completed');
+
+
+interface ButtonConfig {
+    size: 'small' | 'medium' | 'large';
+    color: 'red' | 'green' | 'blue';
+}
+
+const btn: ButtonConfig = {
+    size: 'medium',
+    color: 'green',
+};
+
+======================================================================================================
+### type_guard type guard (type narrowing)
+
+// type guards
+// typeof
+// instanceof
+// custom type guard fn
+
+function printID(id: string | number) {
+    if(typeof id === 'string') {
+        console.log(`id is a string: ${id}`);
+    } else {
+        console.log(`id is a number: ${id}`);
+    }
+}
+
+class Dog1 {
+    bark() {
+        console.log('Woof!');
+    }
+}
+
+class Cat1 {
+    meow() {
+        console.log('Meow!');
+    }
+}
+
+function handlePet(pet: Dog1 | Cat1) {
+    if(pet instanceof Dog1) {
+        pet.bark();
+    } else {
+        pet.meow();
+    }
+}
+
+interface Fish {
+    swim(): void;
+}
+
+interface Bird {
+    fly(): void;
+}
+
+function isFish(pet: Fish | Bird): pet is Fish {
+    return (pet as Fish).swim !== undefined;
+}
+
+function move(pet: Fish | Bird) {
+    if(isFish(pet)) {
+        pet.swim();
+    } else {
+        pet.fly();
+    }
+}
+
+
+function isString(value: any): value is string {
+    return typeof value === 'string';
+}
+
+function checkType(value: string | number) {
+    if(isString(value)) {
+        console.log('value is string');
+    } else {
+        console.log('value is number');
+    }
+}
+
+checkType(10);
+//
+
+// keyof operator
+interface Person12 {
+    name: string;
+    age: number;
+    email: string;
+}
+
+type PersonKeys = keyof Person12;
+let keys: PersonKeys = 'name';
+
+
+======================================================================================================
+### class  and object classes
+
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(): string {
+        return `Hello, my name is ${this.name}, and I'm ${this.age} yrs old`;
+    }
+}
+
+const new_person = new Person('Diya', 19);
+console.log(new_person.greet());
+console.log(new_person.name);
+
+/* 
+access modifiers (public, private, protected)
+
+public: Accessible from anywhere. This is the default if no modifier is specified.
+private: Accessible only within the class.
+protected: Accessible within the class and its subclasses.
+*/
+
+class Car1 {
+    public make: string;
+    private model: string;
+    protected year: number;
+
+    constructor(make: string, model: string, year: number) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public getModel(): string {
+        return this.model;
+    }
+}
+
+const newCar = new Car1('Tesla', 'Model 10', 2024);
+console.log(newCar.getModel());
+// console.log(newCar.model);
+
+// inheritance
+
+class Animal { // parent class
+    
+    constructor(
+        public name: string
+    ) {}
+
+    makeSound(): void {
+        console.log('Some generic sound...');
+    }
+}
+
+class Dog extends Animal { // child class
+
+    constructor(name: string) {
+        super(name);
+    }
+
+    // makeSound(): void {
+    //     console.log('Woof! Woof!');
+    // }
+
+}
+
+const dog = new Dog('Puppy');
+dog.makeSound();
+
+// Abstract class
+
+abstract class Shape {
+    abstract getArea(): number; // abstract method, must be implemented bt subclasses
+
+    printArea(): void {
+        console.log(`The area is ${this.getArea()}`);
+    }
+}
+
+class Rectangle extends Shape {
+
+    constructor(private width: number, private height: number) {
+        super();
+    }
+
+    getArea(): number {
+        return this.width * this.height;
+    }
+
+}
+
+const rect = new Rectangle(5, 10);
+rect.printArea();
+
+// setters & getters
+
+class Circle {
+    private _radius: number;
+    strlength: number | undefined;
+
+    constructor(radius: number) {
+        this._radius = radius;
+    }
+
+    get radius(): number {
+        return this._radius;
+    }
+
+    set radius(value: number) {
+        if(value <= 0) {
+            throw new Error('Radius must be positive');
+        }
+        this._radius = value;
+    }
+}
+
+const circle = new Circle(10);
+console.log(circle.radius);
+circle.radius = 12;
+console.log(circle.radius);
+// circle.radius = -5;
+// console.log(circle.radius);
+circle.strlength = 2;
+console.log(circle!.strlength); // Non-null assertion
+
+======================================================================================================
+### index_signature index signature    (can provide index type)
+// index signature
+/*
+An index signature in TypeScript is used to define types for objects 
+that can have properties of dynamic keys, where the keys are not 
+known in advance but you still want to enforce the type of the values. 
+Index signatures are particularly useful when working with objects 
+that act like dictionaries or maps.
+*/
+
+interface StringArray {
+    [index: number]: string;
+}
+
+let array1: StringArray = ['Code', 'with', 'Technyks'];
+console.log(array1[2]);
+
+interface Fruit {
+    [key: string]: string;
+}
+
+const fruitsArray: Fruit = {
+    apple: 'A fruit',
+    banana: 'A yellow fruit',
+};
+
+console.log(fruitsArray["banana"]);
+======================================================================================================
+### utility_types utility types (generally used for complex type structure )
+
+// utlity types
+
+interface UserRecord {
+    name: string;
+    age: number;
+    email: string;
+}
+// partial
+const updateUser = (user: Partial<UserRecord>) => {
+    console.log(user);
+};
+
+updateUser({ name: 'Diya' });
+updateUser({ email: 'diya@gmail.com' });
+
+
+type User12 = Partial<UserRecord>;
+
+let user123: User12 = {
+    name: 'Diya'
+};
+
+// Required
+
+type User123 = Required<UserRecord>;
+
+let user1234: User123 = {
+    name: 'Diya',
+    age: 10,
+    email: 'diya@gmail.com'
+};
+
+user1234.age = 19;
+
+// Readonly
+type UserRecord2 = Readonly<UserRecord>;
+
+let usr: UserRecord2 = {
+    name: 'Diya',
+    age: 10,
+    email: 'diya@gmail.com'
+};
+
+// usr.age = 19;
+
+// Pick
+type UserInfo = Pick<UserRecord, 'name' | 'email'>;
+
+const userInfo: UserInfo = {
+    name: 'Diya',
+    email: 'diya@gmail.com',
+    // age: 10
+}
+
+// Omit
+
+type UserWithoutEmail = Omit<UserRecord, 'email'>;
+
+const userOmitInfo: UserWithoutEmail = {
+    name: 'Diya',
+    // email: 'diya@gmail.com',
+    age: 10,
+}
+
+// Record
+
+type UserRecordInfo = Record<string, number>;
+
+const userRecordInfo: UserRecordInfo = {
+    name: 2,
+    // email: 23,
+    // age: 10
+};
+
+type Role = 'admin' | 'user' | 'guest';
+
+const userRoles: Record<Role, string> = {
+    admin: 'Diya',
+    user: 'Prem',
+    guest: 'Sujal'
+};
+
+console.log(userRoles.admin);
+
+
+type Stat = 'success' | 'error' | 'loading';
+
+// Exclude
+type ExcludeError = Exclude<Stat, 'error'>;
+const stat1: ExcludeError = 'success';
+const stat2: ExcludeError = 'loading';
+
+// Extract
+type ExtractError = Extract<Stat, 'error' | 'loading'>;
+
+const statE: ExtractError = 'error';
+
+// NonNullable
+
+type MayBeUser = string | null | undefined;
+type UserNull = NonNullable<MayBeUser>;
+
+const userNull: UserNull = 'Diya';
+
+// ReturnType
+function getType() {
+    return { name: 'Diya', age: 19 };
+}
+
+type UserReturnType = ReturnType<typeof getType>;
+
+const userType: UserReturnType = { name: 'Alice', age: 30 };
+
+// Parameters
+function updateUserData(name: string, age: number) {
+    console.log(`${name}, ${age}`);
+}
+
+type UpdateUserParams = Parameters<typeof updateUserData>;
+
+const params: UpdateUserParams = ['Diya', 20]; 
+
+// ContructorParameters
+class UserCData {
+    constructor(public name: string, public age: number) {}
+}
+
+type UserContructorParams = ConstructorParameters<typeof UserCData>;
+
+const userCParams: UserContructorParams = ['Diya', 20];
+======================================================================================================
+
+======================================================================================================
+What are discriminated unions in TypeScript?
+
+Discriminated unions use a common property (discriminator) across multiple types to
+distinguish between different types within a union, allowing for more precise type narrowing.
+
+// Define the discriminated union
+type Vehicle =
+| { type: 'car'; wheels: number }
+I { type: 'bicycle'; pedals: number };
+
+// Function to describe the vehicle
+function describeVehicle(vehicle: Vehicle) {
+// TypeScript will narrow the type based on the 'type' property
+if (vehicle.type === 'car') {
+console.log('This vehicle has ${vehicle.wheels} wheels.");
+} else if (vehicle.type === 'bicycle') {
+console.log('This vehicle has ${vehicle.pedals} pedals.");
+}
+}
+
+--.
+// Example usage
+const myCar: Vehicle = { type: 'car', wheels: 4};
+const myBike: Vehicle = { type: 'bicycle', pedals: 2};
+describeVehicle(myCar); // Output: This vehicle has 4 wheels.
+describeVehicle(myBike); // Output: This vehicle has 2 pedals.
+
+======================================================================================================
+
+Question 16 (MCQ)
+
+Which of the following would allow narrowing a type using the `in' operator in
+TypeScript?
+
+Hint: The in operator checks whether a specific property exists in an object or one of its
+prototypes. Syntax - 'propertyName' in object
+
+A. if (object.hasOwnProperty('property')) { ... }
+B. if ('property' in object) { ... }
+C. if (object.property !== undefined) { ... }
+D. if (typeof object.property !== 'undefined') { ... }
+
+
+Answer:
+B. if ('property' in object) { ... }
+
+Why ?: The `in' operator checks if a property exists in an object and
+type accordingly...
+
+type Dog = { bark: () => void };
+type Cat = { meow: () => void };
+
+function animalSound(animal: Dog | Cat) {
+if ('bark' in animal) {
+animal.bark(); // TypeScript knows animal is a Dog here
+} else {
+animal.meow(); // TypeScript knows animal is a Cat here
+
+if ('property' in object) is the correct way to narrow a type using the in operator because it
+checks whether 'property' exists in object. If the check passes, TypeScript narrows the type of
+object inside the if block, allowing access to that property with confidence.
+
+Eg.
+
+}
+
+}
+
+The in operator checks whether bark exists in animal.If true,
+TypeScript narrows the type to Dog, allowing safe access to bark().
+If false, TypeScript narrows the type to Cat, allowing access to meow().
+
+======================================================================================================
+
+
+Question 17 (MCQ)
+
+Which of the following is an example of using the `infer' keyword in TypeScript?
+
+A. type ReturnType<T> = T extends ( ... args: anyll) => infer R ? R ; never;
+B. type Return Type<T>= infer T extends ( ... args: anyll) => R ? R : never;
+C. type ReturnType<T> = T extends infer ( ... args: anyll) => R ? R : never;
+D. type ReturnType<T> = T matches ( ... args: anyll) => infer R ? R : never;
+
+Answer:
+
+A. type ReturnType<T>= T extends ( ... args: anyll) => infer R ? R : never; 
+
+
+-------------
+Which of the following is an example of using the `infer' keyword in TypeScript?
+
+The correct form of using infer in a conditional type is: T extends U ? infer R : never
+
+T is a type.
+U is a type pattern.
+If T matches U, we infer some type R from U.
+If the condition is met, the type R can be used in the "true" branch of the conditional
+type.
+
+
+Question 17 (MCQ)
+
+Which of the following is an example of using the `infer' keyword in TypeScript?
+
+Analyzing the Options:
+
+1. type ReturnType<T>=T extends ( ... args: anyll) => infer R ? R : never;
+This is the correct answer because it uses the infer keyword correctly to infer the
+return type R from a function type.
+
+This checks if T'is a function type. If it is, TypeScript infers R as the return type of
+the function, and returns R. Otherwise, it returns never.
+
+Eg:
+type MyFunc = (x: number) => string;
+type Result = ReturnType<MyFunc>; // Result is string
+
+In this example, T is the function (x: number) => string. The infer R part captures the
+return type R, which is string.
+
+======================================================================================================
+https://www.youtube.com/watch?v=rRAVqEFnT1s&list=PLFbEoEbDAzrsqB8wnal9z_Hy_OwtUkxTp&index=3&pp=iAQB
+Timestamp:
+00:00 - Introduction
+01:49 - Course Outline
+07:56 - What is Typescript?
+08:55 - Typescript vs Javascript
+16:37 - Setup VS Code Editor & understand the difference
+27:44 - How Typescript Works & Why?
+38:45 - Pros & Cons of TypeScript
+41:22 - Setup TypeScript Compiler
+01:07:10 - Debugging TypeScript Applications
+01:16:04 - Basic Types
+01:31:52 - any type
+01:36:36 - Arrays
+01:40:17 - Tuples
+01:49:04 - Enums
+01:59:47 - unknown type
+02:01:57 - never type
+02:05:11 - void type
+02:09:38 - Type Inference & Type Assertions
+02:13:42 - Union types
+02:16:40 - Type Narrowing
+02:19:10 - Interfaces & Type Aliases (& Intersection types
+02:49:49 - Optional fields
+02:52:30 - Functions
+03:19:30 - Practice problems (4)
+03:43:09 - Classes & Access Modifiers
+04:20:26 - Practice problems (2)
+04:32:40 - Generics
+04:51:47 - Literal types
+05:01:34 - Type guards
+05:10:03 - keyof operator
+05:12:07 - index signature
+05:16:25 - Utility types
+05:41:43 - Modules & Namespaces
+06:06:23 - Decorators
+06:31:33 - Async Programming
+07:08:46 - Non-null Assertion
+07:14:39 - Interview Based Questions

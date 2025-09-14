@@ -1,0 +1,97 @@
+✨ 
+
+✍️ (Person writing)
+✏️ (Pencil)
+✒️ (Black pen)
+✍️ (Writing hand)
+
+
+======================================================
+
+https://github.com/dilipsundarraj1
+
+================
+serdes
+map/mapvalues
+ FlatMapValues/FlatMap 
+ peek 
+ merge
+ lomboc  (other way use )recored (in java)
+ 
+ alt +entr => new demo(); + press 
+ ctrl+ d => dullicate line
+ 
+ ctrl_shifr +f
+ 
+ctrl+shift+A
+ctrl+Alt+L  => indentation
+ctrl+Alt+T
+------------------------------
+service
+@component
+
+
+-------------------------------
+@restcontroller
+@requestmapping 
+@autowired
+
+@putMapping ("/{username}")
+@postmapping({username})
+@RequestBody
+@pathVariable
+-----------------------------
+@noArgconstructore >> lombog
+@data
+@trnsactional
+@Enable TransactionManagement
+
+-----------------------------
+Security
+@Configuration
+@EnableWebSecurity
+-----------------------------
+@override
+@value
+@postconstruct
+@scheduled
+@scheduling
+APP_CACHE
+-----------------------------
+Testing 
+@SpringBootTest
+@parameterisedTest
+@CsvSource
+@ArgumentSource
+@After
+@AfterAll
+@Before
+@mockBean
+@injectMock//@mock
+=====================
+
+
+
+
+
+
+
+"
+WITH    tbl AS (
+ SELECT Table_Schema, Table_Name
+ FROM   information_schema.Tables
+ WHERE  Table_Name NOT LIKE 'pg_%'
+        AND Table_Schema IN ('tenant_test')
+)
+SELECT  Table_Schema AS Schema_Name
+,       Table_Name
+,       (xpath('/row/c/text()', query_to_xml(format(
+          'SELECT count(*) AS c FROM %I.%I', Table_Schema, Table_Name
+        ), FALSE, TRUE, '')))[1]::text::int AS Records_Count
+FROM    tbl
+ORDER   BY Records_Count DESC ,table_name Asc;"
+
+
+====================
+1.3136151944117787
+

@@ -1,0 +1,37 @@
+✨ Utility ✨ 
+=================================================================
+✨   ✏️  ☑️ ✍️ ✒️  ✍️ 
+emoji => press Window + . (dot) special symbol char character
+C:/LocalCode/java_script_proj/Notes/Setup.txt
+=================================================================
+✨ Jupyter Lab ✨ 
+1]install paython
+  check pythone version  ▶️  python --version
+  check Pip version ▶️  pip --version ✏️  if you want to upgrade pip  then run  this command ☑️ python -m pip install --upgrade pip
+--------------------------------------------------------
+2] we can install jupyter lab with pythone install or pip install 
+    create local folder, go to local folder path and run
+   ▶️ python install jupyterlab
+   ▶️ pip install jupyterlab
+--------------------------------------------------------
+3] go to local folder path and run 'jupyter lab'  ☑️   C:\LocalCode\JupyterLab>jupyter lab
+   lab will open in browser
+   
+--------------------------------------------------------
+✏️ Other command
+pip install matplotlib 
+pip install numpy
+   
+================================================================
+✨ React ✨ 
+
+ run in command terminal ▶️ npm run dev
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================
+
+=================================================================

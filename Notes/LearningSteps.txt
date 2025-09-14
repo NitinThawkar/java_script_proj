@@ -1,0 +1,73 @@
+✨ Learning Step
+
+####################################################################################
+Javascript
+1. Variables
+2. functions
+- arrow functions
+-high order functions
+3. Array and objects
+- Array destructuring,objects destructuring, rest operator, spread operator
+4.conditional operator
+5.optional chaining
+6.array methods- map ,filter ,reduce ,sort
+7.event listeners - on click , on submit
+8. Intervals 
+9.callbacks , callbacks hell , promises , promise api
+10.async /await 
+11. Try /catch
+####################################################################################
+===============================================
+Basics of JavaScript 
+Understanding variables (let, const, var), how they are declared and used
+Functions in JavaScript 
+Covers the concept of functions, including Arrow functions, higher-order functions 
+Creator also recommends watching the playlist Namaste JavaScript for more in-depth explanation 
+Arrays and Objects in JavaScript 
+Includes understanding how to work with arrays and objects, including destructuring (object destructuring, array destructuring, rest operator, spread operator) 
+Creator recommends referring back to this section if viewers are not familiar with these concepts 
+If Else statements and Conditional Rendering 
+Covers understanding how to write if-else statements, ternary operator, and conditional rendering 
+Creator emphasizes the importance of these concepts in React 
+Map, Filter, Reduce functions and Sort function 
+These functions are used for array operations 
+Creator recommends watching a video on his channel about these functions 
+Event Listeners 
+Covers understanding how event listeners work, including concepts like event bubbling and capturing 
+Creator recommends watching his videos on YouTube for a deeper understanding 
+Callbacks and Promises 
+Covers understanding callbacks, promises, and promise APIs 
+Creator recommends watching his Namaste JavaScript season 2 playlist for more in-depth explanation 
+Understanding promises is especially important for making API calls 
+Async/Await 
+Covers understanding async/await, which is a modern syntax for handling promises 
+Creator recommends using async/await when writing React code 
+Try/Catch 
+Covers understanding try/catch for error handling 
+Creator recommends learning error handling before moving on to React 
+Creator also mentions he has covered try/catch in his Async/Await video 
+===================================================================================
+####################################################################################
+React Steps
+
+difference between state and props
+creating a new react project with "create-react-app"
+what is "create-react-app" doing. overview over default files created by it.
+types of components in react
+what is jsx
+creating state using useState hook
+how to drink water from an empty bottle
+normal variable vs useState variable
+demo of using props
+building a carousel
+ways of exporting (default vs named export)
+styling in react (inline inside jsx, css separate file, tailwind)
+installing tailwind
+getting rid of the same network calls using map inside jsx and dynamic className
+what is CDN (content delivery network)
+why use key with map
+useEffect hook
+react component lifecycle
+moving hardcoded data in separate constants files
+=====================================================================================
+####################################################################################

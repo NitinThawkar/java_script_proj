@@ -11,7 +11,7 @@ const childAge = 10;
 
 
 let rollNo = 123;
-//let rollNo = 123; // can definde same varible again for let.
+//let rollNo = 123; // can not definde same varible again for let.
 // debugger;
 addAge(age);
 UpdateChildAge(childAge);
@@ -154,3 +154,29 @@ console.log("Reduce : " + calReduce);
 
 //***************************************************************************//
 
+
+// HERE IS ADD IS CALLBACK FUNCTION
+function add(a, b) {
+    return a + b;
+}
+
+// HERE IS SUB IS HIGHER ORDER FUNCTION
+function sub(add) {
+    add(10, 20);
+    return a - b;
+}
+
+sub(add)(10, 20);
+//=============================================================
+// HERE IS ADD IS CALLBACK FUNCTION
+function add(a, b) {
+    return a + b;
+}
+
+// HERE IS SUB IS HIGHER ORDER FUNCTION
+function sub(callback) {
+    const result = callback(10, 20);
+    return result - 5; // Assuming 'b' should be 5 for this example
+}
+
+console.log(sub(add)); // Output: 25

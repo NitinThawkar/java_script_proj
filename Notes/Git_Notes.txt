@@ -1,15 +1,152 @@
+✨ https://www.w3schools.com/git/default.asp
+✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
+
+----------------------------------------------------
+✨ (star)  
+✏️ (Pencil)  ☑️
+----------------------------------------------------
+git config
+git init
+git log
+git status
+git amend
+git stash
+git diff
+git add   
+git commit    //commit --amend  
+git remote
+git branch
+git switch
+git checkout
+git reset    // discard changes //Revert all tracked files to their state at the last commit.
+git pull
+git push
+git merge
+git fetch
+git submodule
+
+delete branch
+grep
+===###===================###===================###===================###===================###================
 Frequntaly Used
-
-
-
-
-#################################
+===###===================###===================###===================###===================###================
+git remote
 git config --list
 git clone <-Repo Link->
+git status 
 git diff  <-BranchName-> use to compaire two different commit or use to compaire two different branches or files and MORE 
 git log
 
-============================================================================
+git config --global alias.ch = checkout  ## now open .gitconfig file , shoercu will created for checkout command
+
+===###===================###===================###===================###===================###================
+git status
+git add . or ./ or  <file Name>
+git commit -m "commit message"   OR -am 
+git commit -am "commit message"  => Add and commit
+git remote -v                  => shoving remote git repo
+git branch                     =>show local branches name 
+git push origin <branch name>  => sending changes on remote server on specific branch ;  origin= remote
+
+# show Commit details 
+git show 5b944acd2  => git show <commit id>
+
+===###===================###===================###===================###===================###================
+git push <remote-name> <local-branch-name>
+git push -u origin main  
+git push origin <branch name>  => sending local changes on remote on remote server like GIT  hub ; 
+
+git push <remote-name> <local-branch-name>
+
+===###===================###===================###===================###===================###================
+git branch                     =>show local branches name 
+git branch -M <new name> (rename branch)
+
+git switch  <branch Name> ( switch command also use  to change a branch)
+git switch -C <new branch Name>   (create new branch and swithch to that new branch)
+git checkout <branch name> (on which branch you want to work, use to navigate)
+git checkout -b <new branch name>  or  git checkout -b <new branch name> main  => this will create new branch from main branch
+
+// discard all changes change the branch or revert all changes and change the branch
+git checkout .      (dot)
+
+
+// delete branch locally
+git branch -d develop4
+// delete branch remotely
+git push origin --delete remoteBranchName
+
+===###===================###===================###===================###===================###================
+Merge Code  => ther are two ways to merge code 1] by branch merge 2] by raiseing pull request
+
+git diff <branch Name>   =>(this command can compaire 2 commits, 2 files ,2 branches and more)
+
+MERGE merge branch
+=-------------------------=-------------------------=
+case : want to merge code from  "DEV1" branch to OBM_master branch
+1] checkout "OBM_master" branch   => git checkout OBM_master 
+2]git merge DEV1
+
+===###===================###===================###===================###===================###================
+Merge Conflict resolving
+
+
+===###===================###===================###===================###===================###================
+git pull origin <branch name>  => getting changes from   remote server to local repository
+
+git pull origin main  (main is branch name)
+===###===================###===================###===================###===================###================
+UNDOING changes revert Changes
+git log
+
+Case 1:  Staged changes  (changes add but not commited)
+		git reset <file name>
+		git reset
+----------------------------------
+Case 2:  commited changes (for one commit only)
+		git reset HEAD~1  (go ine commit back)
+
+----------------------------------
+Case 3:  commited changes (for many commit )
+		git reset <commit Hash>
+		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
+		
+----------------------------------
+To use the git reset command to discard all local changes
+git reset --hard
+===###===================###===================###===================###===================###================
+FORK (rough copy of other user repo)
+
+
+################################################################################################################
+change master branch name to main branch
+
+
+if you have created folder on local machine and want to push in git hub follow these steps
+
+1. git init (go to folder and run this command in terminal)
+
+   .run this command in  and folder beame git repo after this add file make changes and commit your changes
+   .create repo e.g myGitRepo on git hub site,then follow step 2
+--------------------------------------------------------------------------------------------   
+
+2. git remote add origin <link>
+   e.g =>> git remote add origin  https://github.com/NitinThawkar/myGitRepo.git
+--------------------------------------------------------------------------------------------
+
+3. git remote -v (to verify remote) on which we will push our code
+--------------------------------------------------------------------------------------------
+
+4. git branch (to check branch)
+--------------------------------------------------------------------------------------------
+5. git branch -M main (rename branch)
+   change master branch name to main branch
+   --------------------------------------------------------------------------------------------
+6. git push origin main( if you want to use only git push , then run this command first git push -u origin main and from nest time use git fush only)
+
+
+#################################################################################################################
+
 Git Error - Unable to resolve reference refs/remotes/origin/master reference broken
 
 You can fix this error by cleaning up your local repository.
@@ -56,6 +193,12 @@ git push -u origin main
 …or push an existing repository from the command line
 git remote add origin https://github.com/NitinThawkar/Notes.git
 git branch -M main
+					   
+
+																						   
+													   
+															   
+				  
 git push -u origin main
 
 =====###===================================================================================
@@ -65,6 +208,14 @@ Import code
 
 
 git push <remote-name> <local-branch-name>
+
+																						   
+										 
+																						  
+		   
+
+
+										  
 
 ############################################################################################################################
 [working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
@@ -77,11 +228,11 @@ git commit -am "commit message"  => Add and commit
 git remote -v                  => shoving remote git repo
 git branch                     =>show local branches name 
 git push origin <branch name>  => sending on remote server;  origin= remote
-===###===================###===================###===================###===================###================
-git commit -m "commit message"   OR -am 
-git commit -am "commit message"  => Add and commit
+																											  
+										
+												  
 
-# shoe Commit details 
+# show Commit details 
 git show 5b944acd2  => git show <commit id>
 
 ===###===================###===================###===================###===================###================
@@ -212,9 +363,14 @@ git merge origin/dev4_develop_iso =>helm cook
 
 =-------------------------=-------------------------=-------------------------=-------------------------
 ===###===================###===================###===================###===================###================
-ignore gitignore
+✏️ ignore gitignore
 
-1] touch .gitignore   => open this firl in editor
+1] touch .gitignore   => create .gitignore file in root folder of project  pralllel with .git, open this file in editor
+Add following in file 
+folderName /   ☑️ ignore All files and folder 
+*-checkpoint.ipynb  ☑️ ignore any file name  ends with -checkpoint.ipynb
+.gitignore  ☑ ignore '.gitignore' file
+
 
 ===###===================###===================###===================###===================###================
 git remove  ,git mv (move)
@@ -239,6 +395,9 @@ git config --global alias.st status =>  making status command as St  => type git
 git config --global alias.lt 'log -p -1' =>  making log command as lt   => type git lt , it will execute 'git log -p -1' command
 ===###===================###===================###===================###===================###================
 
+
+To use the git reset command to discard all local changes
+git reset --hard
 Revert code changes  (stage to change Area (unstage))
 #git reset 
 
@@ -267,22 +426,36 @@ git checkout -  (hyfun)
 
 
 ===###===================###===================###===================###===================###================
+
+git desktop stash => select al files and right click on changed file check box/label
+
 Stash retrieve, show, list, delete & save
 
 #stash
 git stash
-git stash list
+git stash --keep -index  (only stash untract file not stage files)
+git stash --include -untracked
+git stash list (show all stash)
 git stash save "stash name"
-git stash show => recent stash show
+git stash show => recent stash show  view stashed files
+git stash show <stash id>  #stash@{0}
 git stash show -p => recent stash show with content
 
-git stash pop  =>apply last chnages
+
+
+git stash -- <file name>   //only stash that file
+git stash -m <"any message" > -- <file name>   //only stash that file
+git stash -m "my stash" 
+
+git stash pop  =>apply last chnages apply last chnages and removed from list
 git stash apply <stashid>  =>apply save stash chnages
 
-#delete stash
+//apply
 git stash pop  =>apply last chnages and removed from list
-git stash derop {id} =>apply last chnages and removed from list
-git stash clear => remove all from list
+
+#delete stash
+git stash drop {id} =>apply last chnages and removed from list
+git stash clear => remove all stash from list
 
 #stash to another branch
 git stash branch <other branch name> {Stashid}
@@ -308,12 +481,16 @@ git reset <-HASH ID->  =>staging to local
 git reset <commit id>  => remove from staging 
 git reset --hard <commit id>   => remove from staging and local/ working revert from every places
 git reset HEAD <file name> 
-git restore --stage <filename>
+git restore <filename>  // to discard changes in working directory
+git restore --stage <filename>   // if file present in stage area and we want to restore. it will move in change area
+git restore --stage --worktree . // (dot) every thing will discard from working tree  
+git restore --stage  .
+
 
 git revert <commitid>   
 
 ===###===================###===================###===================###===================###================
-#modify commit
+#modify commit add/update /merge in previous commit =>git add the git amend
 
 git commit --amend  => open editor
 git commit --amend  -m "Message " 

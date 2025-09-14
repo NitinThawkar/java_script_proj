@@ -1,0 +1,68 @@
+✨ Jupyter Lab ✨ 
+=================================================================
+✨   ✏️  ☑️ ✍️ ✒️  ✍️ 
+emoji => press Window + . (dot) special symbol char character
+C:/LocalCode/java_script_proj/Notes/Setup.txt
+=================================================================
+✨ Jupyter Lab ✨ 
+
+1]install paython
+  check pythone version  ▶️  python --version
+  check Pip version ▶️  pip --version ✏️  if you want to upgrade pip  then run  this command ☑️ python -m pip install --upgrade pip
+--------------------------------------------------------
+2] we can install jupyter lab with pythone install or pip install 
+    create local folder, go to local folder path and run
+   ▶️ python install jupyterlab
+   ▶️ pip install jupyterlab
+--------------------------------------------------------
+3] go to local folder path and run 'jupyter lab'  ☑️  C:\LocalCode\JupyterLab>jupyter lab
+   lab will open in browser
+   
+--------------------------------------------------------
+✏️ Other command
+pip install matplotlib 
+pip install numpy
+   
+======================================================================
+
+
+
+class Car: 
+def
+self.colour = colour
+self.horsepower = horsepower
+
+init_(self, colour: str, horsepower: int) -> None:
+
+volvo: Car = Car('red', 200)
+print(volvo.colour)
+print(volvo.horsepower)
+
+--------------------------------------------------------
+class Car: 
+__ init_(self, brand: str, horsepower: int) -> None:
+self.brand = brand
+self.horsepower = horsepower
+
+def drive(self) -> None:
+print(f'{self.brand} is driving!')
+
+def
+
+volvo: Car = Car('Volvo', 200)
+--------------------------------------------------------class Car: 2 usages
+
+self.brand = brand
+self.horsepower = horsepower
+
+def drive(self) -> None: 1 usage
+print(f'{self.brand} is driving!')
+
+def get_info(self) -> None: 1 usage
+print(f'{self.brand} with {self.horsepower} horsepower')
+
+volvo: Car = Car('Volvo', 200)
+volvo.drive()
+volvo.get_info()
+
+I

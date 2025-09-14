@@ -1,0 +1,1199 @@
+ ✨ CSS Notes ✨
+
+✨  ✏️   ☑️ ✍️  ✒️  ✍️ ▶️ 
+ 
+<tagname style="property:value;">
+------------------------------------									
+#### Helping Resource 
+MDN : https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
+      https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+	  
+Git : https://github.com/NitinThawkar/Notes/blob/WorkingBranch/CSS_notes/CSS_Notes.pdf
+
+block inline : https://www.w3schools.com/html/html_blocks.asp
+
+CSS UNIT : https://www.w3schools.com/cssref/css_units.php.
+CSS       : https://www.w3schools.com/css/default.asp
+CSS Selector : https://www.w3schools.com/css/css_selectors.asp
+CSS Position : https://www.w3schools.com/css/css_positioning.asp
+###################################################
+Lorem Ipsum : <p>lorem*100</p>
+
+ Short Hand command >>     tr>td*3>lorem3
+============================================================================================ 
+Div Tag
+Div is a container used for other HTML elements
+
+Block Element (takes full width)
+============================================================================================
+✨ #####  BOX Model ##############
+Slide 23 in 
+https://github.com/NitinThawkar/Notes/blob/WorkingBranch/CSS_notes/CSS_Notes.pdf
+Margin & padding
+margin: adds space outside an element
+padding: adds space inside an element
+============================================================================================
+✨  ####### Display Property  #######
+
+display: inline / block / inline-block / none
+
+https://www.w3schools.com/html/html_blocks.asp
+
+# inline >> Takes only the space required by the element. (no margin/ padding) only take requred space e.g. span, button , input
+# block  >> Takes full space available in width. tahe 100% width  e.g. div,h1 etc
+# inline-block >> Similar to inline but we can set margin & padding.
+# none   >> To remove element from document flow.
+
+if we apply inline style on blocked element then we will not able to set top and bottom  margin and padding.use inline-block set that
+
+============================================================================================
+✨  ###### Units in CSS ####
+Fixed(absulute) and Relative 
+
+Fixed : absulute/fixed value like 2px,1cm,mm
+Relative : 50% %,em,rem
+---------------------------------------
+Percentage (%) :It is often used to define a size as relative to an element's parent object.
+width : 33% ;
+margin-left : 50% ;
+
+em => respective to parent element  
+Rem (Root Em) => respective to root element 
+
+width : 2em;   => take double width of parent element
+margin-left : 50% ;
+
+Unit	Description	
+em	Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	Relative to the x-height of the current font (rarely used)	
+ch	Relative to the width of the "0" (zero)	
+rem	Relative to font-size of the root element	
+vw	Relative to 1% of the width of the viewport*	
+vh	Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	Relative to the parent element
+============================================================================================
+✨  ###### Css value Shorthand ####
+Shorthand
+
+padding: 50px;
+
+padding: 1px 2px 3px 4px;
+top | right | bottom | left -> clockwise
+
+<!-
+
+Margin & padding
+margin: adds space outside an element
+padding: adds space inside an element
+-
+============================================================================================
+✨  ###### Selector ######
+✏️ Universal Selector
+* { }
+-------------------------------------------------------------------
+✏️ Element Selector 
+h1 {}
+h1, h2, p {
+  background-color: gold;
+  border: 1px solid gray;
+}
+-------------------------------------------------------------------
+✏️ Id Selector
+#myId { }
+-------------------------------------------------------------------
+✏️ Class Selector
+.myClass { }
+
+.intro {
+  background-color: yellow;
+}
+
+p.fancy.beige {
+  font-family: 'Courier New', monospace;
+  }
+-------------------------------------------------------------------
+Universal Selector	▶️ *{} 
+ID Selector ▶️	#id {}
+Class Selector	▶️ .class {}
+Type Selector	▶️ h1, h2,h3 {}
+Adjacent Sibling Selector	▶️ h1 +p{}
+Child Selector ▶️	ul > li {}
+General Sibling Selector ▶️	h1 ~ p{}
+Descendant Selector ▶️	p a{}
+Attribute Selector	- ▶️  div[attribute="SomeValue"] {}
+============================================================================================
+ <td>button#myid</td>
+ <td>button:s or button:submit</td>
+===================
+<h1 style="color: red"> Apna Text </h1>
+============================================================================================
+<style>
+{
+color : red;
+}
+</style>
+-------------
+.container > div.header {
+  grid-area: header;
+  font-size:20px;
+  text-align: center;
+}
+============================================================================================
+Used to set the color of foreground /background
+color: red;
+
+background-color: red;
+color: rgb(255, 0, 0);
+Hex (Hexadecimal) color: #ff0000
+
+
+============================================================================================
+
+Padding
+Shorthand
+
+padding: 50px;
+
+padding: 1px 2px 3px 4px;
+top | right | bottom | left -> clockwise
+============================================================================================
+Text Properties
+text-align : left / right / center
+text-decoration : underline / overline / line-through
+font-weight : normal / bold / bolder / lighter
+font-weight : 100-900
+font-family : arial
+font-family : arial, roboto
+============================================================================================
+Units in CSS
+pixels (px)
+Absolute
+96px = 1 inch
+font-size: 2px;
+--------------------------
+line-height : 2px
+line-height : 3
+line-height : normal
+-------------------------
+text-tranform : uppercase / lowercase / capitalize / none
+========================================================================================================================================================================================
+#####  BOX Model ##############
+Slide 23 in 
+https://github.com/NitinThawkar/Notes/blob/main/CSS%20notes/CSS%20Notes.pdf
+
+content : any thing like div, praragrph , text,button, input box
+Height
+Width
+Border
+Padding
+Margin
+-------------------
+div {
+height: 50px;
+}
+-------------------
+div {
+width: 50px;
+}
+---------------
+border-width : 2px;
+border-style : solid / dotted / dashed
+border-color : black;
+
+Shorthand >> border : 2px solid black;
+
+Border
+Used to round the corners of an element's outer border edge
+border-radius : 10px;
+border-radius : 50%;
+-------------
+Slide 29
+
+padding-left
+padding-right
+padding-top
+padding-bottom
+
+padding: 50px;
+
+top | right | bottom | left -> clockwise
+padding: 1px 2px 3px 4px;
+-----------------------------
+Slide 31 
+
+margin-right
+margin-left
+margin-top
+margin-bottom
+
+margin: 50px;
+
+margin: 1px 2px 3px 4px;
+top | right | bottom | left -> clockwise
+============================================================================================
+####### Display Property  #######
+
+display: inline / block / inline-block / none
+
+https://www.w3schools.com/html/html_blocks.asp
+
+# inline >> Takes only the space required by the element. (no margin/ padding) only take requred space e.g. span, button , input
+# block  >> Takes full space available in width. tahe 100% width  e.g. div,h1 etc
+# inline-block >> Similar to inline but we can set margin & padding.
+# none   >> To remove element from document flow.
+
+if we apply inline style on blocked element then we will not able to set top and bottom  margin and padding.use inline-block set that
+
+---------------------------------------------------------------
+
+Visibility
+
+visibility: hidden;
+
+Note : When visibility is set to none, space for the element is reserved.
+But for display set to none, no space is reserved or blocked for the
+element.
+-------------------------------------
+Alpha Channel opacity (value between 0 to 1)  (last parameter)
+
+color: rgba(255, 0, 0, 0.5);
+RGBA
+color: rgba(255, 0, 0, 1);
+
+============================================================================================
+###### Units in CSS ####
+Fixed(absulute) and Relative 
+
+Fixed : absulute/fixed value like 2px,1cm,mm
+Relative : 50% %,em,rem
+---------------------------------------
+Percentage (%) :It is often used to define a size as relative to an element's parent object.
+width : 33% ;
+margin-left : 50% ;
+
+====================================
+https://www.w3schools.com/cssref/css_units.php
+
+em => respective to parent element  
+Rem (Root Em) => respective to root element 
+
+width : 2em;   => take double width of parent element
+margin-left : 50% ;
+
+Unit	Description	
+em	Relative to the font-size of the element (2em means 2 times the size of the current font)	
+ex	Relative to the x-height of the current font (rarely used)	
+ch	Relative to the width of the "0" (zero)	
+rem	Relative to font-size of the root element	
+vw	Relative to 1% of the width of the viewport*	
+vh	Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	Relative to the parent element
+---------------------------------------------------
+<div>The font-size of the div element is set to 30px. 
+  <span>The span element inside the div element has a font-size of 0.5em, 
+         which equals to 0.5x30 = 15px
+  </span>
+</div>
+
+---------------------------------------
+============================================================================================
+####### position ######
+The position CSS property sets how an element is positioned in a document.
+position : static / relative /absolute/fixed/sticky
+
+#static - default position (The top, right, bottom, left, and z-index properties have no effect)
+#relative - element is relative to itself. (The top, right, bottom, left, and z-index will work)
+#absolute - positioned relative to its closest positioned ancestor(ancestor element which is non staticre lative to parent or root)). (removed from the flow)
+#fixed - positioned relative to browser. (relative to browser window)(removed from flow)
+#sticky - positioned based on user's scroll position
+----------
+e.g.
+div {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+------------------
+z-index   handle overlapping element  (by default last element alwayes on top) positive on top , negative on bottom
+It decides the stack level of elements
+Overlapping elements with a larger z-index cover those with a smaller one.
+z-index : auto (0)
+z-index : 1 / 2 / ...
+z-index : -1 / -2 / ...
+
+
+============================================================================================
+### Background Image /size
+Used to set an image as background
+background-image : url("image.jpeg");
+
+background-size : cover / contain / auto
+============================================================================================
+####CSS Flexbox Components
+slide 53
+It is a one-dimensional layout method for arranging items in rows or columns.
+A flexbox always consists of:
+
+a Flex Container - the parent (container) <div> element
+Flex Items - the items inside the container <div>
+-----------
+Before the Flexible Box Layout module, there were four layout modes:
+
+Block, for sections in a webpage
+Inline, for text
+Table, for two-dimensional table data
+Positioned, for explicit position of an element
+-----------
+.flex-container {
+  display: flex;
+}
+-----
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+-----------------------------------------
+Flexbox Direction
+It sets how flex items are placed in the flex container, along which axis and direction.
+flex-direction : row; (default) (placing element from left to right)
+flex-direction : row-reverse;
+flex-direction : column; (placing element from top to bottom)
+flex-direction : column-reverse;
+
+-----------------------------------------
+Flex Properties
+for Flex Container
+justify-content : alignment along the main axis.
+justify-content :flex-start / flex-end / centre / space-evenly /around
+
+flex-wrap : nowrap / wrap / wrap-reverse 
+align-items : alignment along the cross axis.
+align-content : alignment of space between & around the content along cross-axis
+-----------------------------------------
+Flex Properties
+for Flex Item
+align-self : alignment of individual along the cross axis.
+flex-grow : how much a flex item will grow relative to the rest of the flex items if
+space is available
+flex-shrink : how much a flex item will shrink relative to the rest of the flex items if
+space is available
+
+
+============================================================================================
+============================================================================================
+media queries 
+more responsive with different browser / orintation
+device optin in crome dev tool
+
+// changecolor based on width
+@media (min-width : 200px) and (min-width : 300px) {
+div {
+background-color : red;
+}
+}
+============================================================================================
+### Transitions
+Transitions enable you to define the transition between two states of an element.
+
+to add some animation to elements
+
+timing function is how the transition should be applied
+
+show hover
+
+transition-property : property you want to transition (font-size, width etc.)
+
+transition-duration : 2s / 4ms ..
+
+transition-timing-function : ease-in / ease-out / linear / steps ..
+
+transition-delay : 2s / 4ms ..
+
+--------
+Transition Shorthand
+property name | duration | timing-function | delay
+
+transition: font-size 2s ease-in-out 0.2s;
+
+to add some animation to elements
+
+============================================================================================
+### CSS Transform
+
+Used to apply 2D & 3D transformations to an element
+
+transform: rotate(45deg);
+
+scale
+
+x & y axis separately
+
+transform: scale(0.5);
+
+transform: scaleX(0.5);
+
+transform: scaleY(0.5);
+
+------------------------
+
+transform: translate(20px);
+translate
+
+transform: translateX(20px);
+
+transform: translateY(20px);
+============================================================================================
+
+============================================================================================
+nested style sheet																				 
+
+============================================================================================
+###############################Duplicate_notes
+#### Helping Resource 
+MDN : https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals
+      https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+	  
+Git : https://github.com/NitinThawkar/Notes/blob/main/CSS%20notes/CSS%20Notes.pdf
+
+block inline : https://www.w3schools.com/html/html_blocks.asp
+
+CSS UNIT : https://www.w3schools.com/cssref/css_units.php.
+CSS       : https://www.w3schools.com/css/default.asp
+CSS Selector : https://www.w3schools.com/css/css_selectors.asp
+CSS Position : https://www.w3schools.com/css/css_positioning.asp
+###################################################
+Lorem Ipsum : <p>lorem*100</p>
+===================
+<h1 style="color: red"> Apna Text </h1>
+==============================================
+<style>
+color : red;
+}
+</style>
+-------------
+.container > div.header {
+  grid-area: header;
+  font-size:20px;
+  text-align: center;
+}
+==============================================
+Used to set the color of foreground /background
+color: red;
+
+background-color: red;
+color: rgb(255, 0, 0);
+Hex (Hexadecimal) color: #ff0000
+==============================================
+Universal Selector
+* { }
+==============================================
+Element Selector 
+h1 {}
+==============================================
+Id Selector
+#myId { }
+==============================================
+Class Selector
+.myClass { }
+==============================================
+Text Properties
+text-align : left / right / center
+text-decoration : underline / overline / line-through
+font-weight : normal / bold / bolder / lighter
+font-weight : 100-900
+font-family : arial
+font-family : arial, roboto
+==============================================
+Units in CSS
+pixels (px)
+Absolute
+96px = 1 inch
+font-size: 2px;
+--------------------------
+line-height : 2px
+line-height : 3
+line-height : normal
+-------------------------
+text-tranform : uppercase / lowercase / capitalize / none
+============================================================================================
+#####  BOX Model ##############
+Slide 23 in 
+https://github.com/NitinThawkar/Notes/blob/main/CSS%20notes/CSS%20Notes.pdf
+
+content : any thing like div, praragrph , text,button, input box
+Height
+Width
+Border
+Padding
+Margin
+-------------------
+div {
+height: 50px;
+}
+-------------------
+div {
+width: 50px;
+}
+---------------
+border-width : 2px;
+border-style : solid / dotted / dashed
+border-color : black;
+
+Shorthand >> border : 2px solid black;
+
+Border
+Used to round the corners of an element's outer border edge
+border-radius : 10px;
+border-radius : 50%;
+-------------
+Slide 29
+
+padding-left
+padding-right
+padding-top
+padding-bottom
+
+padding: 50px;
+
+top | right | bottom | left -> clockwise
+padding: 1px 2px 3px 4px;
+-----------------------------
+Slide 31 
+
+margin-right
+margin-left
+margin-top
+margin-bottom
+
+margin: 50px;
+
+margin: 1px 2px 3px 4px;
+top | right | bottom | left -> clockwise
+==============================================
+####### Display Property  #######
+
+display: inline / block / inline-block / none
+
+https://www.w3schools.com/html/html_blocks.asp
+
+# inline >> Takes only the space required by the element. (no margin/ padding) only take requred space e.g. span, button , input
+# block  >> Takes full space available in width. tahe 100% width  e.g. div,h1 etc
+# inline-block >> Similar to inline but we can set margin & padding.
+# none   >> To remove element from document flow.
+
+if we apply inline style on blocked element then we will not able to set top and bottom  margin and padding.use inline-block set that
+
+==========================================================================================================================================
+#use for layouts
+CSS Layouts - Use Cases
+
+
+CSS Grid : Complex two-dimensional layouts (e.g .. photo galleries, dashboards).
+Flexbox : One-dimensional layouts (e.g., navigation bars, centering content).
+Float : Wrapping text around images or simple column layouts.
+Positioning : Precise placement of elements (e.g., modals, sticky headers).
+Multi-Column : Newspaper-like text layouts.
+Table : Table-like layouts without using HTML tables.
+Inline-Block : Inline elements with block-level properties.
+Sticky : Elements that stick to the viewport when scrolling.
+
+Grid Layout
+- Flexbox Layout 
+- Float Layout
+- Positioning Layout
+- Multi-Column Layout
+    e.g column-count : 2
+- Table Layout and HTML Table
+	display : table /display : row / display : cell
+- Inline-Block Layout 
+   This layout lets elements sit inline (like text) but still have block-level properties like width and height.
+   show elements in one line   display : inline-block
+- Sitcky Layout
+- CSS Layouts use cases
+
+
+Flexbox (default diection row)
+What It Is:
+
+Flexbox is a one-dimensional layout system that works either in a row or a column. It's great for aligning and
+distributing space among items in a container.
+
+
+
+.flex-container {
+  display: flex;         => 
+}
+-------------
+CSS Grid
+What It Is:
+
+CSS Grid is a two-dimensional layout system that allows you to create complex layouts with rows and
+columns. It's like a grid paper where you can place items in any cell.
+ 
+ display: grid; 
+ 
+ layout
+ ---------------
+ .flex-container {
+  display: grid;
+flot: right
+flot: right  
+}
+---------------------
+position: 
+
+ static -
+relative
+absolute
+fixed - 
+sticky 
+
+ .flex-container {
+  display: grid;
+flot: right
+position: right  
+}
+==========================================================================================================================================
+
+Visibility
+
+visibility: hidden;
+
+Note : When visibility is set to none, space for the element is reserved.
+But for display set to none, no space is reserved or blocked for the
+element.
+-------------------------------------
+Alpha Channel opacity (value between 0 to 1)  (last parameter)
+
+color: rgba(255, 0, 0, 0.5);
+RGBA
+color: rgba(255, 0, 0, 1);
+
+==============================================
+###### Units in CSS ####
+Fixed and Relative 
+Fixed : absulute/fixed value like 2px,1cm,mm
+Relative : 50% %,em,rem
+---------------------------------------
+Percentage (%) :It is often used to define a size as relative to an element's parent object.
+width : 33% ;
+margin-left : 50% ;
+---------------------------------------------------
+rem	Relative to font-size of the root element define a size as relative to an element's root object
+
+html {
+font-size: 16px; /* Root font size */
+}
+P {
+font-size: 1.5rem; /*1.5*16px=24px*/.
+}
+---------------------------------------------------
+
+em	Relative to the font-size of the perent  element (2em means 2 times the size of the current font)	define a size as relative to an element's parent object
+
+div {
+font-size: 20px;
+}
+{
+font-size: 1.5em; /* 1.5 20px = 30px */
+}
+
+---------------------------------------------------
+Percentage (%) :It is often used to define a size as relative to an element's parent object
+---------------------------------------------------
+values in (%)
+font-size: 20vh 
+font-size: 20vw 
+font-size: 20vmin
+font-size: 20vmax
+
+width : 20ch
+====================================
+https://www.w3schools.com/cssref/css_units.php
+
+em => respective to parent element  
+Rem (Root Em) => respective to root element 
+
+width : 2em;   => take double width of parent element
+margin-left : 50% ;
+
+Unit	Description	
+em	Relative to the font-size of the perent element (2em means 2 times the size of the current font)	
+ex	Relative to the x-height of the current font (rarely used)	
+ch	Relative to the width of the "0" (zero)	
+rem	Relative to font-size of the root element	
+vw	Relative to 1% of the width of the viewport*	
+vh	Relative to 1% of the height of the viewport*	
+vmin	Relative to 1% of viewport's* smaller dimension	
+vmax	Relative to 1% of viewport's* larger dimension	
+%	Relative to the parent element
+fr fraction unit
+
+---------------------------------------------------
+<div>The font-size of the div element is set to 30px. 
+  <span>The span element inside the div element has a font-size of 0.5em, 
+         which equals to 0.5x30 = 15px
+  </span>
+</div>
+
+---------------------------------------
+
+==============================================
+####### position ######
+The position CSS property sets how an element is positioned in a document.
+position : static / relative /absolute/fixed/sticky
+
+#static - default position (The top, right, bottom, left, and z-index properties have no effect)
+#relative - element is relative to itself. (The top, right, bottom, left, and z-index will work)
+#absolute - positioned relative to its closest positioned ancestor(ancestor element which is non staticre lative to parent or root)). (removed from the flow)
+#fixed - positioned relative to browser. (relative to browser window)(removed from flow)
+#sticky - positioned based on user's scroll position
+----------
+e.g.
+div {
+  position: relative;
+  left: 30px;
+  border: 3px solid #73AD21;
+}
+
+------------------
+z-index   handle overlapping element  (by default last element alwayes on top) positive on top , negative on bottom
+It decides the stack level of elements
+Overlapping elements with a larger z-index cover those with a smaller one.
+z-index : auto (0)
+z-index : 1 / 2 / ...
+z-index : -1 / -2 / ...
+
+
+==============================================
+### Background Image /size
+Used to set an image as background
+background-image : url("image.jpeg");
+
+background-size : cover / contain / auto
+==============================================
+####CSS Flexbox Components
+slide 53
+It is a one-dimensional layout method for arranging items in rows or columns.
+A flexbox always consists of:
+
+a Flex Container - the parent (container) <div> element
+Flex Items - the items inside the container <div>
+-----------
+Before the Flexible Box Layout module, there were four layout modes:
+
+Block, for sections in a webpage
+Inline, for text
+Table, for two-dimensional table data
+Positioned, for explicit position of an element
+-----------
+.flex-container {
+  display: flex;
+}
+-----
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+-----------------------------------------
+Flexbox Direction
+It sets how flex items are placed in the flex container, along which axis and direction.
+flex-direction : row; (default) (placing element from left to right)
+flex-direction : row-reverse;
+flex-direction : column; (placing element from top to bottom)
+flex-direction : column-reverse;
+
+-----------------------------------------
+Flex Properties
+for Flex Container
+justify-content : alignment along the main axis.
+justify-content :flex-start / flex-end / centre / space-evenly /around
+
+flex-wrap : nowrap / wrap / wrap-reverse 
+align-items : alignment along the cross axis.
+align-content : alignment of space between & around the content along cross-axis
+-----------------------------------------
+Flex Properties
+for Flex Item
+align-self : alignment of individual along the cross axis.
+flex-grow : how much a flex item will grow relative to the rest of the flex items if
+space is available
+flex-shrink : how much a flex item will shrink relative to the rest of the flex items if
+space is available
+
+
+
+============================================================================================
+#####################################uplicate_notes
+============================================================================================
+<!- HTML iFrames - allow to embed another webpage inside a page ->
+<iframe width="560" height="315"
+trca"https://www.youtube.com/embed/Q05EFH6NMCQ"
+title="Zoom Integration in Ionic - CodeWithTechnyks"
+frameborder="0"
+allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</frame>
+============================================================================================
+
+
+
+============================================================================================
+advantages 
+Pros of CSS:
+
+. Universal support: Works in allbrowsers.
+
+. Simple syntax: Easy to learn and use.
+
+. No compilation needed: You write it, andit works.
+
+Cons of CSS:
+
+· Repetitive code: No support for variables, functions, or reusable components.
+
+. Hard to maintain: As projects grow. CSS files can become messy andhard to
+manage.
+
+------------------------------------------------------------------------------------
+SCSS (Sassy CSS)
+
+. SCSS is a CSS pre-processor
+. It's a superset of CSS, meaning all valid CSS is also valid SCSS.
+. SCSS adds powerful features like variables, nesting, mixins, and functions, making your stylesheets more maintainable and
+easier to write.
+
+Pros of SCSS:
+
+. Variables:Store reusable values (e.g. colors, fonts).
+
+. Nesting: Write cleaner.more organized code.
+
+. Mixins: Reuse blocks of code.
+
+. Functions: Perform calculations or logic.
+
+. Modularity: Split your code into smaller, reusable files.
+
+Cons of SCSS:
+
+· Requires compilation: SCSS needs to be compiled into CSS before it can be used in a browser.
+
+. Learning curve: Slightly more complex than plain CSS.
+============================================================================================
+
+============================================================================================
+
+✏️  ☑️ ✍️  ✒️  ✍️ ▶️   ✏️=>   ✨✏️ ✨ ✏️
+
+SCSS 
+====================================================
+7 Concepts
+
+· Variables
+· Nesting
+· Partials
+· Modules
+· Mixins
+. Extend/Inheritance
+· Operators
+
+
+
+
+====================================================
+✨ Operators ✨ 
+
+// we can use operator like  + - / *
+
+h1{
+color:#222f3e;
+font-size: 5rem + 5rem;
+}
+
+====================================================
+✨ Variables ✨
+//define variable with $ sign
+
+$my-BgColor : red ;
+
+
+body{
+background-color : $my-BgColor;
+padding: 40px;
+}
+
+------
+h1{
+
+font-size: ($defaultFont*2) + 10;
+
+}
+====================================================
+✨ Nesting ✨
+Nesting of css
+-----------------
+//Classic Nested Css
+
+div ul {background-color: green;}
+div ul li {list-style-type: none;}
+
+
+------------------
+//Nesting of scss
+
+div{
+background-color:#fff;
+padding: 20px;
+border:1px solid #ccc;
+ul{
+	background-color: red;
+		li{
+			a{
+			  background-color: gree;
+			}
+			a:hover{
+			  background-color: gree;
+			}
+		}
+
+}
+
+}
+-------
+
+
+
+============================================================================================
+✨ Mixins ✨
+// repitative use  style propertises  assigned to variable like (@flexprob) and use with @include keyword
+
+@mixin flexprob {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+}
+-----
+//use 
+
+h1{
+
+@include flexprob;
+
+font-size: ($defaultFont*2) + 10;
+
+}
+--------
+✏️=> mixin with parameter
+@mixin commoncode($par1) {
+color:#222f3e;
+font-size: 5rem + 5rem;
+letter-spacing: $par1;
+text-transform: capitalize;
+
+//use 
+h1 {
+@include commoncode(0.8rem);
+ &:hover {
+color:#c8d6e5;
+}
+& :: after {
+content: " Channel";
+}
+}
+============================================================================================
+✨ Partials ✨
+create new file with _ underscore  like  _nitin.scss
+
+then
+@import "nitin"  => .scss optional
+
+
+============================================================================================
+✨ Extend/Inheritance ✨
+
+
+.btn{
+background-color:#eee;
+padding: 10px 20px;
+border: 0;
+box-shadow: 0px 0px 2px 2px
+margin: 30px;
+color:#ccc;
+}
+
+//--Use @extend like inheritance
+.btn-success{
+@extend .btn;
+background-color: green;
+&: hover{
+background-color:darken(green, 10%);
+}
+}
+
+============================================================================================
+✨ & nesting selector ampersand symbol (&) in css ✨
+ ampersand symbol (&) is primarily used in the context of CSS Nesting, 
+ The & symbol in CSS nesting refers to the parent selector of the current nested rule.
+ 
+.btn-success{
+background-color:green;
+	&: hover{
+		background-color : darken(green, 10%); 
+			}
+}
+-----------------
+Referencing the parent element for compound selectors:
+When you want to apply styles to the parent element itself, or combine the parent selector with a pseudo-class or pseudo-element, the & is used.
+
+ .card {
+      background-color: lightgray;
+
+      /* Targets .card when it's hovered */
+      &:hover {
+        background-color: gray;
+      }
+
+      /* Targets .card with the class .active */
+      &.active {
+        border: 2px solid blue;
+      }
+    }
+	
+----------------------
+Creating contextual styles based on parent relationships:
+The & can be used to define styles that depend on the context of the parent selector, even if the parent is not directly targeted.
+
+    .button {
+      padding: 10px;
+
+      /* Targets .button when it's inside a .dark-mode container */
+      .dark-mode & {
+        color: white;
+        background-color: black;
+      }
+    }
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+
+============================================================================================
+https://www.youtube.com/watch?v=PVPLO3Sxbgw&list=PLFbEoEbDAzrsqB8wnal9z_Hy_OwtUkxTp&index=1&pp=iAQB
+timestamp
+00:00- intro
+01:30- What is HTML
+03:34- How HTML Works
+06:49- Setup VS Code Editor
+16:45- HTML basic structure
+24:27- What are meta tags and its importance
+29:10- HTML Headings
+32:02- HTML Comments
+34:29- HTML Paragraphs
+37:58- Links (a tag) and HTML Attributes
+44:17- Images (*img*)
+47:36- LIST
+49:54- Divisions (*div*) 
+54:34- Line Break (*br*).
+57:24- Horizontal Rule (*hr*)
+59:19- Span (*span*)
+01:02:04- Sematic HTML
+01:13:24- Forms in HTML
+01:29:53- Portfolio Website using HTML
+02:10:34- How to navigate redirect from one HTML file to another
+02:13:06- Tables HTML
+02:20:44- Advanced forms (validation, action, method) in HTML
+02:25:29- HTML Multimedia
+02:31:30- HTML entities
+02:36:03- HTML Iframes
+02:43:21- Checkboxes and Radio Buttons (using input tag in Forms)
+02:49:28- What is CSS?
+02:52:56- How CSS Works with examples
+03:15:40- Basic CSS Syntax
+03:17:30- Common CSS Properties
+04:10:10- CSS Selectors
+04:18:22- Box Model, background-image css properties
+04:32:06- CSS Units
+05:02:19- Grid Layout
+05:08:25- Flexbox Layout 
+05:14:05- Float Layout
+05:20:45- Positioning Layout
+05:31:06- Multi-Column Layout
+05:33:44- Table Layout and HTML Table
+05:38:57- Inline-Block Layout 
+05:41:58- Sitcky Layout
+05:46:03- CSS Layouts use cases
+05:49:03- CSS vs SCSS vs SASS vs LESS vs Others
+06:00:40- How to run HTML with SCSS
+06:03:00 - live server  ==========================>(imp)
+06:26:38- Some shortcut trick ==========================>(imp)
+06:28:29- pseudo classes - Advanced css selector
+06:43:32- pseudo elements - advanced css selector
+06:49:58- Transitions and Animations
+06:55:59- CSS Variables
+07:00:33- Advanced CSS (filters, custom checkbox, auto-fit and minmax in grid)
+07:21:20- Gradients in Text and Background
+07:31:14- Blend Mode and Clip Path in CSS
+07:36:08- Responsive design for different screens
+07:51:03- Designing Header
+08:14:24- Designing Hero Section
+08:24:47- Designing About Section
+08:41:26- Designing Skills Section and integrating icons
+09:10:36- Designing Projects Section
+09:24:09- Designing Contact Section
+09:30:44- Designing Footer
+09:35:50- Making Website Responsive
+09:48:10- What is Tailwind CSS: Why use it
+09:53:44- Tailwind CSS Basics
+10:01:43- Integrating Tailwind CSS and testing it in html
+10:11:31- Apply Flexbox, Grid Layouts using Tailwind CSS and many more
+10:26:26- Border, border-radius, shadow in Tailwind CSS
+10:32:32- Custom Styling in Tailwind CSS
+10:33:58- Setup Tailwind CSS via CLimp4 (typo preserved)
+10:46:27- Adding Earlier Portfolio Website design in the Project
+10:48:42- Design Header using Tailwind CSS
+10:59:50- Design Hero Section 
+11:07:19- Design About Section using Tailwind CSS
+11:18:18- Design Skills Section using Tailwind CSS
+11:26:02- Design Projects Section using Tailwind CSS
+11:36:55- Design Contact Section using Tailwind CSS
+11:44:29- Design Footer using Tailwind CSS
+11:49:03- Outro

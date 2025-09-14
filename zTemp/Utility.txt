@@ -1,0 +1,176 @@
+✨ Utility ✨ 
+=================================================================
+ ✏️   ☑️ ✍️  ✒️  ✍️ ▶️ 
+ ✏️ (Pencil)  ☑️ ✍️ (Person writing) ✒️ (Black pen) ✍️ (Writing hand)
+emoji => press Window + . (dot) special symbol char character
+=================================================================
+In programming, casing refers to the capitalization style used for naming variables, functions, classes, etc. 
+Common casing styles include camel case, Pascal case, snake case, and kebab case
+
+
+Camel Case => myVariableName
+Pascal Case => MyVariableName
+Snake Case => my_variable_name
+Kebab Cas => my-variable-name
+Flat Case => myvariablename
+Upper Case => MY_VARIABLE_NAME
+
+• Camel Case: Capitalizes the first letter of each word after the first word (e.g., myVariableName).  
+• Pascal Case: Capitalizes the first letter of each word (e.g., MyVariableName). [1]  
+• Snake Case: Separates words with underscores and uses lowercase letters (e.g., my_variable_name).  
+• Kebab Case: Separates words with hyphens and uses lowercase letters (e.g., my-variable-name). 
+• Flat Case: No capitalization or punctuation is used, simply concatenating all letters (e.g., myvariablename).
+• Upper Case (Constant Case): All letters are capitalized, often used for constants (e.g., MY_VARIABLE_NAME).   
+
+=================================================================
+./     ✏️=> means current directory
+../    ✏️=> means one folder back
+/      ✏️=> means root 
+=================================================================
+google crome 
+clear()  => clear console tab
+=================================================================
+Query parameter  ✏️=>   www.sj.com/employee?id= nitin
+route parameter  ✏️=>   www.sj.com/ employee/2
+=================================================================
+JAVA script
+
+==   ✏️=> (Loose Equality):
+		Compares values after converting them to a common type if necessary. 
+		May lead to unexpected results due to type coercion. 
+		Example: "5" == 5 evaluates to true because the string "5" is converted to the number 5. 
+===  ✏️=>(Strict Equality): 
+		Compares both value and type directly, without any type conversion. 
+		Provides more predictable and reliable results. 
+		Example: "5" === 5 evaluates to false because the string "5" is not the same type as the number 5. 
+		
+		---------------
+// = (equal to means value only)
+let isEqual = 5 == '5'; // true (loose comparison)
+
+// == (strict equal to means value + type)
+let isStrictEqual = 5 === '5'; // false (strict comparison)
+=================================================================
+terninal  command prompt 
+
+press Ctrl+C again or Ctrl+D or type .exit
+=================================================================
+https://github.com/Nykz/typescript-course-material/blob/main/ts/functions.ts
+
+✏️=> Regular functions
+
+
+function addNumbers(a: number, b: number): number {
+    return a + b;
+}
+
+console.log(addNumbers(2, 6));
+
+✏️=> function expression
+const divide = function (a: number, b: number): number {
+    return a / b;
+};
+
+console.log(divide(8, 2));
+
+✏️=> arrow functions
+const multiply = (a: number, b: number): number => {
+    return a * b;
+};
+const multiply1 = (a: number, b: number): number => a * b;
+
+================================================================= 
+Add prettier (plugin/extension) format code
+------
+vs code  => go to file > preferances > settings  
+click on json view and add following lines 
+
+
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+------------------
+and  change formatOnSave to true 
+formatOnSave": true
+=================================================================
+html
+<!- HTML iFrames - allow to embed another webpage inside a page ->
+<iframe width="560" height="315"
+trca"https://www.youtube.com/embed/Q05EFH6NMCQ"
+title="Zoom Integration in Ionic - CodeWithTechnyks"
+frameborder="0"
+allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</frame>
+=================================================================
+JAVA   read from local file and return json text
+----------------------
+import java.util.List;
+import java.util.TimeZone;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.io.IOException;
+----------------------
+@ApiResponse(responseCode = "200", content = {@Content( mediaType = "application/json")})
+    @PostMapping("/recepee")
+    public ResponseEntity<String> getMetricTrendData(@Valid @RequestBody String cont) {
+        Path filePath = Paths.get("src/main/resources/json.txt");
+
+        String content;
+        try {
+            content = Files.readString(filePath);
+        } catch (IOException e) {
+            content = "";
+        }
+        return ResponseEntity.ok().body(content);
+    }
+---------------------------------------------
+
+  public ResponseEntity<String> getWeatherTrendData(@Valid @RequestBody String payload) {
+        Path filePath;
+        if (payload.contains("\"1d\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trendD.txt");
+        } else if (payload.contains("\"12h\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trend12h.txt");
+        } else if (payload.contains("\"4h\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trend4h.txt");
+        } else if (payload.contains("\"1h\"")) {
+            filePath = Paths.get("C:\\Ztemp\\WeatherTrend\\trend1h.txt");
+        } else {
+            filePath = Paths.get("C:\\Ztemp\\trend.txt");
+        }
+
+        String content;
+        try {
+            content = Files.readString(filePath);
+        } catch (IOException e) {
+            content = "";
+        }
+        return ResponseEntity.ok().body(content);
+    }
+---------------------------------------------     
+=================================================================
+TYPE SCRIPT   type script  object array
+
+const mockHabits: Habit[] =[
+{
+id: "1",
+name: "Read",
+frequency: "daily",
+completedDates: [],
+createdAt: new Date() .toISOString(),
+},
+{
+
+id: "2",
+name: "Exercise",
+frequency: "daily",
+completedDates: [],
+createdAt: new Date().toISOString(),
+}]
+
+=================================================================
