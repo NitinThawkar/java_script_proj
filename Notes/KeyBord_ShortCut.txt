@@ -44,9 +44,9 @@ CTRL + SHIF + F => serch anywhere in project
 
 CTRL + `  (back tick) => Toggle terminal
 
-CTRL + C     comment multiple lines
+CTRL + C  CTRL + K+C   comment multiple lines
 
-CTRL + U     Un comment multiple lines
+CTRL + U  CTRL + K+U   Un comment multiple lines
 -------------------------------------------------
 General VS Code Shortcuts (helpful for Copilot usage): 
 Ctrl+Space: Initiates code completion.
