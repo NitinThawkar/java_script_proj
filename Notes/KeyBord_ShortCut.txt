@@ -6,13 +6,24 @@
 ----------------------------------------------------------------------------
 ✨ IntelliJ Java keybord short cut ✨   ☑️️
 
-ALT + ENTER => on code line
+ALT + ENTER => on code line AI Copilote and etc
 ctrl+D => duplicate lines 
 ctrl + shif + f => serch anywhere in project
 ctrl + shif + A => search any command  => type duplicate , serch etc
 ctrl + Alt + L => indentation, formating the code
 ctrl + Alt + T => wrap code in if,try,for block etc
 sout => System.out.println();
+
+
+Search Everywhere  => Double Shift
+
+Go to File  => Ctrl+Shift+N
+
+Recent Files  => Ctrl+E
+
+Navigation Bar  => Alt+Home
+
+
 
 ----------------------------------------------------------------------------
 ✨IntelliJ plugin ✨ 
@@ -34,7 +45,7 @@ ALT + left / right Arrow  => previous / next file or line  moving  navigate betw
 
 CTRL + I  => On code line will open Git Copilot   ☑️
 
-CTRL + ALT + I  => open chat  
+CTRL + ALT + I  => open AI chat  
 
 CTRL + SHIFT + P  => show All command
 
@@ -43,6 +54,8 @@ CTRL + P  => Go to file
 CTRL + SHIF + F => serch anywhere in project
 
 CTRL + `  (back tick) => Toggle terminal
+
+CTRL + ,  (comma) =>  open Settings
 
 CTRL + C  CTRL + K+C   comment multiple lines
 
