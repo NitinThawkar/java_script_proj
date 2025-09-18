@@ -91,6 +91,9 @@ formatOnSave": true
 ✨ REACT ✨
 
 ES 6 => type  command "rafce"  in component file , create blank react component  (es 6 plugin requied)
+ES 6 => type  command "rfce"  in component file , create blank react component  (es 6 plugin requied)
+
+
 ======================================================================================================
 ✨ Emoji ✨
 emoji => press Window + . (dot) => special symbol char character
