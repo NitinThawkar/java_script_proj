@@ -59,4 +59,71 @@ Use `useMemo` when:
 
 ---
 
-Would you like a real-world example showing both used together?
+ Here's a **real-world example** that demonstrates how `React.memo` and `useMemo` can be used **together** to optimize performance in a React app.
+
+---
+
+### 🧩 Scenario:
+You have a list of users, and you want to display each user in a component. You also want to compute a filtered list based on a search term. The filtering is expensive, so you want to avoid recalculating it unnecessarily. Also, each user component should only re-render if its props change.
+
+---
+
+### ✅ Code Example:
+
+```jsx
+import React, { useState, useMemo } from 'react';
+
+// 👇 Memoized User component
+const User = React.memo(({ user }) => {
+  console.log('Rendering:', user.name);
+  return <li>{user.name}</li>;
+});
+
+// 👇 Main component
+function UserList({ users }) {
+  const [search, setSearch] = useState('');
+
+  // 👇 Memoize filtered users to avoid expensive recalculation
+  const filteredUsers = useMemo(() => {
+    console.log('Filtering users...');
+    return users.filter(user =>
+      user.name.toLowerCase().includes(search.toLowerCase())
+    );
+  }, [users, search]);
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Search users..."
+        value={search}
+        onChange={e => setSearch(e.target.value)}
+      />
+      <ul>
+        {filteredUsers.map(user => (
+          <User key={user.id} user={user} />
+        ))}
+      </ul>
+    </div>
+  );
+}
+```
+
+---
+
+### 🔍 What’s Happening Here?
+
+- **`useMemo`** is used to **memoize the filtered list** of users so that the filtering logic only runs when `users` or `search` changes.
+- **`React.memo`** wraps the `User` component so that **each user item only re-renders if its props (`user`) change**.
+
+---
+
+### 🧠 Benefits:
+
+- Reduces unnecessary re-renders of `User` components.
+- Avoids expensive filtering logic unless needed.
+- Improves performance especially with large lists or complex UI.
+
+---
+
+Would you like me to show how this behaves with console logs or simulate performance impact?
