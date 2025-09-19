@@ -185,6 +185,9 @@ Ctrl + Left - goes one word left,
 
 -------------------------------------------------------
 https://keycombiner.com/collections/notepad/
+
+-------------------------------------------------------
+Date Insert => File Menu EDIT > Insert >date 
 -------------------------------------------------------
 Ctrl + Shif +F   find and replace
 Ctrl + Shif +H
