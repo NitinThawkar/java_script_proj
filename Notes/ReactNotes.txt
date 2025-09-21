@@ -122,7 +122,13 @@ unstable_addTransitionType
 https://youtu.be/wIyHSOugGGw
 passinf other componant as props call as children  AKA composition
 ----------------------------------------------------------------------
-use()   (in 19 replace useEffect and Use Contex)
+use()   (in 19 replace useEffect and Use Contex) we can use this instef of useEffect and UseContex
+alwayes use with suspense  use() + <suspense>
+
+
+<Suspense> => if some tasks is delay. we fall back to suspensethat some thing is loding 
+
+
 	Usage
 	
 	Reading context with use
