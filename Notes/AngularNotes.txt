@@ -15,6 +15,7 @@ install npm
 Node : check node version  : node --version
 npm  :check npm version : nom -v
 
+CLI version : ng -v
 
 install angular  => npm install -g @angular/cli
 
