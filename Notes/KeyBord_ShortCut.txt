@@ -224,9 +224,14 @@ lowercase	ctrl + u
 Proper Case	alt + u    => example : Cursor Position Goes To Start Of First Line Page
 Proper Case (blend)	alt + shift + u
 ======================================================================================================
-
+✨ ANGULAR angular✨
+-g means globalr. we can access out side of folder else it will local access inside folder only
+install angular  => npm install -g @angular/cli
 ======================================================================================================
+✨ Other Short Cut✨
 
+Node : check node version  : node --version
+npm  :check npm version : nom -v
 ======================================================================================================
 
 ======================================================================================================

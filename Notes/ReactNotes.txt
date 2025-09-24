@@ -35,6 +35,9 @@ npm run dev
  const data = JSON.stringify()
 JSON.stringify(props)  , prop is a object
 console.log(JSON.stringify(props));
+
+-------------------------------------------
+alert(`Student Name=${sname} and Button Name=${save}');  =>single tild statment
 ==================================================================================================================================
 class based componant. function based componant
 ==================================================================================================================================
@@ -43,40 +46,112 @@ class based componant. function based componant
 we can write javascript code in between {}
 ==================================================================================================================================
 useActionState
-
 useCallback
-
 useContext
-
-useDebugValue
-
-useDeferredValue
-
+useDebugValue  
+useDeferredValue 
 useEffect
-
-useld
-
-uselmperativeHandle
-
-uselnsertionEffect
-
+useId
+useImperativeHandle 
+useInsertionEffect
 useLayoutEffect
-
 useMemo
-
 useOptimistic
-
 useReducer
-
 useRef
-
 useState
-
 useSyncExternalStore
+useTransition
+useOptimistic
+useSyncExternalStore
+----------------------
 
-use Transition
 
-useFormStatus
+
+###################
+
+
+useFormStatus (react DOM)
+
+
+
+===========================
+props.children
+
+
+life cycle
+===========================
+Components
+
+<Fragment> (<>)
+
+<Profiler>
+
+<StrictMode>
+
+<Suspense>
+
+<Activity>
+
+<ViewTransition>
+===========================
+APIs
+
+act
+
+cache
+
+captureOwnerStack
+
+createContext
+
+lazy
+
+memo  AKA React.Memo
+
+startTransition
+
+use
+
+experimental_taintObjectReference
+
+experimental_taintUniqueValue
+
+unstable_addTransitionType
+===========================
+  <div>FormAActionTest</div>
+    <div>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+    </div>
+
+==========================
+    componentWillMount() {
+
+    }
+
+    componentDidMount() {
+
+    }
+
+    componentWillReceiveProps(nextProps) {
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+    }
+
+    componentWillUnmount() {
+
+    }
 
 ===========================
 Components
@@ -2687,7 +2762,83 @@ type="text"
 
 
 ==================================================================================================================================
+useMemo
 
+useMemo
+
+A React hook that allows to memoize the result of a computation
+
+Used for performance optimization
+
+Ensures that computations are only performed when necessary
+
+-------
+Best Practices
+
+Use for expensive calculations and for passing arrays or objects as prop
+
+For cheap computation, useMemo may add unnecessary complexity
+
+Over-memoizing decrease the performance
+
+Missing or incorrect dependencies may lead to defects
+
+=================================================================
+React.memo
+
+Higher-order component in React that prevents unnecessary re-renders
+
+Improves the performance by caching the result of a component's render
+
+When props don't change, React skips the re-render
+
+Use shallow comparison to check whether the props have changed
+
+
+Scenarios in which we should avoid
+
+Simple component without heavy computations that renders quickly
+
+When parent component rarely updates the props
+
+When we pass complex objects or functions as props
+
+When parent component re-renders frequently
+
+When component is consuming values from React's Context API
+
+When component has side effects
+=================================================================
+useCallback
+
+A React hook that memoizes functions
+
+Performance optimization tool that prevents function recreation
+
+Helps to memoize or cache the function
+
+useCallback( Fn to be memoized, Array of dependencies )
+
+-------------
+
+
+=================================================================
+
+//create , provider , useCoxtex;
+
+Situations where we should avoid using the context
+
+Data sharing between siblings or parent-child components
+
+Data doesn't change often
+
+Static data
+
+When managing state that is localized to a specific component
+
+Larger applications
+
+=================================================================
 ==================================================================================================================================
 
 ==================================================================================================================================
