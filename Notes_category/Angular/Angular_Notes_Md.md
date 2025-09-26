@@ -116,6 +116,8 @@ Angular uses **Shadow DOM** or emulates it to encapsulate styles. When you defin
 Angular modifies the DOM and CSS selectors to ensure styles apply **only to that component**.
 
 ---
+END HERE
+---
 
 ### 🧪 Types of View Encapsulation
 
@@ -144,6 +146,8 @@ Angular provides **three types**:
 - Be cautious: styles can **leak** and affect other components.
 
 
+---
+END HERE
 ---
 Here’s a detailed comparison between **`*ngIf`** and the **`hidden` property** in Angular:
 
