@@ -92,6 +92,11 @@ Here’s a practical guide on **when to use** and **when not to use** **String I
 | Set element property   | `[property]="expression"` |
 | Bind non-string values | `[property]`              |
 | Bind component inputs  | `[input]="value"`         |
+***
+---
+END HERE
+---
+
 
 ***
 ### 🔍 What is **View Encapsulation** in Angular?
@@ -116,10 +121,6 @@ Angular uses **Shadow DOM** or emulates it to encapsulate styles. When you defin
 Angular modifies the DOM and CSS selectors to ensure styles apply **only to that component**.
 
 ---
-END HERE
----
-
-***
 
 ### 🧪 Types of View Encapsulation
 
