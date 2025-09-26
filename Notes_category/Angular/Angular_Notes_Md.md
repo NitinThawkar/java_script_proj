@@ -94,6 +94,55 @@ Here’s a practical guide on **when to use** and **when not to use** **String I
 | Bind component inputs  | `[input]="value"`         |
 
 ***
+### 🔍 What is **View Encapsulation** in Angular?
+
+**View Encapsulation** is a mechanism in Angular that determines how styles defined in a component affect the DOM. It helps **scope CSS styles** to a component so they don’t leak out and affect other parts of the application.
+
+---
+
+### ⚙️ **How It Works**
+
+Angular uses **Shadow DOM** or emulates it to encapsulate styles. When you define styles in a component:
+
+```ts
+@Component({
+  selector: 'app-example',
+  templateUrl: './example.component.html',
+  styleUrls: ['./example.component.css'],
+  encapsulation: ViewEncapsulation.Emulated
+})
+```
+
+Angular modifies the DOM and CSS selectors to ensure styles apply **only to that component**.
+
+---
+
+### 🧪 Types of View Encapsulation
+
+Angular provides **three types**:
+
+| Type                | Description                                                                 | Style Scope | Browser Support |
+|---------------------|-----------------------------------------------------------------------------|-------------|------------------|
+| `Emulated` (default)| Angular emulates Shadow DOM by adding unique attributes to elements & styles| Scoped      | ✅ All browsers   |
+| `ShadowDom`         | Uses native Shadow DOM for true encapsulation                               | Scoped      | ✅ Modern browsers |
+| `None`              | No encapsulation; styles are global                                         | Global      | ✅ All browsers   |
+
+---
+
+### ✅ **When to Use Each**
+
+#### 🔹 `Emulated` (default)
+- Best for most apps.
+- Ensures styles are scoped without needing Shadow DOM support.
+
+#### 🔹 `ShadowDom`
+- Use when you want **true encapsulation** and your app targets **modern browsers**.
+- Ideal for **web components**.
+
+#### 🔹 `None`
+- Use when you want styles to be **global** (e.g., for shared themes or utility classes).
+- Be cautious: styles can **leak** and affect other components.
+
 
 ---
 ***
