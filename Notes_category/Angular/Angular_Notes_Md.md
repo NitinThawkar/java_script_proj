@@ -507,10 +507,145 @@ Angular allows you to provide services in several places:
 ***
 END HERE
 ***
+Here’s a clear and practical comparison between **`switchMap`** and **`mergeMap`** in Angular (RxJS):
+
+---
+
+### 🔹 `switchMap`
+
+- **Purpose**: Switch to a new observable and **cancel the previous one**.
+- **Behavior**: Only the **latest inner observable** is subscribed to.
+- **Use case**: Ideal for **autocomplete**, **live search**, or **HTTP requests** where only the latest result matters.
+
+**Example:**
+```ts
+searchInput.valueChanges.pipe(
+  switchMap(query => http.get(`/api/search?q=${query}`))
+).subscribe(result => console.log(result));
+```
+
+**✅ Best for**: Canceling outdated requests and avoiding race conditions.
+
+---
+
+### 🔹 `mergeMap`
+
+- **Purpose**: Merge multiple inner observables into one output stream.
+- **Behavior**: **All inner observables** are subscribed to concurrently.
+- **Use case**: Ideal for **parallel requests**, **logging**, or **event tracking**.
+
+**Example:**
+```ts
+clicks.pipe(
+  mergeMap(() => http.get('/api/log'))
+).subscribe(response => console.log(response));
+```
+
+**✅ Best for**: Handling multiple simultaneous tasks without cancellation.
+
+---
+
+### ✅ Summary Table
+
+| Feature               | `switchMap`                          | `mergeMap`                          |
+|-----------------------|--------------------------------------|-------------------------------------|
+| Cancels previous      | ✅ Yes                                | ❌ No                                |
+| Concurrency           | ❌ Only one active inner observable   | ✅ Multiple active inner observables |
+| Use case              | Live search, HTTP requests           | Parallel tasks, event logging       |
+| Output order          | Latest only                          | All outputs                         |
+
+---
+
+### ⚠️ When to Use What?
+
+| Scenario                                | Recommended |
+|----------------------------------------|-------------|
+| Autocomplete or live search            | ✅ `switchMap` |
+| Multiple API calls in parallel         | ✅ `mergeMap`  |
+| Cancel outdated requests               | ✅ `switchMap` |
+| Process every event independently      | ✅ `mergeMap`  |
+
+---
+
 
 ***
 END HERE
 ***
+### 🔍 What Are **Pipes** in Angular?
+
+**Pipes** are a way to transform data in templates. They take in a value, process it, and return a transformed value—**without changing the original data**.
+
+***
+
+### 🔧 **Common Use Cases**
+
+*   Formatting dates, numbers, currencies
+*   Filtering or transforming strings
+*   Custom logic for display
+
+**Example:**
+
+
+
+***
+
+### 🧪 **Pure vs Impure Pipes**
+
+Angular distinguishes between **pure** and **impure** pipes based on how often they re-evaluate and update.
+
+***
+
+### 🔹 **Pure Pipes**
+
+*   **Default behavior** in Angular.
+*   Called **only when the input value changes** (by reference).
+*   **Efficient** and fast.
+*   Ideal for **stateless transformations**.
+
+**Example:**
+
+```ts
+@Pipe({ name: 'myPipe' })
+export class MyPipe implements PipeTransform {
+  transform(value: string): string {
+    return value.toUpperCase();
+  }
+}
+```
+
+***
+
+### 🔹 **Impure Pipes**
+
+*   Called **on every change detection cycle**, even if the input hasn't changed.
+*   Can be **performance-intensive**.
+*   Useful when the pipe depends on **external state** or **mutable data**.
+
+**Usage:**
+
+```ts
+@Pipe({ name: 'myImpurePipe', pure: false })
+export class MyImpurePipe implements PipeTransform {
+  transform(value: any): any {
+    // logic that depends on changing external state
+  }
+}
+```
+
+***
+
+### ✅ Summary Table
+
+| Feature          | **Pure Pipe**                     | **Impure Pipe**                     |
+| ---------------- | --------------------------------- | ----------------------------------- |
+| Called when      | Input value changes               | Every change detection cycle        |
+| Performance      | High                              | Lower (can be expensive)            |
+| Use case         | Stateless, simple transformations | Mutable or external state-dependent |
+| Default behavior | ✅ Yes                             | ❌ No (must set `pure: false`)       |
+
+***
+
+Would you like a visual diagram showing how Angular handles change detection with pure vs impure pipes?
 
 ***
 END HERE
