@@ -1,5 +1,7 @@
 
-#####################################################################################################################################
+---
+***
+---
 In Angular, both `loadComponent` and `loadChildren` are used for **lazy loading**, but they serve different purposes and are used in different contexts.
 
 ---
