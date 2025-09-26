@@ -145,6 +145,59 @@ Angular provides **three types**:
 
 
 ---
+Here’s a detailed comparison between **`*ngIf`** and the **`hidden` property** in Angular:
+
+***
+
+### 🔹 `*ngIf`
+
+*   **Purpose**: Conditionally **adds or removes** an element from the DOM.
+*   **Syntax**:
+    
+*   **Behavior**:
+    *   If `isVisible` is `false`, the element is **not rendered** at all.
+    *   If `true`, the element is **inserted** into the DOM.
+*   **Use Case**: When you want to **completely remove** the element and its bindings from the DOM.
+
+***
+
+### 🔹 `hidden` Property
+
+*   **Purpose**: Conditionally **hides** an element using CSS (`display: none`).
+*   **Syntax**:
+    
+*   **Behavior**:
+    *   The element is **always present** in the DOM.
+    *   It’s just **not visible** to the user.
+*   **Use Case**: When you want to **preserve the element** in the DOM but hide it visually.
+
+***
+
+### ✅ Summary Table
+
+| Feature           | `*ngIf`                     | `[hidden]`                   |
+| ----------------- | --------------------------- | ---------------------------- |
+| DOM presence      | Removes element from DOM    | Keeps element in DOM         |
+| Performance       | Better for large components | Slightly faster for toggling |
+| Binding execution | Skipped when not in DOM     | Still active                 |
+| Use case          | Conditional rendering       | Conditional visibility       |
+| CSS control       | No                          | Yes (`display: none`)        |
+
+***
+
+### ⚠️ When to Use What?
+
+| Scenario                                   | Recommended |
+| ------------------------------------------ | ----------- |
+| Toggle visibility without removing element | `[hidden]`  |
+| Avoid unnecessary rendering or bindings    | `*ngIf`     |
+| Improve performance for large components   | `*ngIf`     |
+| Maintain layout but hide content           | `[hidden]`  |
+
+***
+
+END HERE
+
 ***
 ---
 In Angular, both `loadComponent` and `loadChildren` are used for **lazy loading**, but they serve different purposes and are used in different contexts.
