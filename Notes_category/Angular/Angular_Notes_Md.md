@@ -119,6 +119,8 @@ Angular modifies the DOM and CSS selectors to ensure styles apply **only to that
 END HERE
 ---
 
+***
+
 ### 🧪 Types of View Encapsulation
 
 Angular provides **three types**:
@@ -149,6 +151,8 @@ Angular provides **three types**:
 ---
 END HERE
 ---
+
+***
 Here’s a detailed comparison between **`*ngIf`** and the **`hidden` property** in Angular:
 
 ***
