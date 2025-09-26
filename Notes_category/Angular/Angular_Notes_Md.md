@@ -252,4 +252,136 @@ In Angular, both `loadComponent` and `loadChildren` are used for **lazy loading*
 | Routing support  | Basic (single component)                 | Advanced (nested routes, guards, etc.)  |
 | Ideal for        | Lightweight pages                        | Complex sections of the app             |
 
+***
+END HERE
+***
+Here’s a clear and practical comparison between **Observables** and **Promises** in Angular:
+
 ---
+
+### 🔹 **Observable**
+- **From**: RxJS (Reactive Extensions for JavaScript)
+- **Used for**: Handling **streams of data** over time (e.g., HTTP requests, user input, WebSocket).
+- **Can emit**: Multiple values over time.
+- **Lazy**: Doesn’t start until subscribed.
+- **Operators**: Can be transformed using RxJS operators (`map`, `filter`, `switchMap`, etc.).
+- **Cancellable**: You can unsubscribe to stop receiving values.
+
+**Example:**
+```ts
+this.http.get('/api/data').subscribe(data => {
+  console.log(data);
+});
+```
+
+---
+
+### 🔹 **Promise**
+- **From**: Native JavaScript
+- **Used for**: Handling a **single asynchronous event** (e.g., one-time HTTP request).
+- **Can emit**: Only one value (resolved or rejected).
+- **Eager**: Starts immediately when created.
+- **No operators**: Limited transformation capabilities.
+- **Not cancellable**: Once started, it runs to completion.
+
+**Example:**
+```ts
+fetch('/api/data')
+  .then(response => response.json())
+  .then(data => console.log(data));
+```
+
+---
+
+### ✅ Summary Table
+
+| Feature              | **Observable**                          | **Promise**                          |
+|----------------------|------------------------------------------|--------------------------------------|
+| Origin               | RxJS                                     | JavaScript                           |
+| Value emission       | Multiple over time                       | Single (resolved or rejected)        |
+| Laziness             | Lazy (starts on subscription)            | Eager (starts immediately)           |
+| Cancellation         | Can be unsubscribed                      | Cannot be cancelled                  |
+| Operators            | Rich set via RxJS                        | Limited (`then`, `catch`, `finally`) |
+| Use case             | Streams, events, reactive programming    | One-time async operations            |
+
+---
+
+### 🔍 When to Use What?
+
+| Scenario                                | Recommended |
+|----------------------------------------|-------------|
+| HTTP request (Angular `HttpClient`)    | ✅ Observable |
+| WebSocket or real-time data            | ✅ Observable |
+| One-time async task (e.g., file read)  | ✅ Promise    |
+| Complex data transformation            | ✅ Observable |
+| Simple async logic                     | ✅ Promise    |
+
+---
+***
+END HERE
+***
+Here’s a clear and practical comparison between **Observable** and **Subject** in Angular (powered by RxJS):
+
+---
+
+### 🔹 **Observable**
+- **Definition**: A stream that emits data over time.
+- **Nature**: **Unicast** – each subscriber gets its own independent execution.
+- **Usage**: Ideal for **data sources** like HTTP requests, timers, or user input.
+- **Example**:
+  ```ts
+  const obs$ = new Observable(observer => {
+    observer.next('Hello');
+  });
+
+  obs$.subscribe(val => console.log(val)); // Logs: Hello
+  ```
+
+---
+
+### 🔹 **Subject**
+- **Definition**: A special type of Observable that is also an **Observer**.
+- **Nature**: **Multicast** – all subscribers share the same execution and receive the same emitted values.
+- **Usage**: Ideal for **event broadcasting**, **shared state**, or **manual data pushing**.
+- **Example**:
+  ```ts
+  const subject$ = new Subject<string>();
+
+  subject$.subscribe(val => console.log('A:', val));
+  subject$.subscribe(val => console.log('B:', val));
+
+  subject$.next('Hello'); 
+  // Logs:
+  // A: Hello
+  // B: Hello
+  ```
+
+---
+
+### ✅ Summary Table
+
+| Feature               | **Observable**                          | **Subject**                             |
+|-----------------------|------------------------------------------|------------------------------------------|
+| Type                  | Data producer                            | Data producer + consumer                 |
+| Execution             | Unicast (individual for each subscriber) | Multicast (shared among subscribers)     |
+| Manual emission       | ❌ No                                     | ✅ Yes (`next()`, `error()`, `complete()`) |
+| Use case              | HTTP, timers, user input                 | Event bus, shared state, manual triggers |
+| Subscription behavior | Independent                              | Shared                                   |
+
+---
+
+### 🔍 When to Use What?
+
+| Scenario                                | Recommended |
+|----------------------------------------|-------------|
+| HTTP request or async stream           | ✅ Observable |
+| Broadcasting events to multiple parts  | ✅ Subject    |
+| Manual control over data emission      | ✅ Subject    |
+| Reactive pipelines with operators      | ✅ Observable |
+
+---
+
+Would you like a visual diagram showing how data flows differently in Observables vs Subjects?
+***
+END HERE
+***
