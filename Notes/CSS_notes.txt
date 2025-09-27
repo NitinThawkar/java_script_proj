@@ -21,6 +21,18 @@ Lorem Ipsum : <p>lorem*100</p>
 
  Short Hand command >>     tr>td*3>lorem3
 ============================================================================================ 
+
+| Universal Selector | *{} |
+| ID Selector | #id () |
+| Class Selector | .class () |
+| Type Selector | h1, h2,h3 (} |
+| Adjacent Sibling Selector | h1 +p() |
+| Child Selector | ul > li () |
+| General Sibling Selector | h1 ~ p{) |
+| Descendant Selector | pa(} |
+| Attribute Selector | - div[attribute="SomeValue"] () |
+============================================================================================
+
 Div Tag
 Div is a container used for other HTML elements
 
