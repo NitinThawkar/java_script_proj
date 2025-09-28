@@ -161,3 +161,208 @@ https://www.youtube.com/playlist?list=PL7JmcZV0UQtVNlr8JrjNWzLPtVMjGH_Z2
  https://github.com/freelancer-surender/Angular---Zero-to-Hero/tree/master/components-handson/src
  
  
+ ###################################################################################################################
+ 
+ 
+Directives
+
+Instructions in the DOM
+
+Components are also Directives
+
+Types of Directives:
+
+Structural Directives - modify the DOM 
+
+Attribute Directives - modify the properties of the DOM
+---------------------------------------------------------------------
+Attribute Directives
+Modify the properties of DOM
+Most common attribute directives - ngClass & ngStyle
+
+---------------------------------------------------------------------
+
+What is an Angular Service?
+
+Typescript class used for sharing data or functionality
+
+No need to specify any decorator
+
+Need to provide the service
+
+Service can be injected into another service
+
+---------------------------------------------------------------------
+Uses of Service
+
+Code Reuse
+
+Cross component Communication
+---------------------------------------------------------------------
+Added Parent and Child components demonstrating data passing via @Input in Angular. Parent component allows user to input a channel name, which is then displayed in the Child component. Updated HTML and CSS for both components and included them in the main app template.
+
+
+--------------------------------
+Template Reference Variable
+
+Also known as Local Reference Variable
+
+Can be added to any element in DOM
+
+Need to be passed to use it in typescript component
+
+Using @Viewchild we can access the element in typescript
+
+--------------------------------
+Lifecycle Hooks
+
+Components and Directives have Lifecycle Hooks
+
+Components have more Lifecycle Hooks than Directives
+
+Lifecycle Hooks
+
+ngOnlnit
+
+ngOnChanges
+
+ngDoCheck
+
+ngAfterContentInit
+
+ngAfterContentChecked
+
+ngAfterViewlnit
+
+ngAfterViewChecked
+
+ngDestroy
+--------------------------------------
+
+Forms
+
+- Collect data from users
+
+- Two types of form in Angular
+
+- Template Driven Forms
+
+- Model Driven forms (Reactive Forms)
+
+Template Driven Forms
+------------------------
+✅ Easy to create
+🧠 Logic resides in the template
+📝 Suitable for simple forms
+
+Reactive Forms
+
+🧠 Logic resides in the component
+💪 Robust, scalable, reusable & testable
+🧾 Suitable for complex forms
+------------------------
+########################################
+☑️
+
+
+<!-- Before
+<div *ngIf="loggedIn; else anonymousUser">
+The user is logged in
+</div>
+<ng-template #anonymousUser>
+The user is not logged in
+</ng-template>
+----------------
+<!-- After -- >
+@if (loggedIn) {
+The user is logged in
+} @else {
+The user is not logged in
+}
+-- >
+
+
+=================================================================================================================
+☑️
+<!-- Before -- >
+<div *ngIf="users ?. length == 0">Empty list of
+<ng-container *ngFor="let user of users;">
+{{ user.name }} x
+</ng-container>
+
+<br/>
+
+<!-- After -- >
+@for (user of users; track user.id) {
+{{ user.name }}
+} @empty {
+Empty list of users}
+=================================================================================================================
+☑️
+<! x- Before -- >
+<div *ngIf="users ?. length == 0">Empty list of
+<ng-container *ngFor="let user of users;">
+E{ user. name }
+</ng-container>
+
+<br/>
+
+<!-- After
+@for (user of users; track user.id) {
+{{ user.name }}
+} @empty {
+Empty list of users
+}
+=================================================================================================================
+☑️
+<ng-container [ngSwitch]="accessLevel">
+  <p *ngSwitchCase="'admin'">sadsa</p>
+  <p *ngSwitchCase="'moderator'">sdasdasdas</p>
+  <p *ngSwitchDefault>frfadsfd</p>
+</ng-container>
+
+
+@switch (accessLevel) {
+  @case ('admin') { <p>sadsa</p> }
+  @case ('moderator') { <p>sdasdasdas</p> }
+  @default { <p>frfadsfd</p> }
+}
+
+
+☑️
+@for(course of courses; track $index) {
+<app-courses></app-courses>
+} @empty {
+<div align="center">
+No Course added yet
+</div>}
+=================================================================================================================
+☑️
+goToGithub(url){
+window.open(url, '_blank');
+}
+
+=================================================================================================================
+☑️ inject service 
+--new
+private courseService = inject(CourseService);
+
+--old
+// private courseService: CourseService
+constructor(){}
+
+=================================================================================================================
+
+=================================================================================================================
+
+
+=================================================================================================================
+
+=================================================================================================================
+
+=================================================================================================================
+
+=================================================================================================================
+=================================================================================================================
+
+=================================================================================================================

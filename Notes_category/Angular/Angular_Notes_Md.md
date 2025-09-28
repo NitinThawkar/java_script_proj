@@ -1035,11 +1035,67 @@ this.router.navigate([{ outlets: { primary: ['dashboard'], sidebar: ['chat'] } }
 *   **Split-screen layouts**
 *   **Auxiliary views (e.g., chat, notifications)**
 
-***
-
 
 ***
 END HERE
+***
+The difference between `ngClass` and `NgStyle` in Angular lies in **how they apply styles and classes to HTML elements**:
+
+***
+
+### 🟦 `ngClass`
+
+*   **Purpose**: Dynamically adds or removes **CSS classes** on an element.
+
+*   **Type of Binding**: Class binding.
+
+*   **Usage**:
+    
+
+*   **Accepts**:
+    *   A string (single class name)
+    *   An array of strings (multiple class names)
+    *   An object with key-value pairs (class name as key, boolean as value)
+
+*   **Example**:
+    ```ts
+    isActive = true;
+    isDisabled = false;
+    ```
+    This will apply the class `active` but not `disabled`.
+
+***
+
+### 🟩 `NgStyle`
+
+*   **Purpose**: Dynamically sets **inline styles** on an element.
+
+*   **Type of Binding**: Style binding.
+
+*   **Usage**:
+    
+
+*   **Accepts**:
+    *   An object where keys are CSS style properties and values are the corresponding values.
+
+*   **Example**:
+    ```ts
+    textColor = 'blue';
+    fontSize = 16;
+    ```
+    This will render:
+    
+
+***
+
+### 🔍 Summary
+
+| Feature    | `ngClass`                          | `NgStyle`                        |
+| ---------- | ---------------------------------- | -------------------------------- |
+| Applies    | CSS classes                        | Inline styles                    |
+| Input type | String, Array, Object              | Object                           |
+| Use case   | Toggle classes based on conditions | Dynamically set style properties |
+
 ***
 
 
