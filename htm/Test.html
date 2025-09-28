@@ -4,239 +4,26 @@
 	<head>
 		<link rel="stylesheet" href="../Styles/otherPage.css">
 	</head>
+	
+	<hr/>
 
 	<body>
 		<table border=1  >
 
-    <tr>
-         <td>select  from on table and insert in to another
-</td>
-        <td>"INSERT INTO table2 (column1, column2, column3, ...)
-SELECT column1, column2, column3, ...
-FROM table1
-WHERE condition;"
-</td>
-        <td>INSERT INTO tab_2 SELECT * FROM tab_1 WHERE cond;
-</td>
-        <td>"INSERT INTO TABLE1 (id, col_1, col_2, col_3)
-SELECT id, 'data1', 'data2', 'data3'
-FROM TABLE2
-WHERE col_a = 'something';"
-</td>
-        <td>https://www.w3schools.com/sql/sql_insert_into_select.asp
-</td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>Json
-</td>
-        <td>"SELECT 
-   id, 
-   data::json->'name' as name,
-   data::json->'author' ->> 'last_name' as author
-FROM books;"
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>https://stackoverflow.com/questions/32626261/how-to-parse-json-in-postgresql
-</td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>UTC date 
-</td>
-        <td>select now() at time zone 'utc'
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>https://stackoverflow.com/questions/16609724/using-current-time-in-utc-as-default-value-in-postgresql
-</td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>Get column Names  
-</td>
-        <td> ##replace systems with Table Name
-</td>
-        <td>"SELECT 
-        a.attname as ""Column"", 
-        pg_catalog.format_type(a.atttypid, a.atttypmod) as ""Datatype"" 
-    FROM 
-        pg_catalog.pg_attribute a 
-    WHERE 
-        a.attnum > 0 
-        AND NOT a.attisdropped 
-        AND a.attrelid = ( 
-            SELECT c.oid 
-            FROM pg_catalog.pg_class c 
-                LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace 
-            WHERE c.relname ~ '^(systems)$' 
-                AND pg_catalog.pg_table_is_visible(c.oid) 
-        ); "
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>Get column Names 
-</td>
-        <td>"SELECT * 
 
-  FROM information_schema.columns 
-
- WHERE table_schema = 'public' 
-
-   AND table_name   = 'systems' 
-
-     ; "
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+	
+    <tr>
+        <td>Test_1</td>
+        <td>Test_2</td>
+        <td>Test_3</td>
+        <td>Test_4</td>
+        <td>Test_5</td>
+        <td>Test_6</td>
+        <td>Test_7</td>
     </tr>
 	
     <tr>
-         <td>Unlock User 
-</td>
-        <td>EIMS database
-</td>
-        <td>"Super admin Account Lock
-UPDATE [User]
-    SET  IsaccLock = 0,
-    LockAccountDate=NULL,
-    LockTypeID = NULL,
-    UnlockAccountDate=GETDATE()
-    WHERE UserName = 'superadmin'"
-</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>New Guid
-</td>
-        <td>uuid_generate_v4()
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>row count for all your tables in Postgres
-</td>
-        <td>"
-WITH    tbl AS (
- SELECT Table_Schema, Table_Name
- FROM   information_schema.Tables
- WHERE  Table_Name NOT LIKE 'pg_%'
-        AND Table_Schema IN ('public')
-)
-SELECT  Table_Schema AS Schema_Name
-,       Table_Name
-,       (xpath('/row/c/text()', query_to_xml(format(
-          'SELECT count(*) AS c FROM %I.%I', Table_Schema, Table_Name
-        ), FALSE, TRUE, '')))[1]::text::int AS Records_Count
-FROM    tbl
-ORDER   BY Records_Count DESC ,table_name Asc;"
-</td>
-        <td>https://stackoverflow.com/questions/2596670/how-do-you-find-the-row-count-for-all-your-tables-in-postgres</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td></td>
-        <td>List of dependant tables
-</td>
-        <td>"SELECT
-conname AS constraint_name,
-conrelid::regclass AS table_name,
-connamespace::regnamespace AS schema_name,
-pg_get_constraintdef(c.oid) AS constraint_definition
-FROM
-pg_constraint c
-WHERE
-confrelid = 'tenant_shell.technologies'::regclass;"
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td></td>
-        <td>NOT EXISTS or If NOT EXISTS
-</td>
-        <td>"INSERT INTO tenant_shell.segments(
-    id, name, asset_id, segment_type_id, location, date_created, date_updated, user_created, user_updated, active)
-SELECT 14, 'Amine Vent', 1, 14, 'location1', '2025-03-21 11:47:32.724305+00', '2025-03-21 11:47:32.724305+00', 1, 1, true
-WHERE NOT EXISTS (
-    SELECT 1 FROM tenant_shell.segments WHERE id = 14
-);"
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>Table datatype and  length
-</td>
-        <td>replace schema and table name
-</td>
-        <td>"SELECT 
-    column_name, 
-    data_type, 
-    character_maximum_length 
-FROM 
-    information_schema.columns 
-WHERE 
-    table_schema = 'tenant_shell' 
-    AND table_name = 'assets';"
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td>List of table from database
-</td>
-        <td>"SELECT table_name
-FROM information_schema.tables
-WHERE table_schema = 'tenant_shell' --AND table_type = 'BASE TABLE'
-ORDER BY table_name;"
-</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -246,17 +33,7 @@ ORDER BY table_name;"
     </tr>
 	
     <tr>
-         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -266,7 +43,7 @@ ORDER BY table_name;"
     </tr>
 	
     <tr>
-         <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -276,7 +53,7 @@ ORDER BY table_name;"
     </tr>
 	
     <tr>
-         <td></td>
+        <td></td>
         <td></td>
         <td></td>
         <td></td>
@@ -284,8 +61,11 @@ ORDER BY table_name;"
         <td></td>
         <td></td>
     </tr>
+	
 	
 </table>
+
+	<hr/>
 		</body>
 
 	</html>
