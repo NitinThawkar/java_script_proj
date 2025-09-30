@@ -112,9 +112,25 @@ number
 set
 string
 ======================================================================================================
+installation
+
+install vs code 
+add plugin :  JavaScript and TypeScript Nightly 
+and prettier
+ES lint
+install node js
+install typescript npm install -g typescript
+
+
+
+
+======================================================================================================
 ▶️ Install and run
   1]install node js and npm 
+  2]
   2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript   ( -g for globle )
+  
+  compire version tsc -v
 -------------------------------------------------------------------- 
   Installation
 # Locally in your project.
@@ -131,7 +147,10 @@ npm install -D tslib @types/node
 ☑️use npx for window's  get typescript version
     tsc --version
 npx tsc --version
+-----
+compile file ==> tsc  <filepath>/filenale.ts    ==> compile file
 
+run the file => node <filepath>/filenale.ja    ==> note js is compile file  
 --------------------------------------------------------------------
 create config file  command
 	tsc --init
@@ -140,7 +159,7 @@ npx tsc --init
 compile typescript file
 
 in terminal type 
-npx tsc fileName.ts   			✏️=> for manual compile and run  also create .js file
+npx tsc fileName.ts   			 ✏️=> for manual compile and run  also create .js file
 npx tsc fileName.ts --watch 	✏️=> for Auto compile and run
 -------
 we can run transconpile js file with node also
@@ -149,9 +168,9 @@ node <dir>/fileName.js         ✏️=> for manual transconpile .js file, append
 ts-node fileName.ts 					 ✏️=> run directly
 --------------------------------------------------------------------
 To run ts file directly
-npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly  
+npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly   no  need to type two separete command for cmpile and run
 
-ts-node fileName.ts run ts file directly 
+ts-node <filepath> fileName.ts run ts file directly 
 
 ======================================================================================================
 "use strict";
