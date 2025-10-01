@@ -352,7 +352,17 @@ private courseService = inject(CourseService);
 constructor(){}
 
 =================================================================================================================
+☑️ Types of Router Guards
 
+CanActivate
+
+CanActivateChild
+
+CanLoad
+
+CanDeactivate
+
+Resolve
 =================================================================================================================
 
 
@@ -364,5 +374,58 @@ constructor(){}
 
 =================================================================================================================
 =================================================================================================================
-
+##	Angular Custom Directives | How to create custom directives in angular | Advanced Angular
+##	Angular Route Guards | Ensuring Secure Navigation | Advanced Angular | Hero to Superhero
+##	Promises and Observables in Angular: Explained with Examples | Advanced Angular
+##	forkJoin | Simplifying Asynchronous Operations | Advanced Angular | Hero to Superhero
+##	HTTP Interceptor | Advanced Angular | Hero to Superhero
+##	trackBy | Optimizing Performance with ngFor's trackBy | Advanced Angular | Hero to Superhero
+##	Custom Toastr | Taking Your Notifications to the Next Level | Advanced Angular | Hero to Superhero
+##	Custom Spinner | Create Engaging Loading Effects | Advanced Angular | Hero to Superhero
+##	ActivatedRoute vs ActivatedRouteSnapshot | Key Differences | Advanced Angular | Hero to Superhero
+##	Dark Light Theme Toggle: A Simple Solution | Advanced Angular | Hero to Superhero
+##	Unlocking the Power of SCSS | Advanced Angular | Hero to Superhero
+##	When to use ng-content, ng-template, and ng-container | Advanced Angular | Hero to Superhero
+##	Async Pipe | Simplifying Asynchronous Data Handling | Advanced Angular | Hero to Superhero
+##	DOM Sanitizer | XSS Attack | Ensuring Secure Web Content | Advanced Angular | Hero to Superhero
+##	Custom Validator | Boosting Form Validation Like a Pro | Advanced Angular | Hero to Superhero
+##	Change Detection | How Angular Tracks and Updates Data | Advanced Angular | Hero to Superhero
+##	How to integrate Firebase in Angular: A Step-by-Step Guide | Advanced Angular
+##	How to integrate Chart JS in Angular | Advanced Angular
+##	Angular Dashboard Creation: Step-by-Step Tutorial | Advanced Angular | Hero to Superhero
+##	Angular User Notification: A Step-by-Step Guide | Advanced Angular | Hero to Superhero
+##	Mastering ngFor: An In-Depth Guide to Powerful Directive | Advanced Angular | Hero to Superhero
+##	How to create a Carousel in Angular | Building a Carousel Component from Scratch | Advanced Angular
+##	Step-by-Step Guide: Integrating Payment Gateway in Angular | Advanced Angular | Hero to Superhero
+##	How to emit event to app component having router outlet | Advanced Angular | Hero to Superhero
+##	Dependency Injection in-depth | Advanced Angular
+##	Resolution Modifiers in Angular | Advanced Angular
+##	Dependency Providers in Angular | Advanced Angular
+##	Power of angular pipes | Angular
+##	Power of lazy loading | Angular
+##	Master Standalone Components: The Ultimate Guide to Angular's Revolutionary Feature
+##	Angular Typed Reactive Forms: The Comprehensive Guide
+##	Angular 14: Page Title Magic! (No More Headaches) | Streamlined Page Title
+##	Boost Your Core Web Vitals with Angular 15's NgOptimizedImage Magic
+##	Understanding Route-Specific Dependency Management in Angular
+##	Migrate An Angular 11 Project to 17: Step-by-Step Guide
+##	Master Angular Routing Without NgModules | Router Standalone API
+##	Reuse Directives | Directive Composition API
+##	Angular Functional Route Guards Explained
+##	Angular CanMatch Route Guard | Why is CanLoad deprecated?
+##	Self-Closing Tags in Angular 16 Explained [Quick Guide]
+##	Server-Side Rendering (SSR) & Hydration in Angular Explained
+##	Angular Signals: The Complete Guide
+##	What's new in Angular 18
+##	New Control Flow in Angular 17
+##	Deferrable Views in Angular 17
+##	Angular Signal Input Output and Query (ViewChild)
+##	Angular 18 New Feature: redirectTo function
+##	Angular 18 New Feature: Fallback (Default) content for ng-content
+##	Angular 18 New Feature: @let directive
+##	What's new in Angular v19
+##	Angular 19 New Feature: linkedSignal
+##	Angular 19 New Feature: Resource API
+##	Angular Micro Frontend Tutorial 🔥 | Step-by-Step Guide with Module Federation
+##	Angular 20 First Look
 =================================================================================================================
