@@ -29,6 +29,15 @@ ng serve  => to run app or start development server
 -------------
 
 if we delete node_module we can recreate with => npm install
+
+------------
+☑️ How to know Installed version
+Open your terminal or command prompt.
+Navigate to the root directory of your Angular project.
+Execute the following command:
+Code
+
+  ng version
 ------------
 ☑️ install bootstrap
     npm install bootstrap or npm install bootstrap@5.3.8

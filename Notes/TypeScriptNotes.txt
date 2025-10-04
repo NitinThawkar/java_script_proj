@@ -11,6 +11,45 @@ reserved keywords : https://github.com/microsoft/TypeScript/issues/2536
 ======================================================================================================
 ✨ TYPE Script ✨
 ======================================================================================================
+
+### **TypeScript Course Outline**
+
+1. What is TypeScript?  
+2. TypeScript vs JavaScript  
+3. Setup VS Code Editor  
+4. How TypeScript Works & Why?  
+5. Pros & Cons of TypeScript  
+6. Setup TypeScript Compiler  
+7. Debugging TypeScript Applications  
+8. Basic Types  
+9. `any` type  
+10. Arrays  
+11. Tuples  
+12. Enums  
+13. `unknown` type  
+14. `never` type  
+15. `void` type  
+16. Type Inference & Type Assertions  
+17. Union types  
+18. Type Narrowing  
+19. Interfaces & Type Aliases 
+21. Functions  
+22. Practice problems (4)  
+23. Classes & Access Modifiers  
+24. Practice problems (2)  
+25. Generics  
+26. Literal types  
+27. Type guards  
+28. `keyof` operator  
+29. Index signature  
+30. Utility types  
+31. Modules & Namespaces  
+32. Decorators  
+33. Async Programming  
+34. Non-null Assertion  
+35. Interview Based Questions 
+
+======================================================================================================
 reserved keywords
 
 TypeScript incorporates all JavaScript keywords and introduces its own set of keywords for type-related features and other functionalities.
