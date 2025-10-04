@@ -1,130 +1,171 @@
-<! docktype html>
+<!DOCTYPE html>
 <html>
-	<head>
-<style>
-body {
- // background-color: lightblue;
-}
 
-h4 {
-  //color: white;
-  text-align: center;
-}
+<head>
+    <title>My Project Repoes</title>
+    <script>
+        function CallMe(filePath) {
+            try {
+                // Note: Direct file system access is restricted in browsers for security reasons
+                // This will only work for URLs, not local file paths
+                if (filePath && filePath.trim() !== '') {
+                    window.open(filePath, '_blank');
+                } else {
+                    alert('No file path provided');
+                }
+            } catch (error) {
+                console.error('Error opening file:', error);
+                alert('Unable to open the specified path');
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* background-color: lightblue; */
+        }
 
-td {
-  font-family: verdana;
-  font-size: 15px;  
-  padding-left: 3px;
-  padding-right: 3px;
-}
-</style>
-	</head>
-	<body>
-		<title>My Project Repoes</title>
-		<h2>✨ My Project Repoes ✨</h2>
-		<hr>
-			<div id="maindiv">
-				<h3>Go to Home Page : <a href="../index.html">Home</a>
-					<h3>Go to Other : <a href="./Other.html">Other</a>
-						<hr>
-						<h3> My Project Repoes</h3>
-			<table border="1">
-			<tr>
-			        <td><h4>Tech Name</h4></td>
-					<td><h4>Repo Name</h4></td>
-					<td><h4>Discription</h4></td>
-					<td><h4>Local Path</h4></td>
-					<td><h4>Local Path Link</h4></td>
-					<td><h4>Git Path</h4></td>
-					<td><h4>Remark</h4></td>
-					
-				</tr>
-				<tr>
-					<td>Notes</td>
-					<td>Notes</td>
-					<td>My Tech Notes</td>
-					<td>C:\LocalCode\java_script_proj\Notes</td>
-					<td><a href="C:\LocalCode\java_script_proj\Notes" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/java_script_proj" target="_blank">My Tech Notes</a></td>	
-					<td>IMP</td>
-				</tr>
-				<tr>
-					<td>React</td>
-					<td>MyReactJSproj</td>
-					<td>React project with JS</td>
-					<td>C:\LocalCode\MyReactJSproj\my-react-js 	</td>
-					<td><a href="C:\LocalCode\MyReactJSproj\my-react-js" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/MyReactJSproj.git" target="_blank">React project with JS</a></td>	
-					<td>its have 2 folder</td>
-				</tr>
-				<tr>
-					<td>React</td>
-					<td>MyReactTSproj</td>
-					<td>React project with Type script</td>
-					<td>C:\LocalCode\MyReactTSproj 	</td>
-					<td><a href="C:\LocalCode\MyReactTSproj" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/MyReactJSproj.git" target="_blank">React project with Typescript</a></td>	
-					<td>its main folder</td>
-				</tr>
-				
-				<tr>
-					<td>Java Script</td>
-					<td>java_script_proj</td>
-					<td>My Java Script project</td>
-					<td>C:\LocalCode\java_script_proj\Scripts</td>
-					<td><a href="C:\LocalCode\java_script_proj\Scripts" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/java_script_proj" target="_blank">My Java Script project</a></td>	
-					<td>IMP</td>
-				</tr>
-				<tr>
-					<td>Angular</td>
-					<td>MyAngularProjNgModule</td>
-					<td>Angular_NgModule_proj</td>
-					<td>C:\LocalCode\MyAngularProjNgModule</td>
-					<td><a href="C:\LocalCode\MyAngularProjNgModule" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/MyAngularProjNgModule" target="_blank">My Angular_NgModule_proj</a></td>	
-					<td>IMP</td>
-				</tr>
-				<tr>
-					<td>Python</td>
-					<td>MyPythonProj</td>
-					<td>My Python project</td>
-					<td>C:\LocalCode\MyPythonProj</td>
-					<td><a href="C:\LocalCode\MyPythonProj" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/MyPythonProj" target="_blank">My Python project</a></td>	
-					<td></td>
-				</tr>
-				<tr>
-					<td>JupyterLab</td>
-					<td>JupyterLab</td>
-					<td>My JupyterLab Python project</td>
-					<td>C:\LocalCode\JupyterLab</td>
-					<td><a href="C:\LocalCode\JupyterLab" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/JupyterLab" target="_blank">My JupyterLab Python project</a></td>	
-					<td></td>
-				</tr>
+        h4 {
+            /* color: white; */
+            text-align: center;
+        }
 
-				<tr>
-					<td>Notes</td>
-					<td>Notes</td>
-					<td>My Notes Not Much Use</td>
-					<td>C:\LocalCode\NitLocRepoFolder\Notes</td>
-					<td><a href="C:\LocalCode\NitLocRepoFolder\Notes" target="_blank">Local Sys Path</a></td>
-					<td><a href="https://github.com/NitinThawkar/Notes" target="_blank">My Notes</a></td>	
-					<td></td>
-				</tr>
-				
-				<tr>
-					<td>Typescript</td>
-					<td>Typescript</td>
-					<td>My Notes Not Much Use</td>
-					<td>C:\LocalCode\My-Typescript-Proj</td>
-					<td><a href="C:\LocalCode\My-Typescript-Proj" target="_blank">Local Sys Path</a></td>
-					<td><a href="#" target="_blank">My Notes</a></td>	
-					<td></td>
-				</tr>
-			</table>
-			<hr/>
-					</div>
-				</body>
-			</html>
+        td {
+            font-family: verdana;
+            font-size: 15px;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>✨ My Project Repoes ✨</h2>
+    <hr>
+    <div id="maindiv">
+        <h3>Go to Home Page : <a href="../index.html">Home</a></h3>
+        <h3>Go to Other : <a href="./Other.html">Other</a></h3>
+        <hr>
+        <h3> My Project Repoes</h3>
+        <table border="1">
+            <tr>
+                <td>
+                    <h4>Tech Name</h4>
+                </td>
+                <td>
+                    <h4>Repo Name</h4>
+                </td>
+                <td>
+                    <h4>Discription</h4>
+                </td>
+                <td>
+                    <h4>Local Path</h4>
+                </td>
+                <td>
+                    <h4>Local Path Link</h4>
+                </td>
+                <td>
+                    <h4>Git Path</h4>
+                </td>
+                <td>
+                    <h4>Remark</h4>
+                </td>
+                <td>
+                    <h4>Action</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>Notes</td>
+                <td>Notes</td>
+                <td>My Tech Notes</td>
+                <td>C:\LocalCode\java_script_proj\Notes</td>
+                <td><a href="file:///C:/LocalCode/java_script_proj/Notes" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/java_script_proj" target="_blank">My Tech Notes</a></td>
+                <td>IMP</td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/java_script_proj/Notes')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>MyReactJSproj</td>
+                <td>React project with JS</td>
+                <td>C:\LocalCode\MyReactJSproj\my-react-js</td>
+                <td><a href="file:///C:/LocalCode/MyReactJSproj/my-react-js" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/MyReactJSproj.git" target="_blank">React project with JS</a></td>
+                <td>its have 2 folder</td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/MyReactJSproj/my-react-js')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>React</td>
+                <td>MyReactTSproj</td>
+                <td>React project with Type script</td>
+                <td>C:\LocalCode\MyReactTSproj</td>
+                <td><a href="file:///C:/LocalCode/MyReactTSproj" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/MyReactTSproj.git" target="_blank">React project with Typescript</a></td>
+                <td>its main folder</td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/MyReactTSproj')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>Java Script</td>
+                <td>java_script_proj</td>
+                <td>My Java Script project</td>
+                <td>C:\LocalCode\java_script_proj\Scripts</td>
+                <td><a href="file:///C:/LocalCode/java_script_proj/Scripts" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/java_script_proj" target="_blank">My Java Script project</a></td>
+                <td>IMP</td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/java_script_proj/Scripts')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>Angular</td>
+                <td>MyAngularProjNgModule</td>
+                <td>Angular_NgModule_proj</td>
+                <td>C:\LocalCode\MyAngularProjNgModule</td>
+                <td><a href="file:///C:/LocalCode/MyAngularProjNgModule" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/MyAngularProjNgModule" target="_blank">My Angular_NgModule_proj</a></td>
+                <td>IMP</td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/MyAngularProjNgModule')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>MyPythonProj</td>
+                <td>My Python project</td>
+                <td>C:\LocalCode\MyPythonProj</td>
+                <td><a href="file:///C:/LocalCode/MyPythonProj" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/MyPythonProj" target="_blank">My Python project</a></td>
+                <td></td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/MyPythonProj')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>JupyterLab</td>
+                <td>JupyterLab</td>
+                <td>My JupyterLab Python project</td>
+                <td>C:\LocalCode\JupyterLab</td>
+                <td><a href="file:///C:/LocalCode/JupyterLab" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/JupyterLab" target="_blank">My JupyterLab Python project</a></td>
+                <td></td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/JupyterLab')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>Notes</td>
+                <td>Notes</td>
+                <td>My Notes Not Much Use</td>
+                <td>C:\LocalCode\NitLocRepoFolder\Notes</td>
+                <td><a href="file:///C:/LocalCode/NitLocRepoFolder/Notes" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/Notes" target="_blank">My Notes</a></td>
+                <td></td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/NitLocRepoFolder/Notes')" value="Open Folder" /></td>
+            </tr>
+            <tr>
+                <td>Typescript</td>
+                <td>Typescript</td>
+                <td>My Typescript Project</td>
+                <td>C:\LocalCode\My-Typescript-Proj</td>
+                <td><a href="file:///C:/LocalCode/My-Typescript-Proj" target="_blank">Local Sys Path</a></td>
+                <td><a href="https://github.com/NitinThawkar/My-Typescript-Proj" target="_blank">My Typescript Project</a></td>
+                <td></td>
+                <td><input type="button" onClick="CallMe('file:///C:/LocalCode/My-Typescript-Proj')" value="Open Folder" /></td>
+            </tr>
+        </table>
+        <hr />
+    </div>
+</body>
+
+</html>
