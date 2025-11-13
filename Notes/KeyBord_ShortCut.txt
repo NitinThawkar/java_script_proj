@@ -6,13 +6,24 @@
 ----------------------------------------------------------------------------
 ✨ IntelliJ Java keybord short cut ✨   ☑️️
 
-ALT + ENTER => on code line
+ALT + ENTER => on code line AI Copilote and etc
 ctrl+D => duplicate lines 
 ctrl + shif + f => serch anywhere in project
 ctrl + shif + A => search any command  => type duplicate , serch etc
 ctrl + Alt + L => indentation, formating the code
 ctrl + Alt + T => wrap code in if,try,for block etc
 sout => System.out.println();
+
+
+Search Everywhere  => Double Shift
+
+Go to File  => Ctrl+Shift+N
+
+Recent Files  => Ctrl+E
+
+Navigation Bar  => Alt+Home
+
+
 
 ----------------------------------------------------------------------------
 ✨IntelliJ plugin ✨ 
@@ -34,7 +45,7 @@ ALT + left / right Arrow  => previous / next file or line  moving  navigate betw
 
 CTRL + I  => On code line will open Git Copilot   ☑️
 
-CTRL + ALT + I  => open chat  
+CTRL + ALT + I  => open AI chat  
 
 CTRL + SHIFT + P  => show All command
 
@@ -44,6 +55,11 @@ CTRL + SHIF + F => serch anywhere in project
 
 CTRL + `  (back tick) => Toggle terminal
 
+CTRL + ,  (comma) =>  open Settings
+
+CTRL + C  CTRL + K+C   comment multiple lines
+
+CTRL + U  CTRL + K+U   Un comment multiple lines
 -------------------------------------------------
 General VS Code Shortcuts (helpful for Copilot usage): 
 Ctrl+Space: Initiates code completion.
@@ -75,6 +91,9 @@ formatOnSave": true
 ✨ REACT ✨
 
 ES 6 => type  command "rafce"  in component file , create blank react component  (es 6 plugin requied)
+ES 6 => type  command "rfce"  in component file , create blank react component  (es 6 plugin requied)
+
+
 ======================================================================================================
 ✨ Emoji ✨
 emoji => press Window + . (dot) => special symbol char character
@@ -166,6 +185,9 @@ Ctrl + Left - goes one word left,
 
 -------------------------------------------------------
 https://keycombiner.com/collections/notepad/
+
+-------------------------------------------------------
+Date Insert => File Menu EDIT > Insert >date 
 -------------------------------------------------------
 Ctrl + Shif +F   find and replace
 Ctrl + Shif +H
@@ -202,9 +224,14 @@ lowercase	ctrl + u
 Proper Case	alt + u    => example : Cursor Position Goes To Start Of First Line Page
 Proper Case (blend)	alt + shift + u
 ======================================================================================================
-
+✨ ANGULAR angular✨
+-g means globalr. we can access out side of folder else it will local access inside folder only
+install angular  => npm install -g @angular/cli
 ======================================================================================================
+✨ Other Short Cut✨
 
+Node : check node version  : node --version
+npm  :check npm version : nom -v
 ======================================================================================================
 
 ======================================================================================================

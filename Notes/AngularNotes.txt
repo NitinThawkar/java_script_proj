@@ -1,4 +1,47 @@
-✨ Angular 
+✨ (star)  
+✏️ (Pencil)  ☑️️
+✍️ (Person writing)
+✒️ (Black pen)
+✍️ (Writing hand)
+=================================================================================
+✨ ANGULAR angular✨
+
+=================================================================================
+installation
+
+install node js.
+install npm
+
+Node : check node version  : node --version
+npm  :check npm version : nom -v
+
+CLI version : ng -v
+
+install angular  => npm install -g @angular/cli
+
+-g means global. we can access out side of folder else it will local access inside folder only
+----------------
+go inside of your prefer folder and run command
+ng new my-first-app  => this will create folder and source fle in that
+-------------
+go inside for my-first-app
+ng serve  => to run app or start development server
+-------------
+
+if we delete node_module we can recreate with => npm install
+
+------------
+☑️ How to know Installed version
+Open your terminal or command prompt.
+Navigate to the root directory of your Angular project.
+Execute the following command:
+Code
+
+  ng version
+------------
+☑️ install bootstrap
+    npm install bootstrap or npm install bootstrap@5.3.8
+=================================================================================
 
    ng new --no-standalone
    
@@ -7,7 +50,61 @@
    ng new MyAngularProjStandAlone
 
 =================================================================================
+✨ CLI Commands (run in terminal)
 
+ ☑️ ng g c home =>  create home component folder and  create ollowing files
+
+#  home.component.css
+<> home.component.html
+TS home.component.spec.ts
+TS home.component.ts
+
+------------
+ ☑️ ng g s <service-Name>    =>  create service for data sharing and create following files
+ 
+ <service-Name>.service.ts =>  myserv.service.ts and my.service.spec.ts
+ myserv.service.spec.ts
+ ------------
+
+            
+
+=================================================================================
+✨ Data Binding 
+
+
+=================================================================================
+✨ 
+
+passing data parent to child : use propety binging Approch
+1]use @input decorator in child property
+-------------------------------
+passing data child to parent : use event binding and event emmiter Approch
+1]create event in child component
+2]cretae event emmiter in child  and decorate it with @output
+3] create function  and inside function emit child value or data (parent component will recive this emitted event) 
+
+4] in parent component use event binding and recive event form child component
+ 
+ 
+ this will use emmiteat patent child or not more than two levels
+ parent --> child ---> grandchild
+ 
+ 
+ for better use we will use servces 
+=================================================================================
+---------------------------------------------------------
+What is an Angular Service?
+
+Typescript class used for sharing data or functionality
+
+No need to specify any decorator
+
+Need to provide the service
+
+Service can be injected into another service
+
+---------------------------------------------------------
+================================================================================
 @injectable >> service >>provider
 ng Switch ngSwitch
 
@@ -69,4 +166,279 @@ java
 python
 
 https://www.youtube.com/playlist?list=PL7JmcZV0UQtVNlr8JrjNWzLPtVMjGH_Z2
-  
+ --------------------------------------------------------------------------------------------
+ https://github.com/freelancer-surender/Angular---Zero-to-Hero/tree/master/components-handson/src
+ 
+ 
+ ###################################################################################################################
+ 
+ 
+Directives
+
+Instructions in the DOM
+
+Components are also Directives
+
+Types of Directives:
+
+Structural Directives - modify the DOM 
+
+Attribute Directives - modify the properties of the DOM
+---------------------------------------------------------------------
+Attribute Directives
+Modify the properties of DOM
+Most common attribute directives - ngClass & ngStyle
+
+---------------------------------------------------------------------
+
+What is an Angular Service?
+
+Typescript class used for sharing data or functionality
+
+No need to specify any decorator
+
+Need to provide the service
+
+Service can be injected into another service
+
+---------------------------------------------------------------------
+Uses of Service
+
+Code Reuse
+
+Cross component Communication
+---------------------------------------------------------------------
+Added Parent and Child components demonstrating data passing via @Input in Angular. Parent component allows user to input a channel name, which is then displayed in the Child component. Updated HTML and CSS for both components and included them in the main app template.
+
+
+--------------------------------
+Template Reference Variable
+
+Also known as Local Reference Variable
+
+Can be added to any element in DOM
+
+Need to be passed to use it in typescript component
+
+Using @Viewchild we can access the element in typescript
+
+--------------------------------
+Lifecycle Hooks
+
+Components and Directives have Lifecycle Hooks
+
+Components have more Lifecycle Hooks than Directives
+
+Lifecycle Hooks
+
+ngOnlnit
+
+ngOnChanges
+
+ngDoCheck
+
+ngAfterContentInit
+
+ngAfterContentChecked
+
+ngAfterViewlnit
+
+ngAfterViewChecked
+
+ngDestroy
+--------------------------------------
+
+Forms
+
+- Collect data from users
+
+- Two types of form in Angular
+
+- Template Driven Forms
+
+- Model Driven forms (Reactive Forms)
+
+Template Driven Forms
+------------------------
+✅ Easy to create
+🧠 Logic resides in the template
+📝 Suitable for simple forms
+
+Reactive Forms
+
+🧠 Logic resides in the component
+💪 Robust, scalable, reusable & testable
+🧾 Suitable for complex forms
+------------------------
+########################################
+☑️
+
+
+<!-- Before
+<div *ngIf="loggedIn; else anonymousUser">
+The user is logged in
+</div>
+<ng-template #anonymousUser>
+The user is not logged in
+</ng-template>
+----------------
+<!-- After -- >
+@if (loggedIn) {
+The user is logged in
+} @else {
+The user is not logged in
+}
+-- >
+
+
+=================================================================================================================
+☑️
+<!-- Before -- >
+<div *ngIf="users ?. length == 0">Empty list of
+<ng-container *ngFor="let user of users;">
+{{ user.name }} x
+</ng-container>
+
+<br/>
+
+<!-- After -- >
+@for (user of users; track user.id) {
+{{ user.name }}
+} @empty {
+Empty list of users}
+=================================================================================================================
+☑️
+<! x- Before -- >
+<div *ngIf="users ?. length == 0">Empty list of
+<ng-container *ngFor="let user of users;">
+E{ user. name }
+</ng-container>
+
+<br/>
+
+<!-- After
+@for (user of users; track user.id) {
+{{ user.name }}
+} @empty {
+Empty list of users
+}
+=================================================================================================================
+☑️
+<ng-container [ngSwitch]="accessLevel">
+  <p *ngSwitchCase="'admin'">sadsa</p>
+  <p *ngSwitchCase="'moderator'">sdasdasdas</p>
+  <p *ngSwitchDefault>frfadsfd</p>
+</ng-container>
+
+
+@switch (accessLevel) {
+  @case ('admin') { <p>sadsa</p> }
+  @case ('moderator') { <p>sdasdasdas</p> }
+  @default { <p>frfadsfd</p> }
+}
+
+
+☑️
+@for(course of courses; track $index) {
+<app-courses></app-courses>
+} @empty {
+<div align="center">
+No Course added yet
+</div>}
+=================================================================================================================
+☑️
+goToGithub(url){
+window.open(url, '_blank');
+}
+
+=================================================================================================================
+☑️ inject service 
+--new
+private courseService = inject(CourseService);
+
+--old
+// private courseService: CourseService
+constructor(){}
+
+=================================================================================================================
+☑️ Types of Router Guards
+
+CanActivate
+
+CanActivateChild
+
+CanLoad
+
+CanDeactivate
+
+Resolve
+=================================================================================================================
+
+☑️ What is HTTP Interceptor ?
+
+Unique type of Angular Service, that we can implement to
+intercept HTTP Request
+
+=================================================================================================================
+
+=================================================================================================================
+
+=================================================================================================================
+
+=================================================================================================================
+=================================================================================================================
+##	Angular Custom Directives | How to create custom directives in angular | Advanced Angular
+##	Angular Route Guards | Ensuring Secure Navigation | Advanced Angular | Hero to Superhero
+##	Promises and Observables in Angular: Explained with Examples | Advanced Angular
+##	forkJoin | Simplifying Asynchronous Operations | Advanced Angular | Hero to Superhero
+##	HTTP Interceptor | Advanced Angular | Hero to Superhero
+##	trackBy | Optimizing Performance with ngFor's trackBy | Advanced Angular | Hero to Superhero
+##	Custom Toastr | Taking Your Notifications to the Next Level | Advanced Angular | Hero to Superhero
+##	Custom Spinner | Create Engaging Loading Effects | Advanced Angular | Hero to Superhero
+##	ActivatedRoute vs ActivatedRouteSnapshot | Key Differences | Advanced Angular | Hero to Superhero
+##	Dark Light Theme Toggle: A Simple Solution | Advanced Angular | Hero to Superhero
+##	Unlocking the Power of SCSS | Advanced Angular | Hero to Superhero
+##	When to use ng-content, ng-template, and ng-container | Advanced Angular | Hero to Superhero
+##	Async Pipe | Simplifying Asynchronous Data Handling | Advanced Angular | Hero to Superhero
+##	DOM Sanitizer | XSS Attack | Ensuring Secure Web Content | Advanced Angular | Hero to Superhero
+##	Custom Validator | Boosting Form Validation Like a Pro | Advanced Angular | Hero to Superhero
+##	Change Detection | How Angular Tracks and Updates Data | Advanced Angular | Hero to Superhero
+##	How to integrate Firebase in Angular: A Step-by-Step Guide | Advanced Angular
+##	How to integrate Chart JS in Angular | Advanced Angular
+##	Angular Dashboard Creation: Step-by-Step Tutorial | Advanced Angular | Hero to Superhero
+##	Angular User Notification: A Step-by-Step Guide | Advanced Angular | Hero to Superhero
+##	Mastering ngFor: An In-Depth Guide to Powerful Directive | Advanced Angular | Hero to Superhero
+##	How to create a Carousel in Angular | Building a Carousel Component from Scratch | Advanced Angular
+##	Step-by-Step Guide: Integrating Payment Gateway in Angular | Advanced Angular | Hero to Superhero
+##	How to emit event to app component having router outlet | Advanced Angular | Hero to Superhero
+##	Dependency Injection in-depth | Advanced Angular
+##	Resolution Modifiers in Angular | Advanced Angular
+##	Dependency Providers in Angular | Advanced Angular
+##	Power of angular pipes | Angular
+##	Power of lazy loading | Angular
+##	Master Standalone Components: The Ultimate Guide to Angular's Revolutionary Feature
+##	Angular Typed Reactive Forms: The Comprehensive Guide
+##	Angular 14: Page Title Magic! (No More Headaches) | Streamlined Page Title
+##	Boost Your Core Web Vitals with Angular 15's NgOptimizedImage Magic
+##	Understanding Route-Specific Dependency Management in Angular
+##	Migrate An Angular 11 Project to 17: Step-by-Step Guide
+##	Master Angular Routing Without NgModules | Router Standalone API
+##	Reuse Directives | Directive Composition API
+##	Angular Functional Route Guards Explained
+##	Angular CanMatch Route Guard | Why is CanLoad deprecated?
+##	Self-Closing Tags in Angular 16 Explained [Quick Guide]
+##	Server-Side Rendering (SSR) & Hydration in Angular Explained
+##	Angular Signals: The Complete Guide
+##	What's new in Angular 18
+##	New Control Flow in Angular 17
+##	Deferrable Views in Angular 17
+##	Angular Signal Input Output and Query (ViewChild)
+##	Angular 18 New Feature: redirectTo function
+##	Angular 18 New Feature: Fallback (Default) content for ng-content
+##	Angular 18 New Feature: @let directive
+##	What's new in Angular v19
+##	Angular 19 New Feature: linkedSignal
+##	Angular 19 New Feature: Resource API
+##	Angular Micro Frontend Tutorial 🔥 | Step-by-Step Guide with Module Federation
+##	Angular 20 First Look
+=================================================================================================================

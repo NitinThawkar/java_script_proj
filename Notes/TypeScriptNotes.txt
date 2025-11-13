@@ -1,4 +1,10 @@
 ✏️  ☑️ ✍️  ✒️  ✍️ ▶️   ✏️=> 
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+
+------------------------------------------------------------
+TYpescript_Notes.txt
+=============================================================
+
 ----------------------------------------------------------------------------
 https://www.typescriptlang.org/
 https://www.typescriptlang.org/download/
@@ -10,6 +16,45 @@ npm : https://www.npmjs.com/package/ts-node
 reserved keywords : https://github.com/microsoft/TypeScript/issues/2536
 ======================================================================================================
 ✨ TYPE Script ✨
+======================================================================================================
+
+### **TypeScript Course Outline**
+
+1. What is TypeScript?  
+2. TypeScript vs JavaScript  
+3. Setup VS Code Editor  
+4. How TypeScript Works & Why?  
+5. Pros & Cons of TypeScript  
+6. Setup TypeScript Compiler  
+7. Debugging TypeScript Applications  
+8. Basic Types  
+9. `any` type  
+10. Arrays  
+11. Tuples  
+12. Enums  
+13. `unknown` type  
+14. `never` type  
+15. `void` type  
+16. Type Inference & Type Assertions  
+17. Union types  
+18. Type Narrowing  
+19. Interfaces & Type Aliases 
+21. Functions  
+22. Practice problems (4)  
+23. Classes & Access Modifiers  
+24. Practice problems (2)  
+25. Generics  
+26. Literal types  
+27. Type guards  
+28. `keyof` operator  
+29. Index signature  
+30. Utility types  
+31. Modules & Namespaces  
+32. Decorators  
+33. Async Programming  
+34. Non-null Assertion  
+35. Interview Based Questions 
+
 ======================================================================================================
 reserved keywords
 
@@ -112,9 +157,25 @@ number
 set
 string
 ======================================================================================================
+installation
+
+install vs code 
+add plugin :  JavaScript and TypeScript Nightly 
+and prettier
+ES lint
+install node js
+install typescript npm install -g typescript
+
+
+
+
+======================================================================================================
 ▶️ Install and run
   1]install node js and npm 
+  2]
   2]fom folder terminal install typescript compiler  ✏️=> npm install -g typescript   ( -g for globle )
+  
+  compire version tsc -v
 -------------------------------------------------------------------- 
   Installation
 # Locally in your project.
@@ -131,7 +192,10 @@ npm install -D tslib @types/node
 ☑️use npx for window's  get typescript version
     tsc --version
 npx tsc --version
+-----
+compile file ==> tsc  <filepath>/filenale.ts    ==> compile file
 
+run the file => node <filepath>/filenale.ja    ==> note js is compile file  
 --------------------------------------------------------------------
 create config file  command
 	tsc --init
@@ -140,7 +204,7 @@ npx tsc --init
 compile typescript file
 
 in terminal type 
-npx tsc fileName.ts   			✏️=> for manual compile and run  also create .js file
+npx tsc fileName.ts   			 ✏️=> for manual compile and run  also create .js file
 npx tsc fileName.ts --watch 	✏️=> for Auto compile and run
 -------
 we can run transconpile js file with node also
@@ -149,9 +213,9 @@ node <dir>/fileName.js         ✏️=> for manual transconpile .js file, append
 ts-node fileName.ts 					 ✏️=> run directly
 --------------------------------------------------------------------
 To run ts file directly
-npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly  
+npm i ts-node -g  (or) npm i -g ts-node  			✏️=> run ts file directly   no  need to type two separete command for cmpile and run
 
-ts-node fileName.ts run ts file directly 
+ts-node <filepath> fileName.ts run ts file directly 
 
 ======================================================================================================
 "use strict";

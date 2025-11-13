@@ -1,519 +1,353 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" href="Styles/myStyle.css" />
 
-    <!-- <script src="Scripts/MyTest.js"></script> 
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="Styles/myStyle.css" />
+
+  <!-- <script src="Scripts/MyTest.js"></script> 
     <script src="Scripts/AsyncCallbackPromise.js"></script> -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="htm/MyTemp.html">Temp Html</a>
-            </li>
-          
-			<li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-				href="htm/Other.html"
-                >OTHER</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="htm/Other.html" target="_blank"
-                    >Other Reference</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="htm/InterviewQuestions.html" target="_blank"
-                    >Interview Questions</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-              </ul>
-			   </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">My Html</a>
-            </li>
-            
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >JAVA Script</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="htm/MyIndex.html">MyIndex</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/JavaScriptPlayGround.html"
-                    target="_blank"
-                    >JavaScript PlayGround</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="Notes/JavaScriptNotes.txt"
-                    target="_blank"
-                    >JavaScript Notes</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://csharp-video-tutorials.blogspot.com/2014/11/javascript-tutorial.html"
-                    target="_blank"
-                    >JavaScript Blog</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/JavascriptBlogAll.html"
-                    target="_blank"
-                    >JavaScript All Blog</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b"
-                    target="_blank"
-                    >JavaScript Video</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >CSS</a
-              >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="htm/CssPayGround.html">CSS Playground</a></li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="Notes/CSS_notes.txt"
-                    target="_blank"
-                    >Css Notes</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp"
-                    target="_blank"
-                    >Bootstrap</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >TYpeScript</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="Notes/CSS_notes.txt"
-                    target="_blank"
-                    >Css Notes</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.typescriptlang.org/docs/handbook/intro.html"
-                    target="_blank"
-                    >TYpeScript DOC</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.youtube.com/watch?v=rRAVqEFnT1s&t=476s"
-                    target="_blank"
-                    >TYpeScript Vid</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Angular</a
-              >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link</a></li>
-                <li><a class="dropdown-item" href="#">Another link</a></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://csharp-video-tutorials.blogspot.com/2017/12/angular-crud-tutorial.html"
-                    target="_blank"
-                    >AngularBlog</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.youtube.com/watch?v=_PQ7NSppj3Q"
-                    target="_blank"
-                    >Angular Video</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/AngularBlog-1.html"
-                    target="_blank"
-                    >Angular Blog 1</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/AngularBlog-2.html"
-                    target="_blank"
-                    >Angular Blog 2</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/AngularBlog-3.html"
-                    target="_blank"
-                    >Angular Blog 3</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/AngularBlog-4.html"
-                    target="_blank"
-                    >Angular Blog 4</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/AngularBlogAll.html"
-                    target="_blank"
-                    >AngularBlogAll</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.youtube.com/watch?v=bzdy-hZT8y0"
-                    target="_blank"
-                    >AngularDataBInding45</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="htm/AngularHelp.html"
-                    target="_blank"
-                    >Angular Help</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >React</a
-              >
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="htm/React_Notes.html">React_Notes</a></li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.youtube.com/playlist?list=PL8p2I9GklV463WUKdVzUZ17IDZ3SwoSTu"
-                    target="_blank"
-                    >React Tuto Vid</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >SQL</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://csharp-video-tutorials.blogspot.com/2017/12/angular-crud-tutorial.html"
-                    target="_blank"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://csharp-video-tutorials.blogspot.com/2014/05/sql-server-interview-questions-and.html"
-                    target="_blank"
-                    >SQl Interview</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Design Patterns</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://csharp-video-tutorials.blogspot.com/2017/06/design-patterns-tutorial-for-beginners.html"
-                    target="_blank"
-                    >Design Patterns</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://csharp-video-tutorials.blogspot.com/2018/01/solid-design-principles.html"
-                    target="_blank"
-                    >SOLID Principles</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://www.youtube.com/watch?v=fdpdw5MOTWU&t=2180s"
-                    target="_blank"
-                    >SOLID VID</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="https://github.com/preslavmihaylov/booknotes/tree/master/system-design"
-                    target="_blank"
-                    >System Design</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >GIT</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="Notes/Git_Notes.txt" target="_blank">GIT Notes</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-              </ul>
-            </li>
-			<li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >AIML</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="Notes/AIML.txt" target="_blank">AIML Notes</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="htm/AIML_Notes.html" target="_blank">AIML_Notes</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-              </ul>
-            </li>
-			<li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Cyber Security</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="Notes/Cyber_Security.txt" target="_blank">Cyber_Security Notes</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="htm/CyberSecurity_Notes.html" target="_blank">CyberSecurity_Notes</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-              </ul>
-            </li>
-			<li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >Language</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                >REPO</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="htm/MyProjectRepo.html" target="_blank">MyProjectRepo</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#" target="_blank">LINK</a>
-                </li>
-              </ul>
-            </li>
-			  <li class="nav-item">
-              <a class="nav-link" href="htm/VideoList.html">Video List</a>
-            </li>
-            </li>
-			  <li class="nav-item">
-              <a class="nav-link" href="./zTemp/">zTemp</a>
-            </li>
-          </ul>
-        </div>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="htm/MyTemp.html">Temp Html</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="htm/Other.html">OTHER</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="htm/Other.html" target="_blank">Other Reference</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/InterviewQuestions.html" target="_blank">Interview Questions</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Notes/KeyBord_ShortCut.txt" target="_blank">KeyBord ShortCut</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/md_notes.html" target="_blank">MD Notes</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Html</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">JAVA Script</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="htm/MyIndex.html">MyIndex</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Another link</a></li>
+              <li>
+                <a class="dropdown-item" href="htm/JavaScriptPlayGround.html" target="_blank">JavaScript PlayGround</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Notes/JavaScriptNotes.txt" target="_blank">JavaScript Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://csharp-video-tutorials.blogspot.com/2014/11/javascript-tutorial.html"
+                  target="_blank">JavaScript Blog</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/JavascriptBlogAll.html" target="_blank">JavaScript All Blog</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL6n9fhu94yhUA99nOsJkKXBqokT3MBK0b"
+                  target="_blank">JavaScript Video</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">CSS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="htm/CssPayGround.html">CSS Playground</a></li>
+              <li><a class="dropdown-item" href="#">Another link</a></li>
+              <li>
+                <a class="dropdown-item" href="Notes/CSS_notes.txt" target="_blank">Css Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp"
+                  target="_blank">Bootstrap</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">TYpeScript</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Notes/CSS_notes.txt" target="_blank">Css Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.typescriptlang.org/docs/handbook/intro.html"
+                  target="_blank">TYpeScript DOC</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=rRAVqEFnT1s&t=476s"
+                  target="_blank">TYpeScript Vid</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Angular</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="htm/Angular_Notes.html" target="_blank">Angular_Notes</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item"
+                  href="https://csharp-video-tutorials.blogspot.com/2017/12/angular-crud-tutorial.html"
+                  target="_blank">AngularBlog</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=_PQ7NSppj3Q" target="_blank">Angular
+                  Video</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/AngularBlog-1.html" target="_blank">Angular Blog 1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/AngularBlog-2.html" target="_blank">Angular Blog 2</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/AngularBlog-3.html" target="_blank">Angular Blog 3</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/AngularBlog-4.html" target="_blank">Angular Blog 4 CLI </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/AngularBlogAll.html" target="_blank">AngularBlogAll</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=bzdy-hZT8y0"
+                  target="_blank">AngularDataBInding45</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Link</a></li>
+              <li><a class="dropdown-item" href="#">Another link</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">React</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="htm/React_Notes.html">React_Notes</a></li>
+              <li>
+                <a class="dropdown-item" href="https://www.youtube.com/playlist?list=PL8p2I9GklV463WUKdVzUZ17IDZ3SwoSTu"
+                  target="_blank">React Tuto Vid</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">SQL</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item"
+                  href="https://csharp-video-tutorials.blogspot.com/2017/12/angular-crud-tutorial.html"
+                  target="_blank"></a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://csharp-video-tutorials.blogspot.com/2014/05/sql-server-interview-questions-and.html"
+                  target="_blank">SQl Interview</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/PostgreSQL.html" target="_blank">SQL-Help</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Design Patterns</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item"
+                  href="https://csharp-video-tutorials.blogspot.com/2017/06/design-patterns-tutorial-for-beginners.html"
+                  target="_blank">Design Patterns</a>
+              </li>
+              <li>
+                <a class="dropdown-item"
+                  href="https://csharp-video-tutorials.blogspot.com/2018/01/solid-design-principles.html"
+                  target="_blank">SOLID Principles</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://www.youtube.com/watch?v=fdpdw5MOTWU&t=2180s"
+                  target="_blank">SOLID VID</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://github.com/preslavmihaylov/booknotes/tree/master/system-design"
+                  target="_blank">System Design</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">GIT</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Notes/Git_Notes.txt" target="_blank">GIT Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">AIML</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Notes/AIML.txt" target="_blank">AIML Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/AIML_Notes.html" target="_blank">AIML_Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cyber Security</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="Notes/Cyber_Security.txt" target="_blank">Cyber_Security Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/CyberSecurity_Notes.html" target="_blank">CyberSecurity_Notes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Language</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">REPO</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="htm/MyProjectRepo.html" target="_blank">MyProjectRepo</a>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#" target="_blank">LINK</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="htm/VideoList.html">Video List</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">zTemp</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="./zTemp/" target="_blank">zTemp</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="htm/Test.html" target="_blank">Test Html</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item" href="#" target="_blank">LINK</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#" target="_blank">LINK</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <!-- ********************************************************************************** -->
-    <div class="container-fluid mt-3">
-      <h3>Navbar With Dropdown</h3>
-      <p>This example adds a dropdown menu in the navbar.</p>
     </div>
+  </nav>
+  <!-- ********************************************************************************** -->
+  <div class="container-fluid mt-3">
+    <h3>Navbar With Dropdown</h3>
+    <p>This example adds a dropdown menu in the navbar.</p>
+  </div>
 
-    <!-- ********************************************************************************** -->
-    <hr />
+  <!-- ********************************************************************************** -->
+  <hr />
+  ☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+<hr/>
+  <h1 id="Heading">This is a Heading</h1>
 
-    <h1 id="Heading">This is a Heading</h1>
+  <p class="para">This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+  <p>This is a paragraph.</p>
+  <p id="demo"></p>
+  <hr />
+  <p>API CALL</p>
 
-    <p class="para">This is a paragraph.</p>
-    <p>This is a paragraph.</p>
-    <p>This is a paragraph.</p>
-    <p id="demo"></p>
-    <hr />
-    <p>API CALL</p>
+  <button id="btnAsyncCall">Async API Call</button>
+  <button id="btnPromiseCall">Promise API Call</button>
 
-    <button id="btnAsyncCall">Async API Call</button>
-    <button id="btnPromiseCall">Promise API Call</button>
+  <p id="factparaAsync"></p>
+  <p id="factparaPromise"></p>
+  <hr />
 
-    <p id="factparaAsync"></p>
-    <p id="factparaPromise"></p>
-    <hr />
+  <table class="table table-striped">
+    <tr>
+      <td>Lorem ipsum dolor</td>
+      <td>Lorem ipsum dolor</td>
+      <td>Lorem ipsum dolor</td>
+    </tr>
+  </table>
 
-    <table>
-      tr>td*3>lorem3
-    </table>
+  <script>
+    /*debugger*/
+    document.getElementById("demo").innerHTML = 5 + 68;
+  </script>
+  <script src="Scripts/ApiCall.js"></script>
 
-    <script>
-      /*debugger*/
-      document.getElementById("demo").innerHTML = 5 + 68;
-    </script>
-    <script src="Scripts/ApiCall.js"></script>
-
-    <!-- bootstrap scripts -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 
+  <!-- bootstrap scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
 integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
 crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
 crossorigin="anonymous"></script> -->
-    <!-- bootstrap scripts -->
-  </body>
-  <script src="Test.js"></script>
+  <!-- bootstrap scripts -->
+</body>
+<script src="Test.js"></script>
+
 </html>

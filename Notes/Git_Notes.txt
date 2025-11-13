@@ -1,3 +1,10 @@
+
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+
+------------------------------------------------------------
+Git_Notes.txt
+=============================================================
+
 ✨ https://www.w3schools.com/git/default.asp
 ✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
 
