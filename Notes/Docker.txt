@@ -1,4 +1,10 @@
 ✨ Docker 
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+
+------------------------------------------------------------
+Docker_Notes.txt
+=============================================================
+
 
 1. images are  executable conf file  => images stored in like gocker hub website. we can download images from there and convert in to containers  
 
