@@ -7,6 +7,21 @@
 ✨ ANGULAR angular✨
 
 =================================================================================
+Angular CLI provides it's installed version using below different ways using ng command,
+
+ng v
+ng version
+ng -v
+ng --version
+
+and the output would be as below,
+
+Angular CLI: 1.6.3
+Node: 8.11.3
+OS: darwin x64
+Angular:
+
+==================================================================================
 installation
 
 install node js.
@@ -442,3 +457,230 @@ intercept HTTP Request
 ##	Angular Micro Frontend Tutorial 🔥 | Step-by-Step Guide with Module Federation
 ##	Angular 20 First Look
 =================================================================================================================
+
+
+@if @else @empty @for @switch @defer @placeholdre @loading @errror
+------------
+viewchild,viewChildren,contentchild,contentchildren
+
+------------
+
+-------------
+{{student ?. address ?. contant ?. mobileNo1}
+
+null check
+------------
+Fallback (Default) content for ng-content
+-------------
+<div style="background-color: lightgray; padding: 10px; margin-top: 10px;">
+    
+
+</div>
+
+ng g c attribute-directives
+
+passing-data-between-components
+
+ng g c passing-data-between-components/child --flat
+
+ng g c passing-data-between-components/child --flat
+
+ng g c shared-service-example/second
+---------------------------------------------------------------------
+
+
+ng g c template-reference-variable-and-viewchild
+
+
+
+b
+
+
+ng g c route-example
+
+ng g c route-product-pages/apple
+ng g c route-product-pages/banana
+ng g c route-product-pages/product
+
+ng g c angular-forms
+
+ng g c template-driven-forms
+ng g c reactive-model-driven-forms
+
+ng g p initials 
+ng g c http-web-communication
+
+----------------------------
+
+ngForm
+ngModel
+ngSubmit
+===============================================
+private router = inject(Router);
+
+constructor(
+// Brivate router: Router
+) {}
+=====================================================
+<a [routerLink]="['/', 'about', 'test']">Go to about</a>
+<!-- <a (click)="navigate()">Go to about</a> ->
+=====================================================
+const id = this. route.snapshot.paramMap.get('id');
+console.log(id);|
+
+this. route.params. subscribe({
+next: (data) => {
+console. log(data['id']);
+
+error: (e) => {
+console. log (e);
+=====================================================
+{
+
+{
+
+path: '',
+loadComponent: () =>
+import('./home/home.component').then(4c) => c.HomeComponent),
+
+path: 'about',
+loadComponent: () =>
+import('./components/about/about.component').then(
+(c) => c.AboutComponent
+
+=====================================================
+ng generate module home --route home --module app.module
+
+ng generate module home --routing
+
+difference between loadcomponent and loadchildren
+
+=====================================================
+
+goToGithub(url){
+window.open(url, '_blank');
+}
+=====================================================
+import httpclient module in import section  of app.module.ts
+
+=====================================================
+SIGNALS
+Reactive primitives that offers granular tracking of state changes
+
+Writable Signals
+
+Computed Signals  => values deried from other signals
+
+Effects
+
+
+signal just like states in reac
+.set(),.update(),.muted()
+=====================================================
+
+Router Guards
+
+Interfaces provided by angular which when implemented
+allow us to control the accessibility of a route based on
+condition provided in class implementation of that interface
+
+
+Router Guards
+
+Interfaces provided by angular which when implemented
+allow us to control the accessibility of a route based on
+condition provided in class implementation of that interface
+
+
+Types of Router Guards
+
+CanActivate  
+
+CanActivateChild
+
+CanLoad =>removed in 15 use from 15 use canMatch  /CanLoad deprecated
+
+CanDeactivate
+
+Resolve
+-----
+
+ROUTER GUARDS
+
+CanActivate - protect rendering a component
+
+CanActivateChild - protect children routes
+
+CanDeactivate - prevent from moving out of route
+
+CanLoad - prevent loading a lazy loaded module
+
+Resolve - fetch data before changing route
+
+=====================================================
+CSS Preprocessor
+
+A Tool to extend the basic functionality of CSS through it's scripting
+language
+
+Browsers can understand only native CSS
+
+Preprocessor syntax should be compiled to native CSS
+
+
+=====================================================
+Cross Site Scripting (XSS)
+
+Client side code injection attack
+
+Web security vulnerability
+
+Attackers can access your data, microphone, camera, etc
+
+
+=====================================================
+Change Detection
+
+Ability to detect changes
+
+Backbone of Angular framework
+ChangeDetection
+=====================================================
+9
+
+1
+2
+3
+
+<div>
+<ul>
+<li *ngFor="let num of nums; let i = even">{{ i }}</li>
+</ul>
+</div>
+=====================================================
+Dependency Injection
+--Dependency Providers
+@useClases 
+ @useexisting 
+ @usevalue
+ @useFactory
+   --Resolution Modifiers
+ @optional 
+ @self
+ @skipself
+ @host
+ 
+ ---in clsses
+ 
+ @Injectable({
+providedIn: 'root'
+}
+ 
+
+=====================================================
+
+=====================================================
+=====================================================
+=====================================================
+
+=====================================================
