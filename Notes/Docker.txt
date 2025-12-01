@@ -32,5 +32,8 @@ Docker_Notes.txt
  
  ▶️ docker ps -a
  
+ ▶ docker ps --all → docker ps -a
+ ▶ docker container ls → docker ps
+ ▶ docker image ls → docker images
  
  ###################################################################
