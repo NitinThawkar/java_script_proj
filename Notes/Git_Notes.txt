@@ -14,11 +14,17 @@ Git_Notes.txt
 
 
 ----------------------------------------------------
+git help
+git help -a
+git help -g
+
 ☑️ head or head branch means (you have created from main or parent branch )	
 
 https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests
 
-Serch
+
+
+search
 
 is:pr is:merged author:jthawkn_jcplc
 is:pr is:closed author:jthawkn_jcplc
@@ -27,6 +33,13 @@ Example (all closed PRs by you in ds-obcfm-ui): >>> is:pr is:closed repo:jci-pro
 Example (only merged PRs by you in ds-obcfm-ui): >>> is:pr is:merged repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
 
 ----------------------------------------------------
+git help
+git help -a
+git help add
+git help --branch  (open help in console)
+git help branch   (open help in browser)
+----------------------------------------------------
+
 git config
 git init
 git log
