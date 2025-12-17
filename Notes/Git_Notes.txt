@@ -36,7 +36,7 @@ Example (only merged PRs by you in ds-obcfm-ui): >>> is:pr is:merged repo:jci-pr
 git help
 git help -a
 git help add
-git help --branch  (open help in console)
+git help --branch  (open help in console) # git help --<command>  
 git help branch   (open help in browser)
 ----------------------------------------------------
 
