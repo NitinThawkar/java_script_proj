@@ -33,6 +33,9 @@ Example (all closed PRs by you in ds-obcfm-ui): >>> is:pr is:closed repo:jci-pro
 Example (only merged PRs by you in ds-obcfm-ui): >>> is:pr is:merged repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
 
 ----------------------------------------------------
+HEAD >> is point ot recent most commit in currant branch
+
+----------------------------------------------------
 git help
 git help -a
 git help add
