@@ -42,10 +42,14 @@ git help add
 git help --branch  (this is wrong but will show all helping options)  
 git help branch   (open help in browser)  # git help <command>  
 ----------------------------------------------------
-
+git config -- global core.editor "notepad.exe"
+open cinfig file located in .git folder of repo location on local machine
+----------------------------------------------------
 git config
+git config --list
 git init
 git log
+git log --oneline
 git status
 git amend
 git stash
@@ -54,6 +58,7 @@ git add
 git commit    //commit --amend  
 git remote
 git branch
+git branch -v
 git switch
 git checkout
 git reset    // discard changes //Revert all tracked files to their state at the last commit.
