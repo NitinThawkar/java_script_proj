@@ -17,15 +17,16 @@ check rust installed version
 ▶️rustc --version
 
 
----------------
+#########################################################################################
 cargo use for package manager, project cretion (just like angular cli)
 ▶️ cargo --version (type on vs code  termonal or cmd)
 ▶️ cargo new <project name> # it will crete progect
 ---
 to run project go inside to project folder and run 
-▶️  cargo run
+▶️ cargo run
 ▶️ cargo build 
-▶️ cargo check
+▶️ cargo check ->  This command quickly checks your code to make sure it compiles but doesn’t produce an executable target and debug folder
+▶️ cargo fmt  -> format the code 
 -----
 ▶️ cargo doc --open   #and click rand in the sidebar on the left.
 cargo new restaurant --lib
@@ -34,7 +35,7 @@ cargo new restaurant --lib
  ▶️ use for import
  run in vs terminal # cargo modules structure -- lib
  
-=============================================================
+#########################################################################################
 ✏️ rust first programe 
 
 create file main.rs  add following code
@@ -51,20 +52,20 @@ then type .\main.exe in terminal
 it will show you 
 Welcome to Rust Programming World!
 =====================================================================
-
+#########################################################################################
 ✏️ del * => terminal command will delete file from folder
 ---
 dir 
 
-=====================================================================
+#########################################################################################
 A crate is the smallest amount of code that the Rust compiler considers at a time.
 Even if you run rustc rather than cargo and pass a single source code file 
-=====================================================================
+#########################################################################################
 Making Structs and Enums Public
 We can also use pub to designate structs and enums as public, but there are a few extra details to the usage of pub with structs and enums. If we use pub before a struct definition, we make the struct public, but the struct’s fields will still be private.
-=====================================================================
+#########################################################################################
 crate is a libarlay
-=====================================================================
+#########################################################################################
 struct
 
 ----------

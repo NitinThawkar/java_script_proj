@@ -35,5 +35,6 @@ Docker_Notes.txt
  ▶ docker ps --all → docker ps -a
  ▶ docker container ls → docker ps
  ▶ docker image ls → docker images
+ ▶ docker restart [container_name_or_id]
  
  ###################################################################
