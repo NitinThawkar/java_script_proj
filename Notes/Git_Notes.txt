@@ -69,6 +69,14 @@ git fetch
 git submodule
 git prune
 delete branch
+git clean -n  >> git clean -nfd  >> showing list of files and directory before deleting  or use git clean or git clean -fd
+
+pruning old branches
+
+git branch -- merged | grep -v "main" | xargs git branch -D
+
+git branch -- merged
+
 grep
 ===###===================###===================###===================###===================###================
 Frequntaly Used
