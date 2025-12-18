@@ -11,10 +11,45 @@ Git_Notes.txt
 ----------------------------------------------------
 ✨ (star)  
 ✏️ (Pencil)  ☑️
+
+
+----------------------------------------------------
+git help
+git help -a
+git help -g
+
+☑️ head or head branch means (you have created from main or parent branch )	
+
+https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests
+
+
+
+search
+
+is:pr is:merged author:jthawkn_jcplc
+is:pr is:closed author:jthawkn_jcplc
+
+Example (all closed PRs by you in ds-obcfm-ui): >>> is:pr is:closed repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
+Example (only merged PRs by you in ds-obcfm-ui): >>> is:pr is:merged repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
+
+----------------------------------------------------
+HEAD >> is point ot recent most commit in currant branch
+
+----------------------------------------------------
+git help
+git help -a
+git help add
+git help --branch  (this is wrong but will show all helping options)  
+git help branch   (open help in browser)  # git help <command>  
+----------------------------------------------------
+git config -- global core.editor "notepad.exe"
+open cinfig file located in .git folder of repo location on local machine
 ----------------------------------------------------
 git config
+git config --list
 git init
 git log
+git log --oneline
 git status
 git amend
 git stash
@@ -23,6 +58,7 @@ git add
 git commit    //commit --amend  
 git remote
 git branch
+git branch -v
 git switch
 git checkout
 git reset    // discard changes //Revert all tracked files to their state at the last commit.
@@ -31,8 +67,16 @@ git push
 git merge
 git fetch
 git submodule
-
+git prune
 delete branch
+git clean -n  >> git clean -nfd  >> showing list of files and directory before deleting  or use git clean or git clean -fd
+
+pruning old branches
+
+git branch -- merged | grep -v "main" | xargs git branch -D
+
+git branch -- merged
+
 grep
 ===###===================###===================###===================###===================###================
 Frequntaly Used
@@ -439,34 +483,43 @@ git desktop stash => select al files and right click on changed file check box/l
 Stash retrieve, show, list, delete & save
 
 #stash
-git stash
-git stash --keep -index  (only stash untract file not stage files)
-git stash --include -untracked
-git stash list (show all stash)
-git stash save "stash name"
-git stash show => recent stash show  view stashed files
-git stash show <stash id>  #stash@{0}
-git stash show -p => recent stash show with content
+
+Command                                      | Description
+---------------------------------------------|---------------------------------------------------------------
+git stash                                    | Stash tracked modified files
+git stash --keep-index                       | Stash only untracked files; keep staged files intact
+git stash --include-untracked                | Stash tracked + untracked files
+git stash list                               | Show all stash entries
+git stash save "stash name"                  | Create a stash with a custom message
+git stash show                               | Show files changed in the most recent stash
+git stash show <stash id>                    | Show files changed in the specified stash (e.g., stash@{0})
+git stash show -p                            | Show detailed diff/content of the latest stash content
+git stash -- <file name>                     | Stash only the specified file
+git stash -m "message" -- <file name>        | Stash a specific file with a message
+git stash -m "my stash"                      | Create stash with a message
+
+git stash pop                                | Apply latest stash and remove it from stash list
+git stash apply <stash id>                   | Apply stash without removing it
+
+git stash drop <stash id>                    | Delete specific stash entry delete stash
+git stash clear                              | Remove all stash entries
+
+git stash branch <branch> <stash id>         | Create new branch and apply stash to it
 
 
 
-git stash -- <file name>   //only stash that file
-git stash -m <"any message" > -- <file name>   //only stash that file
-git stash -m "my stash" 
+git stash list                               | List all stashes (duplicate reference from above)
+git stash show stash@{n}					 | show list of stash files summary 	
+git stash show -p stash@{n}                  | View diff/content of stash index n
+git show stash@{n}:path/file                 | View full content of a specific file from stash 
+git stash apply stash@{n}                    | Apply stash entry n without removing
+git stash branch <name> stash@{n}            | Extract stash into new branch
 
-git stash pop  =>apply last chnages apply last chnages and removed from list
-git stash apply <stashid>  =>apply save stash chnages
-
-//apply
-git stash pop  =>apply last chnages and removed from list
-
-#delete stash
-git stash drop {id} =>apply last chnages and removed from list
-git stash clear => remove all stash from list
-
-#stash to another branch
-git stash branch <other branch name> {Stashid}
-
+----------------------------------------------
+git show stash@{0}:src/store/cbm/alarmTrendSlice.ts    >> View full content of a specific file from stash 
+git show stash@{0}:.env                                >> View full content of a specific file from stash 
+git stash show 0
+git stash show stash@{n} 
 
 ===###===================###===================###===================###===================###================
 #Cherry pick & merge abort  # https://www.youtube.com/watch?v=QxGrGtFB2Ig&list=PLolI8AY2AS9aaHf99kGdrpRB28H5iaWHT&index=10
@@ -552,4 +605,34 @@ But make sure you don't have any commits to sync.
 Worst case you can delete the local repository and clone again.
 red below articles as well. this might be useful.
 
+===###===================###===================###===================###===================###================
+
+The git prune command is an internal housekeeping utility used to remove unreachable Git objects (like commits and files) from the local repository. In most cases, users should not run git prune directly but instead use higher-level commands like git gc or git fetch --prune. 
+
+
+Primary Uses and Related Commands
+The term "prune" is used in several related but distinct Git commands: 
+
+git prune: This low-level command deletes objects in your local database that are no longer referenced by any branch, tag, or the reflog (Git's internal history log). It is primarily a child command of git gc (garbage collector) and rarely needed for standalone use by a casual user.
+
+git fetch --prune: This is the most common use of pruning. It updates your local remote-tracking branches to reflect the exact state of the remote repository and removes any local remote-tracking branches that no longer exist on the remote. This does not delete your local working branches.
+
+git remote prune <remote-name>: This command does the same thing as git fetch --prune <remote-name>, but it only performs the pruning operation without first fetching new updates. 
+
+-----------------------------------------
+Common Pruning Scenarios
+Scenario 	Recommended Command	Effect
+Clean up stale remote-tracking branches (e.g., origin/feature-x after feature-x was deleted on GitHub) >>	git fetch --prune or git remote prune origin	>> Removes the local references to branches that no longer exist on the remote.
+
+General repository maintenance/optimization >>	git gc	>>Automatically runs git prune along with other tasks like packing objects, which cleans up all genuinely unreachable data.
+-----------------------------------------
+Useful Options for git prune 
+--dry-run or -n: Reports what would be removed without actually deleting anything, which is useful for safety.
+--verbose or -v: Displays the output of all objects and actions taken during the pruning process.
+--expire <time>: Specifies a time limit; only objects older than this time are considered for pruning (the default for git gc is 2 weeks ago). 
+Configuration
+You can configure Git to always prune when fetching by running: 
+bash
+git config --global fetch.prune true
+-----------------------------------------
 ===###===================###===================###===================###===================###================

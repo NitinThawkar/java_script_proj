@@ -23,9 +23,17 @@ Upper Case => MY_VARIABLE_NAME
 • Upper Case (Constant Case): All letters are capitalized, often used for constants (e.g., MY_VARIABLE_NAME).   
 
 =================================================================
-./     ✏️=> means current directory
+☑️
+
+./     ✏️=> means current directory or folder
 ../    ✏️=> means one folder back
 /      ✏️=> means root 
+
+..     ✏️=>syntax that means to go to the parent directory.
+----
+/front_of_house/hosting/add_to_waitlist  ✏️=> using / to start from the filesystem root in your shell.
+front_of_house/hosting/add_to_waitlist    ✏️=>  start from the filesystem from current location in your shell.
+
 =================================================================
 google crome 
 clear()  => clear console tab

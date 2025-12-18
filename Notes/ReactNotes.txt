@@ -2846,7 +2846,162 @@ Larger applications
 
 =================================================================
 ==================================================================================================================================
+useActionState Hook
 
+. Used to handle form in React js
+. It updates state based on the result of a form action
+
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+useSyncExternalStore :  React Hook that lets you subscribe to an external store  
+parent golbal data outside of function  used in child component,
+---------------------------------------------------------------------
+
+useDebugValue
+React Hook that lets you add a label to a custom Hook in React DevTools.
+it will show data in crome React DevTools.
+---------------------------------------------------------------------
+useDeferredValue:.
+useDeferredValue is a React Hook that lets you defer updating a part of the UI.
+defered the other UI and process will continue non Blocking
+---------------------------------------------------------------------
+useInsertionEffect
+---------------------------------------------------------------------
+useEffect  -==>after render UI
+useLayoffeffect => before rendain UI
+---------------------------------------------------------------------
+
+useTransition  => specity certain state update not urgent
+---------------------------------------------------------------------
+useDefferedValue =>  silmiler to transition , its lets you defer updates to keep your app responsive
+sechedul an update at an optimal time
+
+---------------------------------------------------------------------
+useOptimistic
+
+---------------------------------------------------------------------
+
+
+
+UseSyncExternalStore
+contex
+memo
+callback
+
+
+UseTransition / useformstatus
+
+----------------
+
+
+
+
+
+---------------
+await new Promise(res=>setTimeout(res,2000))
+
+
+===========================================================================================================================
+React.memo (use for stop rerendaring  and useMemo is different it is use for cache output or keep output in memory)
+
+Higher-order component in React that prevents unnecessary re-renders
+
+Improves the performance by caching the result of a component's render
+
+When props don't change, React skips the re-render
+
+Use shallow comparison to check whether the props have changed
+-------------
+Scenarios in which we should avoid
+
+Simple component without heavy computations that renders quickly
+
+When parent component rarely updates the props
+
+When we pass complex objects or functions as props
+
+When parent component re-renders frequently
+
+When component is consuming values from React's Context API
+
+When component has side effects
+===========================================================================================================================
+Use Callback
+Best Practices
+
+Use only when it is necessary, don't overuse
+
+Not needed for child component which is small or fast
+
+Works best when combined with React.memo
+
+Keep the dependencies correctly
+
+Use for functions that are computationally expensive
+===========================================================================================================================
+What is uselmperativeHandle ?
+
+A powerful tool that allows us to expose functions or values from a child component to a parent component
+
+
+
+
+useImperativeHandle : 
+
+it also use for call child functions from parent component code . with using ref
+
+access some data or function from child to parent 
+
+useImperativeHandle customizes the instance value that is exposed to parent components
+when using ref. As always, imperative code using refs should be avoided in most cases.
+useImperativeHandle should be used with forwardRef:
+
+https://www.youtube.com/watch?v=9jOUXWgbDNY
+https://www.youtube.com/watch?v=RVTvjbU-S64&t=25s
+===========================================================================================================================
+Code Splitting is the act of breaking up your application's large single code file (the "bundle") into many smaller files or "chunks." Think of it as preparing your code to be loaded on demand. By itself, splitting the code doesn't mean the chunks are loaded lazily; it just makes it possible. ✂
+
+Lazy Loading is the strategy of actually waiting to download one of those small chunks from the server until the exact moment it's needed. This is the action that defers the download. ⏳
+
+In this video two methods of lazy loading are used:
+
+1. React.lazy + Suspense   ->   React.lazy(() => import(...))	
+The standard, declarative way. Best for route-based splitting or when you want React to manage the loading state declaratively.
+
+2.Manual async/await + State	 ->   const module = await import(...)	
+The manual, imperative way. Best for event-driven loading (e.g., modals, popups) where you need fine-grained control over the loading logic.
+
+===========================================================================================================================
+Side Effects
+
+Fetching data from APIs
+
+Setting up subscriptions or timers
+
+Modifying DOM elements directly
+
+Accessing browser APIs
+
+
+Best Practices
+
+Include only the dependencies that directly affect
+the side effect
+
+Avoid including unnecessary dependencies
+
+Use separate useEffect for separate side effect
+
+Specify correct dependencies
+
+Cleanup side effects
+
+Avoid performing side effects in render function
+
+===========================================================================================================================
 ==================================================================================================================================
 
 ==================================================================================================================================
