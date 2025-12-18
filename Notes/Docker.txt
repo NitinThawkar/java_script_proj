@@ -1,14 +1,40 @@
 ✨ Docker 
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
 
-1. images are  executable conf file  => images stored in like gocker hub website. we can download images from there and convert in to containers  
+------------------------------------------------------------
+Docker_Notes.txt
 
+###################################################################
+✨✨ Docker setup
+
+1. images are  executable conf file  => images stored in like docker hub website. we can download images from there and convert in to containers  
+------------------------------------------------------------
 2. convert image to docker container
-   docker run <inage name>
-   docker run -it <image name >  (it is enteractive mode ,open in command promt)
+	▶️ docker run <inage name>
+    ▶️ docker run -it <image name >  (it is enteractive mode ,open in command promt)
 
-   docker stop <container id >  (to stop container)
-
+    ▶️ docker stop <container id >  (to stop container)
+------------------------------------------------------------
 3. we can do development in container
 
 4. for linux command  we can download ubuntu image , convert it in to container and run in itnteractive mode 
    you can prctice command there
+
+###################################################################
+
+✨✨ Docker command
+------------------------------------------------------------
+ ▶️ man docker 
+ 
+ ▶️ docker --help
+  
+ ▶️ docker ps --help
+ 
+ ▶️ docker ps -a
+ 
+ ▶ docker ps --all → docker ps -a
+ ▶ docker container ls → docker ps
+ ▶ docker image ls → docker images
+ ▶ docker restart [container_name_or_id]
+ 
+ ###################################################################

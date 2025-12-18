@@ -1,3 +1,10 @@
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+
+------------------------------------------------------------
+Python
+=============================================================
+
+
 ✨ Python Notes
 https://www.w3schools.com/python/python_operators.asp
 =======================================================================================================
@@ -266,7 +273,225 @@ favorite_drink("coffee")
 print('Goodbye!')
 
 =======================================================================================================
+names: list[str] = ['Bob', 'Luigi', 'James' , 'Anna']
 
+
+=======================================================================
+
+#
+
+I
+
+long_names: list[str] =
+
+names: list[str] = ['Bob', 'Luigi', 'James', 'Anna']
+
+# long_names: list[str] = []
+# for name in names:
+if len(name) > 4:
+long_names.append(name)
+
+[name.for.name in. names if len(name)>4]
+
+print(long_names)
+
+=======================================================================
+172.29.239.34
+31816
+-------------------------------------------------------------------------
+
+X = 1
+while x <= 500:
+print("Hello.world", x)
+x += 1
+
+-------------------------------------------------------------------------
+turnary
+
+-------------------------------------------------------------------------
+
+
+
+#
+
+### sequences - string, list, tuple  (store in same order)
+### mappings - dictionary
+### sets - set, frozenset
+
+#### string - Ordered, immutable sequences of characters
+- "Hello world"
+
+-------------------------------------------------------------------------
+List - Ordered, mutable collections that can contain mixed data types
+- [1, 'hello', 3.14, True]
+
+Tuple - Ordered, immutable collections similar to lists
+- (1, 'hello', 3.14, True)
+
+Dictionary - Unordered (pre-3.7) python version  / insertion-ordered (3.7+) key-value
+
+- {'name' : 'Alice', 'age' : 25, 'city': 'New York'}
+
+ set - Unordered collection of unique element
+- {1, 2, 3, 4}
+
+ frozenset - Immutable version of a set
+
+-------------------------------------------------------------------------
+A built -in DS (data structure ) that stores an ordered, mutable collection of items
+List can an hold items of any type, including other lists
+
+orderd : Items have a defined order and can be accessed by their index.
+mutable : You can change, add, or remove items after the list has been create
+heterogeneous: A single list can contain elements of different data types.
+iterable e: Lists can be looped over using for loops or comprehensions.
+
+
+-------------------------------------------------------------------------
+my_list = [1, 2, 3, 4, 5]
+mixed_list = [1, "hello", 3.14, True]
+nested = [[1, 2], [3, 4]]
+
+
+# Empty list
+empty = []
+
+# List of strings
+colors = ["red", "green", "blue"]
+
+# List of booleans
+flags = [True, False, True]
+
+# List of mixed types
+info = ["Alice", 30, 5.5, False]
+
+# List inside a list (nested)
+matrix = [[1, 2], [3, 4], [5, 6]]
+
+
+lst = list() # [] using list constructure or function
+
+lst = list(10)
+lst = list('nitin')
+
+mySet = {10,20,30,40,50}
+lst = list(mySet)
+
+
+lst = list(range (10))
+
+
+-------------------------------------------------------------------------
+a = [[1,2], [3, 4]]
+b = a[:]
+b [0] [0] = 99
+print(id(a[0]),id(b[0]))
+print(b)
+print(a)
+
+import copy
+b = copy.deepcopy(a)
+print(id(a[0]), id(b[0]))
+b [0] [0] = 99
+print(b)
+-------------------------------------------------------------------------
+def longer_than_4(string):
+return len(string) > 4
+
+strings = ["my", "world", "apple", "pear"]
+filtered = filter(lambda x: len(x > 4), strings)
+print(list(filtered))
+------------------------------------------------------------------
+numbers = {1, 4.5, 5, 23, 2}
+print(sum(numbers, start= -10))
+print(sum(numbers, start= 10))
+------------------------------------------------------------------
+numbers = [4, 5, 2, 3, -1, 0, 9]
+sorted_nums = sorted(numbers, reverse=True)
+
+print(sorted_nums)
+------------------------------------------------------------------
+people = [
+{"name": "Alice", "age": 30},
+{"name": "Bob", "age": 25},
+{"name": "Charlie", "age": 35},
+{"name": "David", "age": 20},
+
+sorted_people = sorted(people, key=lambda person: person ["age"])
+
+print(sorted_people)
+======================================================================================= 
+tasks = ["Write report", "Attend meeting", "Review code", "Submit timesheet"]
+
+for index in range(len(tasks)):
+task = tasks [index]
+print(f"{index + 1}. {task}")
+------------------------------------------------------------------
+tasks = ["Write report", "Attend meeting", "Review code", "Submit timesheet"]
+
+for index, task in enumerate(tasks):
+print(f"{index + 1}. {task}")
+=======================================================================================
+zip 
+names = ["Alice", "Bob", "Charlie", "David"]
+ages = [30, 25, 35, 20]
+
+for idx in range(min(len(names), len(ages))):
+name = names [idx]
+age = ages [idx]
+print(f"{name} is {age} years old")
+------------------------------------------------------------------
+names = ["Alice", "Bob", "Charlie", "David", "Tim"]
+ages = [30, 25, 35, 20]
+
+combined = list(zip(names, ages))
+print(combined)
+
+for name, age in combined:
+print(f"{name} is {age} years old")
+------------------------------------------------------------------
+=======================================================================================
+
+file = open("test.txt", "w")
+file.write("hello world\nmy name is tim")
+file.close()
+
+I
+------------------------------------------------------------------
+# automatically closed file 
+with open("test.txt", "w") as file:
+file.write("here")
+I
+------------------------------------------------------------------
+with open("test.txt", "r") as file:
+text = file. read ()
+print(text)
+
+------------------------------------------------------------------
+with open("test.txt", "a") as file:
+file.write("\n new addition )
+=======================================================================================
+
+=======================================================================================
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
+
+-------------------------------------------------------------------------
 =======================================================================================================
 
 =======================================================================================================

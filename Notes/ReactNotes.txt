@@ -1,4 +1,12 @@
-✨ React Notes ✨
+
+					   ☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+
+------------------------------------------------------------
+Panda_Notes.txt
+=============================================================
+
+✨ React Notes ✨ ▶️
+
 https://www.w3schools.com/react/react_components.asp
 https://react.dev/learn/installation
 
@@ -9,9 +17,1253 @@ create resct app : https://create-react-app.dev/
 form hook : https://www.react-hook-form.com/
 nest js replacement : https://remix.run/
 redux : https://react-redux.js.org/introduction/getting-started
+Every React Concept Explained : https://youtu.be/wIyHSOugGGw # https://www.youtube.com/@TheCodeBootcamp/videos
+
+https://www.youtube.com/@TechPrepYT/shorts
 ==================================================================================================================================
+
+### command to create project
+create vite project => npm create vite@4.10 
+
+npm create vite@4.10 
+
+npm create vite@latest
+
+
+cd foodapp # cd <project folder>
+npm install
+npm run dev
+
 #### command  to run project
 npm run dev
+--------------------------------------------------
+
+ const data = JSON.stringify()
+JSON.stringify(props)  , prop is a object
+console.log(JSON.stringify(props));
+
+-------------------------------------------
+alert(`Student Name=${sname} and Button Name=${save}');  =>single tild statment
+==================================================================================================================================
+class based componant. function based componant
+==================================================================================================================================
+<React.StrictMode> => used for debugging in dev mode. on production it should be remove
+==================================================================================================================================
+we can write javascript code in between {}
+==================================================================================================================================
+useActionState
+useCallback
+useContext
+useDebugValue  
+useDeferredValue 
+useEffect
+useId
+useImperativeHandle 
+useInsertionEffect
+useLayoutEffect
+useMemo
+useOptimistic
+useReducer
+useRef
+useState
+useSyncExternalStore
+useTransition
+useOptimistic
+useSyncExternalStore
+----------------------
+
+
+
+###################
+
+
+useFormStatus (react DOM)
+
+
+
+===========================
+props.children
+
+
+life cycle
+===========================
+Components
+
+<Fragment> (<>)
+
+<Profiler>
+
+<StrictMode>
+
+<Suspense>
+
+<Activity>
+
+<ViewTransition>
+===========================
+APIs
+
+act
+
+cache
+
+captureOwnerStack
+
+createContext
+
+lazy
+
+memo  AKA React.Memo
+
+startTransition
+
+use
+
+experimental_taintObjectReference
+
+experimental_taintUniqueValue
+
+unstable_addTransitionType
+===========================
+  <div>FormAActionTest</div>
+    <div>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+    </div>
+
+==========================
+    componentWillMount() {
+
+    }
+
+    componentDidMount() {
+
+    }
+
+    componentWillReceiveProps(nextProps) {
+
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+    }
+
+    componentWillUnmount() {
+
+    }
+
+===========================
+Components
+
+<Fragment> (<>)
+
+<Profiler>
+
+<StrictMode>
+
+<Suspense>
+
+<Activity>
+
+<ViewTransition>
+===========================
+APIs
+
+act
+
+cache
+
+captureOwnerStack
+
+createContext
+
+lazy
+
+memo
+
+startTransition
+
+use
+
+experimental_taintObjectReference
+
+experimental_taintUniqueValue
+
+unstable_addTransitionType
+===========================
+==================================================================================================================================
+----------------------------------------------------------------------
+https://youtu.be/wIyHSOugGGw
+passinf other componant as props call as children  AKA composition
+----------------------------------------------------------------------
+use()   (in 19 replace useEffect and Use Contex) we can use this instef of useEffect and UseContex
+alwayes use with suspense  use() + <suspense>
+
+
+<Suspense> => if some tasks is delay. we fall back to suspensethat some thing is loding 
+
+
+	Usage
+	
+	Reading context with use
+	
+	When a context is passed to use , it works similarly to useContext . While useContext must be called at the
+	
+	top level of your component, use can be called inside conditionals like if and loops like for . use is preferred
+	
+	over useContext because it is more flexible.
+----------------------------------------------------------------------
+useState
+----------------------------------------------------------------------
+State lifting : passing data from child to parent component
+
+----------------------------------------------------------------------
+useDispatch :  called redux reducers FROM Component  (useDispatch is a function) (generally dispatch called reducer function through actions)
+----------------------------------------------------------------------
+useSelector  : access state values from store . it is also function. it return state data and other info 
+
+				const {items, filters} = useSelector(state => state.tasks);  => state.tasks  => tasks is a reducer name from store configrution file
+				console.log(items, 'items')
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+useNavigate/usedLocation
+----------------------------------------------------------------------
+userefuse with forward Ref  => not muted , not re-render,use in uncontrolled form ,
+----------------------------------------------------------------------
+useref use with forward Ref => passing data from parent to child componant, in child olny limited data access part render not full child componant. depricated from vesion 19 use Get Ref
+----------------------------------------------------------------------
+useformStstus hoo =>
+----------------------------------------------------------------------
+useactionstate
+----------------------------------------------------------------------
+useEffect
+----------------------------------------------------------------------
+useParams    => read query string parameter from url/route path in componenetnt
+----------------------------------------------------------------------
+useID ()    => genarating to uniq id ; const = useID ();
+			useld()
+			
+			useld is a React Hook for generating unique IDs that can be passed to accessibility
+			attributes. It helps to ensure that each instance of a component gets a unique ID,
+			which is useful for associating labels with input fields and other elements
+			
+			Syntax = const id = useId( )
+			
+			Parameters: useld does not take any parameters.
+			
+			Returns: useld returns a unique ID string associated with this particular useld call
+			
+			in this particular component.
+			
+			Note: useld should not be used to generate keys in a list.
+----------------------------------------------------------------------
+useReduces  => use with dispatch , like use state , define initial state
+----------------------------------------------------------------------
+createContex  =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
+----------------------------------------------------------------------
+Redux          => It Uses a centralised store, actions and reducers to manage state change predictibliy
+----------------------------------------------------------------------
+useCallback
+----------------------------------------------------------------------
+useTransition
+----------------------------------------------------------------------
+useLayoutEffect
+----------------------------------------------------------------------
+React.memo
+useMemo 
+useCallback
+compiler
+------------------
+React.memo(compName) => it's use for if perticulaer component render then child component should not be render. avoid unnecesary re-render of child componenet✏️parect child tree  , if parent componant render then child componant also render
+----------------------------------------------------------------------
+useMemo // useEffect
+----------------------------------------------------------------------
+useTheam
+----------------------------------------------------------------------
+useMediaQuery
+----------------------------------------------------------------------
+useSession
+----------------------------------------------------------------------
+usePathName
+----------------------------------------------------------------------
+children => we can pass component as childeren. it means we can pass component as props (https://youtu.be/6z1qEQU-stI?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza)
+			we have used this with contex  useContex
+----------------------------------------------------------------------
+preventdefault => use in form to avoind default submit e.preventdefault()
+----------------------------------------------------------------------
+
+<react.fragment>
+----------------------------------------------------------------------
+React Route
+
+<outlet>  => in main componant  show nested route / child pages
+----------------------------------------------------------------------
+Portals
+
+----------------------------------------------------------------------
+isActive :
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+
+==================================================================================================================================
+... spread operator   # or use .concate() to copy array
+    const originalArray = [1, 2, 3];
+    const copiedArray = [...originalArray]; 
+==================================================================================================================================
+In react use camel for event 
+onClick =>React  => onClick{functionName} => onlu use functionName dont use (). if we use () it will executed even before click
+onclick => javascript
+onClick{()=>functionName()} => with callback it will not executed automatic
+==================================================================================================================================
+<input
+type="text"
+onChange={(e) => setAmount(e.target.value)}     ✏️ setting input value
+value={amount}
+name=""
+id=""
+==================================================================================================================================
+------------------------------------------------------------------
+Props are immutable 
+
+Destructuring Props => props assinged to variables
+1]
+function Hello(props) {  // as prop key word
+console. log(props);
+const { name, message } = props;
+return (
+<div>
+
+{message} {name}
+</h1>
+</div>
+
+export default Hello;
+
+-------------------------
+2] directly destructure 
+function Hello({ name, message }) { // directly destructure  here.  remove prop keyword and in curly brases give varibles name
+return
+
+<div>
+
+<h1>
+{message} {name}
+</h1>
+</div>
+
+) ;
+
+export default Hello;
+
+------------------------------------------------------------------
+<h1>{`Hello ${user}!`}</h1>  => variable subcription  (tild use here)
+
+...Values  => ... used for creating copy 
+
+e.target.value  => get any html element value  . like input ,button etc
+
+
+
+
+---------------------------------------------------------------------
+cons name = "your name";
+numRange = [1, 4, 7];
+
+//object
+const person = {
+name: "Rob",
+message: "Hi there!",
+emoji: "@",
+seatNumbers: [1, 4, 7],
+};
+
+return (
+<div>
+<h2>Name: {name} </h2>
+<h3>Rating: {5 / 3.2} </h3>
+<p>Sumamry: {summary} </p>
+<p>Genre: {returnGenre ()} </p> calling function;
+<h2>Name: {name}, seatNumbers={seatNumbers} ,person={person}</h2> // sending array and object as props
+</div>
+)
+
+==================================================================================================================================
+Rendering Arrays Or Lists In React
+
+export default function Fruits() {
+const fruits = ["Apple", "Mango", "Banana", "Orange"]
+return (
+<div>
+
+<ul>
+{fruits.map((fruit) => (
+<li key={fruit}>{fruit}</li>           //key is acts like uniq index 
+
+</ul>
+</div>
+
+);
+
+-------
+const fluitsList = fruits.map((fruit, index) => <h3 key={index}>{fruit}</h
+return <div>fruitsList}</div>;
+
+-------------------------------------
+Rendering Array Of Objects In React
+
+export default function Fruits() {
+//const fruits = ["Apple", "Mango", "Banana", "Orange", "Pineapple"];
+const fruits = [
+[
+{ name: Apple", price: 10, emoji: "" },
+{ name: "Mango", price: 7, emoji: "Q" },
+{ name: "Banana", price: 2, emoji: "" },
+{ name: "Orange", price: 5, emoji: "é" },
+{ name: "Pineapple", price: 8, emoji: ">" },
+];
+
+
+<ul>
+{ fuits.map((fruit) =>
+li key={fruit.name}
+{" "}
+{fruit.emoji} {fruit.name} ${fruit.price}
+</li>
+
+</ul>
+-------------------------------------
+Rendering Components Inside A Loop
+https://www.youtube.com/watch?v=8AY4siDB3ow&list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza&index=15&pp=iAQB
+
+==================================================================================================================================
+
+
+Conditional Rendering Using Element Variables
+
+export default function ConditionalComponent()
+let message;
+tonst display = false;
+if (display) {
+message = <h1>This is message 1</h1>;
+} else {
+message = <h1>This is message 2</h1>;
+
+return message;
+---------------------------------
+Using Ternary Operators In React
+export default function ConditionalComponent()
+const display = true;
+return display ? <h1>Message 1</h1> : <h1>Message 2</h1>;
+
+---------------------------------
+export default function ConditionalComponent()
+const display = false;
+return display ? <Welcome /> : <Code />;
+
+---------------------------------
+{/* {emoji} {name} {price} */}
+{price>5 ? <h3>{emoji} {name} {price}</h3>:
+/li>
+
+-----------------------------------
+export default function Fruit({ name, price, emoji, soldout
+return
+
+<li>
+{emoji} {name} {price} {soldout ? "soldOut" : ""}
+</li>
+</>
+
+( 
+==================================================================================================================================
+Props v/s State
+. Props are passed to the component.
+. State is contained inside the component.
+. Props are immutable.
+· State can be changed.
+. Props are like parameters passed to a function.
+. State is like a variable declared in function body.
+
+
+----------------------------------------------------------------------------------
+
+import { useState } from "react";   => import this 
+
+export default function Counter() {
+const [count, setCount] = useState(0);  => use setCount function to  set value in count variable
+function handleClick()
+setCount(count + 1); => use setCount function to  set value in count variable
+
+(
+<div>
+<h1> Count value is: {count}</h1>
+<button onClick={handleClick}>Increment</button>
+</div>
+--------------------------------------------------------------------------------
+Creating Multiple States In React
+
+import { useState } from "react";
+
+export default function Counter() {
+const [count, setCount] = useState(0);             => multiple state
+const [incrementBy, setIncrementBy] = useState(1);  => multiple state
+function increment() {
+setCount (count + incrementBy) ;         =>both state variabe used 
+
+function decrement() {
+setCount(count - incrementBy);
+
+function increaseIncrement() {
+setIncrementBv(incrementBv + 1):
+}
+
+<div>
+<h1> Count value is: {count}</h1>
+<button onClick={increment}>Increment</button>
+<button onClick={decrement}>Decrement</button>
+
+<h1 We are incrementing the value by: {incrementBy}</h1>
+<betton onClick={increaseIncrement}>Increase Increment</button>
+</div>
+==================================================================================================================================
+Handling Input Fields In React
+
+export default function Form() {
+const [name, setName] = useState("Rob");
+function handleChange() {
+console. log ("Change occured')
+}
+
+return(
+<div>
+
+<form>   => use form tag
+<input onChange={handleChange} type="text" value={name} />
+</form>
+</form>
+</div>
+
+)
+};
+--------------------------------------------------------------------------
+export default function Form( )
+const [name, setName] = useState("");
+
+(
+<div>
+<form>
+<input
+onChange={(e) => setName(e.target.value)} => event value capture
+type="text"
+value={name}
+
+</form>
+</div>
+--------------------------------------------------------------------------
+==================================================================================================================================
+State lifting 
+passing data from child to parent component
+
+// Child Componant
+
+import React from 'react'
+import {useState} from 'react'
+
+function Child(props) {
+const [name, setName]= useState();
+function handleSubmit(e)
+e.preventDefault();
+props.getData(name)
+
+}
+return
+
+	(
+		<div>
+			<form onSubmit={handleSubmit}>
+			<input type='text' value={name} onChange={(e)=>{setName(e.target.value)}}></input>
+			<button>Submit</button>
+		</form>
+		
+		</div>
+	)
+}
+
+expport default child;
+-------------------------------------
+// Parent omponent Componant
+import './App.css';
+import Child from './Child';
+// Listing State up or pass data from child to parent
+
+function App(){
+	function getData(data){
+		console.log(data)
+			}
+return(
+<>
+	<Child getData={getData}/>
+
+</>
+);
+---------------------------------------
+==================================================================================================================================
+className  => camel case provided by react
+
+# inline CSS Stylesheets To Style Component
+
+const header = { color: "blue", fontSize: "140px" };
+export default function InlineComponent()
+(
+<div>
+<h1 style={header}>Inline Component</h1>
+</div>
+
+return
+
+) ;
+----------------------------------------------------------------
+CSS Stylesheets To Style Components
+
+----------------------------------------------------------------
+# CSS Modules For Styling
+
+import " .. /css/style.css";
+export default function InlineComponent() {
+return (
+<div>
+h1 className="inline-header"   =>  inline-header class name defined in css file style.css
+</div>
+);
+
+Inline Component</h1>
+
+}
+
+----------------------------------------------
+import styles from "./inlinecomponent.module.css";  => styles is variable name  this file created for each componant
+export default function InlineComponent() {
+return
+Ediva
+<h1 className={styles.header}>Inline Component</h1>  => header is calss name
+</div>
+) ;
+
+----------------------------------------------
+
+==================================================================================================================================
+## handling event
+
+
+
+const handleButtonClick = (event) = {
+console.log(event);
+console.log(event.target);
+console.log(event.type); // "click"
+alert("Hey I am onClick Event");
+};
+------------------
+https://github.com/thapatechnical/react-19-series-thapa-technical/blob/master/src/components/EventHandling.jsx
+{/* // ? Function Components with Named Functions */
+/* Remember how we haven't called this function, if you call this
+function here then it will run without even clicking. You just need
+to pass reference and not call here. */}
+<button onClick={handleButtonClick}>click Me</button>
+<br
+<button onClick={() = handleButtonClick(event)}>click Me 2 </button>
+
+----------------------------------------
+{/* /* //? Inline Event Handlers} */}
+<button onClick={(event) => console.log(event)}>Inline Function</button>
+-------------------------------------
+{/* //? Function Components with Inline Arrow Functions */}
+<button onClick={() => alert("Hey I am inline evnt function")}>
+w
+
+Inline Arr fun
+/button>
+--------------------------------------------
+{/* {/* //? Passing Arguments to Event Handlers } */}
+{/* <button onClick={handleWelcomeUser("vinod")}>click Me</button> */}
+<button onClick={() =handleWelcomeUser("vinod")}>click Me</button>
+--------------------------------------------
+
+const handleWelcomeUser =
+console. log( Hey ${user}, Welcome );
+
+(
+
+user) = {
+
+};
+
+==================================================================================================================================
+Passing Events as Props in React | Control Parent Function Using Child Component
+
+onClickCapture
+stopPropagation
+
+https://github.com/thapatechnical/react-19-series-thapa-technical/blob/master/src/components/EventProps.jsx
+------------------------
+==================================================================================================================================
+Syntax of the useEffect hook
+///useEffect(callback_function,exec callback_function,dependencies) //  any change in dependencies triggers code inside useEffect
+//useEffect(() => {}, [])
+
+
+useEffect(() => {
+function demo() {
+console. log("Demo function executed"
+
+demo ()    // executing call back demo function
+}, [])
+
+-----------------------------------------------------
+export default function Search() {
+const [query, setQuery] = useState("pizza")
+// Syntax of the useEffect hook
+useEffect(() => {
+async function fetchFood()
+const res = await fetch('${URL}?query=${query}&apiKey=${API_KEY}');
+const data = await res. json()
+console. log (data)
+
+fetchFood()
+}, [query] )     => in depandacy we have added query , if any thing change in query thee it again execute api call
+return
+
+(
+==================================================================================================================================
+##  useReducer =>  have state and action that we want to dispatch  and reducer function(3 types)
+
+useReducer is a function which return some value 
+
+syntax
+const [state_var, dispatch_action] = useReducer(reducer_func, 0);  => 0 is a initial value
+function reducer_func(state, action) {}
+----------------------------
+//example
+const [state_var, dispatch_action] = useReducer(reducer_func, 0);  => 0 is a initial value
+function reducer_func(state, action) {}
+----
+// reducer  function aggrigation or logic write here
+function reducer_func(state, action) {
+if (action. type == "increment") {
+return state + action.payload;
+}}
+----
+//execution
+// action object {type:"increment", payload: 1}
+
+< button onClick={ ()=>dispatch_action({type:"increment", payload: 1})}>Increment couny>/button>   => in call back function  have 2 argument  type and payload(data),payload data use any aggrigatin in reducer function
+
+----
+---------------------------------------------------------------
+##  Using Object As State In useReducer
+
+import { useReducer, useState } from "react";
+
+function App() {
+const [state, dispatch] = useReducer(reducer, { count: 0 });
+function reducer(state, action) {
+if (action.type == "increment") {
+return { ... state, count: state. count + action. payload }; // state + action.payload;
+}
+if (action. type == "decrement") {
+return { ... state, count: state. count - action. payload };
+}
+return (
+<div>
+{state. count}
+<button onClick={() => dispatch({ type: "increment", payload: 1 }) }>
+Increment count
+</button>
+<button onClick={() => dispatch({ type: "decrement", payload: 1}) }>
+Decrement count
+</button>
+</div>
+}
+---------------------------------------------------------------
+## Using Complex Object As State In useReducer
+
+https://youtu.be/kFe4h4HHpbA?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
+
+
+=================================================================================================================================
+## React Router (Creating Routes)
+
+npm install react-router-dom
+npm install react-router-dom@6 install version 6
+
+
+----------------------------------------------------
+import { BrowserRouter, Routes, Route } from "react-router-dom"; ✏️=> import
+import Homepage from "./pages/Homepage";
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
+
+function App() {
+return(
+<BrowserRouter>
+<Routes>
+<Route path="/" element={<Homepage />} />                          ✏️=> Homepage is componant
+<Route path="/dashboard" element={<Dashboard />} />                ✏️=> Dashboard is componant
+<Route path="*" element={<PageNotFound/>} />
+</Routes>
+</BrowserRouter>
+);
+---------------------------------------------------------
+https://youtu.be/gBH34hZdjns?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
+React Router ## Link Component In React
+import { Link } from "react-router-dom";  ✏️=> import
+export default function Homepage() {
+return (
+<div>
+This is a homepage
+<Link to="/dashboard" Dashboard</Link>  ✏️=> /dashboard is componant
+</div>
+);
+}
+---------------------------------------------------------
+React Router ##  Nesting Routes  ✏️=> import
+
+import Dashboard from "./pages/Dashboard";
+import PageNotFound from "./pages/PageNotFound";
+import Nav from "./Nav";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+
+function App() {
+return (
+
+<BrowserRouter>
+<Nav />
+
+<Routes>
+<Route path="/" element={<Homepage />} />
+<Route path="/products/: id element={<Products />}/>
+<Route path="/dashboard" element={<Dashboard >}>
+	<Route path="profile" element={<Profile />} />
+	<Route path="settings" element={<Settings />} />
+</Route>
+<Route path="*" element={<PageNotFound />} />
+</Routes>
+</BrowserRouter>
+);
+-----------------
+
+import { Link, Outlet } from "react-router-dom";
+
+export default function Dashboard() {
+return (
+<div>
+This is a dashboard
+<Outlet>  ✏️=> use this
+</div>
+);
+}
+---------------------------------------------------------
+<Route path="/" element={<Homepage />} />
+Route path="/products/: id element={<Products />}/>
+--------
+return <div>Products List
+
+import { useParams } from "react-router-dom";
+
+export default function Products() {
+const { id } = useParams ();
+return <div> my product {id} </div>
+
+
+---------------------------------------------------------
+React Router ## progrmatic by code useNavigate Hook In React
+
+import { Link, useNavigate } from "react-router-dom";
+export default function Homepage() {
+const navigate = useNavigate();
+function handleClick() {
+navigate("/dashboard/profile");
+}
+return(
+<div>
+This is a homepaget
+<button onClick={handleClick}>Go to profile page</button>
+</div>
+);
+}
+
+---------------------------------------------------------
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+export default function Homepage() {
+const [username, setUsername] = useState("");
+const navigate = useNavigate();
+function handleClick() {
+navigate("/dashboard/profile",
+}
+return (
+<div>
+This is a homepage
+<input
+type="text"
+value={username}
+onChange={(e) => setUsername(e.target.value)}
+/>
+<button onClick={handleClick}>Go to profile page</button>
+</div>
+
+state: { username } }) ;
+
+) ;
+}
+---------
+import { useLocation } from "react-router-dom";
+
+export default function Profile() {
+const location = useLocation();
+const { username } = location. state | | {};
+return <div>Profile for
+
+{username}</div>;}
+
+=================================================================================================================================
+✨ useContext Hook Context  // avoid prop drelling
+✨ Context API In React ✨
+https://youtu.be/aL6PBTtdt40?list=PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza
+-----------------------------------------------
+4 Steps Involved With Context (context have data and function)
+. Creating context.   =>  createContext(); method to create contex. every contex contain DATA and FUNCTION pass data or function
+· Providing context.  => provide contex to other componant that required it .wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
+. Consuming context.  => get data and function from contex
+· Updating context.
+------------------------------------------------------------------------------
+we will use createContext() and useContext(UserContext )   method and hook
+==================================================================================================================================
+create contex (parent)
+provider  (parent)
+consume contex (child>
+------------------------------------------------------------------------------
+//Creating context.
+//Providing context
+import { createContext, useState } from 'react'   =>   Creating context
+import './App.css'
+import ChildA from './components/ChildA';
+
+//step1: create Context
+    const UserContext = createContext();             =>   Creating context(this is outside of componenet)
+//step2: wrap all the child inside a provider
+//step3: pass value
+//step4: consumer .k andar jaake consume karlo
+
+function App() {
+const [user, setUser] = useState({name:"Love"});
+return (
+
+<UserContext.Provider value={user}>   ✏️=> provide contex
+<ChildA />
+</UserContext.Provider>
+</>
+
+export default App
+export {UserContext}  //=> export contex
+------------------------------------------------------------------------------
+step 3 Consuming context
+
+import React, { useContext } from 'react'
+import { UserContext } from ' .. /App'
+
+const Child = () => {
+const user = useContext(UserContext);
+return (
+<div>
+{user. name}
+</div>
+
+)
+
+export default Child
+------------------------------------------------------------------------------
+
+
+step 4 ## Updating context.
+ 
+ import { createContext, useState } from "react";
+import Checkout from "./Checkout";
+export const userContext = createContext();
+function App() {
+const [user, setUser] = useState("guest");  => user is data and setUser is a function
+return (
+<div>
+<input
+type="text"
+value={user}
+onChange={(e) => setUser(e.target. value)}
+/>
+<userContext.Provider xalue={{ user }}>
+<Checkout />
+</userContext.Provider>
+</div>
+
+):
+--------------------------------------------
+export default App; to Checkout component
+-----------
+src > Checkout.jsx > Checkout > 
+import { useContext } from "react";
+import { userContext } from "./App";
+
+export default function Checkout() {
+const {value} = useContext(userContext);    =>every contex have DATA and FUNCTION
+return <div>Checkout as {value.user}</div>; 
+==================================================================================================================================
+const ThemeContext = createContext();
+I
+
+function App()
+// const [user, setUser] = useState({name:"Love"});
+const [theme, setTheme] = useState('light');
+
+return (
+
+<ThemeContext.Provider value={{theme, setTheme}}>
+<div id='container' style={{backgroundColor:theme === 'light'?
+"beige":"black"}}>
+<ChildA />
+</div>
+
+</ThemeContext.Provider>
+------------------------------------------------------------------------------
+const ChildC = () => {
+const user = useContext(UserContext);
+const {theme, setTheme} = useContext (ThemeContext);
+function toggleTheme()
+if(theme === 'light' )
+setTheme ('dark')
+else
+setTheme('light')
+
+return (
+<div>
+<button onClick={toggleTheme}>
+Change Theme
+</button>
+</div>
+
+)
+
+export default ChildC
+==================================================================================================================================
+2]  Separating Context Into Its Own File In React
+   #also we can see here passing componant as children to componet using props
+------------------------------------------------------------------------------
+src > context >UserContext.jsx > UserProvider
+import { createContext } from "react";
+import { useState } from "react";
+const userContext = createContext();
+
+function UserProvider({ children }) {
+const [user, setUser] = useState("guest");
+return
+<userContext.Provider value={{ user, setUser }}>
+{children}
+</userContext.Provider>
+);
+
+export { UserProvider, userContext };  => export these
+----------------------------
+>src App.jsx > App
+import { createContext, useState } from "react";
+import Checkout from "./Checkout";
+import Login from "./Login";
+import { UserProvider } from "./context/UserContext";
+
+
+function App()
+
+return (
+<div>
+<UserProvider>
+<Login />
+<Checkout />
+</UserProvider>
+</div>
+
+export default App:
+
+----------------------------------------
+Sharing Context With Other Components In React
+}
+
+import { useContext } from "react";
+import { userContext } from "./context/UserContext";
+
+export default function Logout() {
+const { setUser } = useContext(userContext);
+return (
+<div>
+<button onClick={() => setUser("Guest")}>Logout</button>
+</div>
+);
+
+----------
+<div>
+<UserProvider>
+<Login />
+<Logout />
+<Checkout />
+</UserProvider>
+</div>
+
+
+==================================================================================================================================
+
+  
+✨ ####  Using Reducer With Context Provider ✨
+------------------------------------------------
+src > context > UserContext.jsx > UserProvider > userReducer
+ 
+import { createContext, useReducer } from "react";
+import { useState } from "react";
+const userContext = createContext();
+
+function UserProvider({ children }) {
+//const [user, setUser] = useState("guest");
+function userReducer(state, action) {
+if (action. type == "login") {
+
+return action.payload;
+
+if (action. type == "logout")
+
+return "Guest";
+
+const [user, dispatch] = useReducer(userReducer, "");
+
+return (
+<userContext.Provider value={{ user, dispatch }}>
+{children}
+</userContext. Provider> 
+------------------------------------------------------------------------------------------------
+>src > Logout.jsx > Logout
+import { useContext } from "react";
+import { userContext } from "./context/UserContext";
+
+export default function Logout() {
+const { dispatch } = useContext(userContext);
+return
+<div>
+<button onClick={() => dispatch({ type: "logout", payload: "Guest" }) }>
+Logout
+</button>
+</div>
+------------------------------------------------------------------------------------------------
+src > Login.jsx > Login > handleSubmit
+Enport { userContext } trom "./context/UserContext";
+
+export default function Login() {
+const [value, setValue] = useState["");
+const { user, dispatch } = useContext(userContext);
+function handleSubmit(e) <
+e.preventDefault();
+//setUser(value);
+dispatch({ type: "login", payload: value });
+
+return (
+<div>
+<form onSubmit={handleSubmit}>
+<input
+value={value}
+onChange={(e) => setValue(e.target.value)}
+type="text"
+
+<button type="submit">Login</button>
+</form>
+</div>
+);
+==================================================================================================================================
+
+=================================================================================================================================
+memo
+
+
+import React from "react";
+function Child({ count }) {
+console. log("Child component is being rerendered");
+kdiv Child count is {count}</div>;
+
+export default React.memo(Child);
+=================================================================================================================================
+Portals
+
+=================================================================================================================================
+## useId   (thapa)
+import { useId } from "react";
+
+export const UseId = () =
+const usernameId = useId( );
+const emailId = useId( );
+cosnt passwordId = useId( );
+
+return (
+<form>
+
+<div>
+
+<label htmlFor={usernameId}> Username: </label>
+<input type="text" id={usernameId} name="name"
+</div>
+<div>
+
+<label htmlFor={passwordId}> Password: </label>
+<input type="password" id={passwordId} name="password"
+=================================================================================================================================
+
+## Create Custom Hooks in React
+
+Rules for Custom Hooks
+
+Creating custom hooks in React is a powerful way to encapsulate logic and make your
+components cleaner and more maintainable.
+
+Custom hooks must start with the word use. This convention ensures
+that hooks are easily identifiable and adhere to the hook rules.
+
+2. Use Built-in Hooks: Custom hooks should utilize React's built-in hooks (e.g., useState,
+useEffect, useContext) to leverage React's state and lifecycle features.
+
+3. Avoid Side Effects Outside Hooks: Side effects (e.g., data fetching, subscriptions)
+should be managed within hooks using useEffect or other appropriate hooks.
+
+4. Keep Hooks Pure: Hooks should be free from side effects and return values or function
+that the component can use.
+
+Prefix with
+
+use:
+=================================================================================================================================
+
+
+==================================================================================================================================
+
+==================================================================================================================================
+
+
 ==================================================================================================================================
 ChatGPT.com switched from NextJS to Remix
 ? create your own hook , custome hook ?
@@ -31,25 +1283,6 @@ htmlFor    =>
 e,preventDefault =>
 <React.StrictMode>   => use application run in dev mode , cause to double rendaring , Remove on Prod 
 useState             => hook  to change initial value  like input  
-Destructuring Props =>
-
-<h1>{`Hello ${user}!`}</h1>  => variable subcription  (tild use here)
-
-...Values  => ... used for creating copy 
-
-e.target.value  => get any html element value  . like input ,button etc
-
-
-useEffect
-useParams    => read query string parameter from url/route path in componenetnt
-useRef
-useReduces  => use with dispatch , like use state , define initial state
-createContex () =>  create contex and then ,create provider component and register component , and then use provider in Application , consume contex in component
-Redux           => It Uses a centralised store, actions and reducers to manage state change predictibliy
-usedispatch()
-useselector ()
-useDispatch()
-useLayoutEffect()
 
 ==================================================================================================================================
 ✨ react js with vite
@@ -194,6 +1427,28 @@ return (<div>
 <MyButton prphandleClick = { handleClick}  text ="click me "> <h1>{count}</h1>	<MyButton>  ✏️=> we will send this function  in prop
 </div>)
 }
+==================================================================================================================================
+✨ #### Conditional rendaring 
+Function App()
+const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+return (
+<div style={{ padding: "2rem" }}>
+<h1>Welcome to chai code</h1>
+<button onClick={() => setIsLoggedIn(!isLoggedIn)}
+>Toggle login</button>
+
+<div>
+<h3>&& operator</h3>
+{isLoggedIn && <p>Welcome to chaicode video</p>}   ☑️  use this {! ! isLoggedIn && <p>Welcome to chaicode video</p>}  ▶️  to avoid short condition
+</div>
+<div>
+<h3>Ternary operator</h3>
+{isLoggedIn ? <p>Welcome to chaicode video</p>:
+"Please login"}
+</div>
+
+export default App;
 
 ==================================================================================================================================
 ✨ #### Props  State Lifting in React  (child to parent )
@@ -303,7 +1558,9 @@ prop, state and hook,memo ?
 ==================================================================================================================================
 ### comment
 
- {/* This is a comment in React */}
+normal javascript commit use //
+
+ for jsx comment use =>{/* This is jsx comment in React */}
  
  // Types of comment  support in  react ****************************************************//
 // ConditionalRendering.jsx
@@ -313,6 +1570,21 @@ prop, state and hook,memo ?
 
 ### fragment
 <></>
+
+return (
+<>
+<h1>Heading</h1>
+<h2>Subheading</h2>
+</>
+);
+--------------- OR 
+return (
+<React.Fragment>
+<h1>Heading</h1>
+<h2>Subheading</h2>
+</React.Fragment>
+);
+
 ----------------------------------------------------------------
 
 const {abcd}= value || {};  value or default , in this case empty object is defaut 
@@ -359,15 +1631,7 @@ uncontrolled >> use ref >> using selector >> directly dom  referance
 ### hook
 hook's are reguler functions but these function only called by react component (alwayes place inside of component)
 
-useState
-useDispatch
-useSelector
-useparams
-useNavigate/usedLocation
-useref
-forward Ref>> depricated from vesion 19
-useformStstus hoo =>
-useactionstate
+
 ==================================================================================================================================
 next js
 router.push ()=> this will create entry in history
@@ -1039,165 +2303,7 @@ button>
 
 );}
 ==================================================================================
-✨ useContext Hook Context  // avoid prop drelling
-✨ Context API In React ✨
------------------------------------------------
-Steps Involved With Context
-. Creating context.
-· Providing context.  => wrap child in <ContextName.Provider > tags, // <ContextName.Provider  anyData ="guest" >  sending data also
-. Consuming context.  =>
-· Updating context.
 
-==================================================================================================================================
-create contex (parent)
-provider  (parent)
-consume contex (child>
-------------------------------------------------------------------------------
-Creating context.
-Providing context
-import { createContext, useState } from 'react'
-import './App.css'
-import ChildA from './components/ChildA';
-
-//step1: create Context
-const UserContext = createContext();
-//step2: wrap all the child inside a provider
-//step3: pass value
-//step4: consumer .k andar jaake consume karlo
-
-function App() {
-const [user, setUser] = useState({name:"Love"});
-return (
-
-<UserContext.Provider value={user}>
-<ChildA />
-</UserContext.Provider>
-</>
-
-export default App
-export {UserContext}  //=> export contex
-------------------------------------------------------------------------------
-Consuming context
-
-import React, { useContext } from 'react'
-import { UserContext } from ' .. /App'
-
-const Child = () => {
-const user = useContext(UserContext);
-return (
-<div>
-{user. name}
-</div>
-
-)
-
-export default Child
-------------------------------------------------------------------------------
- ## Updating context.
- 
- import { createContext, useState } from "react";
-import Checkout from "./Checkout";
-export const userContext = createContext();
-function App() {
-const [user, setUser] = useState("guest");
-return (
-<div>
-<input
-type="text"
-value={user}
-onChange={(e) => setUser(e.target. value)}
-/>
-<userContext.Provider xalue={{ user }}>
-<Checkout />
-</userContext.Provider>
-</div>
-
-):
-
-export default App;
------------
-src > Checkout.jsx > Checkout > 
-import { useContext } from "react";
-import { userContext } from "./App";
-
-export default function Checkout() {
-const {value} = useContext(userContext);
-return <div>Checkout as {value.user}</div>;
-==================================================================================================================================
-const ThemeContext = createContext();
-I
-
-function App()
-// const [user, setUser] = useState({name:"Love"});
-const [theme, setTheme] = useState('light');
-
-return (
-
-<ThemeContext.Provider value={{theme, setTheme}}>
-<div id='container' style={{backgroundColor:theme === 'light'?
-"beige":"black"}}>
-<ChildA />
-</div>
-
-</ThemeContext.Provider>
-------------------------------------------------------------------------------
-const ChildC = () => {
-const user = useContext(UserContext);
-const {theme, setTheme} = useContext (ThemeContext);
-function toggleTheme()
-if(theme === 'light' )
-setTheme ('dark')
-else
-setTheme('light')
-
-return (
-<div>
-<button onClick={toggleTheme}>
-Change Theme
-</button>
-</div>
-
-)
-
-export default ChildC
-==================================================================================================================================
-2]  Separating Context Into Its Own File In React
-------------------------------------------------------------------------------
-src > context >UserContext.jsx > UserProvider
-import { createContext } from "react";
-import { useState } from "react";
-const userContext = createContext();
-
-function UserProvider({ children }) {
-const [user, setUser] = useState("guest");
-return
-<userContext.Provider value={{ user, setUser }}>
-{children}
-</userContext.Provider>
-);
-
-export { UserProvider, userContext };
-------------------------------------------------------------------------------
-src > App.jsx > App
->src App.jsx > App
-import { createContext, useState } from "react";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import { UserProvider } from "./context/UserContext";
-
-
-function App()
-
-return (
-<div>
-<UserProvider>
-<Login />
-<Checkout />
-</UserProvider>
-</div>
-
-export default App:
-==================================================================================================================================
 https://reactrouter.com/start/data/routing
 ✨ Routing in React ✨ 
 ------------------------------------------------------------------------------
@@ -1662,9 +2768,240 @@ type="text"
 
 
 ==================================================================================================================================
+useMemo
 
+useMemo
+
+A React hook that allows to memoize the result of a computation
+
+Used for performance optimization
+
+Ensures that computations are only performed when necessary
+
+-------
+Best Practices
+
+Use for expensive calculations and for passing arrays or objects as prop
+
+For cheap computation, useMemo may add unnecessary complexity
+
+Over-memoizing decrease the performance
+
+Missing or incorrect dependencies may lead to defects
+
+=================================================================
+React.memo
+
+Higher-order component in React that prevents unnecessary re-renders
+
+Improves the performance by caching the result of a component's render
+
+When props don't change, React skips the re-render
+
+Use shallow comparison to check whether the props have changed
+
+
+Scenarios in which we should avoid
+
+Simple component without heavy computations that renders quickly
+
+When parent component rarely updates the props
+
+When we pass complex objects or functions as props
+
+When parent component re-renders frequently
+
+When component is consuming values from React's Context API
+
+When component has side effects
+=================================================================
+useCallback
+
+A React hook that memoizes functions
+
+Performance optimization tool that prevents function recreation
+
+Helps to memoize or cache the function
+
+useCallback( Fn to be memoized, Array of dependencies )
+
+-------------
+
+
+=================================================================
+
+//create , provider , useCoxtex;
+
+Situations where we should avoid using the context
+
+Data sharing between siblings or parent-child components
+
+Data doesn't change often
+
+Static data
+
+When managing state that is localized to a specific component
+
+Larger applications
+
+=================================================================
 ==================================================================================================================================
+useActionState Hook
 
+. Used to handle form in React js
+. It updates state based on the result of a form action
+
+
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+
+useSyncExternalStore :  React Hook that lets you subscribe to an external store  
+parent golbal data outside of function  used in child component,
+---------------------------------------------------------------------
+
+useDebugValue
+React Hook that lets you add a label to a custom Hook in React DevTools.
+it will show data in crome React DevTools.
+---------------------------------------------------------------------
+useDeferredValue:.
+useDeferredValue is a React Hook that lets you defer updating a part of the UI.
+defered the other UI and process will continue non Blocking
+---------------------------------------------------------------------
+useInsertionEffect
+---------------------------------------------------------------------
+useEffect  -==>after render UI
+useLayoffeffect => before rendain UI
+---------------------------------------------------------------------
+
+useTransition  => specity certain state update not urgent
+---------------------------------------------------------------------
+useDefferedValue =>  silmiler to transition , its lets you defer updates to keep your app responsive
+sechedul an update at an optimal time
+
+---------------------------------------------------------------------
+useOptimistic
+
+---------------------------------------------------------------------
+
+
+
+UseSyncExternalStore
+contex
+memo
+callback
+
+
+UseTransition / useformstatus
+
+----------------
+
+
+
+
+
+---------------
+await new Promise(res=>setTimeout(res,2000))
+
+
+===========================================================================================================================
+React.memo (use for stop rerendaring  and useMemo is different it is use for cache output or keep output in memory)
+
+Higher-order component in React that prevents unnecessary re-renders
+
+Improves the performance by caching the result of a component's render
+
+When props don't change, React skips the re-render
+
+Use shallow comparison to check whether the props have changed
+-------------
+Scenarios in which we should avoid
+
+Simple component without heavy computations that renders quickly
+
+When parent component rarely updates the props
+
+When we pass complex objects or functions as props
+
+When parent component re-renders frequently
+
+When component is consuming values from React's Context API
+
+When component has side effects
+===========================================================================================================================
+Use Callback
+Best Practices
+
+Use only when it is necessary, don't overuse
+
+Not needed for child component which is small or fast
+
+Works best when combined with React.memo
+
+Keep the dependencies correctly
+
+Use for functions that are computationally expensive
+===========================================================================================================================
+What is uselmperativeHandle ?
+
+A powerful tool that allows us to expose functions or values from a child component to a parent component
+
+
+
+
+useImperativeHandle : 
+
+it also use for call child functions from parent component code . with using ref
+
+access some data or function from child to parent 
+
+useImperativeHandle customizes the instance value that is exposed to parent components
+when using ref. As always, imperative code using refs should be avoided in most cases.
+useImperativeHandle should be used with forwardRef:
+
+https://www.youtube.com/watch?v=9jOUXWgbDNY
+https://www.youtube.com/watch?v=RVTvjbU-S64&t=25s
+===========================================================================================================================
+Code Splitting is the act of breaking up your application's large single code file (the "bundle") into many smaller files or "chunks." Think of it as preparing your code to be loaded on demand. By itself, splitting the code doesn't mean the chunks are loaded lazily; it just makes it possible. ✂
+
+Lazy Loading is the strategy of actually waiting to download one of those small chunks from the server until the exact moment it's needed. This is the action that defers the download. ⏳
+
+In this video two methods of lazy loading are used:
+
+1. React.lazy + Suspense   ->   React.lazy(() => import(...))	
+The standard, declarative way. Best for route-based splitting or when you want React to manage the loading state declaratively.
+
+2.Manual async/await + State	 ->   const module = await import(...)	
+The manual, imperative way. Best for event-driven loading (e.g., modals, popups) where you need fine-grained control over the loading logic.
+
+===========================================================================================================================
+Side Effects
+
+Fetching data from APIs
+
+Setting up subscriptions or timers
+
+Modifying DOM elements directly
+
+Accessing browser APIs
+
+
+Best Practices
+
+Include only the dependencies that directly affect
+the side effect
+
+Avoid including unnecessary dependencies
+
+Use separate useEffect for separate side effect
+
+Specify correct dependencies
+
+Cleanup side effects
+
+Avoid performing side effects in render function
+
+===========================================================================================================================
 ==================================================================================================================================
 
 ==================================================================================================================================

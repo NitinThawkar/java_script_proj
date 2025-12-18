@@ -1,12 +1,35 @@
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+
+------------------------------------------------------------
+Linux_Notes.txt
+=============================================================
+
+
 ✨ Linux Notes
 
 LINUX command : https://medium.com/@subhampradhan966/linux-fundamentals-and-basic-commands-30a1ea72ea11
 
 BASH : https://www.w3schools.com/bash/bash_touch.php
 
+✍️ IMP : https://www.howtoforge.com/linux-commands/
+
+https://medium.com/@subhampradhan966/linux-fundamentals-and-basic-commands-30a1ea72ea11
+
+C:/LocalCode/java_script_proj/Notes/Linux_notes.txt
 -------------------------------------------------
 =============================================================================
 #########################################################################################
+# install operating system version
+▶️ lsb_release -a
+Ubuntu 24.04.3 LTS
+
+▶️  arch
+
+▶️  cat /etc/os-release
+
+▶️sudo su root  (go to root user)
+#########################################################################################
+
 ls: List files and directories.
 cd: Change the current directory.
 mkdir: Create a new directory.
@@ -15,10 +38,10 @@ cp: Copy files or directories.
 mv: Move or rename files or directories.
 rm: Remove files or directories.
 pwd: Print the current working directory.
-=============================================================================
+#########################################################################################
 Linux Commands You Must Know as a Regular User
 ls         — The most frequently used command in Linux to list directories
-pwd         — Print working directory command in Linux
+pwd         — Print working directory path command in Linux
 cd         — Linux command to navigate through directories
 mkdir         — Command used to create directories in Linux
 mv         — Move or rename files in Linux
@@ -67,7 +90,12 @@ whatis         — Find what a command is used for
 top         — View active processes live with their system usage
 useradd and usermod         — Add new user or change existing users data
 passwd         — Create or update passwords for existing users
-=============================================================================
+file 
+stat            -- stat <file name>
+groups
+xargs
+which 
+#########################################################################################
 What is Linux?
 - Linux is an open-source operating system modelled on UNIX. It’s the foundation of many cloud infrastructures and has a significant presence in the server world, among other places.
 
@@ -139,33 +167,728 @@ uname -a: Display system information.
 df -h: Show disk usage.
 free -h: Display memory usage.
 top or htop: Monitor system processes.
-=============================================================================
+#########################################################################################
+syntax
+▶️command + options + one or multiple Arguments 
 
-=============================================================================
+---
+▶️use space for next page 
+---
+▶️ press q to exit  
+▶️ tab to auto complete
+#########################################################################################
+https://www.howtoforge.com/linux-ls-command/
+-----------------------------------------------------------------
+☑️☑️ man manual
+▶️ man
+-----------------------------------------------------------------
+Check your current user
+☑️☑️ whoami
 
-=============================================================================
+▶️ whoami
+------------
+exit current user or  exit from super user (root) and return to your normal user
+▶️ exit
+-----------------------------------------------------------------
+#########################################################################################
+☑️☑️ man history
+history | grep "mkdir"
+history 10
+history | head
+history | tail
+!!
+!456
+history -c  (clear history)
+ctrl + R
 
-=============================================================================
+echo $HISTFILESIZE
+echo $HISTSIZE
 
-=============================================================================
+stored in .bash_history file in  (sech in user home folder)
 
-=============================================================================
 
-=============================================================================
+#########################################################################################
+☑️☑️ mkdir
+if you want to create dir1/dir2/dir2 when none of these directories are already existing, then you can do this in the
+multiple / nested / subdirectories
+▶️ mkdir -p nitin/proj/rust_test_proj
+-----------------------------------------------------------------
+# Create and set permissions
+Use the mkdir command with the -m (mode) option to specify the permissions
+▶️ mkdir -m 777 directory_name
+-----------------------------------------------------------------
+create a directory and switch to it using a single command
 
-=============================================================================
+▶️mkdir howtoforge && cd $_
 
-=============================================================================
+#########################################################################################
+☑️☑️ cat - concatenate files and print on the standard output  echo
 
-=============================================================================
+▶️cat man
+▶️cat a.txt b.txt   (combine both file content and will show on terminal)
 
-=============================================================================
+▶️cat a.txt b.txt > xyz.txt   combine both file and create new file xyz ( > = overwrite if already created)
+▶️cat a.txt b.txt >> xyz.txt   combine both file and create new file xyz ( >> = append content in file)
+---------------------------------
+▶️cat a.txt
+hello nitin    (press ctrl+d) 
+---------------------------------
+▶️echo "hello" > abc.txt
 
-=============================================================================
+---------------------------------
+☑️☑️ head tail
+▶️ man tail
+▶️ head abc.txt ( will disply starting 10 element)
+▶️ tail abc.txt ( will disply starting 10 element)
 
-=============================================================================
+▶️ head -3 abc.txt (shoe first 3 line and tail shoe last 3 lines)
+------------
+▶️ man less
 
-=============================================================================
+▶️ less abc.txt
 
-=============================================================================
+#########################################################################################
+☑️☑️ cp 
+also use for copy  file dir
+▶️cp man
+
+
+#########################################################################################
+☑️☑️ man mv   Move or rename files or directories
+also use for  move file dir
+▶️  mv nitin  abc 
+Move or rename files in Linux
+
+#########################################################################################
+
+☑️☑️ ls
+▶️ man ls
+https://www.howtoforge.com/linux-ls-command/
+
+List hidden files/directories
+▶️ ls -a
+
+----------------------------------------------------------------
+ls command display contents of subdirectories as well (like tree structure)
+▶️ls -R 
+----------------------------------------------------------------
+# display detailed information about files and directories
+The first column shows file permissions
+The second column shows the number of hard links 
+The third and the fourth ones are owner and group names
+fifth is the file size
+The sixth and seventh are the date and time of the last modification
+The last is the name of the file.
+
+▶️ls -l 
+
+----------------------------------------------------------------
+▶️ls -l > abc.txt (write output in abc.txt)(
+
+▶️ls -l >> abc.txt (append output in abc.txt)
+#########################################################################################
+Sudo User
+----------------------------------------------------------------
+▶️sudo su root
+
+The command sudo su root is used in Linux to launch an interactive root shell from your current user account, provided your account has the necessary sudo privileges. It is functionally similar to sudo -s or sudo -i, but with some key differences in how the environment is set up
+----------------------------------------------------------------
+Navigating to the root User's Home Directory (/root)
+The /root directory is the home directory for the administrator user account (root). 
+To access this directory, you typically need elevated privileges
+▶️ sudo -i
+This command simulates a full login as the root user and places you in the /root directory automatically. 
+Your command prompt will often change from a $ to a # to indicate you have root privileges
+
+To exit the root shell and return to your normal user session, type 
+▶️ exit. 
+#########################################################################################
+☑️☑️ cd
+---------------------------------------
+Command 	Description	Example
+cd /path/to/directory	Use an absolute path to go directly to a specific location from anywhere in the filesystem (paths starting with / begin at the root directory).	cd /home/user/Documents
+cd ..	Move up one level to the parent directory of your current location.	If in /home/user/Documents, this moves you to /home/user
+cd ~ or cd	Go directly to your current user's home directory from anywhere.	cd ~
+cd -	Go back to the previous directory you were just in.	cd -
+----------------------------------------------------------------
+cd ..
+cd [directory-name]
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+ Navigating to the Root Directory
+▶️cd ..
+▶️cd /
+
+----------------------------------------------------------------
+quickly switch to home directory using cd command
+▶️ cd ~
+----------------------------------------------------------------
+#########################################################################################
+☑️☑️ redirection > >> and standard output and standard error  ( > for overwrite and >> for append)
+echo "hello" > a.txt
+cat a.txt
+
+echo "hello" 1> a.txt  (1  for  standard output . even we not provide by default is is 1)
+cat a.txt
+
+echo "hello" 2> new. txt
+
+echo "hello" 2> new. txt > neww. txt > newest. txt
+
+echo "hello" 2> new. txt >> neww. txt >> newest. txt
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+#########################################################################################
+☑️☑️ rmdir
+Remove the DIRECTORY # rmdir [OPTION]... DIRECTORY...
+▶️ rmdir  <dir-name>
+----------------------------------------------------------------
+Remove or delete directory (sub directory)
+▶️rmdir -p test/test-dir/
+
+----------------------------------------------------------------
+difference between rmdir and rm -r
+
+▶️ rm [filename]
+----------------------------------------------------------------
+remove directories using rm command
+▶️rm -r [dir name]
+----------------------------------------------------------------
+ rm only remove empty directories
+ rm -d [dir]
+----------------------------------------------------------------
+#########################################################################################
+☑️☑️ rm remove file and directory  
+▶️ man rm
+
+----------------------------------------------------------------
+remove directory
+▶️ man rm -d
+----------------------------------------------------------------
+▶️ man rm -r  (delete non empty dir)
+----------------------------------------------------------------
+
+#########################################################################################
+✨ ☑️☑️ man chmod
+
+✏️ use ls -l to view permission
+
+drwxr-xr--   ✏️#first char for Symbol # next 3 char for Owner (u)/user Permissions # next 3 char for Group (g) Permissions # next 3 char for Others (o) Permissions 
+
+-------------------------------------------------------------------------
+File Type Indicator
++--------+------------------+
+| Symbol | Meaning          |
++--------+------------------+
+| -      | Regular file     |
+| d      | Directory        |
+| l      | Symbolic link    |
++--------+------------------+
+
++---------+-----------+----------------------+
+| Section | Who       | Permissions          |
++---------+-----------+----------------------+
+| rwx     | Owner (u) | Read, Write, Execute |
+| r-x     | Group (g) | Read, Execute        |
+| r--     | Others (o)| Read only            |
++---------+-----------+----------------------+
+
+rwx → Owner (u) has Read, Write, Execute
+r-x → Group (g) has Read, Execute
+r-- → Others (o) have Read only
+
++----------------------+----------------------+
+| Permission Types     | Permission Categories|
++----------------------+----------------------+
+| r  = Read            | u = Owner            |
+| w  = Write           | g = Group            |
+| x  = Execute         | o = Others           |
++----------------------+----------------------+
+| Numeric Values       |
++----------------------+
+| r = 4 | w = 2 | x = 1|
++----------------------+
+---------------------------------------------------------------------
+
+
+☑️☑️ man chmod
+▶️chmod [who][what][which]  <file or dir name>
+
+---------------------------------------------------------------------
+✏️ add = +   | remove = -
+
+chmod u+x file.txt   # Add execute for owner
+chmod g-w file.txt   # Remove write for group
+
+---------------------------------------------------------------------
+✏️ Numeric Representation
+r = 4 | w = 2 | x = 1      0=-
+Examples:
+chmod 644 file.txt → rw-r--r--  (Owner: read/write, Group: read, Others: read)
+chmod 755 file.txt → rwxr-xr-x  (Owner: all, Group: read/execute, Others: read/execute)
+chmod 700 file.txt → rwx------  (Owner only)
+
+#########################################################################################
+✨  date and time datetime
+
+☑️☑️ ncal
+
+
+#########################################################################################
+✨  user and groups (super use do)
+
+☑️☑️ sudo
+▶️sudo
+▶️sudo -l
+▶️su      (want to run some command by login with different user using same shell terminal)
+▶️su - <username>
+
+#########################################################################################
+☑️☑️ nano  text editor
+
+Alt-G: Go to a specific line number
+Ctrl- up arrow : Go to the start of the text
+Ctrl- down arrow : Go to the end of the text
+Ctrl- A: Go to the start of the line
+Ctrl- E: Go to the end of the line
+
+Ctrl + Shift + C: Copy to global
+Ctrl + Shift + V: Paste from global
+Ctrl-K: Cut a line / selected
+Alt + ^: Copy the line / selected
+Ctrl-U: Paste
+Alt + U: Undo
+
+Ctrl + W - Search for a string or a regular expression
+
+Ctrl + \ - Replace a string
+
++----------------------+-------------------------------------------+
+| Shortcut             | Action                                    |
++----------------------+-------------------------------------------+
+| Ctrl + G             | Show help                                 |
+| Ctrl + O             | Write (Save) file                         |
+| Ctrl + X             | Exit Nano                                 |
+| Ctrl + W             | Search text                               |
+| Ctrl + \             | Search and replace                        |
+| Ctrl + K             | Cut current line                          |
+| Ctrl + U             | Paste (Uncut) line                        |
+| Ctrl + J             | Justify current paragraph                 |
+| Ctrl + A             | Move to beginning of line                 |
+| Ctrl + E             | Move to end of line                       |
+| Ctrl + Y             | Scroll up one page                        |
+| Ctrl + V             | Scroll down one page                      |
+| Ctrl + C             | Show current cursor position              |
+| Ctrl + T             | Spell check (if enabled)                  |
+| Ctrl + _             | Go to specific line number                |
+| Alt + A              | Set mark (start selection)                |
+| Alt + 6              | Copy selected text                        |
+| Ctrl + K             | Cut selected text                         |
+| Ctrl + U             | Paste text                                |
+| Alt + U              | Undo last action                          |
+| Alt + E              | Redo last undone action                   |
+| Ctrl + R             | Insert another file into current buffer   |
+| Ctrl + N             | Create new buffer                         |
+| Ctrl + P             | Switch to previous buffer                 |
+| Ctrl + ]             | Switch to next buffer                     |
++----------------------+-------------------------------------------+.
++----------------------+-------------------------------------------+
+| Shortcut             | Action                                    |
++----------------------+-------------------------------------------+
+| Ctrl + A             | Move to beginning of line                 |
+| Ctrl + E             | Move to end of line                       |
+| Ctrl + K             | Cut current line (or marked text)         |
+| Ctrl + U             | Paste (Uncut) text                        |
+| Ctrl + Y             | Scroll up one page                        |
+| Ctrl + V             | Scroll down one page                      |
+| Ctrl + W             | Search text                               |
+| Ctrl + L             | Refresh screen                            |
+| Ctrl + R             | Insert another file into current buffer   |
+| Ctrl + D             | Delete character under cursor             |
+| Ctrl + Alt + T       | Open terminal (Ubuntu shortcut)           |
+| Ctrl + Shift + -     | Go to specific line number in Nano        |
+| Ctrl + -             | (Same as above, depending on keyboard)    |
+| Alt + A              | Set mark (start selection)                |
+| Alt + 6              | Copy selected text                        |
+| Alt + B              | Move back one word                        |
+| Alt + F              | Move forward one word                     |
+| Alt + D              | Delete next word                          |
+| Alt + U              | Undo last action                          |
+| Alt + E              | Redo last undone action                   |
++----------------------+-------------------------------------------+
+
+
+
+#########################################################################################
+✨  Sort
+
+☑️☑️ sort
+▶️ man sort
+
+▶️ sort abc.txt   (sort accending)
+▶️ sort -r abc.txt (sort decending)
+▶️ sort -n -r abc.txt (-n for number)
+▶️ sort -k5h  files          (k is column , h for readable sort)
+#########################################################################################
+☑️☑️ pipe operator ( combine the coomands )
+# output of one comand will became input of another command
+
+▶️ ls -lh | sort -k5h   (combine ls and sort command)
+▶️ ls -lh | sort -k5h | head 10  
+#########################################################################################
+☑️☑️ grep (search in terminal) (search pattern)
+
+▶️ man grep
+▶️ grep "imp"   #search in current dir or file
+▶️ grep <pattern> <filename>   # it is case sensative 
+▶️ grep -i "life"   abc.txt 
+▶️ grep -i "life"   hello  (-i for case insensative, "life" is pattern  hello is file
+▶️ grep -iwc "life" 
+▶️ grep "tomato" foods.txt -iB2 A2
+▶️ sort abc.txt
+#########################################################################################
+☑️☑️  find - search for files in a directory hierarchy
+▶️ man find
+
+$ find /home/ooo/ -name "medi"
+$ find /home/ooo/ -name "medi*"
+
+find -iname "*ReSume*"
+
+find -iname " *. pdf"
+
+ 
+find -type f -iname "*important"   -f for file and -d for folder
+
+-----------
+find /path -size +100M # for files larger than 100 MB
+find /path -size -50k # for files smaller than 50 KB
+-----------
+find /path -mtime -7 # for files modified in the last 7 days
+find /path -mtime +7 # for files modified more than 7 days ago
+
+-mmin
+-amin -atime
+-cmin -ctime
+
+
+--------
+find /path -type f -name " *. txt" -and -size +1M
+
+find /path \( -name " *. txt" -or -name " *. pdf" \)
+
+find /path ! -name " *. txt"
+
+--------
+
+find /path -type d -empty
+
+-----------
+find /path -name " *. txt" -exec command {} ';'
+
+-exec is followed by the command you
+want to execute.
+
+{} represents the placeholder for the
+found file or directory.
+
+';' marks the end of the command to be
+executed.
+
+# find -empty -exec rm -rd (} ';'
+
+find -exec echo {} ';'
+
+find -exec file {} ';'
+
+
+
+-----------------
+#########################################################################################
+☑️☑️  chown change owner
+
+▶️ man chown
+  chown <ownername> <file or dir name>
+▶️ chown rohit sampledir  # or # sudo chown rohit sampledir
+  chown
+▶️ chown
+
+
+#########################################################################################
+
+
+
+#########################################################################################
+☑️☑️  bashrc  (show saved content  on trminal open)
+
+▶️ls -a  # it will show hidden .rbashrc file
+
+▶️nano .rbashrc  # update file like ps1=hellow world
+
+▶️ source .rbashrc #refresh terminla and load bashrc
+
+
+#########################################################################################
+☑️☑️ Understanding Alias Commands for Efficiency 
+
+
+$ type pwd
+
+$ type cd
+$ type ls
+$ type cat
+
+▶️ cat .bashrc   (located in home directory)
+  
+-------------------------------------------
+write follworing line in bashrc file (nano .bashrc)
+alias quotes='cat ~/Documents/quotes'
+
+.bash_aliases  (hiden file)
+▶️ alias quotes='cat ~/Documents/quotes'
+ 
+ 
+save and exit
+
+-----------
+▶️ quotes
+
+#########################################################################################
+☑️☑️ #session
+
+echo $$
+
+bash
+echo $$
+
+exit 
+exit 
+
+#########################################################################################
+☑️☑️ environment variable 
+▶️ man printenv
+▶️ printenv
+
+▶️ printenv USER
+▶️ echo $USER     -> evaluate the value
+▶️ echo $nitin
+
+# add environment variable
+export my_mail = my_mail@gmail.com
+▶️
+echo $my_mail 
+#########################################################################################
+
+
+☑️☑️   What is $PATH   link with Linux Scripts
+▶️  which pwd
+▶️  echo $PATH
+-------------------
+# Add in path
+
+mkdir bin
+mv NitHI bin   => move NitHI to bin folder
+-------------------
+00o@UBU-PC :~ /bin$ cat NitHI
+#!/bin/bash
+echo "NitHI $USER"
+echo "NitHI $USER"
+echo "NitHI $USER"
+echo "NitHI $USER"
+echo "NitHI $USER"
+echo $SmyVariable
+-------------------
+#add bin folder to $PATH varialbe
+▶️  nano .bashrs      (located in home directory)
+
+add following line
+PATH = $PATH:/home/<user name>/bin
+
+▶️ source .bashrs   (reload terminal session)
+
+▶️  echo $PATH   (check path is added)
+-------------------
+▶️ NitHI   (execute NitHI )
+▶️ source NitHI
+#########################################################################################
+☑️☑️  Linux Scripts linked with $PATH
+
+What is a Script?
+
+In Linux, a script is a series of commands
+written in a scripting language (like Bash)
+that can be executed by the shell.
+
+---------------------------------
+Creating a Simple Script
+
+#!/bin/bash
+echo "Hello, Linux scripting!"
+--------------------------------------
+When you execute a script, the system typically
+relies on the shebang (the #!/bin/bash line at the beginning of the script) to determine the
+interpreter that should be used, regardless of the file extension. This allows you to name your
+scripts with or without a .sh extension.
+--------------------------------------
+# execute file different ways
+
+bash myFirstScript
+sh myFirstScript
+source myFirstScript
+./myFirstScript
+$PATH
+
+--------------------------------------
+bash myFirstScript
+
+This explicitly tells the Bash shell to execute the
+script. It's commonly used for Bash scripts.
+
+▶️ bash NitHI
+--------------------------------------
+sh myFirstScript
+
+This instructs the system to use the default shell
+
+▶️ sh NitHI
+--------------------------------------
+source myFirstScript
+This runs the script in the current shell session instead of spawning a new process. It's often
+used to execute scripts that modify the environment, such as setting environment variables.
+
+▶️ source NitHI
+--------------------------------------
+./myFirstScript
+Requires the script to be made executable
+
+If the file is found and has execute permission,
+the shell executes it using the appropriate
+interpreter specified in the shebang line.
+▶️ ./NitHI
+--------------------------------------
+/home/ooo/myFirstScript
+
+Even though you're not explicitly providing
+the script file to a command like cat or echo,
+you're instructing the shell to execute the
+script at the given absolute path. The shell
+takes care of locating the file and using the
+terpreter to run it.
+--------------------------------------
+
+#########################################################################################
+☑️☑️  cron
+crontab
+* * * * *
+--------------------------------------
+▶️ man crontab 
+
+▶️ man -e 
+
+▶️ man crontab 
+
+--------------------------------------
+* command_to_be_executed
+
+1. Minute (0 - 59)
+2. Hour (0 - 23)
+3. Day of month (1 - 31)
+4. Month (1 - 12)
+5. Day of week (0 - 6, where Sunday is 0 and Saturday is 6)
+
+--------------------------------------
+. Asterisk (*): Matches any value for the respective time
+unit.
+. Comma (,): Specifies a list of values.
+. Hyphen (-): Specifies a range of values.
+. Slash (/): Specifies a step value for the range. For
+example, */5 in the minute field means every 5 minutes.
+
+--------------------------------------
+
+
+30 3 * * * echo "hello" >> ~/hello. log
+
+
+#########################################################################################
+☑️☑️   man ps  process status 
+
+▶️ ps aux 
+▶️ ps -e
+▶️ ps -A
+
+top
+ps tree -p
+
+ps [OPTIONS]
+
+ps - Shows the process of current shell
+
+PID - unique process ID
+TTY - terminal type of user logged in to
+TIME - amount of CPU in min and sec that process has been
+running
+CMD = name of the command that launched the process
+
+▶️ ps aux | grep nginx
+▶️ ps aux | grep nginx
+▶️ ps grep nginx
+
+#########################################################################################
+☑️☑️  man kill (kill process)
+
+Most Widely used kill commands
+
+kill PID
+kill -1 PID (to restart the process)
+kill -2 PID(interrupt from keyboard like Ctrl+c)
+kill -9 PID (forcefully terminate the process)
+kill -15 PID (kill process gracefully)
+
+
+#########################################################################################
+
+
+ctrl+ A
+ctrl+ E
+ctrl+ k
+ctrl+ Y
+ctrl+ R
+ctrl+ u
+ctrl+ W
+ctrl+ L
+
+ctrl+ D
+ctrl+ ALT+T
+ctrl+shift+
+ctrl+ -
+
+
+
+ALT + B
+ALT + F
+
+ALT +D
+
+
+#########################################################################################
+☑️☑️  Aritmatic operations
+
+echo $((2+3))
+
+echo $((2*3))
+
+echo $((2 ** 3))
+
+echo $((3/2))
+
+echo $((11%7))
+
+echo $((2 ** (3-2)))
+
+#########################################################################################
+
+#########################################################################################
 
