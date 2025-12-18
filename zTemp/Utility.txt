@@ -25,7 +25,7 @@ Upper Case => MY_VARIABLE_NAME
 =================================================================
 ☑️
 
-./     ✏️=> means current directory
+./     ✏️=> means current directory or folder
 ../    ✏️=> means one folder back
 /      ✏️=> means root 
 
