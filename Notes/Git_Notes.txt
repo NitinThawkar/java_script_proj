@@ -7,7 +7,7 @@ Git_Notes.txt
 
 ✨ https://www.w3schools.com/git/default.asp
 ✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
-
+https://git-scm.com/
 ----------------------------------------------------
 ✨ (star)  
 ✏️ (Pencil)  ☑️
@@ -33,29 +33,32 @@ Example (all closed PRs by you in ds-obcfm-ui): >>> is:pr is:closed repo:jci-pro
 Example (only merged PRs by you in ds-obcfm-ui): >>> is:pr is:merged repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
 
 ----------------------------------------------------
-HEAD >> is point ot recent most commit in currant branch
+HEAD >> this is point to recent most commit in currant branch
 
 ----------------------------------------------------
 git help
+git <cmd> --help
 git help -a
 git help add
 git help --branch  (this is wrong but will show all helping options)  
 git help branch   (open help in browser)  # git help <command>  
 ----------------------------------------------------
 git config -- global core.editor "notepad.exe"
-open cinfig file located in .git folder of repo location on local machine
+open config file located in .git folder of repo location on local machine
 ----------------------------------------------------
 git config
 git config --list
 git init
 git log
 git log --oneline
+git reflog
 git status
 git amend
 git stash
 git diff
 git add   
 git commit    //commit --amend  
+git restore . //
 git remote
 git branch
 git branch -v
@@ -90,6 +93,23 @@ git log
 
 git config --global alias.ch = checkout  ## now open .gitconfig file , shoercu will created for checkout command
 
+-------------------------------------------------------------------------------------------
+git diff  <-BranchName-> use to compaire two different commit or use to compaire two different branches or files and MORE 
+
+-------------------------------------------------------------------------------------------
+# Show exact content diffs ,Compare what's different in content between branches
+
+git diff develop..jthawkn_develop
+-------------------------------------------------------------------------------------------
+List changed files (no content):
+
+# Names only
+git diff --name-only develop..jthawkn_develop
+
+# Names + status (A=added, M=modified, D=deleted, R=renamed)
+git diff --name-status develop..jthawkn_develop
+
+git diff -M develop..jthawkn_develop
 ===###===================###===================###===================###===================###================
 git status
 git add . or ./ or  <file Name>
@@ -153,6 +173,7 @@ git log
 Case 1:  Staged changes  (changes add but not commited)
 		git reset <file name>
 		git reset
+		git restore .
 ----------------------------------
 Case 2:  commited changes (for one commit only)
 		git reset HEAD~1  (go ine commit back)
@@ -163,8 +184,9 @@ Case 3:  commited changes (for many commit )
 		git reset --hard  <commit Hash>  (--hard remode changes from git and local machine code)
 		
 ----------------------------------
-To use the git reset command to discard all local changes
+To use the git reset command to discard revert all local changes
 git reset --hard
+git restore .
 ===###===================###===================###===================###===================###================
 FORK (rough copy of other user repo)
 
@@ -529,13 +551,22 @@ git mearge --abort ==> revert all merge  for checkout branch
 
 ===###===================###===================###===================###===================###================
 # Git Undo | Reset hard & mixed, revert and restore 
+# Git Undo/revert/discard  code 
+
+   rebase                  Reapply commits on top of another base tip
+   reset                   Reset current HEAD to the specified state
+   restore                 Restore working tree files
+   revert                  Revert some existing commits
+====================
 
 # Git Undo 
 git reset =>staging to local
 git reset <commit id>  => remove from staging 
 git reset --hard <commit id>   => remove from staging and local/ working
 
-================
+====================
+
+
 # Git Undo  rvert code
 git reset <-HASH ID->  =>staging to local
 git reset <commit id>  => remove from staging 
@@ -636,3 +667,75 @@ bash
 git config --global fetch.prune true
 -----------------------------------------
 ===###===================###===================###===================###===================###================
+===###===================###===================###===================###===================###================
+===###===================###===================###===================###===================###================
+===###===================###===================###===================###===================###================
+
+git show <commit id> --name-only
+-----------------------------------------------------------
+
+1. Revert the changes from git working area
+2. Revert the changes from git staging area
+3. Revert the changes after performing 'commit' operation
+4. Revert the changes after performing 'push' operation
+
+
+
+
+1. Revert the changes from git working area
+Using checkout command:
+git checkout <file>
+git checkout <file>
+OR
+
+git checkout .
+
+Using restore command:
+git restore 
+git restore <file>
+
+------------------------------------------
+2. Revert the changes from git staging area
+git reset HEAD 
+git reset HEAD  <file>
+git restore --staged 
+git restore --staged  <file>
+
+------------------------------------------
+3. Revert the changes after performing 'commit' operation
+
+Revert the changes and move file to staging area
+Revert the changes and move file to working area
+Revert the changes and discard all changes
+
+default mixed mode
+# HEAD-<how many commit you want to go back>
+
+git reset -- mixed HEAD-1
+Move files to the working area
+
+git reset -- soft HEAD-1
+Move files to the staging area
+
+git reset -- hard HEAD-1
+Discard the files permanently
+------------------------------------------
+4. Revert the changes after performing 'push' operation 
+
+Revert the changes as a part of the given commit ID Make new commit for the revert
+this changes work on remote, need to execute git push to affect final changes on remote 
+git revert <CommitID>
+------------------------------------------
+
+###########################
+
+Git Diff - Check File Differences
+
+Check file difference between working area and staging area
+>> git diff
+Check file difference between staging area and repository
+>> git diff --staged
+Check file difference between working area and repository
+>> git diff head
+
+###########################
