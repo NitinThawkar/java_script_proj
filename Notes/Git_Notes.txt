@@ -4,6 +4,9 @@
 ------------------------------------------------------------
 Git_Notes.txt
 =============================================================
+https://github.dev/github/dev
+
+
 
 ✨ https://www.w3schools.com/git/default.asp
 ✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
@@ -17,6 +20,8 @@ https://git-scm.com/
 git help
 git help -a
 git help -g
+
+git commit -m "commit changes from git desktop" --no-verify
 
 ☑️ head or head branch means (you have created from main or parent branch )	
 

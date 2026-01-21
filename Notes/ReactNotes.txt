@@ -219,6 +219,20 @@ alwayes use with suspense  use() + <suspense>
 	top level of your component, use can be called inside conditionals like if and loops like for . use is preferred
 	
 	over useContext because it is more flexible.
+---------------------------------------------------------------------
+Two golden rules of hooks
+
+Rule 1: Only call hooks at the top level of your function
+
+- not inside loops
+- not inside conditions
+- not inside nested functions
+- not in try/catch blocks
+
+Rule 2: Only call hooks from React functions
+
+- from React components
+- from custom hooks
 ----------------------------------------------------------------------
 useState
 ----------------------------------------------------------------------
