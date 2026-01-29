@@ -37,7 +37,7 @@ The root directory is denoted by >> cd /
 Go to your home directory >> cd ~
 Print path of your home directory >> echo $HOME
 Print the root directory path  >> echo /
-Go to a specific user’s home directory >> cd /home/<username>
+Go to a specific user’s home directory >> cd /home/<username>   e.g. root@oro-VirtualBox:/home/oro# 
 --------
 Go to root user’s home directory (/root)
 (Requires sudo / root access)
