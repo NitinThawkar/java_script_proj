@@ -1,6 +1,6 @@
-✨ Utility ✨ 
+✨ Utility ✨                 ☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔ 
 =================================================================
- ✏️   ☑️ ✍️  ✒️  ✍️ ▶️ 
+ ✏️   ☑️ ✍️  ✒️  ✍️ ▶️  
  ✏️ (Pencil)  ☑️ ✍️ (Person writing) ✒️ (Black pen) ✍️ (Writing hand)
 emoji => press Window + . (dot) special symbol char character
 =================================================================
@@ -9,7 +9,7 @@ Common casing styles include camel case, Pascal case, snake case, and kebab case
 
 
 Camel Case => myVariableName
-Pascal Case => MyVariableName
+Pascal Case => MyVariableName  (start with Capital letter)
 Snake Case => my_variable_name
 Kebab Cas => my-variable-name
 Flat Case => myvariablename

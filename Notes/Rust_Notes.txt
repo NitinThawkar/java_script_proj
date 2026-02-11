@@ -1,4 +1,4 @@
-☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔  
 
 
 Rust_Notes.txt
@@ -9,24 +9,34 @@ https://rust-lang.org/tools/install/
 rust-book.cs.brown.edu/ch04-02-references-and-borrowing.html
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 
-----
+https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
+
+slide : https://docs.google.com/presentation/d/1UnPZV7K6s798RAlkanOFn1iHDK1uMqBJTnzUKYvuT2Q/edit?slide=id.g2dd7481bd74_0_63#slide=id.g2dd7481bd74_0_63
+https://docs.google.com/presentation/d/1t7IMRMdkR3an0-YofAF9M0r9od_0kcfl03UCjdE5njQ/edit?slide=id.p#slide=id.p
+
+https://github.com/DrVipinKumar/RUST
+=============================================================
+☑️ Setup
 vscode 
  install Visual Studio C++ Build tools  for wondows system
 ---
 check rust installed version
 ▶️rustc --version
-
+---
+uninstall
+▶️rust self uninstall
 
 #########################################################################################
 cargo use for package manager, project cretion (just like angular cli)
 ▶️ cargo --version (type on vs code  termonal or cmd)
-▶️ cargo new <project name> # it will crete progect
+▶️ cargo new <project name> # it will crete new project
 ---
 to run project go inside to project folder and run 
 ▶️ cargo run
 ▶️ cargo build 
 ▶️ cargo check ->  This command quickly checks your code to make sure it compiles but doesn’t produce an executable target and debug folder
-▶️ cargo fmt  -> format the code 
+▶️ rustfmt -> Format only a specific file >> format the code  >> rustfmt src/main.rs  (go to folder path # rustfmt <filename_with_extension>
+▶️ cargo fmt  -> cargo fmt is the command that formats a Rust project using rustfmt. 
 -----
 ▶️ cargo doc --open   #and click rand in the sidebar on the left.
 cargo new restaurant --lib
@@ -36,7 +46,23 @@ cargo new restaurant --lib
  run in vs terminal # cargo modules structure -- lib
  
 #########################################################################################
-✏️ rust first programe 
+☑️ comment 
+// hello, world
+
+or
+
+// So we're doing something 
+// multiple lines of comment
+// explain what's going on.
+
+------
+☑️ println
+let num1: i32=10;
+let num2: i32=20;
+println!("num1={}, num2={}",num1,num2);
+=====================================================================
+
+☑️ rust first programe 
 
 create file main.rs  add following code
 ---
@@ -52,6 +78,557 @@ then type .\main.exe in terminal
 it will show you 
 Welcome to Rust Programming World!
 =====================================================================
+unsigned means positive number 
+signed mens negative number
+-------------------------
+by default rust variable are im-mutable 
+let my_test:i128 = 10;
+let my_test = 10;
+
+late we can not assign the value my_test like my_test =20;
+-------------------------
+☑️ mut 
+let mut my_test:i128 = 10; we can ressigne it 
+
+=====================================================================
+☑️ println!("hellow");
+----------------------
+ let my_test = 10;
+
+println!("my number value {my_test}");
+
+  let x = 5;
+    println!("The value of x is: {x}");
+
+=====================================================================
+☑️ Statment and expresson.
+ @ statment may contain expression;
+ @statment al end with ; (semicolon)
+ @expression alwayed return data. statment does not return any value ;
+=====================================================================
+☑️ Datatypes
+----------------------
+✏️ &str and String
+fn main() {
+let name:&str;
+name="Dr. Vipin Classes";
+println! ("String Literal Name={}",name);
+//-----
+let mut name1: String=String :: new();  // here string is opbject we need to use from methos to assigne value
+name1=String :: from("Dr. Vipin Teotia");   // we ca use many inbuild function  with string oblect
+//---
+//short way to assigne value
+let name1: String=String :: from("Dr. Vipin Teotia");
+
+
+}
+
+-------------------------------------------------------------------------------------
+Feature             | String Literal                 | String
+--------------------|--------------------------------|------------------------------
+Mutability          | Immutable                      | Mutable
+Memory Allocation   | Part of program binary         | Heap-allocated
+Length              | Known at compile time          | Dynamic
+Usage               | Suitable for static strings    | Suitable for dynamic strings
+
+--------------------------------------------------------------------------------------------------------------
+
+✏️ Tuple 
+
+fn main() {
+
+Let mut tup: (i32, bool, char)=(1, true,'s');
+
+tup.0 = 10;
+
+println!("{}", tup.0);
+println!("{}", tup.2);
+----------
+
+//lupple
+let emp_info:(&str,u8)=("Ramesh",50);
+
+let emp_name =emp_info.0;
+let emp_age =emp_info.1;
+
+//destructuring
+let (employee_name, employee_age) = emp_info;
+println! ("Employee Name={},Employee Age={}",employee_name,employ);
+println! ("Employee Name={},Employee Age={}",emp_name, emp_age);
+----------------------
+✏️ array
+
+Let arr = [1, 2, 3, 4, 5];
+arr[4]
+-----------
+fn main() {
+let mut arr: [i32; 5] = [];
+println!("{}", arr[4])
+
+=====================================================================
+☑️ Arithmetic and Type Casting
+
+✏️ using as keyword
+fn main() {
+Let x = 127_000 as i64;
+Let y = 10_i32;
+
+Let z = x / (y asi64)
+println!("{}", z)
+----------------------
+use std :: io;
+
+fn main() {
+Let mut input = String :: new();
+io :: stdin().read_line(&mut input).expect("expected to read line");
+
+Let int_input: i64 = input.trim().parse().unwrap();
+
+println!("{}", int_input + 2);
+}
+----------------------
+=====================================================================
+☑️ Function https://www.youtube.com/watch?v=0-yJfHbnPXU&list=PLDtWoQ-cxqiyQgcpmmJ7MFSddekcfL42N&index=8
+
+
+fn main() {
+let num1:u8 = 10;
+let num2:u8 = 20;
+let result:u8 = add(num1,num2);
+println! ("The sum of num1 and num2 is {}",result);
+
+}
+
+
+// Note : -> use to return type from function
+fn add(item1:u8,item2:u8)->u8{
+return item1+item2;     // use return keyword
+
+item1+item2             // return by expression dont provide semi colon
+
+}
+
+-----------------
+fn add(item1:u8,item2:u8)->&str{
+return item1+item2;
+
+}
+------
+fn add(item1:u8,item2:u8)->String{
+return item1+item2;
+
+}
+=====================================================================
+☑️ Ownership 
+----------------------
+ Move Ownership vs Clone Ownership vs Copy Data
+---------------------
+✍️  if memory managment happed in heap like string or object -
+// two variable cant have ownershisp of same data
+---------------------
+//Move Ownership
+fn main() {
+let name: String=String :: from("Dr. Vipin Classes");
+println! ("Name={}",name);
+let name1=name; //Move Ownership
+println! ("Name1={}",name1);
+println! ("Name={}",name); //name does not have access to data it store
+
+}
+----------------------
+//Clone Ownership
+fn main() {
+let mut name: String=String :: from("Dr. Mipin Classes");
+println! ("Name={}",name);
+// let name1=name; //Move Ownership
+let mut name1=name.clone(); //Clone Ownership
+name1=String :: from("Dr. Vipin Kumar");
+println! ("Name1={}",name1);
+name=String :: from("Dr. Vipin Teotia");
+println! ("Name={}",name); //name does not have access to data it store
+----------------------------------------------------------------------------------------
+//Copy Data
+✍️ //if memory managment happed in stack then we will not face Ownership issue 
+
+let num=10;    //scalar data type stack/heap
+println! ("Num={}",num);
+let num1=num;
+num1=20;
+println!("Num1={}",num1);
+println! ("Num={}",num);
+----------------------------------------------------------------------------------------
+✍️  to avoit owner ship  we can use 
+tupel return
+.clone()
+brrowing Pass by Reference in Rust 
+Pass by Reference in Rust 
+
+Type                     | Write? | Read? | How Many?
+-------------------------|--------|-------|-----------------------------
+Immutable reference (&T) |   ❌    |  ✔    | Many (unlimited)
+Mutable reference (&mut) |   ✔    |  ✔    | Only one at a time
+Ownership (value)        |   ✔    |  ✔    | Only one owner
+Slice (&[T], &str)       |   ❌    |  ✔    | Many (immutable borrow)
+Mutable slice (&mut [T]) |   ✔    |  ✔    | Only one (mutable borrow)
+Copy types               |   ✔    |  ✔    | Copied, not moved
+
+
+=====================================================================
+☑️  Referencing in Rust | Borrowing in Rust 
+
+----------------------
+fn main() {
+
+let x = 5;
+let y = &x;
+let z = &y;
+
+// Here, x is a variable binding to the value 5
+// Here, y is a reference to the value of x
+// Here, z is a reference to the reference y
+}
+
+let mut x = 5;
+let y = &mut x;
+*y = 50;   // de-reference to reach vakue of y
+--------------------
+
+
+----------------------
+fn main() {
+//let mut x=10;
+//println! ("x = {}",x);
+//let y=&mut x;
+//*y =* y+10;
+
+// println! ("y = {}",y);
+// //println! ("x = {}",x);
+// println! ("y = {}",y);
+let name: String=String :: from("Dr. Vipin Classes");
+display_Message(&name);
+display_Message(&name);
+
+fn display_Message(name:&String){
+println! ("{}",name);
+}
+----------------------
+
+----------------------
+=====================================================================
+☑️ Call by Value vs Call by Reference  to get data
+
+ ✍️ // call by value example
+fn main() {
+let num1: i32=10;
+let num2=20 ;: i32
+println!("num1={}, num2={}",num1,num2);
+swapbyvalue(num1, num2);
+println!("num1={}, num2={}",num1,num2);
+
+fn swapbyvalue(mut num1: i32,mut num2: i32){
+num1=num1+num2;
+num2=num1-num2;
+num1=num1-num2;
+println! ("num1={}, num2={}",num1,num2);
+}
+
+-----------------------------------------
+✍️ // same example with call by referance
+fn main() {
+let mut num1: i32=10;
+let mut num2: i32=20;
+println! ("num1={}, num2={}",num1,num2);
+swapbyref(&mut num1, &mut num2);
+println!("num1={}, num2={}",num1,num2);
+
+}
+
+fn swapbyref(num1: &mut i32,num2: &mut i32){
+*num1 =* num1+*num2;
+*num2 =* num1 -* num2;
+*num1 =* num1 -* num2;
+println! ("num1={}, num2={}",num1,num2);
+
+}
+=====================================================================
+☑️ Pass by Reference in Rust 
+
+--------------------
+
+--------------------
+
+--------------------
+
+--------------------
+
+
+=====================================================================
+☑️ Struct in Rust 
+
+--------------------
+struct Student {
+    name: String,
+    sid: i32,
+}
+
+// Tuple struct
+struct Emp(String, i32, f32);
+
+fn main() {
+    let s1 = Student {
+        name: String::from("Dr. Vipin Classes"),
+        sid: 1,
+    };
+
+    println!("Student ID = {}, Student Name = {}", s1.sid, s1.name);
+
+    let s2 = Student {
+        name: String::from("Rust Student"),
+        sid: 2,
+    };
+
+    println!("Student ID = {}, Student Name = {}", s2.sid, s2.name);
+
+    let e1 = Emp(String::from("Dr. Vipin"), 1, 20000.233);
+
+    println!(
+
+-------------------
+#[derive(Debug)]
+struct Student {
+    name: String,
+    age: u8,
+    pass: bool,
+}
+
+fn main() {
+    let stu: Student = Student {
+        name: "Raju".to_owned(),
+        age: 12,
+        pass: true,
+    };
+
+    println!("Student: {:?}", stu);
+}
+``
+=====================================================================
+☑️ Dangling Reference
+--------------------
+//Dangling Reference
+fn main() {
+let reference_to_nothing = create_string_ref();
+
+}
+
+fn create_string_ref()->&String {
+let s:String = String :: from("hello");  //s i local variable , created in function scope. value remove afte scope end. we will get error reference_to_nothing  because nothing is returing 
+return &s;
+
+}
+-------------------
+
+=====================================================================
+☑️ Vector - Dynamic Array
+--------------------
+//Vector - Dynamic Array
+fn main()
+let mut v:Vec<i32> = Vec :: new();//declaration
+let mut vm = Vec ::< i32> :: new(); //declaration another way
+
+v.push(1);
+v.push(2);
+v.push(3);
+
+println!("Vector v={ :? }",v);
+-------------------
+
+v . push (3);
+let mut v = vec! [1,2,3,4,5];
+v.push(10);
+println!("Vector v={ :? }",v);
+
+
+
+=====================================================================
+☑️ Type inference in Rust 
+
+fn main() €
+// Type inference in Rust
+let x = 5; // Compiler infers that x is of type i32
+let y = 5.5; // Compiler infers that y is of type f64
+let z = "Hello, world!"; // Compiler infers that z is of type &str
+
+// Printing the types inferred by the compiler
+println!("Type of x:{}",type_of(&x));
+println!("Type of y: {)",type_of(&y));
+println!("Type of z:{)",type_of(&z));
+--------------------
+
+-------------------
+
+=====================================================================
+☑️ match ( like switch in c# and java)
+
+--------------------
+//match
+fn main(){
+let number = 5;
+
+match number {
+1 =>println! ("Number is one"),
+2 | 4 =>println! ("Number is two or four"),
+5=>println! ("Number is five"),
+_= >println! ("Number is not recongnizible")  // this is default value
+
+}
+-------------------
+✍️ function switch
+}
+
+fn main(){
+
+fn is_even(num:i8)->bool{
+if num%2 == 0{
+return true;
+}
+return false;
+}
+
+let number = 5;
+match number {
+x if is_even(x)=>println!("Even"),
+x if !is_even(x)=>println!("Odd"),
+_= >println! ("Number is not recongnizible")
+
+}
+-------------------
+
+=====================================================================
+☑️impl (impliment) in Rust | traits (interface ,method template) in Rust
+
+https://github.com/DrVipinKumar/RUST/blob/main/class26impltraits/src/main.rs
+
+
+struct Circle {
+    radius: f64,
+}
+
+trait Shape {
+    fn area(&self) -> f64;
+}
+
+impl Shape for Circle {
+    fn area(&self) -> f64 {
+        3.14 * self.radius * self.radius
+    }
+}
+
+fn main() {
+    let circle: Circle = Circle { radius: 5.0 };
+    let area = circle.area();
+    println!("Circle area: {}", area);
+}
+--------------------
+
+-------------------
+=====================================================================
+=====================================================================
+☑️ Struct in Rust 
+
+--------------------
+☑️  enums 
+✏️ enum , option enum and result enum
+-------------------
+enum Color {
+    Red,
+    Yellow,
+    Blue,
+}
+
+fn main() {
+    let color: Color = Color::Yellow;
+
+    match color {
+        Color::Blue => println!("Blue"),
+        Color::Yellow => println!("Yellow"),
+        Color::Red => println!("Red"),
+    }
+}
+
+-------------------
+✏️  using enum we can store values 
+-------------------
+#[derive(Debug)]
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+}
+
+impl Shape {
+    fn new_circle(radius: f64) -> Self {
+        Self::Circle(radius)
+    }
+}
+
+fn main() {
+    let circle: Shape = Shape::new_circle(5.0);
+    println!("Circle: {:?}", circle);
+}
+-------------------
+✏️  option enum
+enum OptionalValue<T> {
+    Some(T),
+    None,
+}
+-------------------
+fn main() {
+    let user_id_1: i32 = 1;
+    let user_id_2: i32 = 2;
+
+    let value: Option<i32> = get_user_phone_number(user_id_1);
+    println!("User 1 phone: {:?}", value);
+
+    let value2: Option<i32> = get_user_phone_number(user_id_2);
+    println!("User 2 phone: {:?}", value2);
+	
+	match get_user_phone_number(user_id_1) {
+//Some(mbb_num)
+Some(data: i32) => println! ("Data:{}", data),
+None => println! ("User mob num does not exist"),
+}
+
+fn get_user_phone_number(user_id: i32) -> Option<i32> {
+    let mob_num: i32 = 923233;
+
+    if user_id == 1 {
+        Some(mob_num)
+    } else {
+        None
+    }
+}
+-------------------
+✏️ result enume
+
+in divide(x: 132, y: 132) -> Result<i32, ip2> {
+if y == 0 {
+return Err(89);
+} else {
+return Ok(x / y);
+
+}
+
+Run | Debug
+n main() {
+let result: Result<i32, i32> = divide(x: 10, y:0);
+println! ("Result: { :? }", result);
+-------------------
+=====================================================================
+☑️ Smart Box Pointer
+if we  want to store data in heap insted of stack  then we use smart pointer
+
+
+=====================================================================
+
 #########################################################################################
 ✏️ del * => terminal command will delete file from folder
 ---
@@ -66,9 +643,10 @@ We can also use pub to designate structs and enums as public, but there are a fe
 #########################################################################################
 crate is a libarlay
 #########################################################################################
-struct
+
+questions : 
 
 ----------
 {:?}
-
+:#?
 ----------

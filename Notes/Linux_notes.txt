@@ -32,13 +32,16 @@ Ubuntu 24.04.3 LTS
 nano little bit advance than vim. we can use gedit also use 
 
 #########################################################################################
- 
+Loged in Root user denoted by #  or root wor in prompt (hash) e.g. root@oro-VirtualBox:/home/oro# su oro
+normal user denoted $ (doller) e.g. oro@oro-VirtualBox:~$ 
+
+---------------------------- 
 The root directory is denoted by >> cd /
 Go to your home directory >> cd ~
 Print path of your home directory >> echo $HOME
 Print the root directory path  >> echo /
 Go to a specific user’s home directory >> cd /home/<username>   e.g. root@oro-VirtualBox:/home/oro# 
---------
+---------------------------
 Go to root user’s home directory (/root)
 (Requires sudo / root access)
 
@@ -52,7 +55,7 @@ cd /root
 
 
 ======================================
-
+sudo : super user do
 su : switch user
 ls: List files and directories.
 cd: Change the current directory.
