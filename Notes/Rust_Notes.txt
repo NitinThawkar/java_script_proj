@@ -54,6 +54,8 @@ cargo new restaurant --lib
  run in vs terminal # cargo modules structure -- lib
  
 #########################################################################################
+☑️   y = &x;   //y. is.reference to the value of x.  value of x is 5.
+------
 ☑️ comment 
 // hello, world
 
@@ -290,6 +292,8 @@ return item1+item2;
 }
 =====================================================================
 ☑️ Ownership  mostally work on HEAP allocation of memory and manage HEAP data
+
+y = &x;   //y. is.reference to the value of x.  value of x is 5.
 ----------------------
  Move Ownership vs Clone Ownership vs Copy Data
 ---------------------
@@ -440,6 +444,7 @@ println!("r2={}",w2);
 =====================================================================
 ☑️  Referencing in Rust | Borrowing in Rust 
 
+y = &x;   //y. is.reference to the value of x.  value of x is 5.
 ----------------------
 fn main() {
 
@@ -478,22 +483,43 @@ println! ("{}",name);
 ----------------------
 
 ----------------------
+
+=====================================================================
+☑️ de-reference Reference in Rust  dereference
+
+ // dereference
+    //y = &x;   // y is reference to the value of x.  value of x is 5.
+    
+    let mut x = 5;
+
+    x = x + 1; // x = 6
+
+    let y = &mut x; // y is a mutable reference to x 
+
+    *y = *y + 1; // dereference y and modify x → x becomes 7    * means take value  # go to address and get the value stored there
+
+    println!("x = {}", x);
 =====================================================================
 ☑️ Call by Value vs Call by Reference  to get data
 
  ✍️ // call by value example
+ 
 fn main() {
-let num1: i32=10;
-let num2=20 ;: i32
-println!("num1={}, num2={}",num1,num2);
-swapbyvalue(num1, num2);
-println!("num1={}, num2={}",num1,num2);
+    let num1: i32 = 10;
+    let num2: i32 = 20;
+    println!("Before (main): num1 = {}, num2 = {}", num1, num2);
 
-fn swapbyvalue(mut num1: i32,mut num2: i32){
-num1=num1+num2;
-num2=num1-num2;
-num1=num1-num2;
-println! ("num1={}, num2={}",num1,num2);
+    swap_by_value(num1, num2); // passes copies
+
+    println!("After  (main): num1 = {}, num2 = {}", num1, num2);
+}
+
+fn swap_by_value(mut num1: i32, mut num2: i32) {
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+
+    println!("Inside function (by value): num1 = {}, num2 = {}", num1, num2);
 }
 
 -----------------------------------------
@@ -514,15 +540,26 @@ fn swapbyref(num1: &mut i32,num2: &mut i32){
 println! ("num1={}, num2={}",num1,num2);
 
 }
+
 =====================================================================
-☑️ Pass by Reference in Rust 
+
+☑️ // Dangling Reference  
+fn main() {
+    let reference_to_nothing = create_string_ref();
+}
+
+fn create_string_ref() -> &String {
+    let s: String = String::from("hello");
+    return &s;  // ← returning a reference to a local variable
+}
 
 --------------------
+s is created inside create_string_ref.
+When the function returns, s is dropped (its memory is freed).
+Returning &s would point to freed memory → dangling reference.
+Rust’s borrow checker rejects this at compile time with an error like:
 
---------------------
-
---------------------
-
+returns a reference to data owned by the current function
 --------------------
 
 
@@ -811,9 +848,8 @@ crate is a libarlay
 questions : 
 
 ----------
-{:?}
-:#?
-
+{:p}
+------------
  ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_my_string`
 ----------
 #########################################################################################
@@ -851,3 +887,4 @@ fn main() {
 
 #########################################################################################
 
+This diff contains a change in line endings from 'LF' to 'CRLF'.
