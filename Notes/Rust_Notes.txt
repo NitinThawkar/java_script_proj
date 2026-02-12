@@ -5,7 +5,7 @@ Rust_Notes.txt
 =============================================================
 ✨ rust install
 https://rust-lang.org/tools/install/
-
+https://doc.rust-lang.org/std/index.html
 rust-book.cs.brown.edu/ch04-02-references-and-borrowing.html
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 
@@ -641,6 +641,18 @@ fn main() {
     println!("User2 (pretty): {:#?}", user2);
 }
 =====================================================================
+☑️ impl :
++----------------------+-------------------------------+--------------------------------------+
+| Feature              | Methods                       | Associated Functions                  |
++----------------------+-------------------------------+--------------------------------------+
+| Definition           | Within impl, first param self | Within impl, no self parameter        |
++----------------------+-------------------------------+--------------------------------------+
+| Access to Instance   | Yes                           | No                                   |
++----------------------+-------------------------------+--------------------------------------+
+| Syntax for Calling   | instance.method()             | TypeName::function()                 |
++----------------------+-------------------------------+--------------------------------------+
+
+----------
 ☑️ impl : Associated Functions
 ----------
 Key Characteristics of Associated Function
@@ -766,6 +778,35 @@ fn main() {
         rect.area()
     );
 }
+
+---------------------------------
+🟦   Associated Function and Method 
+struct Circle {
+    radius: f64,
+}
+
+impl Circle {
+    // Associated function (constructor)
+    pub fn new(radius: f64) -> Circle {
+        Circle { radius }
+    }
+
+    // Instance method
+    pub fn area(&self) -> f64 {
+        std::f64::consts::PI * self.radius * self.radius
+    }
+}
+
+fn main() {
+    // Call the associated function `new` to create a `Circle` instance
+    let circle = Circle::new(5.0);
+
+    // Call the instance method `area` on the `Circle` instance
+    println!("The area of the circle is {}", circle.area());
+}
+
+
+
 =====================================================================
 ☑️ Vector - Dynamic Array
 --------------------
