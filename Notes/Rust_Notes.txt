@@ -561,6 +561,20 @@ Rust’s borrow checker rejects this at compile time with an error like:
 
 returns a reference to data owned by the current function
 --------------------
+☑️ Dangling Reference
+--------------------
+//Dangling Reference
+fn main() {
+let reference_to_nothing = create_string_ref();
+
+}
+
+fn create_string_ref()->&String {
+let s:String = String :: from("hello");  //s i local variable , created in function scope. value remove afte scope end. we will get error reference_to_nothing  because nothing is returing 
+return &s;
+
+}
+-------------------
 
 
 =====================================================================
@@ -596,38 +610,162 @@ fn main() {
 
 -------------------
 #[derive(Debug)]
-struct Student {
-    name: String,
-    age: u8,
-    pass: bool,
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
 }
 
 fn main() {
-    let stu: Student = Student {
-        name: "Raju".to_owned(),
-        age: 12,
-        pass: true,
+    let mut user1 = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("someone@example.com"),
+        sign_in_count: 1,
     };
 
-    println!("Student: {:?}", stu);
+    // Assigning a different email
+    user1.email = String::from("anotheremail@example.com");
+
+    // Debug printing
+    println!("User (single-line): {:?}", user1);   // Single-line debug
+    println!("User (pretty): {:#?}", user1);      // Pretty multi-line debug
+
+    let user2 = User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+
+    println!("User2 (single-line): {:?}", user2);
+    println!("User2 (pretty): {:#?}", user2);
 }
-``
 =====================================================================
-☑️ Dangling Reference
---------------------
-//Dangling Reference
+☑️ impl : Associated Functions
+----------
+Key Characteristics of Associated Function
+
+No self parameter:
+	Unlike methods, associated functions do not take self, &self, or &mut self as their first parameter because they operate on the type, not on an instance of the type.
+
+
+Namespaced by the Type:
+	You call them using the type’s name followed by ::, such as
+	TypeName::function_name().
+Common Use Cases:
+	• Constructors:
+	Functions like new or custom builders that return new instances of the type.
+	• Utility Functions:
+	Functions that perform calculations or operations relevant to the type but don’t need an instance (e.g., String::from).
+------------------------------------------------------
+s
+
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    // Constructor to create a square
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+}
+
 fn main() {
-let reference_to_nothing = create_string_ref();
+    let sq = Rectangle::square(3);
 
+    println!(
+        "Square: width = {}, height = {}",
+        sq.width, sq.height
+    );
+}
+-------------------------------------------------------
+
+struct Rectangle { width: u32, height: u32 }
+
+impl Rectangle {
+    // Associated function (constructor)
+    fn new(width: u32, height: u32) -> Self {
+        Self { width, height }
+    }
+
+    // Another associated function (specialized constructor)
+    fn square(size: u32) -> Self {
+        Self { width: size, height: size }
+    }
+
+    // A method (note the &self)
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
 }
 
-fn create_string_ref()->&String {
-let s:String = String :: from("hello");  //s i local variable , created in function scope. value remove afte scope end. we will get error reference_to_nothing  because nothing is returing 
-return &s;
+fn main() {
+    let r = Rectangle::new(10, 20);
+    let s = Rectangle::square(3);
 
+    println!("r area = {}", r.area());
+    println!("s area = {}", s.area());
 }
--------------------
 
+=====================================================================
+☑️ impl : Method
+
+Method Syntax
+
+Methods are similar to functions: we declare them with the fn keyword and a name, they can have parameters
+and a return value, and they contain some code that's run when the method is called from somewhere else.
+Unlike functions, methods are defined within the context of a struct or an enum, and their first parameter is
+always self, which represents the instance of the struct the method is being called on.
+--------------
+Defined within an impl block:
+
+	Methods are defined in an impl block for a specific type (e.g., struct, enum).
+
+First Parameter is self:
+
+	Methods always take self, &self, or &mut self as the first parameter.
+	This indicates that the method operates on the instance of the type:
+	
+	self: Takes ownership of the instance.
+	&self: Borrows the instance immutably.
+	&mut self: Borrows the instance mutably.
+
+Called using Dot Notation:
+
+	Methods are called using dot syntax:
+	instance.method_name(),
+	which makes them feel intuitive and object‑oriented.
+-------------
+
+
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    /// Calculates the area of the rectangle.
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect.area()
+    );
+}
 =====================================================================
 ☑️ Vector - Dynamic Array
 --------------------
