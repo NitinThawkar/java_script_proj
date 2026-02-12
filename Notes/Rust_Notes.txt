@@ -1,4 +1,4 @@
-☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔  📌 🎯 🟢 🟥 🔹🔍 🟦
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔  📌 🎯 🟢 🟥 🔹🔍 🟦 🟢
 
 
 Rust_Notes.txt
@@ -807,26 +807,6 @@ fn main() {
 
 
 
-=====================================================================
-☑️ Vector - Dynamic Array
---------------------
-//Vector - Dynamic Array
-fn main()
-let mut v:Vec<i32> = Vec :: new();//declaration
-let mut vm = Vec ::< i32> :: new(); //declaration another way
-
-v.push(1);
-v.push(2);
-v.push(3);
-
-println!("Vector v={ :? }",v);
--------------------
-
-v . push (3);
-let mut v = vec! [1,2,3,4,5];
-v.push(10);
-println!("Vector v={ :? }",v);
-
 
 
 =====================================================================
@@ -884,11 +864,226 @@ _= >println! ("Number is not recongnizible")
 -------------------
 
 =====================================================================
-☑️impl (impliment) in Rust | traits (interface ,method template) in Rust
+
+=====================================================================
+=====================================================================
+
+☑️  enums 
+✏️ enum , option enum and result enum
+--------------------------------------
+enum Color {
+    Red,
+    Yellow,
+    Blue,
+}
+
+fn main() {
+    let color: Color = Color::Yellow;
+
+    match color {
+        Color::Blue => println!("Blue"),
+        Color::Yellow => println!("Yellow"),
+        Color::Red => println!("Red"),
+    }
+}
+
+-------------------------------------------------------
+✏️  using enum IMPL
+------
+#[derive(Debug)]
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+}
+
+impl Shape {
+    fn new_circle(radius: f64) -> Self {
+        Self::Circle(radius)
+    }
+}
+
+fn main() {
+    let circle: Shape = Shape::new_circle(5.0);
+    println!("Circle: {:?}", circle);
+}
+--------------------------------------
+✏️ Enum with variant 
+-----
+enum School {
+    Number(i32),
+    Name(String),
+    Unknown,
+}
+
+fn school_data() {
+    let s: School = School::Unknown;
+
+    match s {
+        School::Number(n) => println!("School roll number is {}", n),
+        School::Name(s) => println!("School name is {}", s),
+        School::Unknown => println!("School location is unknown"),
+    }
+
+    let size = std::mem::size_of::<School>();
+    println!("The size of enum School is {} bytes", size);
+}
+
+fn main() {
+    school_data();
+}
+---------------------------------------
+ ✏️  using enum we can store values
+ 
+ enum Shape {
+    Circle(f64),                 // Variant with radius
+    Rectangle(f64, f64),         // Variant with width and height
+    Triangle(f64, f64, f64),     // Variant with side lengths
+}
+
+impl Shape {
+    fn area(&self) -> f64 {
+        match *self {
+            Shape::Circle(radius) => std::f64::consts::PI * radius * radius,
+
+            Shape::Rectangle(width, height) => width * height,
+
+            Shape::Triangle(a, b, c) => {
+                let s = (a + b + c) / 2.0;   // Semiperimeter
+                (s * (s - a) * (s - b) * (s - c)).sqrt()   // Heron's formula
+            }
+        }
+    }
+}
+
+fn main() {
+    let circle = Shape::Circle(3.0);
+    let rectangle = Shape::Rectangle(2.0, 4.0);
+    let triangle = Shape::Triangle(3.0, 4.0, 5.0);
+
+    println!("Area of the circle: {}", circle.area());
+    println!("Area of the rectangle: {}", rectangle.area());
+    println!("Area of the triangle: {}", triangle.area());
+}
+=====================================================================
+🟢  optional enum
+-------------------
+if any value exist then return some  else none
+-----
+enum  OptionalValue<T> {
+    Some(T),
+    None,
+}
+-------------------
+fn main() {
+    let user_id_1: i32 = 1;
+    let user_id_2: i32 = 2;
+
+    let value: Option<i32> = get_user_phone_number(user_id_1);
+    println!("User 1 phone: {:?}", value);
+
+    let value2: Option<i32> = get_user_phone_number(user_id_2);
+    println!("User 2 phone: {:?}", value2);
+	
+	// another way to access value 
+	match get_user_phone_number(user_id_1) {
+	//Some(mbb_num)
+		Some(data: i32) => println! ("Data:{}", data),
+		None => println! ("User mob num does not exist"),
+	}
+
+//📌 use Option as return type  if we are us Some or None
+fn get_user_phone_number(user_id: i32) -> Option<i32> {
+    let mob_num: i32 = 923233;
+
+    if user_id == 1 { 
+        Some(mob_num)
+    } else {
+        None
+    }
+}
+=====================================================================
+🟢  result enum  (help in error handaling)
+
+enum Result<T, E> {
+0k(T),
+Err(E),
+}
+---------------
+// A function that divides two numbers and returns either the result or an error
+fn divide(x: i32, y: i32) -> Result<i32, String> {
+    if y == 0 {
+        // If the divisor is zero, return an error
+        Err(String::from("Division by zero"))
+    } else {
+        // Otherwise, return the result of division
+        Ok(x / y)
+    }
+}
+
+fn main() {
+    // Try to divide two numbers and handle the result
+    match divide(10, 2) {
+        Ok(result) => {
+            println!("Result of division: {}", result);
+        }
+        Err(error) => {
+            eprintln!("Error: {}", error);
+        }
+    }
+}
+
+---------------
+in divide(x: 132, y: 132) -> Result<i32, ip2> {
+if y == 0 {
+return Err(89);
+} else {
+return Ok(x / y);
+
+}
+
+Run | Debug
+n main() {
+let result: Result<i32, i32> = divide(x: 10, y:0);
+println! ("Result: { :? }", result);
+-------------------
+
+=====================================================================
+☑️ generic Type
+
+use std::fmt::Debug;
+
+fn print_type<T: Debug>(var: T) {
+    println!("Hi, {:?}", var);
+}
+
+fn main() {
+    print_type(5);
+    print_type(true);
+    print_type("hi");
+    print_type(3.14);
+}
+---------
+same code with display
+use std::fmt::Display;
+
+fn print_type<T: Display>(var: T) {
+    println!("Hi, {:?}", var);
+}
+
+fn main() {
+    print_type(5);
+    print_type(true);
+    print_type("hi");
+    print_type(3.14);
+}
+=======================================================================
+☑️ Trait  (interface blue print)
+
+️impl (impliment) in Rust (interface ,method template) in Rust
 
 https://github.com/DrVipinKumar/RUST/blob/main/class26impltraits/src/main.rs
 
-
+-----------------
 struct Circle {
     radius: f64,
 }
@@ -908,106 +1103,691 @@ fn main() {
     let area = circle.area();
     println!("Circle area: {}", area);
 }
---------------------
+==================
+Another example 
 
--------------------
-=====================================================================
-=====================================================================
-☑️ Struct in Rust 
-
---------------------
-☑️  enums 
-✏️ enum , option enum and result enum
--------------------
-enum Color {
-    Red,
-    Yellow,
-    Blue,
+struct Car {
+    name: String,
 }
 
-fn main() {
-    let color: Color = Color::Yellow;
+struct SuperCar {
+    name: String,
+}
 
-    match color {
-        Color::Blue => println!("Blue"),
-        Color::Yellow => println!("Yellow"),
-        Color::Red => println!("Red"),
+trait Speed {
+    fn car_speed(&self);
+}
+
+impl Speed for Car {
+    fn car_speed(&self) {
+        println!("{}'s maximum speed is 102 mph", self.name);
     }
 }
 
--------------------
-✏️  using enum we can store values 
--------------------
-#[derive(Debug)]
-enum Shape {
-    Circle(f64),
-    Rectangle(f64, f64),
-}
-
-impl Shape {
-    fn new_circle(radius: f64) -> Self {
-        Self::Circle(radius)
+impl Speed for SuperCar {
+    fn car_speed(&self) {
+        println!("{}'s maximum speed is 249 mph", self.name);
     }
 }
 
 fn main() {
-    let circle: Shape = Shape::new_circle(5.0);
-    println!("Circle: {:?}", circle);
-}
--------------------
-✏️  option enum
-enum OptionalValue<T> {
-    Some(T),
-    None,
-}
--------------------
-fn main() {
-    let user_id_1: i32 = 1;
-    let user_id_2: i32 = 2;
+    let scorpio = Car {
+        name: String::from("Scorpio"),
+    };
+    scorpio.car_speed();
 
-    let value: Option<i32> = get_user_phone_number(user_id_1);
-    println!("User 1 phone: {:?}", value);
-
-    let value2: Option<i32> = get_user_phone_number(user_id_2);
-    println!("User 2 phone: {:?}", value2);
-	
-	match get_user_phone_number(user_id_1) {
-//Some(mbb_num)
-Some(data: i32) => println! ("Data:{}", data),
-None => println! ("User mob num does not exist"),
+    let ferrari = SuperCar {
+        name: String::from("Ferrari"),
+    };
+    ferrari.car_speed();
 }
 
-fn get_user_phone_number(user_id: i32) -> Option<i32> {
-    let mob_num: i32 = 923233;
+------------------------------
+✏️ Using Default Trait Implementation
 
-    if user_id == 1 {
-        Some(mob_num)
-    } else {
-        None
+struct Car {
+    name: String,
+}
+
+trait Speed {
+    // Default implementation
+    fn car_speed(&self) {
+        println!("Maximum speed is unknown");
     }
 }
--------------------
-✏️ result enume
 
-in divide(x: 132, y: 132) -> Result<i32, ip2> {
-if y == 0 {
-return Err(89);
-} else {
-return Ok(x / y);
-
+impl Speed for Car {
+    // No method provided here → default from trait is used
+    // fn car_speed(&self) {
+    //     println!("{}'s maximum speed is 102 mph", self.name);
+    // }
 }
 
-Run | Debug
-n main() {
-let result: Result<i32, i32> = divide(x: 10, y:0);
-println! ("Result: { :? }", result);
+fn main() {
+    let scorpio = Car {
+        name: String::from("Scorpio"),
+    };
+
+    scorpio.car_speed();   // Uses the default trait method
+}
+
 -------------------
+Reconstructed Rust Code
+trait Greet {
+    fn say_hello() -> String;
+
+    // Default method
+    fn greet(&self) {
+        println!("Hello from default greet!");
+    }
+}
+
+struct Person;
+
+impl Greet for Person {
+    fn say_hello() -> String {
+        "Hello".to_string()
+    }
+}
+
+struct Student;
+
+impl Greet for Student {
+    fn say_hello() -> String {
+        "Hello".to_string()
+    }
+
+    fn greet(&self) {
+        println!("Hello from Student!");
+    }
+}
+
+fn main() {
+    let p = Person;
+    let s = Student;
+
+    println!("{}", Person::say_hello());
+    p.greet(); // uses default greet()
+
+    println!("{}", Student::say_hello());
+    s.greet(); // overrides greet()
+}
 =====================================================================
 ☑️ Smart Box Pointer
 if we  want to store data in heap insted of stack  then we use smart pointer
 
 
 =====================================================================
+☑️ Arrays
+
+Rust Array Example (Immutable & Mutable Arrays + Iteration
+----------------------------------------------------------------------------------------
+fn main() {
+    // Immutable array
+    let a1 = [10, 11, 12];
+    println!("a1 length is {}, first element is {}", a1.len(), a1[0]);
+
+    // Mutable array
+    let mut a2 = [10, 11, 12];
+    a2[0] = 9; 
+    println!("a2 length is {}, first element is {}", a2.len(), a2[0]);
+
+    // Iterate through array
+    for elem in a2.iter() {
+        println!(" {}", elem);
+    }
+}
+----------------------------------------------------------------------------------------
+fn main() {
+    // Declare an array a1 of type [i64; 5] without initializing it
+    let mut a1: [i64; 5];
+
+    // Initialize the array a1 with values [10, 11, 12, 13, 14]
+    a1 = [10, 11, 12, 13, 14];
+
+    // Print the debug representation of array a1
+    println!("a1 is {:?}", a1);
+
+    // Declare a mutable array named a2 initialized with [32, 32, 32, 32, 32]
+    let mut a2 = [32; 5];
+
+    // Modify the first element of a2 to 9
+    a2[0] = 9;
+
+    // Print the debug representation of array a2
+    println!("a2 is {:?}", a2);
+}
+``
+----------------------------------------------------------------------------------------
+✏️Reconstructed Rust Code (Borrowing Arrays: Immutable & Mutable) (array read and write)
+fn main() {
+    // A mutable array of &str
+    let mut arr: [&str; 2] = ["Hello", "World"];
+
+    read_arr(&arr);         // immutable borrow
+    write_arr(&mut arr);    // mutable borrow
+
+    println!("{:?}", arr);  // final state
+}
+
+fn read_arr(arr: &[&str; 2]) {
+    println!("{:?}", arr);
+}
+
+fn write_arr(arr: &mut [&str; 2]) {
+    arr[0] = "New";   // modify first element
+}
+
+=====================================================================
+Vector
+☑️ Vector - Dynamic Array
+
+----------------------------------------------------------------------------------------
+Different ways of creating
+vectors.
+let mut v: Vec<i32> = Vec :: new();
+
+let mut v = Vec: : <i32>: :new();
+
+let v1 = vec![1, 2, 3, 4, 5]; // Creates a vector with initial values
+let v2: Vec<i32> = vec![0; 5]; // Creates a vector with 5 elements initialized to 0
+----------------------------------------------------------------------------------------
+--------------------
+//Vector - Dynamic Array
+fn main()
+let mut v:Vec<i32> = Vec :: new();//declaration
+let mut vm = Vec ::< i32> :: new(); //declaration another way
+
+v.push(1);
+v.push(2);
+v.push(3);
+
+println!("Vector v={ :? }",v);
+-------------------
+
+v . push (3);
+let mut v = vec! [1,2,3,4,5];
+v.push(10);
+println!("Vector v={ :? }",v);
+
+----------------------------------------------------------------------------------------
+ Reconstructed Rust Vector Example (Creation, Safe Indexing, Push, Pop, Insert, Iterate)
+fn main() {
+    // Create vectors in different ways
+    let mut v1: Vec<i32> = Vec::new();
+    let mut v2 = Vec::<i32>::new();
+    let mut v3 = vec![100, 101, 102];
+
+    // Index into a vector safely, returning an Option<T>
+    let opt = v3.get(10);
+
+    match opt {
+        Some(value) => println!("Value: {}", value),
+        None => println!("No value"),
+    }
+
+    // Push elements into the vector
+    v3.push(1);
+    v3.push(5);
+
+    // Pop the last element from the vector
+    v3.pop();
+
+    // Insert an element at a specific index
+    v3.insert(0, 99);
+
+    // Iterate over the elements of the vector and print each one
+    for item in &v3 {
+        println!("{}", item);
+    }
+}
+---------------------------------------------------------------------------------------
+✏️ Reconstructed Rust Code (Vector + Immutable & Mutable Borrowing) # vector read and write
+fn main() {
+    let mut vrr: Vec<&str> = vec!["Hello", "World"];
+
+    read_arr(&vrr);        // immutable borrow
+    write_arr(&mut vrr);   // mutable borrow
+
+    println!("{:?}", vrr); // final vector
+}
+
+fn read_arr(vrr: &[&str]) {
+    println!("{:?}", vrr);
+}
+
+fn write_arr(vrr: &mut Vec<&str>) {
+    vrr.push("New");
+}
+
+=====================================================================
+☑️ Here is the fully reconstructed, corrected, and complete Rust code from your screenshot — formatted cleanly and with proper function signatures.
+This example demonstrates:
+✔ Borrowing a vector immutably
+✔ Borrowing a vector mutably
+✔ Nested function calls using the same borrow
+✔ Mutating a vector through multiple functions
+
+
+----------------------------------------------------------------------------------------
+fn main() {
+    let mut vrr: Vec<&str> = vec!["Hello", "World"];
+
+    // Read the original vector
+    read_arr_one(&vrr);
+
+    // Modify the vector
+    write_arr_one(&mut vrr);
+
+    // Print the modified vector
+    println!("{:?}", vrr);
+}
+
+// ---------------- READ FUNCTIONS ------------------
+
+fn read_arr_one(vrr1: &[&str]) {
+    // Print the slice of string references
+    println!("Read Arr One: {:?}", vrr1);
+
+    // Call another function to read the same slice
+    read_arr_two(vrr1);
+}
+
+fn read_arr_two(vrr2: &[&str]) {
+    // Print the slice of string references
+    println!("Read Arr Two: {:?}", vrr2);
+}
+
+// ---------------- WRITE FUNCTIONS ------------------
+
+fn write_arr_one(vrr3: &mut Vec<&str>) {
+    // Add a new string reference to the vector
+    vrr3.push("New");
+
+    // Call another function to modify the vector
+    write_arr_two(vrr3);
+}
+
+fn write_arr_two(vrr4: &mut Vec<&str>) {
+    // Add another new string reference to the vector
+    vrr4.push("Few");
+}
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Iterators
+
+
+Iterators in Rust are a powerful abstraction for working with sequences of data. They provide a
+way to process elements one at a time without requiring manual indexing or loops.
+
+Iterators are lazy by design and are often used with the iterator adapters (e.g., map, filter,
+collect) for functional-style transformations.
+----------------------------------------------------------------------------------------
+Why Iterators?
+
+In Rust, you cannot directly loop through an array using for without explicitly converting it into an
+iterator because Rust enforces strict ownership and borrowing rules. Rust requires an iterator to
+iterate over collections like arrays or vectors. Unlike some languages (e.g., Python, JavaScript)
+----------------------------------------------------------------------------------------
+✏️ conver  arry to Iterator
+
+let arr = [1, 2, 3];
+
+for item in arr {
+println! ("{}", item);
+
+}
+---------
+let mut iter: IntoIter<i32, 3> = arr.into_iter(); //converting array into iterator
+	while let Some(item: i32) = iter.next() {
+	println!("{}", item);
+----------------------------------------------------------------------------------------
+fn main() {
+    let vec: Vec<i32> = vec![1, 2, 3];
+
+    // -------- iter(): iterate by reference (no ownership transfer) --------
+    for item in vec.iter() {
+        // item: &i32
+        println!("{}", item);
+    }
+
+    // vec is still usable because we only borrowed it
+    println!("vec after iter(): {:?}", vec);
+
+    // -------- into_iter(): iterate by value (ownership is moved) --------
+    for item in vec.into_iter() {
+        // item: i32
+        println!("{}", item);
+    }
+
+    // vec is no longer usable here because its ownership was moved by into_iter()
+    // println!("{:?}", vec); // ❌ This would not compile
+}
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Type        | iter() gives | into_iter() gives | After into_iter() usable?
+------------|--------------|-------------------|----------------------------
+Array       | &T           | T (copied)        | ✔ Yes
+Vec         | &T           | T (moved)         | ❌ No (vector consumed)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+fn main() {
+    let arr: [i32; 3] = [1, 2, 3];   // stack array — Copy type
+    let vec: Vec<i32> = vec![1, 2, 3]; // heap vector — owns heap data
+
+    // --------------------- iter() for array ---------------------
+    for item in &arr {
+        println!("{}", item); // item: &i32
+    }
+    println!("{:?}", arr); // array still usable
+
+    // --------------------- into_iter() for array ----------------
+    for item in arr.into_iter() {
+        println!("{}", item); // item: i32 (copied)
+    }
+    println!("{:?}", arr); // array STILL usable (important!)
+}
+``
+=====================================================================
+☑️ Error Handaling , Exception Handaling
+------------------------------------
+Error Categories
+------------
+🟢Recoverable Error - A recoverable error, such as if you try to open a file and that operation fails because the
+file doesn't exist, you might want to create the file instead of terminating the process.
+
+🟢Unrecoverable Error - Unrecoverable errors are always symptoms of bugs, such as trying to access a location
+beyond the end of an array, and so we want to immediately stop the program.
+------------
+Note - Most languages don't distinguish between these two kinds of errors and handle both in the same way,
+using mechanisms such as exceptions. Rust doesn't have exceptions. Instead, it has the type Result<T, E> for
+recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable
+error.
+
+----------------------------------------------------------------------------------------
+✏️ Unrecoverable Errors with panic!
+
+There are two ways to cause a panic in practice: by taking an action that causes our code to panic (such as
+accessing an array past the end) or by explicitly calling the panic! macro.
+
+fn main() {
+panic! ("crash and burn");
+}
+
+---
+fn main() {
+let v = vec! [1, 2, 3];
+
+v[100];
+}
+----------------------------------------------------------------------------------------
+🟢 Recoverable Error 
+---------
+enum Result<T, E> {
+Ok (T),
+Err(E),
+
+}
+---------
+The File: : create function in Rust's
+std: : fs module returns a value of the type
+Result<File, std :: io :: Error>.
+---------
+Err(error) if the operation fails,
+where error is an instance of
+std :: io :: Error.
+----
+Ok(file) if the operation
+succeeds, where file is an
+instance of std :: fs :: File
+----------------------------------------
+Rust Code (Handling File Creation Errors)
+✏️Recoverable Errors with Result
+use std::fs::File;
+
+fn main() {
+    match File::create("invalid\\path/hello.txt") {
+        Ok(_file) => println!("File 'hello.txt' created successfully."),
+        Err(error) => println!("Error creating file: {:?}", error),
+    }
+}
+----------------------------------------
+use std::fs::File;
+
+fn main() {
+    match File::create("hello.txt") {
+        Ok(_file) => println!("File 'hello.txt' created successfully."),
+        Err(error) => println!("Error creating file: {:?}", error),
+    }
+}
+----------------------------------------------------------------------------------------
+🟢  Recoverable Error 
+
+We can use the kind method of the
+std :: io :: Error type to determine the type of
+error. This method returns an ErrorKind
+enum, which provides variants like
+NotFound, PermissionDenied, Invalidlnput,
+etc.
+-------
+error.kind():
+
+This method retrieves the
+ErrorKind of the error, which is
+an enum representing categories
+of I/O errors.
+
+Matching on ErrorKind:
+
+Check if the error is
+ErrorKind :: InvalidInput
+(used for invalid file paths).
+Use the _ or specific variants for
+other types of errors, such as
+PermissionDenied,
+NotFound, etc.
+
+.
+----------
+✏️use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {
+    match File::create("invalid\\path/hello.txt") {
+        Ok(_) => println!("File created successfully."),
+        Err(error) => match error.kind() {
+            ErrorKind::InvalidInput => panic!("Invalid path provided!"),
+            other_error => panic!("An error occurred: {:?}", other_error),
+        },
+    }
+}
+
+
+----------------------------------------------------------------------------------------
+🟢  Recoverable Error     unwrap()  (not good practice  use unwrap or else)
+
+unwrap() with Result, but it will panic if the
+Result is Err. Using unwrap() without
+proper context is generally discouraged in
+production code since it doesn't allow for
+customized error handling or meaningful
+error messages.
+---------------------------------
+How unwrap() Works:
+
+. If the Result is Ok, it extracts the
+value inside.
+. If the Result is Err, it panics with
+a default message showing the
+error.
+---
+use std::fs::File;
+
+fn main() {
+    let file = File::create("invalid\\path/hello.txt").unwrap();
+    println!("File created: {:?}", file);
+}
+
+----------------------------------------------------------------------------------------
+✏️ Recoverable Error   unwrap or else
+
+It allows you to provide a fallback or default value (or perform some logic) when the Option or Result is
+None or Err, respectively, without panicking.
+
+(unwrap_or_else with Option<T>)
+----------------
+
+fn main() {
+    let option: Option<i32> = Some(42);
+    let value: i32 = option.unwrap_or_else(|| 0); 
+    // returns 42
+    println!("value = {}", value);
+
+    let none_option: Option<i32> = None;
+    let value: i32 = none_option.unwrap_or_else(|| 0); 
+    // returns 0, no panic
+    println!("value = {}", value);
+
+    // You can also have custom logic in the closure
+    let none_option: Option<i32> = None;
+    let value: i32 = none_option.unwrap_or_else(|| {
+        println!("No value found!");
+        100 // returns 100 after printing the message
+    });
+    println!("value = {}", value);
+}
+
+----------------------------------------------------------------------------------------
+✏️ Customizable unwrap Error handaling 
+
+The | error | in the unwrap_or_else
+method is a closure in Rust. Closures
+are anonymous functions that can
+capture variables from their surrounding
+scope.
+
+In this specific context, | error | is the
+syntax for a closure that takes one
+argument, error, representing the Err
+value from the Result.
+------------------
+
+Using unwrap_or_else With Error Matching
+
+use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {
+    let _file = File::create("invalid\\path/hello.txt").unwrap_or_else(|error| {
+        if error.kind() == ErrorKind::InvalidInput {
+            panic!("Invalid path provided!");
+        } else {
+            panic!("An unexpected error occurred: {:?}", error);
+        }
+    });
+}
+----------------------------------------------------------------------------------------
+✏️ Error handaling Using Expect (better than unwarp)
+
+the expect method lets us also choose the panic! error message. Using expect instead of unwrap and
+providing good error messages can convey your intent and make tracking down the source of a panic
+easier.
+
+In production-quality code, most Rustaceans choose expect rather than unwrap and give more context
+about why the operation is expected to always succeed.
+----------
+use std::fs::File;
+
+fn main() {
+    let file = File::create("invalid\\path/hello.txt")
+        .expect("file could not be created");
+
+    println!("File created: {:?}", file);
+}
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Error Propagation ( usin question mark)
+
+
+Error propagation allows a function to pass errors to the calling code instead of handling them directly, giving more
+flexibility to the caller.
+-----------------------
+The ? operator propagates the error
+from File: : create to the calling
+function (main) if it fails.
+
+If successful, it returns the File.
+
+----------------------------------------------------------------------------------------
+use std::fs::File;
+use std::io;
+
+fn create_file(file_path: &str) -> Result<File, io::Error> {
+    // Attempt to create a file and propagate errors with `?`
+    let file = File::create(file_path)?;
+    Ok(file)
+}
+
+fn main() {
+    match create_file("invalid\\path/hello.txt") {
+        Ok(_) => println!("File created successfully."),
+        Err(e) => println!("Failed to create file: {:?}", e),
+    }
+}
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+
 
 #########################################################################################
 ✏️ del * => terminal command will delete file from folder
@@ -1030,7 +1810,15 @@ questions :
 {:p}
 ------------
  ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_my_string`
+ 
 ----------
+diff : and ::
+use std::fmt::Debug;
+use std::fmt::Display;
+----------
+Macros
+
+
 #########################################################################################
 {} 			#Display (pretty, user-friendly) 	#Display trait
 {:?}		#Debug format						#Debug trait
