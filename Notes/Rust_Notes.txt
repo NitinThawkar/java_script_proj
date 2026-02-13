@@ -12,7 +12,7 @@ https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
 
 slide : https://docs.google.com/presentation/d/1UnPZV7K6s798RAlkanOFn1iHDK1uMqBJTnzUKYvuT2Q/edit?slide=id.g2dd7481bd74_0_63#slide=id.g2dd7481bd74_0_63
-https://docs.google.com/presentation/d/1t7IMRMdkR3an0-YofAF9M0r9od_0kcfl03UCjdE5njQ/edit?slide=id.p#slide=id.p
+slide : https://docs.google.com/presentation/d/1t7IMRMdkR3an0-YofAF9M0r9od_0kcfl03UCjdE5njQ/edit?slide=id.p#slide=id.p
 
 https://github.com/DrVipinKumar/RUST
 =============================================================
@@ -1738,6 +1738,64 @@ fn main() {
 }
 ----------------------------------------------------------------------------------------
 =====================================================================
+☑️ Hashmap
+
+Hashmap
+
+In Rust, a HashMap is a key-value store, similar
+to dictionaries in Python or maps in Java.
+
+Key Features:
+
+· Stores data as key-value pairs.
+
+· Fast lookup using a hash function.
+
+· Keys must be unique.
+
+. Provided by Rust's standard library in
+std :: collections.
+----------------------------------------------------------------------------------------
+use std::collections::HashMap;
+
+fn main() {
+    // Create a HashMap<String, u32>
+    let mut students: HashMap<String, u32> = HashMap::new();
+
+    // Insert entries (String keys, u32 values)
+    students.insert("Ravi".to_string(), 100);
+    students.insert("Raju".to_string(), 10);
+    students.insert("Lalu".to_string(), 1);
+
+    // Iterate (borrowed) and print
+    for (student, marks) in &students {
+        println!("Student name: {:<5} marks: {}", student, marks);
+    }
+
+    // Update an existing key: insert returns the old value (if any)
+    // This will update Raju from 10 -> 200
+    if let Some(old) = students.insert("Raju".to_string(), 200) {
+        println!("Updated 'Raju': old marks = {}, new marks = {}", old, students["Raju"]);
+    }
+
+    // Look up a key using get (returns Option<&u32>)
+    match students.get("Raju") {
+        Some(marks) => println!("Found: {}", marks),
+        None => println!("Not Found"),
+    }
+
+    // Alternative: mutate in-place using get_mut
+    if let Some(m) = students.get_mut("Lalu") {
+        *m += 5;
+        println!("After bonus, Lalu = {}", m);
+    }
+
+    // Show final map (order not guaranteed)
+    println!("All students: {:?}", students);
+}
+
+----------------------------------------------------------------------------------------
+=====================================================================
 ☑️ Lifetimes 🟢 ️✏️
 
 
@@ -1777,6 +1835,7 @@ compile time, guaranteeing memory safety without runtime overhead.
 ----------------------------------------------------------------------------------------
 
 
+
 =====================================================================
 ☑️ Arrays
 
@@ -1799,60 +1858,10 @@ compile time, guaranteeing memory safety without runtime overhead.
 
 ----------------------------------------------------------------------------------------
 =====================================================================
-☑️ Arrays
-
-
-----------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------
-=====================================================================
-☑️ Arrays
-
-
-----------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------
-=====================================================================
-☑️ Arrays
-
-
-----------------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------------
-
-
-
-#########################################################################################
-✏️ del * => terminal command will delete file from folder
----
-dir 
-
-#########################################################################################
-A crate is the smallest amount of code that the Rust compiler considers at a time.
-Even if you run rustc rather than cargo and pass a single source code file 
-#########################################################################################
-Making Structs and Enums Public
-We can also use pub to designate structs and enums as public, but there are a few extra details to the usage of pub with structs and enums. If we use pub before a struct definition, we make the struct public, but the struct’s fields will still be private.
-#########################################################################################
-crate is a libarlay
-#########################################################################################
-
-questions : 
-
-----------
-{:p}
-------------
- ^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_my_string`
- 
-----------
-diff : and ::
+☑️ Display Format
 use std::fmt::Debug;
 use std::fmt::Display;
-----------
-Macros
 
-
-#########################################################################################
 {} 			#Display (pretty, user-friendly) 	#Display trait
 {:?}		#Debug format						#Debug trait
 {:#?} 		#Pretty Debug (multi-line)			#Debug trait
@@ -1884,6 +1893,121 @@ fn main() {
     println!("{:?}", u);
 }
 ``
+---------------------------------------------
+✏️ 
+It prints the memory address, not the value stored inside.
+{:p} formats its argument as a pointer
+a reference &T
+a raw pointer *const T or *mut T
+anything that implements Pointer
+
+
+fn main() {
+    let x = 10;
+    println!("Address of x: {:p}", &x);
+}
+
+println!("{:p}", &10);
+``
+Sample output: Address of x: 0x7ffee7d63a3c
+
+-------------
+
+debugging memory layout
+checking uniqueness of heap allocations
+understanding Box<T>, Rc<T>, Arc<T> internals
+comparing addresses of two references
+
+fn main() {
+    let x = 10;
+    let bx = Box::new(20);
+
+    println!("Stack variable x:  {:p}", &x);
+    println!("Box pointer (stack): {:p}", &bx);
+    println!("Box inner value (heap): {:p}", bx.as_ref());
+}
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ clear and practical explanation of the difference between : and :: in Rust.
+
+Symbol | Meaning
+-------|------------------------------------------------------------
+::     | Path separator: access modules, types, traits, enum variants
+:      | Type annotation, trait bounds, function signatures, fields
+----------
+
+:: is used to access items inside modules, types, enums, and traits.
+std::fs::File
+String::from("hello")
+Vec::new()
+Option::Some(10)
+Result::Ok("done")
+std::f64::consts::PI
+ToString::to_string(&123)
+
+-------------------------------------------------------
+Type annotations
+Rustlet x: i32 = 10;
+
+Function parameter / return type annotations
+fn add(a: i32, b: i32) -> i32 { a + b }
+
+Struct fields
+
+struct Person {
+    name: String,
+    age: u32,
+}
+
+Trait bounds (generics)
+
+fn print<T: std::fmt::Debug>(x: T) {
+    println!("{:?}", x);
+}
+
+
+Elided lifetime syntax (rare but still :)
+for (i, value) in array.iter().enumerate() {
+
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+
+
+#########################################################################################
+✏️ del * => terminal command will delete file from folder
+---
+dir 
+
+#########################################################################################
+A crate is the smallest amount of code that the Rust compiler considers at a time.
+Even if you run rustc rather than cargo and pass a single source code file 
+#########################################################################################
+Making Structs and Enums Public
+We can also use pub to designate structs and enums as public, but there are a few extra details to the usage of pub with structs and enums. If we use pub before a struct definition, we make the struct public, but the struct’s fields will still be private.
+#########################################################################################
+crate is a libarlay
+#########################################################################################
+
+questions : 
+
+----------
+{:p}
+------------
+
+----------
+
+
+Macros
+
+
+#########################################################################################
+
 
 #########################################################################################
 
