@@ -61,8 +61,10 @@ Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
 ----------------------
 Align By Character : Ctrl + Shift + =
 ========================================================================================================================================
-☑️ Insert date
-serch in plugin >> plugin demo >> 
+☑️ Insert date  time  datetime
+serch in plugin >> plugin demo >> Notepad ++ plugin demo (install)
+
+create date time shortcut
 
 short format: Alt + Ctrl + d 
 long format : Alt + Ctrl + Shift + d
@@ -114,6 +116,10 @@ Proper case        : ALT + U
 Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
 ----------------------
 Align By Character : Ctrl + Shift + =
+======================================================================================================================================
+☑️ REMOVE DUPLICATE LINES IN NOTEPAD
+  edit ► line operation ► remove duplicate lines
+
 ========================================================================================================================================
 ☑️ how to indent html tags in notepad++  // format code  INDENTATION 
 serch in plugin >> xml tool>>  # (ctrl + Alt + shift + B)
@@ -220,7 +226,8 @@ If you do not like an underline, check "No Underline"
 Click Close. 
 Now, if you double click a link, it will open in a web browser.
 ========================================================================================================================================
-☑️ Settings >> preferences >> backup
+☑️ iscover Top 5 Best Settings for Coding in Notepad++
+Settings >> preferences >> backup
 
 Discover Top 5 Best Settings for Coding in Notepad++
 
@@ -238,7 +245,6 @@ Vertical Edge settings: allows you a visual guide line to see how wide your code
 
 Auto Complete Features: helps you to auto complete the word or functions. It can also auto complete the parenthesis, curly brackets and even html closing tags. 
 
-Setting Theme and Fonts: Change your Notepad++ themes and fonts from Style Configurator. 
 ========================================================================================================================================
 ☑️ How to View HTML File in Firefox, Google Chrome, IE, Edge in Notepad++
 
@@ -307,7 +313,10 @@ Notepad++ allows you to view/edit/compare two files side by side without any plu
 
 3. Drag the file tab and an Option will appear to "Move or Clone the Document"
 
-COMPARING CONTENTS OF TWO FILES SIDE BY SIDE SYNCHRONOUSLY
+✏️ TO  Remove side by side VIEW drag and drop  (right hand tab to left habd main view)
+
+
+✏️ COMPARING CONTENTS OF TWO FILES SIDE BY SIDE SYNCHRONOUSLY (parallel scrolling)(tool bar icon)
 ===========================
 
 You can use "Synchronize Vertical/Horizontal Scrolling" from Toolbar icons. These features allow you to compare the contents of two files since you can synchronize scrolling of two files' content. 
@@ -339,7 +348,7 @@ Notepad++ provides multiple ways to edit number of lines at the same time. Here 
    First need to enable MULTI EDITING SETTING.
    
    a. Go to Settings ► Preferences ► Editing.
-   b. Check box to Enable Multi Editing Settings. 
+   b. Check box to Enable Multi Editing Settings.   (mouse or selection)
 ========================================================================================================================================
 ☑️ Automate Repetitive Task using Notepad++ Macro  ( like recording)
 
@@ -436,19 +445,68 @@ HOW TO VIEW THEM
 2. From the toolbar icon.
 
 ======================================================================================================================================
-☑️ 
+
+☑️ How to View HTML File in Firefox, Google Chrome, IE, Edge in Notepad++: NO CUSTOM RUN COMMAND REQD
+All you have to do is to go to 'View' ► View Current File In ► Google Chrome/Mozilla FireFox/Internet Explorer/Microsoft Edge web browsers.
 ======================================================================================================================================
-☑️ 
+☑️ REMOVE DUPLICATE LINES IN NOTEPAD
+  edit ► line operation ► remove duplicate lines
 ======================================================================================================================================
-☑️ 
+☑️ HOW TO INSTALL PLUGINS IN NOTEPAD++ With Explorer, FTP and HTML Preview
+
+TO ADD/INSTALL NOTEPAD++ PLUGINS (EXTENSIONS) 
+=============================================
+1. Go to Plugins ► Plugins Admin. 
+2. Plugin Admin Windows contains three tabs. 
+ 1) Available Plugins 
+ 2) Plugins that need Updates 
+ 3) Installed Plugins
+3. You can select a particular plugin and read its description to know what this plugin does. 
+4. To install plugins in Notepad++, simply Click the Install button.
+5. Notepad++ will restart so make sure you save your unsaved document. 
+6. you can see all your Notepad++ plugins under the plugins menu.
+
+WE WILL INSTALL THREE PLUGINS:
+==============================
+1. Notepad++ Explorer - File Explorer plugin
+2. NppFTP -   Notepad++  FTP plugin to connect to ftp server
+3. Preview HTML - plugin to preview HTML code right from Notepad++ 
 ======================================================================================================================================
-☑️ 
+☑️ HOW TO SPLIT break LINES IN NOTEPAD++:
+line operation > spit line 
+
 ======================================================================================================================================
-☑️ 
+☑️ Remember Opened Files using Load and Save Sessions in Notepad++
+LOAD AND SAVE SESSIONS IN NOTEPAD++
+
+- Set of files to be opened with one click
+- Files do not need to be in the same directory or even same drive
+- You can set the extension of session file in 'Preferences > Misc.'
+
+WHAT DOES SESSION SAVE?
+
+- All files currently opened in the Notepad++ session
+- Multi Views (if any)
+- Currently active file
+* Current position in the file
+* Bookmarks in the file
+
+(ADVANCED) HOW DOES SESSION FILE LOOK LIKE?
+
+- Session file looks like an XML file.
+- You can open it using Notepad
 ======================================================================================================================================
-☑️ 
-======================================================================================================================================
-☑️ 
+☑️ SET DOCUMENT MAP IN NOTEPAD++
+
+Document Map is a section on a sidebar that gives you an overview of your entire
+document in a very small fontsize. It is useful, when
+allows you to quickly move from one section of the document to another,
+
+
+- Moving quickly from one section to another in a large document or code.
+- Gives you a good overview of your functions etc.
+
+MENU>view > document map
 ======================================================================================================================================
 ☑️ 
 ======================================================================================================================================
