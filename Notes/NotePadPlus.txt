@@ -751,7 +751,7 @@ Right click tab  ►Read-Only
 Right click tab  ► 
 ----------------------
 ======================================================================================================================================
-☑️ menu ► view ► summary
+☑️ Find and Replace String with New Line
 
 \r\n
 ======================================================================================================================================
@@ -872,36 +872,74 @@ REPLACE WITH: "\1 \2 \3"
 ✏️ Linux Files: Remove Odd Even Lines
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️HTML Tidy in Notepad++: Beautify and Format HTML5 Code
+      tidy2 plugin 
+HTML tidy is an feature/application that are available in many HTML tools and also online that can really clean up your html code. 
+✏️ ►Beautify The Code
+Indent The Code  
+Format The Html Code To Fix Incorrect Markup.
+Corrects And Fixes Any Invalid Web Html/Html5 Code.
+
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️How to Reformat JSON in Notepad++ Using JSON Plugin
+✏️ ►In order to install JSTool plugin, go to Plugins Admin and search for JSTool. Install the plugin. 
+
+To reformat the json file, go to Plugins ... JSTool ... JSFormat. 
+
+You can also use JSON viewer to view your JSON file in nice indented tree format. 
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️Run Python in Notepad++ with Interactive Python Environment using PyPadPlusPlus
+https://www.youtube.com/watch?v=qSwbavkYE3w&list=PL1z4RL0Mc_2WUImD2wg-c6YOaqMfngl7w&index=15
+
+✏️ ►Installation of PyPadPlusPlus
+How to Execute Python scripts
+How to Use Your own Python distribution
+Some more features
+Pros and Cons 
+
+PyPadPlusPlus is a great alternative to Jupyter Notebook, for those who want to continue working in Notepad++. It provides an interactive python shell right from NPP. 
+
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️How to Open Really Large Text Files in Notepad++ (CSV, JSON) with BigFiles Plugin
+https://www.youtube.com/watch?v=2-iSYdQiZ6g&list=PL1z4RL0Mc_2WUImD2wg-c6YOaqMfngl7w&index=16
+✏️ ►open really really large text files such as JSON or CSV files in Notepad++. These files can be greater than 4 GB. BigFiles plugin allows opening large files very quickly using buffers. 
+We will also look at other alternatives such as GVIM, Sublime text. 
+Solution
+How to use BigFiles Plugin
+Resources to download large files
+Pros and Cons of BigFiles Notepad++ plugin 
+Other Alternatives (Sublime text, Large File Viewer, GVim)
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️TextFX Plugin for Notepad++ How to Install on 32 bit and 64 bit (or Fix Missing Plugin)
+✏️ ► install if we are working with large files more than 2 gb
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️How to Use FTP Client in Notepad++ To Upload & Download Files from Server
+✏️ ►  The NppFTP plugin
+
+How to create a FTP server profile.
+How to download a file from FTP server using the plugin (Using a test FTP server).
+How to Upload a file using a plugin (using a free FTP server).
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️NOTEPAD++ CUSTOM SYNTAX HIGHLIGHTING: User Defined Language Tutorial
+✏️ ►Notepad++ supports many programming languages, but there may be some programming languages that it may still not support. Though, notepad++ provides a custom highlighting feature, so that you can define your own language in notepad++. It is very easy to enable user-defined language. 
+
+So, we will generate a new user-defined language for a new language, we will use IDL language which is still not supported in Notepad++. 
+
+1. Let's say our file extension is .idl. So, we will go to Languages and User Defined Languages ► User Defined Language ► Create Your Language. 
+2. Create a new language and give its extension to be idl. 
+3. Now go ahead and select folding, keywords list, comments and numbers, operators, and enter your language's syntax. Also, select Styler for each and select your own color-coding. 
+4. Once, you are happy with the results. You can export it as an XML file and pass it along to your colleagues.
+
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️NOTEPAD++ SELECT LINE RANGE: Select Lines from MySQL Dump or Log File Easily
+✏️ ►https://www.youtube.com/watch?v=JvmZGN8Z1Ng&list=PL1z4RL0Mc_2XSWwOOFvi4W0CRcFAQgeKH
 ======================================================================================================================================
 
 ☑️
