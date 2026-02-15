@@ -704,12 +704,43 @@ To Cut The Text Selection: CTRL + X
 
 
 ======================================================================================================================================
-☑️ 
+☑️ TAB IMPROVE YOUR CODE MANAGEMENT SKILLS with To Tab Management Tricks in Notepad++
 
-✏️  Word Wrap
+✏️ Cloning Tabs
+----------------------
+Right click tab  ► clone to other view
+
+
+✏️ Moving Tabs
+----------------------
+Right click tab  ► open in new instance  (open in new window)
+
+
+✏️ Multi-Line Tabs
+----------------------
+setting > preferance > general > multiline 
+
+
+✏️ Closing Tabs 
+----------------------
+setting > preferance > general >
+
+
+✏️ Read-Only Tabs
+----------------------
+Right click tab  ►Read-Only
+
+✏️ Tab Bar Preferences
+----------------------
+ setting > preferance > general > Tab bar section
+ 
+ 
+✏️ Renaming Tabs, Open folders, CMD, etc
+----------------------
+Right click tab  ► 
 ----------------------
 ======================================================================================================================================
-☑️ 
+☑️ menu ► view ► summary
 ======================================================================================================================================
 ☑️ 
 ======================================================================================================================================
