@@ -578,6 +578,37 @@ Align By Character : Ctrl + Shift + =
 ----------------------
 Line operation > reverse line order
 
+✏️ Hide Lines
+----------------------
+1. From Menu item: View .... Hide Lines
+2. From Right Click Menu
+3. Using Keyboard Shortcut: ALT + H
+
+
+
+✏️Remove or Delete Empty Lines
+----------------------
+remove empty line or remove spaces (find and replace)
+EDIT >> lineOpration  >> remove empty line    or remove empty line blank characture
+remove spaces (find and replace)
+
+
+
+✏️ Join Lines
+----------------------
+Select all lines 
+EDIT >> lineOpration  
+CTRL+J
+
+✏️ Split Lines
+----------------------
+CTRL+I
+
+✏️ ZOOM IN/ZOOM OUT
+----------------------
+1. From a Toolbar icon
+2. From Top Menu item: View...Zoom...Zoom In/Out 
+3. Using Keyboard/Mouse Combo: CTRL + SCROLL WHEEL 
 ======================================================================================================================================
 ☑️ FIND IN FILES: How to Search and Replace in Multiple Files (ctrl+shift+F)
 
@@ -623,17 +654,60 @@ view distraction free mode
 12 Great Community And Support Online 
 ======================================================================================================================================
 
-☑️ 
+☑️ Open Notepad++ from CMD (Windows Command Line)
+
+Option 1: Add Notepad++ in the System Path. (Needs Admin Right). Add C:\Program Files (x86)\Notepad++ to your PATH environment variable. You can also use 'notepad++ filename' to open any file in notepad++ from cmd. 
+
+Option 2: Type 'start notepad++'. This option is useful, if you don't have admin rights or if you don't want to clutter your PATH system variable. 
+
+Option 3: Add Notepad++ in the System Path. and Copy Notepad++.exe as npp.exe (Needs Admin Right) This option simplifies the typing of 'notepad++' to just 'npp', saves you some keystrokes!
+======================================================================================================================================
+☑️ Simplify Note Taking: Superfast, Free and Efficient Note-taking using Notepad
+
+HOW TO USE
+[1] Install TakeNotes plugin. 
+[2] Configure the plugin to your liking. 
+======================================================================================================================================
+☑️ NOTEPAD TO PDF Conversion Without Any Software With Single Click
+
+HOW TO USE
+[1] Install MarkdownViwer plugin
+======================================================================================================================================
+☑️ How to Set File READ ONLY MODE in Notepad+
+
+Here is how to do that. 
+1. Right click on the file tab. 
+2. Click on the READ-ONLY in the selection options. 
 ======================================================================================================================================
 ☑️ 
+
+✏️ Quick Summary of a File
+----------------------
+menu ► view ► summary
+
+
+✏️  Word Wrap
+----------------------
+1. From Menu item: View .... Word Wrap
+2. From Toolbar Icon
+HOW TO IDENTIFY THE WORD WRAP?
+------------------------------
+The wrapped line will not have a line number associated with it. 
+
+
+✏️ Cut/Select All Keyboard Shortcuts
+----------------------
+
+To Select Entire Document: CTRL + A     (Probably stands for ALL)
+To Cut The Text Selection: CTRL + X   
+
+
+
 ======================================================================================================================================
 ☑️ 
-======================================================================================================================================
-☑️ 
-======================================================================================================================================
-☑️ 
-======================================================================================================================================
-☑️ 
+
+✏️  Word Wrap
+----------------------
 ======================================================================================================================================
 ☑️ 
 ======================================================================================================================================
