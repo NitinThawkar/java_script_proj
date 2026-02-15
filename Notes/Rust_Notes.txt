@@ -1213,8 +1213,42 @@ fn main() {
     s.greet(); // overrides greet()
 }
 =====================================================================
-☑️ Smart Box Pointer
+☑️ Smart Box Pointer Smart Pointers
 if we  want to store data in heap insted of stack  then we use smart pointer
+
+Smart Pointers
+
+In Rust, a smart pointer is a data structure that not only acts like a pointer (i.e., it allows access to data) but
+also manages ownership and memory according to specific rules.
+
+fn main() {
+let b: Box<i32> = Box :: new(10); // '10' is stored on the heap
+println! ("b = {}", b);
+}
+
+=====================================================================
+☑️ 'static
+
+'static means: "This thing lives forever - as long as the program runs."So, if something has a ' static lifetime, it will
+never be removed from memory until the program ends.
+
+The 'static lifetime is a special lifetime in Rust that denotes that a reference can live
+for the entire duration of the program.
+------------------
+let s: &'static str = "hello";
+
+
+"hello" is a string literal and of type &'static
+
+It is stored in the program's memory permanently.
+
+This string is not created at runtime. Instead:
+
+Rust puts it directly into the program's compiled file
+(your . exe or binary).
+When you run the program, this string is already there
+in memory.
+It is never deleted until the program ends.
 
 
 =====================================================================
@@ -1819,9 +1853,65 @@ or gone out of scope, leading to undefined behavior and potential memory safety 
 By tracking the scope for which a reference is valid, Rust's borrow checker can enforce rules at
 compile time, guaranteeing memory safety without runtime overhead.
 ----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Packages & Crates
 
+
+
+---
+
+Packages & Crates
+
+· Package
+. Package is collection of crates
+. Often synonymous with the "project"
+. One or more crates that provide a set of functionality. More often than
+not, you will be dealing with only 1 crate in simple programs.
+. Contains a Cargo.toml file that describes how to build those crates
+· Crate
+. A crate is a single computational unit - either a binary or a library
+. Binary crate (has a fn main, can be compiled into an executable)
+. Library crate (does not have a fn main, cannot be compiled into an
+executable)
+
+----------
+Packages & Crates*
+
+· cargo new <name>
+· creates a new Package with 1 Binary Crate represented by main.rs.
+· This is the option we use most of the time to create a new project
+. cargo new <name> -lib
+. creates a new Package with 1 Library crate represented by lib.rs. There
+is no main.rs created.
+. We use this option to create an external library of code that can be used
+by another project
+----------
 ----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Modules and Use
 
+----------
+.
+
+Modules & Use
+
+Modules
+· Allow for the organization of code into groups for readability and re-use
+· Allow for the grouping of related definitions together
+· Flexibility for controlling the public / private visibility of items (such as
+functions), so as to limit their visibility to outside code
+· Can also hold definitions of other items inside, including other modules
+----------
+Modules & Use
+
+Rust finds the function in this sequence:
+
+within the current file
+
+looks for a '.rs' file with the same name as the module name in the current folder
+
+looks for a folder with the module name and a file mod.rs inside, there it looks for the code.
+=====================================================================
 ----------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------
@@ -1995,12 +2085,7 @@ crate is a libarlay
 #########################################################################################
 
 questions : 
-
-----------
-{:p}
-------------
-
-----------
+--
 
 
 Macros
@@ -2010,5 +2095,3 @@ Macros
 
 
 #########################################################################################
-
-This diff contains a change in line endings from 'LF' to 'CRLF'.

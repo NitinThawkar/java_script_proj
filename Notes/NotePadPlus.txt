@@ -134,6 +134,13 @@ save document as md file    <filename>.md
 plugin>>Markdown>>  serch mark down in plug in 
 ========================================================================================================================================
 ☑️ BOOK MARK BOOKMARK bookmark
+
+menu > serch > bookmark
+
+
+menu > file >save session
+------
+just ckick in left pannel greay area . you will see blue circle icon
 1. Toggle a bookmark in notepad++       (CTRL + F2)
 2. Go to next bookmark in notepad++     (F2)
 3. Go to previous bookmark in notepad++ (SHIFT + F2)
@@ -141,7 +148,7 @@ plugin>>Markdown>>  serch mark down in plug in
 ARE BOOKMARKS SAVED ON NOTEPAD++ RESTART
 No! But you can use notepad++ sessions to save bookmarks.
 
-Can I see all my bookmarks in the file?
+✏️ Can I see all my bookmarks in the file?
 Yes, using a Bookmark Panel plugin. 
 ========================================================================================================================================
 
@@ -358,8 +365,11 @@ remove spaces (find and replace)
 
 ======================================================================================================================================
 
+☑️  tab replace with spaces
 
-☑️  HOW TO CONFIGURE INDENTATION SETTINGS?
+line operation > blank operation
+======================================================================================================================================
+☑️ HOW TO CONFIGURE INDENTATION SETTINGS?
 1. Go to Settings.
 2. Go to Preferences. 
 3. Click on 'Language'.
@@ -381,29 +391,68 @@ From Toolbar, select ICON, that says, 'Indent Guide'
 HOW NOTEPAD++ INDENTATION SETTINGS HELP IN CODE-FOLDING?
 Under 'View' menu, there are many options to 'Fold All', 'Unfold All' etc..
 ======================================================================================================================================
+☑️ NOTEPAD++ CODE ALIGNMENT PLUGIN: How to Use Code Alignment in Notepad++ to Improve Code Readability
+install plugin  code aligment
 
+HOW TO INSTALL CODE ALIGNMENT PLUGIN IN NOTEPAD++
+
+1. Go to Plugins ► Plugins Admin 
+2. Search For 'Code Alignment'
+3. Install the plugin.
+
+HOW TO USE NOTEPAD++ CODE ALIGNMENT PLUGIN
+
+1. From Plugin Menu. 
+2. Using keyboard shortcut, CTRL + SHIFT + = 
+======================================================================================================================================
+☑️  DARK THEMES With Preview: Change Notepad++ Text Color using Themes
+1. Go to Settings.
+2. Click on Style Configurator.
+3. Select Theme from Themes dropdown. And change them to your liking.
 ======================================================================================================================================
 
+☑️  FIND AND REPLACE WITH NEW LINE
+choose  extented option
+==============================
+
+SEARCH FOR: any character
+REPACE WITH: \r\n
+
+WHAT IS \r\n (Carriage Return and Line Feed)?
+=============
+\r   : Carriage Return (CR) 
+\n   : Line Feed(LF) - a new line character in Unix/Mac OS X
+\r\n : Used as a new line character in Windows
 ======================================================================================================================================
+☑️ Show Symbols Or Special Characters
+COMMON TYPES: NON-ALPHANUMERIC CHARACTERS (HIDDEN)
+==================================================
+Spaces, Tabs, Line Feed (LF), Carriage Return (CR)
+
+HOW TO VIEW THEM
+================
+1. From Menubar View ...Show Symbol ... Show All Characters
+
+2. From the toolbar icon.
 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
-
+☑️ 
 ======================================================================================================================================
