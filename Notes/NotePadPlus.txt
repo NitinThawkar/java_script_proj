@@ -18,7 +18,11 @@ youtube : https://www.youtube.com/watch?v=8GWjRe-0shk&list=PL1z4RL0Mc_2XuRjFgG8X
 
 what is notepad ++ portable version?
 ========================================================================================================================================
-☑️  view ▶️ distraction free mode
+☑️  create new file : double click on aside of tab 
+
+✏️ view ▶️ distraction free mode
+
+Figlet
 ========================================================================================================================================
 ☑️ modify shortcut
 Run >> modify shortcut/delete command
@@ -345,6 +349,10 @@ SELECT MONOSPACED FONT:
 -------------------------------
 COURIER NEW
 CONSOLAS
+
+✏️Change Default Font
+-------------------------------
+Go to Settings ► Preferences ► style configrution ► globle style ► Font Style
 ========================================================================================================================================
  ☑️ EDIT MULTIPLE LINES AT THE SAME TIME IN NOTEPAD
  
@@ -702,6 +710,9 @@ To Select Entire Document: CTRL + A     (Probably stands for ALL)
 To Cut The Text Selection: CTRL + X   
 
 
+✏️ Remove Trailing Spaces
+----------------------
+menu ► view ► Blank line operation
 
 ======================================================================================================================================
 ☑️ TAB IMPROVE YOUR CODE MANAGEMENT SKILLS with To Tab Management Tricks in Notepad++
@@ -741,8 +752,183 @@ Right click tab  ►
 ----------------------
 ======================================================================================================================================
 ☑️ menu ► view ► summary
+
+\r\n
 ======================================================================================================================================
-☑️ 
+☑️ How to Fix You Do Not Have Permission to Open This File with Notepad++ in Windows
+
+https://www.youtube.com/watch?v=zgNOjwMz0pw&list=PL1z4RL0Mc_2U-MDWdJyVNihFAWF_8O2eS&index=28
 ======================================================================================================================================
-☑️ 
+☑️ Copy and Paste Multiple Times with Notepad
+
+MultiClipboard plugin
+
+ This plugin keeps the history of copy to clipboard items. And allows you to use it later.
+ It is a common windows annoyance that when you copy some text and then copy another text, it forgets (loses) the old copied text.
 ======================================================================================================================================
+☑️ Set the Default Language in Notepad
+
+✏️ ► setting > preferance > langualge  (intelli sence )intellisence  (HTML)
+======================================================================================================================================
+
+☑️ Create ASCII Text Banner with Figlet on Windows and in Notepad++  ( text heading)
+✏️ ►https://patorjk.com/software/taag/#p=display&f=Big&t=nitin+santosh&x=none&v=4&h=4&w=80&we=false
+
+
+======================================================================================================================================
+
+☑️Increase Toolbar Size and Customize Icons
+
+✏️ ►setting > preferance > general > toolbar section 
+======================================================================================================================================
+
+☑️Copy Code Snippets with Colors and Syntax Highlighting from Text Editor to Word Document
+
+✏️ ► plugin >NPP export >copy to RTF
+======================================================================================================================================
+
+☑️Disable Auto Update Pop Up Settings
+✏️ ►setting > preferance > MISC >disable auto upgrade
+======================================================================================================================================
+
+☑️How to Automatically Reload Modified Files
+✏️ ►Go to Settings ► Preferences ► MISC ► auto update silentaly
+======================================================================================================================================
+
+☑️Remove Space Between Words Using Notepad
+ctrl+shif+f
+
+✏️ ►The regular expression we will use is,
+means one or more time. For example, m+ mean 'm' one or more time
+\t for tabs
+[ ] Square bracket creates a matching list that will match any one of the characters in the list.
+======================================================================================================================================
+
+☑️Remove Specific Lines or Copy or Extract Lines with Specific Text in Notepad++ using Mark Tool
+ctrl+shif+f
+regular expression
+# go to find and replace  ctrl+H  check regular expression in serch option, new line option
+https://www.youtube.com/watch?v=JeDOlpfytYE&list=PL1z4RL0Mc_2UEn-9qHIIT_P1jN0nwde2f&index=2
+
+✏️ Extract / Copy Specific Set of Lines from a Large Text or Log file
+✏️ Remove / Delete Specific Set of Lines from Text File containing a specific text
+✏️ Remove Lines that does not contain specific text or keyword
+✏️ Keep a lines from a large text file that contains specific text
+
+======================================================================================================================================
+
+☑️Match IP Address with REGEX: Step By Step Regular Expression Tutorial to Validate IPv4
+✏️ ►Here are the rules for valid IPv4 IP addresses.
+
+1. Four integers ranging from zero to 255. 
+2. Any address with more than three dots (.) is not valid.
+3. Any address with number greater than 255 is invalid.
+
+
+Here is a full Regular expression for matching ip address list. 
+
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
+
+Let's break this into smaller pieces:
+
+[0-9][0-9]?   covers 0-99 numbers
+1[0-9][0-9]   covers 100-199 numbers
+2[0-9][0-9] - Will this work? No.
+2[0-9][5]   - How about this? No. 
+2[0-4][0-9] - covers 200 to 249
+25[0-5] - covers 250-25
+======================================================================================================================================
+
+☑️REGULAR EXPRESSION: Rearrange Lines   Lines in columns
+find and replace
+
+✏️ ►Example
+=======
+line1
+line2
+line3
+...
+line12
+
+FOR TWO COLUMNS
+===============
+SEARCH FOR:   "^(.*)$\r\n^(.*)$"
+REPLACE WITH: "\1 \2" 
+
+FOR THREE COLUMNS
+=================
+SEARCH FOR:   "^(.*)$\r\n^(.*)$\r\n^(.*)$
+REPLACE WITH: "\1 \2 \3"
+======================================================================================================================================
+
+☑️ Text Editing Magic: Learn How to Remove Odd or Even Lines from Your Files with Notepad++ and Regex!
+✏️  By using Regular Expression (Regex) (find and replace)
+✏️ Remove Odd Lines
+✏️ Remove Even Lines
+✏️ CSV File: Remove Odd Even Lines
+✏️ Linux Files: Remove Odd Even Lines
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
+☑️
+✏️ ►
+======================================================================================================================================
+
