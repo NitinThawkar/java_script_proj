@@ -87,6 +87,8 @@ create date time shortcut
 short format: Alt + Ctrl + d 
 long format : Alt + Ctrl + Shift + d
 
+## i set if to >> ALT +D
+
 Run >> modify shortcut/delete command
 setting >> shortcut mapper 
 Edit >> insert
@@ -243,6 +245,11 @@ Check "Enable" under clickable link settings.
 If you do not like an underline, check "No Underline" 
 Click Close. 
 Now, if you double click a link, it will open in a web browser.
+
+---------------------------
+Disable Clickable Hyper Links in Notepad++ While Editing HTML File
+
+
 ========================================================================================================================================
 ☑️ iscover Top 5 Best Settings for Coding in Notepad++
 Settings >> preferences >> backup
@@ -942,12 +949,32 @@ So, we will generate a new user-defined language for a new language, we will use
 ✏️ ►https://www.youtube.com/watch?v=JvmZGN8Z1Ng&list=PL1z4RL0Mc_2XSWwOOFvi4W0CRcFAQgeKH
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️SELECT LINE RANGE: Select Lines from MySQL Dump or Log File Easily
+✏️ Menu ► EDIT ► Click on 'Begin/End Select' 
+CASE 1: You have a large MySQL dump file. Let's say you want to copy lines from 0,000 to 20,000.
+
+CASE 2: You have a log file with millions of lines. And You need to delete some fragments of it. Manual selection will be very tedious.
+
+USE NOTEPAD++ "BEGIN/END SELECT" FEATURE:
+
+1. Go to Start Line.
+2. Click on 'Begin/End Select'.
+3. Go to End Line. 
+4. Click on 'Begin/End Select'.
 ======================================================================================================================================
 
-☑️
-✏️ ►
+☑️NOTEPAD++ TUTORIAL - Six Ways To Sort Lines or Text in Notepad++
+✏️ ► Line oprations 
+NOTEPAD++ TUTORIAL - SIX POWERFUL WAYS TO SORT TEXT/LINES WITH ALPHABETS/NUMBERS/INTEGERS/DECIMALS
+
+OPTIONS
+=======
+1. Sort Text/Lines Alphabetically (Lexicographically)  Ascending/Descending
+2. Sort Text/Lines Alphabetically (Lexicographically  Ascending/Descending (Ignoring Case)
+3. Sort Text/Lines As Integers  Ascending/Descending
+4. Sort Text/Lines As Decimals(Dots)  Ascending/Descending
+5. Sort Text/Lines As Decimals(Comma) Ascending/Descending
+6. Sort Text/Lines Randomly
 ======================================================================================================================================
 
 ☑️

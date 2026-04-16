@@ -138,6 +138,21 @@ import java.io.IOException;
         }
         return ResponseEntity.ok().body(content);
     }
+	
+---------------------------------------------
+	@PostMapping("/meter-summary")
+    public ResponseEntity<String> getMeterSummary(@Valid @RequestBody MeterSummaryRequest meterSummaryRequest) {
+        Path filePath;
+        filePath = Paths.get("C:\\zTemp\\summary.txt");
+        String content;
+        try {
+            content = Files.readString(filePath);
+        } catch (IOException e) {
+            content = "";
+        }
+        return ResponseEntity.ok().body(content);
+    }
+
 ---------------------------------------------
 
   public ResponseEntity<String> getWeatherTrendData(@Valid @RequestBody String payload) {

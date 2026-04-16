@@ -1,0 +1,321 @@
+
+TEXT-BASED TABULAR NPM CHEAT SHEET
+==================================
+
+SECTION 1: INITIALIZATION & PROJECT SETUP
+-----------------------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm init                         | Create a new package.json interactively
+npm init -y                      | Create package.json with default values
+npm create <initializer>         | Run a project scaffolder (e.g., create-vite)
+
+SECTION 2: INSTALL / REMOVE / INSPECT
+--------------------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm install                      | Install all dependencies
+npm install <pkg>                | Install a package locally
+npm install <pkg>@<version>      | Install a specific version
+npm i -D <pkg>                   | Install as dev dependency
+npm i -O <pkg>                   | Install as optional dependency
+npm i -g <pkg>                   | Install globally
+npm ci                           | Clean install using lockfile
+npm uninstall <pkg>              | Remove a local package
+npm uninstall -g <pkg>           | Remove a global package
+
+SECTION 3: SCRIPTS
+-------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm run <script>                 | Run a script
+npm start                        | Shortcut for npm run start
+npm test                         | Shortcut for npm run test
+npm run                          | List all scripts
+
+SECTION 4: LIST / VIEW / SEARCH
+--------------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm list                         | List installed dependencies
+npm list -g                      | List globally installed packages
+npm view <pkg>                   | View package metadata
+npm docs <pkg>                   | Open package documentation
+npm search <term>                | Search npm registry
+
+SECTION 5: UPDATE & OUTDATED
+----------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm outdated                     | Show outdated dependencies
+npm update                       | Update dependencies using semver
+npm update <pkg>                 | Update a specific package
+npm install <pkg>@latest         | Upgrade to latest version
+
+SECTION 6: SECURITY
+--------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm audit                        | Scan for vulnerabilities
+npm audit fix                    | Auto-fix security issues
+npm audit fix --force            | Force fix including breaking changes
+npm doctor                       | Diagnose environment issues
+
+SECTION 7: CACHE & CLEANUP
+---------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm cache verify                 | Validate npm cache
+npm cache clean --force          | Clear npm cache
+npm prune                        | Remove extraneous packages
+npm prune --production           | Keep only production dependencies
+
+SECTION 8: CONFIGURATION
+-------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm config list                  | Show all configuration
+npm config get <key>             | Read config value
+npm config set <key> <value>     | Set config value
+npm set <key>=<value>            | Shorthand for set
+npm get <key>                    | Shorthand for get
+npm prefix                       | Show npm prefix
+npm root                         | Show node_modules path
+
+SECTION 9: REGISTRY & PUBLISHING
+---------------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm login                        | Authenticate
+npm logout                       | Logout from npm registry
+npm whoami                       | Show current user
+npm publish                      | Publish package
+npm unpublish <pkg>              | Unpublish package
+npm deprecate <pkg> "msg"        | Deprecate version(s)
+npm owner add/remove             | Manage owners
+npm access                       | Manage registry access
+
+SECTION 10: VERSIONING
+-----------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm version patch                | Patch version bump
+npm version minor                | Minor version bump
+npm version major                | Major version bump
+npm version prerelease           | Pre-release version bump
+npm dist-tag ls <pkg>            | List dist-tags
+npm dist-tag add <pkg>@<ver> tag | Add a dist-tag
+
+SECTION 11: LINKING
+--------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm link                         | Link package globally
+npm link <pkg>                   | Link global package locally
+npm pack                         | Create tarball
+
+SECTION 12: WORKSPACES
+------------------------
+Command                          | Description
+---------------------------------|----------------------------------------------
+npm init -w <dir>                | Initialize workspace
+npm install -w <ws>              | Install in workspace
+npm run -w <ws> <script>         | Run workspace script
+npm exec -w <ws> <cmd>           | Execute command in workspace
+
+SECTION 13: SEMVER RANGES
+--------------------------
+Syntax                           | Meaning
+---------------------------------|----------------------------------------------
+^1.2.3                           | Allow non-breaking major updates
+~1.2.3                           | Allow patch updates only
+*                                | Any version
+>=2.0.0                          | Greater than or equal
+1.x                              | Any 1.* version
+
+====================================================================
+Absolutely! Here’s a comprehensive, **detailed table‑style npm cheat sheet**.  
+I’ve organized it by tasks so you can quickly find what you need.
+
+> **Note:** To keep the tables clean and readable, examples are shown as plain text (no code blocks). If you’d like, I can also generate this as a **PDF/Word** file.
+
+***
+
+## 🔧 Initialization & Project Setup
+
+| Command                  | Purpose                                 | Common Flags | Example                 | Notes                                    |
+| ------------------------ | --------------------------------------- | ------------ | ----------------------- | ---------------------------------------- |
+| npm init                 | Create a new package.json interactively | —            | npm init                | Guides you through package metadata      |
+| npm init -y              | Create package.json with all defaults   | -y           | npm init -y             | Skips all prompts                        |
+| npm create <initializer> | Run a project scaffolder (via npx)      | —            | npm create vite\@latest | Equivalent to npx create-\* in newer npm |
+
+***
+
+## 📦 Install, Remove & Inspect Packages
+
+| Command                | Purpose                                | Common Flags                                                  | Example                     | Notes                                       |
+| ---------------------- | -------------------------------------- | ------------------------------------------------------------- | --------------------------- | ------------------------------------------- |
+| npm install            | Install dependencies from package.json | —                                                             | npm install                 | Reads package.json & package-lock.json      |
+| npm install <pkg>      | Install a package locally              | @version, --save-dev (-D), --save-optional, --save-exact (-E) | npm install express\@4.18.2 | Default saves to dependencies               |
+| npm i -D <pkg>         | Install as devDependency               | -D                                                            | npm i -D typescript         | Adds to devDependencies                     |
+| npm i -g <pkg>         | Install globally                       | -g                                                            | npm i -g serve              | Puts binary in global PATH                  |
+| npm ci                 | Clean install from lockfile            | —                                                             | npm ci                      | Strict, reproducible installs (CI-friendly) |
+| npm uninstall <pkg>    | Remove a local package                 | —                                                             | npm uninstall lodash        | Updates package.json                        |
+| npm uninstall -g <pkg> | Remove a global package                | -g                                                            | npm uninstall -g nodemon    | —                                           |
+| npm rebuild            | Rebuild native add-ons                 | —                                                             | npm rebuild                 | Useful after Node version changes           |
+| npm dedupe             | De-duplicate dependency graph          | —                                                             | npm dedupe                  | Flattens duplicates in node\_modules        |
+| npm fund               | Show funding URLs                      | —                                                             | npm fund                    | See who to sponsor                          |
+
+***
+
+## 🚀 Scripts & Lifecycle
+
+| Command                    | Purpose                              | Common Flags | Example                  | Notes                           |
+| -------------------------- | ------------------------------------ | ------------ | ------------------------ | ------------------------------- |
+| npm run <script>           | Run a script defined in package.json | —            | npm run build            | Uses scripts.\* entries         |
+| npm start                  | Shortcut for run start               | —            | npm start                | Runs scripts.start if present   |
+| npm test                   | Shortcut for run test                | —            | npm test                 | Runs scripts.test               |
+| npm run                    | List available scripts               | —            | npm run                  | Shows all script names          |
+| npm run <script> -- <args> | Pass args to script                  | —            | npm run build -- --watch | Arguments after -- go to script |
+
+***
+
+## 📁 Listing, Viewing & Searching Packages
+
+| Command           | Purpose                              | Common Flags                    | Example                 | Notes                              |
+| ----------------- | ------------------------------------ | ------------------------------- | ----------------------- | ---------------------------------- |
+| npm list          | List installed dependencies (tree)   | --depth, --json                 | npm list --depth=0      | Use --depth=0 for top-level        |
+| npm list -g       | List globally installed packages     | -g, --depth                     | npm list -g --depth=0   | —                                  |
+| npm view <pkg>    | Show package metadata (npm registry) | versions, dist-tags, repository | npm view react versions | Use dot paths: view lodash version |
+| npm docs <pkg>    | Open package docs                    | —                               | npm docs vite           | Opens in default browser           |
+| npm search <term> | Search npm registry                  | —                               | npm search markdown     | Terminal search results            |
+
+***
+
+## 🔄 Updating & Outdated
+
+| Command                  | Purpose                            | Common Flags   | Example             | Notes                                  |
+| ------------------------ | ---------------------------------- | -------------- | ------------------- | -------------------------------------- |
+| npm outdated             | Show outdated dependencies         | --long, --json | npm outdated        | Compares against semver ranges         |
+| npm update               | Update to latest allowed by semver | <pkg>, -g      | npm update          | Uses ranges in package.json            |
+| npm update <pkg>         | Update a specific package          | —              | npm update axios    | Does not change range unless necessary |
+| npm install <pkg>@latest | Upgrade to latest version          | —              | npm i react\@latest | Explicitly jumps to latest             |
+
+***
+
+## 🔐 Security & Integrity
+
+| Command               | Purpose                         | Common Flags                | Example               | Notes                                |
+| --------------------- | ------------------------------- | --------------------------- | --------------------- | ------------------------------------ |
+| npm audit             | Scan for known vulnerabilities  | --json                      | npm audit             | Uses npm advisories database         |
+| npm audit fix         | Auto-fix vulnerabilities        | --force, --legacy-peer-deps | npm audit fix         | force may introduce breaking changes |
+| npm audit fix --force | Force upgrades including majors | —                           | npm audit fix --force | Review diffs after using             |
+| npm doctor            | Diagnose environment issues     | —                           | npm doctor            | Checks config, cache, perms          |
+
+***
+
+## 🧹 Cache, Prune & Cleanup
+
+| Command                 | Purpose                    | Common Flags | Example                 | Notes                       |
+| ----------------------- | -------------------------- | ------------ | ----------------------- | --------------------------- |
+| npm cache verify        | Verify cache integrity     | —            | npm cache verify        | Fixes minor cache issues    |
+| npm cache clean --force | Clear cache                | --force      | npm cache clean --force | Requires --force            |
+| npm prune               | Remove extraneous packages | --production | npm prune               | Removes not-in-package.json |
+| npm prune --production  | Keep only prod deps        | —            | npm prune --production  | Helpful for Docker builds   |
+
+***
+
+## 📝 Configuration & Environment
+
+| Command                    | Purpose                  | Common Flags | Example                   | Notes                         |
+| -------------------------- | ------------------------ | ------------ | ------------------------- | ----------------------------- |
+| npm config list            | Show config (active)     | --json, -l   | npm config list           | Includes env and user configs |
+| npm config get <key>       | Read a config value      | —            | npm config get registry   | —                             |
+| npm config set <key> <val> | Set a config value       | --global     | npm config set fund false | Use --global for user-level   |
+| npm set <key>=<val>        | Shorthand for config set | —            | npm set audit=false       | Inline equals syntax          |
+| npm get <key>              | Shorthand for config get | —            | npm get init-author-name  | —                             |
+| npm prefix                 | Show prefix path         | -g           | npm prefix -g             | Global install prefix         |
+| npm root                   | Show node\_modules path  | -g           | npm root                  | Path to local node\_modules   |
+
+***
+
+## 👤 Registry, Auth & Publishing
+
+| Command                     | Purpose                      | Common Flags                      | Example                                 | Notes                                           |                       |
+| --------------------------- | ---------------------------- | --------------------------------- | --------------------------------------- | ----------------------------------------------- | --------------------- |
+| npm login                   | Authenticate to a registry   | --registry, --scope               | npm login                               | Prompts for credentials                         |                       |
+| npm logout                  | Remove registry auth         | —                                 | npm logout                              | —                                               |                       |
+| npm whoami                  | Show logged-in username      | —                                 | npm whoami                              | On current registry                             |                       |
+| npm publish                 | Publish a package            | --access public, --tag            | npm publish --access public             | For scoped packages, public access often needed |                       |
+| npm unpublish <pkg>         | Unpublish a package          | --force                           | npm unpublish my-pkg\@1.0.0             | Use carefully; policies restrict unpublishing   |                       |
+| npm deprecate <pkg> "<msg>" | Mark a version as deprecated | —                                 | npm deprecate my-pkg@"<2.0.0" "Use 2.x" | Warns consumers on install                      |                       |
+| npm dist-tag add            | Manage dist-tags             | —                                 | npm dist-tag add my-pkg\@2.0.0 next     | Control npm tag channels                        |                       |
+| npm owner add               | rm                           | Manage package owners             | —                                       | npm owner add username my-pkg                   | Grants publish rights |
+| npm access                  | Manage access for scopes     | public, restricted, grant, revoke | npm access public @scope/pkg            | For org/scoped packages                         |                       |
+
+***
+
+## 🧱 Versioning & Tags
+
+| Command                | Purpose                       | Common Flags                              | Example                           | Notes                                 |
+| ---------------------- | ----------------------------- | ----------------------------------------- | --------------------------------- | ------------------------------------- |
+| npm version patch      | Bump version & create git tag | patch, minor, major, prerelease, from-git | npm version minor                 | Updates package.json, creates git tag |
+| npm version prerelease | Bump prerelease (e.g., -rc.0) | --preid                                   | npm version prerelease --preid rc | Requires Git workspace by default     |
+| npm dist-tag ls <pkg>  | List tags for a package       | —                                         | npm dist-tag ls react             | See latest, next, etc.                |
+
+***
+
+## 🔗 Linking & Local Development
+
+| Command        | Purpose                              | Common Flags | Example         | Notes                                     |
+| -------------- | ------------------------------------ | ------------ | --------------- | ----------------------------------------- |
+| npm link       | Symlink the current package globally | —            | npm link        | For developing CLI/libs locally           |
+| npm link <pkg> | Symlink a global package locally     | —            | npm link my-lib | Use with paired npm link in lib           |
+| npm pack       | Create a tarball of the package      | —            | npm pack        | Useful to test install without publishing |
+| npm pack <pkg> | Download tarball from registry       | —            | npm pack lodash | Saves .tgz to current directory           |
+
+***
+
+## 🧰 Executing Binaries & npx
+
+| Command        | Purpose                               | Common Flags         | Example                      | Notes                           |
+| -------------- | ------------------------------------- | -------------------- | ---------------------------- | ------------------------------- |
+| npx <bin>      | Execute a package binary (auto-fetch) | @version, --yes (-y) | npx create-react-app my-app  | Runs without permanent install  |
+| npm exec <bin> | Execute in npm environment            | -- <args>            | npm exec eslint -- --version | Equivalent to npx in newer npm  |
+| npm run env    | Print script environment              | —                    | npm run env                  | Debug env variables for scripts |
+
+***
+
+## 🧪 Workspaces (Monorepos)
+
+| Command                  | Purpose                    | Common Flags     | Example                       | Notes                              |
+| ------------------------ | -------------------------- | ---------------- | ----------------------------- | ---------------------------------- |
+| npm init -w <dir>        | Create a workspace package | -w               | npm init -w packages/api -y   | Requires workspaces config in root |
+| npm install -w <ws>      | Install in a workspace     | -w, --workspaces | npm i -w @myorg/api lodash    | Use multiple -w for multi targets  |
+| npm run -w <ws> <script> | Run script in a workspace  | -ws (all)        | npm run -w @myorg/web build   | -ws runs across all workspaces     |
+| npm exec -w <ws> <bin>   | Exec in a workspace        | —                | npm exec -w packages/app vite | Scoped execution                   |
+
+***
+
+## 🧭 Semver Ranges (Reference)
+
+| Syntax       | Meaning                                 | Example        | Notes                         |
+| ------------ | --------------------------------------- | -------------- | ----------------------------- |
+| ^            | Compatible with next non-breaking major | ^1.2.3         | Allows 1.x updates, not 2.0.0 |
+| \~           | Patch-level updates                     | \~1.2.3        | Allows 1.2.x                  |
+| \*           | Any version                             | \*             | Avoid in production           |
+| >=, <=, >, < | Comparators                             | >=2.1.0 <3.0.0 | Combine for ranges            |
+| x or .x      | Wildcards                               | 1.x, 1.2.x     | —                             |
+| -            | Hyphen range                            | 1.2.3 - 1.3.4  | Inclusive                     |
+
+***
+
+## 🧩 Useful Environment Variables (npm scripts)
+
+| Variable              | Purpose                   | Example                     | Notes                                |
+| --------------------- | ------------------------- | --------------------------- | ------------------------------------ |
+| npm\_lifecycle\_event | Current script name       | echo $npm\_lifecycle\_event | Helps detect which script is running |
+| npm\_config\_\*       | Exposes config as env     | npm\_config\_registry       | Set via npm config set               |
+| NODE\_ENV             | Common convention for env | NODE\_ENV=production        | Not set by npm by default            |
+
+***
