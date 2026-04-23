@@ -271,6 +271,18 @@ use for cleaner History (avoid unnessary merging commits)
 1]checkout or switch to working or feature branch
 git rebase main
 git rebase master
+----------------------------------------------------
+✏️ git cherry-pick   ## merge selective commits from one branch to another branch
+
+if we want to merge some selective commite from feature branch to Main or master branch. this will create new commit id in main branch
+
+1] switch or checkout Main branch
+  git cherry-pick <feature branch CommitId>
+ 
+
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 🟢## Undo/revert/discard / UnDo Commit  changes
