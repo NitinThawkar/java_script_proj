@@ -277,8 +277,8 @@ git rebase master
 
 following list of command used for Undo/revert/discard /UnDo Commit changes
 
-   reset                   Reset current HEAD to the specified state (undo commit)
-   revert                  Revert some existing commits (undo commit)
+   reset                   Reset current HEAD to the specified state (undo commit  , change commit history)
+   revert                  Revert some existing commits (undo commit , Move Head Specific Commit Location / commitId , not change commit history)
    restore                 Restore working tree files
    
 ================================================================================

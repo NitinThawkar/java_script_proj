@@ -1,13 +1,100 @@
 
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
 
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+------------------------------------------------------------
+Git_Notes.txt
+=============================================================
+https://github.dev/github/dev
 
+
+
+✨ https://www.w3schools.com/git/default.asp
+✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
+https://git-scm.com/
+----------------------------------------------------
+✨ (star)  
+✏️ (Pencil)  ☑️
+
+
+----------------------------------------------------
+git help
+git help -a
+git help -g
+
+git commit -m "commit changes from git desktop" --no-verify
+
+☑️ head or head branch means (you have created from main or parent branch )	
+
+https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests
+
+
+
+search
+
+is:pr is:merged author:jthawkn_jcplc
+is:pr is:closed author:jthawkn_jcplc
+
+Example (all closed PRs by you in ds-obcfm-ui): >>> is:pr is:closed repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
+Example (only merged PRs by you in ds-obcfm-ui): >>> is:pr is:merged repo:jci-products/ds-obcfm-ui author:jthawkn_jcplc
+
+----------------------------------------------------
+HEAD >> this is point to recent most commit in currant branch
+
+----------------------------------------------------
+git help
+git <cmd> --help
+git help -a
+git help add
+git help --branch  (this is wrong but will show all helping options)  
+git help branch   (open help in browser)  # git help <command>  
+----------------------------------------------------
+git config -- global core.editor "notepad.exe"
+open config file located in .git folder of repo location on local machine
+----------------------------------------------------
+git config
+git config --list
+git init
+git log
+git log --oneline
+git reflog
+git status
+git amend
+git stash
+git diff
+git add   
+git commit    //commit --amend  
+git restore . //
 git remote
+git branch
+git branch -v
+git switch
+git checkout
+git reset    // discard changes //Revert all tracked files to their state at the last commit.
+git pull
+git push
+git merge
+git fetch
+git submodule
+git prune
+delete branch
+git clean -n  >> git clean -nfd  >> showing list of files and directory before deleting  or use git clean or git clean -fd
 
+pruning old branches
+
+git branch -- merged | grep -v "main" | xargs git branch -D
+
+git branch -- merged
+
+grep
+===###===================###===================###===================###===================###================
+Frequntaly Used
+===###===================###===================###===================###===================###================
+git remote
+git config --list
 git clone <-Repo Link->
 git status 
 git diff  <-BranchName-> use to compaire two different commit or use to compaire two different branches or files and MORE 
-
+git log
 
 git config --global alias.ch = checkout  ## now open .gitconfig file , shoercu will created for checkout command
 
@@ -30,8 +117,9 @@ git diff --name-status develop..jthawkn_develop
 git diff -M develop..jthawkn_develop
 ===###===================###===================###===================###===================###================
 git status
-
-
+git add . or ./ or  <file Name>
+git commit -m "commit message"   OR -am 
+git commit -am "commit message"  => Add and commit
 git remote -v                  => shoving remote git repo
 git branch                     =>show local branches name 
 git push origin <branch name>  => sending changes on remote server on specific branch ;  origin= remote
@@ -65,13 +153,15 @@ git branch -d develop4
 git push origin --delete remoteBranchName
 
 ===###===================###===================###===================###===================###================
-
+Merge Code  => ther are two ways to merge code 1] by branch merge 2] by raiseing pull request
 
 git diff <branch Name>   =>(this command can compaire 2 commits, 2 files ,2 branches and more)
 
 MERGE merge branch
 =-------------------------=-------------------------=
-
+case : want to merge code from  "DEV1" branch to OBM_master branch
+1] checkout "OBM_master" branch   => git checkout OBM_master 
+2]git merge DEV1
 
 ===###===================###===================###===================###===================###================
 Merge Conflict resolving
@@ -197,10 +287,21 @@ Import code
 
 git push <remote-name> <local-branch-name>
 
+																						   
+										 
+																						  
+		   
+
+
+										  
+
+############################################################################################################################
+[working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
+
 ===###===================###===================###===================###===================###================
 git status
 git add . or ./ or  <file Name>
-
+git commit -m "commit message"   OR -am 
 git commit -am "commit message"  => Add and commit
 git remote -v                  => shoving remote git repo
 git branch                     =>show local branches name 
@@ -218,7 +319,10 @@ git push origin <branch name>  => sending on remote server;
 git pull origin <branch name>  => getting from   remote server or take latest from server
 
 
-
+git config --list            => show all setting
+git config user.email "your name" => Set your name in variable 
+git config user.email "your email" => Set your email in variable 
+git config --global user.email  =>show set user name 
 
 Code Revert or UNDO
 
@@ -241,7 +345,9 @@ git remote rm <origin name>
 git remote add origin https://github.com/NitinThawkar/Notes.git
 
 ===###===================###===================###===================###===================###================
-
+git log       => commit list
+git log -oneline   => last commit 
+git log -p -1 
 git cat-file <commitid> -p  => commit details
 
 git diff
@@ -317,8 +423,24 @@ git push origin main
 git push origin dev
 git push origin myFeature
 ===###===================###===================###===================###===================###================
+MERGE merge branch
+=-------------------------=-------------------------=
+case : want to merge code from  "DEV1" branch to OBM_master branch
+1] checkout "OBM_master" branch   => git checkout OBM_master 
+2]git merge DEV1
+=-------------------------=-------------------------=
+#friends branches 
+1]git merge origin/branch or #git checkout <friends branch name >
 
+=-------------------------=-------------------------=-------------------------=-------------------------
+#merge code from "origin/master_iso" in to "jthawkn_master_iso"
+git checkout jthawkn_master_iso   => checkout branch in which you want to mearge
+git merge origin/master_iso  => branch from which you want to mearge
+git merge origin/develop4 
+git merge origin/dev4_develop_iso =>helm cook
 
+=-------------------------=-------------------------=-------------------------=-------------------------
+===###===================###===================###===================###===================###================
 ✏️ ignore gitignore
 
 1] touch .gitignore   => create .gitignore file in root folder of project  pralllel with .git, open this file in editor
@@ -383,15 +505,91 @@ git checkout -  (hyfun)
 
 ===###===================###===================###===================###===================###================
 
+git desktop stash => select al files and right click on changed file check box/label
+
+Stash retrieve, show, list, delete & save
+
+#stash
+
+Command                                      | Description
+---------------------------------------------|---------------------------------------------------------------
+git stash                                    | Stash tracked modified files
+git stash --keep-index                       | Stash only untracked files; keep staged files intact
+git stash --include-untracked                | Stash tracked + untracked files
+git stash list                               | Show all stash entries
+git stash save "stash name"                  | Create a stash with a custom message
+git stash show                               | Show files changed in the most recent stash
+git stash show <stash id>                    | Show files changed in the specified stash (e.g., stash@{0})
+git stash show -p                            | Show detailed diff/content of the latest stash content
+git stash -- <file name>                     | Stash only the specified file
+git stash -m "message" -- <file name>        | Stash a specific file with a message
+git stash -m "my stash"                      | Create stash with a message
+
+git stash pop                                | Apply latest stash and remove it from stash list
+git stash apply <stash id>                   | Apply stash without removing it
+
+git stash drop <stash id>                    | Delete specific stash entry delete stash
+git stash clear                              | Remove all stash entries
+
+git stash branch <branch> <stash id>         | Create new branch and apply stash to it
+
+
+
+git stash list                               | List all stashes (duplicate reference from above)
+git stash show stash@{n}					 | show list of stash files summary 	
+git stash show -p stash@{n}                  | View diff/content of stash index n
+git show stash@{n}:path/file                 | View full content of a specific file from stash 
+git stash apply stash@{n}                    | Apply stash entry n without removing
+git stash branch <name> stash@{n}            | Extract stash into new branch
+
+----------------------------------------------
+git show stash@{0}:src/store/cbm/alarmTrendSlice.ts    >> View full content of a specific file from stash 
+git show stash@{0}:.env                                >> View full content of a specific file from stash 
+git stash show 0
+git stash show stash@{n} 
+
+===###===================###===================###===================###===================###================
 #Cherry pick & merge abort  # https://www.youtube.com/watch?v=QxGrGtFB2Ig&list=PLolI8AY2AS9aaHf99kGdrpRB28H5iaWHT&index=10
 
 git cherry-pick <commit id>
-
-
-===###===================###===================###===================###===================###================
+git mearge --abort ==> revert all merge  for checkout branch
 
 ===###===================###===================###===================###===================###================
+# Git Undo | Reset hard & mixed, revert and restore 
+# Git Undo/revert/discard  code 
 
+   rebase                  Reapply commits on top of another base tip
+   reset                   Reset current HEAD to the specified state
+   restore                 Restore working tree files
+   revert                  Revert some existing commits
+====================
+
+# Git Undo 
+git reset =>staging to local
+git reset <commit id>  => remove from staging 
+git reset --hard <commit id>   => remove from staging and local/ working
+
+====================
+
+
+# Git Undo  rvert code
+git reset <-HASH ID->  =>staging to local
+git reset <commit id>  => remove from staging 
+git reset --hard <commit id>   => remove from staging and local/ working revert from every places
+git reset HEAD <file name> 
+git restore <filename>  // to discard changes in working directory
+git restore --stage <filename>   // if file present in stage area and we want to restore. it will move in change area
+git restore --stage --worktree . // (dot) every thing will discard from working tree  
+git restore --stage  .
+
+
+git revert <commitid>   
+
+===###===================###===================###===================###===================###================
+#modify commit add/update /merge in previous commit =>git add the git amend
+
+git commit --amend  => open editor
+git commit --amend  -m "Message " 
 git config --golobal core.editor "vim" / nano
 
 
@@ -474,6 +672,9 @@ bash
 git config --global fetch.prune true
 -----------------------------------------
 ===###===================###===================###===================###===================###================
+===###===================###===================###===================###===================###================
+===###===================###===================###===================###===================###================
+===###===================###===================###===================###===================###================
 
 git show <commit id> --name-only
 -----------------------------------------------------------
@@ -543,103 +744,3 @@ Check file difference between working area and repository
 >> git diff head
 
 ###########################
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-undo changes if file
- $ git rm -- cached f1.txt f2.txt f3.txt
-rm 'f1.txt'
-rm 'f2.txt'
-rm 'f3.txt'
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
-
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
-git log -n 2
-
-
-git log --pretty=full
-git log --pretty=online
-git log --pretty=format:"%h"
-git log --pretty=format:"%h %s"
-
-git log --since "1 week ago"
-git log --since "yesterday"
-
-git log -- author="Ram"
-git log -- grep="Modified"  >> serch commit with modify word
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-UNDO Commit
-
->> GIT RESET 
-unstage file
-un do commit
-i can discard commit
-
-having 3 mode soft / mixed /hard
-	
-----------
-🟢 git reset --soft <previous commit id>   
-#HEAD move to <previous commit id>  and whatever changes we have that are moved to staging area
-
-----------
-git diff --stage 
-
-----------
-🟢 git reset --mixed <previous commit id>   
-#HEAD move to <previous commit id>  and whatever changes we have that are moved to working area/ non staging area /changes area
-
-
-----------
-🟢 git reset --Hard <previous commit id>   
-#HEAD move to <previous commit id>  and whatever changes we have that discarded 
-
-
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
->> GIT REVERT 
-
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
--u : upstrim (create if not exist)
-git remote
-git push -u origin master   <branch name>
-
-git push -u origin feature1 <branch name>
-
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-git fetch origin/master
-git fetch origin master
- 
-#GIT FETCH --PRUNE
-
-git branch -r 
-
-git fetch --all
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
-git stash clear
-
-git restore -- staged -- worktree
-
-
-
-/project$ git restore -- source=2d36430
-
-
-
-🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
--------------------------------
-
-git rebase
-git cherry pic
-
-
