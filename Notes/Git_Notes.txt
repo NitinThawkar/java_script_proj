@@ -16,8 +16,10 @@ https://git-scm.com/
 HEAD >> this is pointer to recent/latest most commit id in currant branch
 ----------------------------------------------------
 ✏️ git commit -m "commit changes from git desktop" --no-verify
-
+-------------
 Names + status (A=added, M=modified, D=deleted, R=renamed)
+-------------
+-u : upstrim (create if not exist)
 ----------------------------------------------------
 [working area / Unstage area] => after git add cha goes to  => [stage area] ==>after commit in local machine repo  =>sending on remote server;=>git push origin <branch name>
 
@@ -272,6 +274,7 @@ use for cleaner History (avoid unnessary merging commits)
 git rebase main
 git rebase master
 ----------------------------------------------------
+
 ✏️ git cherry-pick   ## merge selective commits from one branch to another branch
 
 if we want to merge some selective commite from feature branch to Main or master branch. this will create new commit id in main branch
