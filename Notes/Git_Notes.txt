@@ -243,6 +243,7 @@ git merge origin/develop4
 git merge origin/dev4_develop_iso =>helm cook
 
 ----------------------------------------------------
+  ## quash (part of merge catagory)
 ✏️merge --quash  (will not create new commit id automatically . manualy need to create" keep one entry)
  I want  to merge main_work branch to main branch 
 1]checkout or switch to main branch
@@ -261,38 +262,55 @@ git branch --merged
 checkout or switch to working  branch
 git branch --no-merged
 ----------------------------------------------------
-
+✏️ rebase # Reapply commits on top of another base tip
+Unlike merging, which creates a new "merge commit" to join two histories, rebasing rewrites the project history to create a clean, linear path
+use for cleaner History (avoid unnessary merging commits)
+1]checkout or switch to working or feature branch
+git rebase main
+git rebase master
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-🟢## git fetch   # use for remote repository (like on GitHub or GitLab)
-# git fetch => only doenload changes will not merge working branch later we need to merge those changes 
-# git merge origin/master 
+🟢## Undo/revert/discard / UnDo Commit  changes
 
 
-====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-🟢## Undo/revert/discard  changes
-#  Undo | Reset hard & mixed, revert and restore 
-#  Undo/revert/discard  code 
-
-   rebase                  Reapply commits on top of another base tip
    reset                   Reset current HEAD to the specified state
    restore                 Restore working tree files
    revert                  Revert some existing commits
-====================
+================================================================================
+🟢## GIT RESET
 
-# Git Undo 
-git reset =>staging to local
-git reset <commit id>  => remove from staging 
+use for unstage file
+use for undo commit
+use for discard commit
+
+git reset =>staging to working area
+git reset <commit id>  => remove from staging area
 git reset --hard <commit id>   => remove from staging and local/ working
 
-====================
+having 3 mode soft / mixed /hard
+	
+----------------------------------------------------
+✏️  git reset --soft <previous commit id>   
+#HEAD move to <previous commit id>  and whatever changes we have that are moved to staging area
+
+----------------------------------------------------
+git diff --stage 
+
+----------------------------------------------------
+✏️ git reset --mixed <previous commit id>   
+#HEAD move to <previous commit id>  and whatever changes we have that are moved to working area/ non staging area /changes area
 
 
-# Git Undo  rvert code
-git reset <-HASH ID->  =>staging to local
-git reset <commit id>  => remove from staging 
-git reset --hard <commit id>   => remove from staging and local/ working revert from every places
-git reset HEAD <file name> 
+----------------------------------------------------
+✏️  git reset --Hard <previous commit id>   
+#HEAD move to <previous commit id>  and whatever changes we have that discarde.remove from staging and local/ working revert from every places
+----------------------------------------------------
+	git reset HEAD <file name> 
+	git reset HEAD~1  (go one commit back)
+	git reset <commit Hash>
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+
 git restore <filename>  // to discard changes in working directory
 git restore --stage <filename>   // if file present in stage area and we want to restore. it will move in change area
 git restore --stage --worktree . // (dot) every thing will discard from working tree  
@@ -300,6 +318,15 @@ git restore --stage  .
 
 
 git revert <commitid>   
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢## git fetch   # use for remote repository (like on GitHub or GitLab)
+# git fetch => only doenload changes will not merge working branch later we need to merge those changes 
+# git merge origin/master 
+
+
+
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 
