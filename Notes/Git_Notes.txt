@@ -5,7 +5,7 @@
 Git_Notes.txt  (also check Notes/Git_Notes_old.txt)
 =============================================================
 https://github.dev/github/dev
-
+https://www.w3schools.com/git/git_new_files.asp?remote=github
 
 ✨ https://www.w3schools.com/git/default.asp
 ✨ https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to
@@ -221,7 +221,10 @@ git stash show stash@{n}
 
 ===###===================###===================###===================###===================###================
 ----------------------------------------------------
-
+git stash - Stash your changes
+git stash push -m "message" - Stash with a message
+git stash list - List all stashes
+git stash branch <branchname> - Create a branch from a stash
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 🟢## git merge
@@ -274,9 +277,10 @@ git rebase master
 
 following list of command used for Undo/revert/discard /UnDo Commit changes
 
-   reset                   Reset current HEAD to the specified state
+   reset                   Reset current HEAD to the specified state (undo commit)
+   revert                  Revert some existing commits (undo commit)
    restore                 Restore working tree files
-   revert                  Revert some existing commits
+   
 ================================================================================
 🟢## GIT RESET
 
@@ -303,13 +307,38 @@ git diff --stage
 
 
 ----------------------------------------------------
-✏️  git reset --Hard <previous commit id>   
+✏️  git reset --Hard <previous commit id>   # this is danger command try to use git revert to avoid other team member commit's hamparing.
+
 #HEAD move to <previous commit id>  and whatever changes we have that discarde.remove from staging and local/ working revert from every places
 ----------------------------------------------------
 	git reset HEAD <file name> 
 	git reset HEAD~1  (go one commit back)
 	git reset <commit Hash>
+==============	
+default mixed mode
+# HEAD-<how many commit you want to go back>
+
+git reset -- mixed HEAD-1
+Move files to the working area
+
+git reset -- soft HEAD-1
+Move files to the staging area
+
+git reset -- hard HEAD-1
+Discard the files permanently
+
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟢## GIT revert # git revert use for undo commit
+
+The git revert command undoes a previous commit by creating a new commit that reverses the changes.
+
+git revert <commitid> 
+git revert HEAD - Revert the latest commit
+git revert <commit> - Revert a specific commit
+git revert HEAD~2 - Revert a commit further back in history
+git revert --no-edit - Skip commit message editor
+git log --oneline - Show commit history
+
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 git restore <filename>  // to discard changes in working directory
