@@ -744,3 +744,44 @@ Check file difference between working area and repository
 >> git diff head
 
 ###########################
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+>> GIT REVERT 
+
+
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+-u : upstrim (create if not exist)
+git remote
+git push -u origin master   <branch name>
+
+git push -u origin feature1 <branch name>
+
+
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+git fetch origin/master
+git fetch origin master
+ 
+#GIT FETCH --PRUNE
+
+git branch -r 
+
+git fetch --all
+
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+git stash clear
+
+git restore -- staged -- worktree
+
+
+
+/project$ git restore -- source=2d36430
+
+
+
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+-------------------------------
