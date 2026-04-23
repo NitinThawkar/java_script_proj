@@ -272,6 +272,7 @@ git rebase master
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 🟢## Undo/revert/discard / UnDo Commit  changes
 
+following list of command used for Undo/revert/discard /UnDo Commit changes
 
    reset                   Reset current HEAD to the specified state
    restore                 Restore working tree files
@@ -310,7 +311,7 @@ git diff --stage
 	git reset <commit Hash>
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 
-
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 git restore <filename>  // to discard changes in working directory
 git restore --stage <filename>   // if file present in stage area and we want to restore. it will move in change area
 git restore --stage --worktree . // (dot) every thing will discard from working tree  
