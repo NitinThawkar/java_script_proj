@@ -1,6 +1,7 @@
-✨ Utility ✨ 
+✨ Utility ✨                 ☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔  📌 🎯 🟢 🟥 🔹🔍 🟦  🔥 📚 🛠 📁 🔗 📦
+
 =================================================================
- ✏️   ☑️ ✍️  ✒️  ✍️ ▶️ 
+ ✏️   ☑️ ✍️  ✒️  ✍️ ▶️  
  ✏️ (Pencil)  ☑️ ✍️ (Person writing) ✒️ (Black pen) ✍️ (Writing hand)
 emoji => press Window + . (dot) special symbol char character
 =================================================================
@@ -9,7 +10,7 @@ Common casing styles include camel case, Pascal case, snake case, and kebab case
 
 
 Camel Case => myVariableName
-Pascal Case => MyVariableName
+Pascal Case => MyVariableName  (start with Capital letter)
 Snake Case => my_variable_name
 Kebab Cas => my-variable-name
 Flat Case => myvariablename
@@ -59,11 +60,12 @@ let isEqual = 5 == '5'; // true (loose comparison)
 // == (strict equal to means value + type)
 let isStrictEqual = 5 === '5'; // false (strict comparison)
 =================================================================
-terninal  command prompt 
+☑️ terninal  command prompt 
 
 press Ctrl+C again or Ctrl+D or type .exit
 =================================================================
-https://github.com/Nykz/typescript-course-material/blob/main/ts/functions.ts
+☑️
+☑️ https://github.com/Nykz/typescript-course-material/blob/main/ts/functions.ts
 
 ✏️=> Regular functions
 
@@ -88,7 +90,7 @@ const multiply = (a: number, b: number): number => {
 const multiply1 = (a: number, b: number): number => a * b;
 
 ================================================================= 
-Add prettier (plugin/extension) format code
+☑️ Add prettier (plugin/extension) format code
 ------
 vs code  => go to file > preferances > settings  
 click on json view and add following lines 
@@ -104,7 +106,7 @@ click on json view and add following lines
 and  change formatOnSave to true 
 formatOnSave": true
 =================================================================
-html
+☑️ html
 <!- HTML iFrames - allow to embed another webpage inside a page ->
 <iframe width="560" height="315"
 trca"https://www.youtube.com/embed/Q05EFH6NMCQ"
@@ -114,7 +116,7 @@ allow "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; pic
 allowfullscreen>
 </frame>
 =================================================================
-JAVA   read from local file and return json text
+☑️ JAVA   read from local file and return json text
 ----------------------
 import java.util.List;
 import java.util.TimeZone;
@@ -136,6 +138,21 @@ import java.io.IOException;
         }
         return ResponseEntity.ok().body(content);
     }
+	
+---------------------------------------------
+	@PostMapping("/meter-summary")
+    public ResponseEntity<String> getMeterSummary(@Valid @RequestBody MeterSummaryRequest meterSummaryRequest) {
+        Path filePath;
+        filePath = Paths.get("C:\\zTemp\\summary.txt");
+        String content;
+        try {
+            content = Files.readString(filePath);
+        } catch (IOException e) {
+            content = "";
+        }
+        return ResponseEntity.ok().body(content);
+    }
+
 ---------------------------------------------
 
   public ResponseEntity<String> getWeatherTrendData(@Valid @RequestBody String payload) {
@@ -162,7 +179,7 @@ import java.io.IOException;
     }
 ---------------------------------------------     
 =================================================================
-TYPE SCRIPT   type script  object array
+☑️ TYPE SCRIPT   type script  object array
 
 const mockHabits: Habit[] =[
 {
@@ -181,4 +198,50 @@ completedDates: [],
 createdAt: new Date().toISOString(),
 }]
 
+=================================================================
+☑️ This diff contains a change in line endings from 'LF' to 'CRLF'.
+
+it means Git detected that the file’s newline characters changed, even if the actual text stayed the same.
+
+Different operating systems use different newline styles:
+
+OS            | Line Ending   | Meaning
+--------------|---------------|--------------------------------------
+Linux/macOS   | LF (\n)       | Line Feed
+Windows       | CRLF (\r\n)   | Carriage Return + Line Feed
+---------------------------------------------------------------------
+
+So Git is telling you:
+
+The file originally used LF
+The version you staged/committed uses CRLF
+This creates a large diff, even though the text might not have changed.
+
+----------
+✅ Why This Happens
+Common causes:
+✔ 1. Your editor auto‑converted line endings
+VS Code, Notepad++, IntelliJ, etc. may silently change LF → CRLF.
+✔ 2. Git configuration is converting line endings
+core.autocrlf or .gitattributes can trigger conversions.
+✔ 3. The file was copied from Windows or a Windows tool wrote it
+----------
+✅ How To Fix It
+Option 1: Convert back to LF inside your editor
+Most editors show line ending type (bottom-right corner).
+Choose: LF → Save file again.
+
+Option 2: Tell Git to always use LF (recommended for cross-platform repos)
+Add a .gitattributes file:
+* text=auto eol=lf
+
+Then normalize the repo:
+git add --renormalize .
+git commit -m "Normalize line endings"Show more lines
+
+Option 3: Disable Git’s automatic CRLF conversion
+For Linux/macOS users:
+git config --global core.autocrlf input
+For Windows users who want LF everywhere:
+git config --global core.autocrlf false
 =================================================================

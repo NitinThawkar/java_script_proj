@@ -3,7 +3,7 @@
 ✏️ (Pencil)
 ✒️ (Black pen)
 ✍️ (Writing hand)
-
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔  📌 🎯 🟢 🟥 🔹🔍 🟦
 =================================================================
 Frontend Master : https://www.youtube.com/@rahuulmiishra/videos
 -------------------------

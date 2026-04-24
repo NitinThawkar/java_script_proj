@@ -233,7 +233,40 @@ install angular  => npm install -g @angular/cli
 Node : check node version  : node --version
 npm  :check npm version : nom -v
 ======================================================================================================
+EXCEL
+Ctrl+G (or F5): Go To
+Ctrl+End: Go to the last used cell
+Ctrl+Arrow Key: Move to edge of data region
+Ctrl+Spacebar: Select entire column
+Shift+Spacebar: Select entire row 
+Ctrl+K: Insert Hyperlink
+Ctrl+H: Find & Replace
+Ctrl+Shift+L: Toggle AutoFilter
+Ctrl+T: Create Table 
 
+---------------
+Formula & Function
+= (Equals sign): Start a formula
+F3: Paste a name into a formula
+Shift+F3: Open Insert Function dialog
+Ctrl+A: Insert function arguments (inside function)
+F9: Calculate all worksheets 
+----------------
+select roe or column	
+
+Shift + Spacebar: Select the entire row you're in.
+Ctrl + Spacebar: Select the entire column you're in. 
+
+Shift + plus + plus : insert row  =>select entire row
+Ctrl + - (Minus sign) : delete row after selecting the row 
+
+--------------------------
+Ctrl + shifft +(plus)      =>> select cell first >> insert row
+Ctrl + -                 =>>  =>> select cell first >> delete  row
+
+Ctrl + Shift + Plus (+)
+--------------------------
+Ctrl + Shift + L    : Apply filter or clear filter
 ======================================================================================================
 
 ======================================================================================================

@@ -1,32 +1,50 @@
-☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ❌ ✔  📌 🎯 🟢 🟥 🔹🔍 🟦 🟢
 
 
 Rust_Notes.txt
 =============================================================
 ✨ rust install
 https://rust-lang.org/tools/install/
-
+https://doc.rust-lang.org/std/index.html
 rust-book.cs.brown.edu/ch04-02-references-and-borrowing.html
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 
-----
+https://doc.rust-lang.org/book/ch03-03-how-functions-work.html
+
+slide : https://docs.google.com/presentation/d/1UnPZV7K6s798RAlkanOFn1iHDK1uMqBJTnzUKYvuT2Q/edit?slide=id.g2dd7481bd74_0_63#slide=id.g2dd7481bd74_0_63
+slide : https://docs.google.com/presentation/d/1t7IMRMdkR3an0-YofAF9M0r9od_0kcfl03UCjdE5njQ/edit?slide=id.p#slide=id.p
+
+https://github.com/DrVipinKumar/RUST
+=============================================================
+snake_case : file ,variable, function 
+
+
+=============================================================
+☑️ Setup
 vscode 
  install Visual Studio C++ Build tools  for wondows system
 ---
 check rust installed version
 ▶️rustc --version
-
+---
+check rust installed version
+▶️rustup   > se and update tool chain
+---
+uninstall
+▶️rust self uninstall
 
 #########################################################################################
 cargo use for package manager, project cretion (just like angular cli)
 ▶️ cargo --version (type on vs code  termonal or cmd)
-▶️ cargo new <project name> # it will crete progect
+▶️ cargo new <project name> # it will crete new project
 ---
 to run project go inside to project folder and run 
 ▶️ cargo run
 ▶️ cargo build 
+▶️ cargo build cargo run --relesse (create optimise resease build in release folder of project)
 ▶️ cargo check ->  This command quickly checks your code to make sure it compiles but doesn’t produce an executable target and debug folder
-▶️ cargo fmt  -> format the code 
+▶️ rustfmt -> Format only a specific file >> format the code  >> rustfmt src/main.rs  (go to folder path # rustfmt <filename_with_extension>
+▶️ cargo fmt  -> cargo fmt is the command that formats a Rust project using rustfmt. 
 -----
 ▶️ cargo doc --open   #and click rand in the sidebar on the left.
 cargo new restaurant --lib
@@ -36,7 +54,25 @@ cargo new restaurant --lib
  run in vs terminal # cargo modules structure -- lib
  
 #########################################################################################
-✏️ rust first programe 
+☑️   y = &x;   //y. is.reference to the value of x.  value of x is 5.
+------
+☑️ comment 
+// hello, world
+
+or
+
+// So we're doing something 
+// multiple lines of comment
+// explain what's going on.
+
+------
+☑️ println
+let num1: i32=10;
+let num2: i32=20;
+println!("num1={}, num2={}",num1,num2);
+=====================================================================
+
+☑️ rust first programe 
 
 create file main.rs  add following code
 ---
@@ -52,6 +88,1987 @@ then type .\main.exe in terminal
 it will show you 
 Welcome to Rust Programming World!
 =====================================================================
+unsigned means positive number 
+signed means negative and positive number  eg. -128 to 127
+-------------------------
+by default rust variable are im-mutable 
+let my_test:i128 = 10;
+let my_test = 10;
+
+late we can not assign the value my_test like my_test =20;
+-------------------------
+☑️ mut 
+let mut my_test:i128 = 10; we can ressigne it 
+
+=====================================================================
+☑️ println!("hellow");
+----------------------
+ let my_test = 10;
+
+println!("my number value {my_test}");
+
+  let x = 5;
+    println!("The value of x is: {x}");
+
+=====================================================================
+☑️ Statement and expresson. Statement vs Expression
+ @ Statement may contain expression;
+ @Statement al end with ; (semicolon)
+ @expression alwayed return data. Statement does not return any value ;
+ 
+✔ Expressions produce values
+✔ Expressions produce values
+✔ Statements do not
+✔ Semicolons convert expressions → statements
+✔ Functions return the last expression (if no semicolon)
+ ----------------------
+ Expressions return a value
+Expressions do not end with a semicolon ;
+Blocks ({ ... }) are expressions too
+
+--------------------------- ---------------------------
+ Examples of expressions without semicolon:
+ 5
+5 + 3
+if x > 0 { 1 } else { -1 }
+foo()          // function call
+{ a + b }      // block expression
+
+------------------
+
+let x = {
+    let a = 10;
+    let b = 20;
+    a + b  // ← no semicolon → returns 30
+};
+--------------------------------------------------------
+ 1] Example (expression-style return)
+
+
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+------
+2] Example (statement-style with explicit return
+
+
+fn add(a: i32, b: i32) -> i32 {
+    return a + b;
+}
+Both are correct — but the first is more idiomatic.
+--------------------------------------------------------
+🟦 3. Blocks Are Expressions
+
+
+let x = {
+    let y = 7;
+    y * 2
+};
+
+>> x becomes 14. 
+----------
+
+let x = {
+    let y = 7;
+    y * 2;
+};
+>>x becomes ().
+
+=====================================================================
+☑️ Datatypes
+
+let mut variable_name: data_type = "value_nitin"
+----------------------
+✏️ &str and String (in capital)
+fn main() {
+let name:&str;
+name="Dr. Vipin Classes";
+println! ("String Literal Name={}",name);
+//-----
+let mut name1: String=String :: new();  // here string is opbject we need to use from methos to assigne value
+name1=String :: from("Dr. Vipin Teotia");   // we ca use many inbuild function  with string oblect
+//---
+//short way to assigne value
+let name1: String=String :: from("Dr. Vipin Teotia");
+
+
+}
+
+-------------------------------------------------------------------------------------
+Feature             | String Literal                 | String
+--------------------|--------------------------------|------------------------------
+Mutability          | Immutable                      | Mutable
+Memory Allocation   | Part of program binary         | Heap-allocated
+Length              | Known at compile time          | Dynamic
+Usage               | Suitable for static strings    | Suitable for dynamic strings
+
+--------------------------------------------------------------------------------------------------------------
+
+✏️ Tuple 
+
+fn main() {
+
+Let mut tup: (i32, bool, char)=(1, true,'s');
+
+tup.0 = 10;
+
+println!("{}", tup.0);
+println!("{}", tup.2);
+----------
+
+//Tuple
+let emp_info:(&str,u8)=("Ramesh",50);
+
+let emp_name =emp_info.0;
+let emp_age =emp_info.1;
+
+//destructuring
+let (employee_name, employee_age) = emp_info;
+println! ("Employee Name={},Employee Age={}",employee_name,emp_name);
+println! ("Employee Name={},Employee Age={}",employee_age, emp_age);
+----------------------
+✏️ array
+
+Let arr = [1, 2, 3, 4, 5];
+arr[4]
+-----------
+fn main() {
+let mut arr: [i32; 5] = [];
+println!("{}", arr[4])
+
+=====================================================================
+☑️ Arithmetic and Type Casting
+
+✏️ using as keyword
+fn main() {
+Let x = 127_000 as i64;
+Let y = 10_i32;
+
+Let z = x / (y asi64)
+println!("{}", z)
+----------------------
+use std :: io;
+
+fn main() {
+Let mut input = String :: new();
+io :: stdin().read_line(&mut input).expect("expected to read line");
+
+Let int_input: i64 = input.trim().parse().unwrap();
+
+println!("{}", int_input + 2);
+}
+----------------------
+=====================================================================
+☑️ Function https://www.youtube.com/watch?v=0-yJfHbnPXU&list=PLDtWoQ-cxqiyQgcpmmJ7MFSddekcfL42N&index=8
+
+
+fn main() {
+let num1:u8 = 10;
+let num2:u8 = 20;
+let result:u8 = add(num1,num2);
+println! ("The sum of num1 and num2 is {}",result);
+
+}
+
+
+// Note : -> use to return type from function
+fn add(item1:u8,item2:u8)->u8{
+return item1+item2;     // use return keyword
+
+item1+item2             // return by expression dont provide semi colon
+
+}
+
+-----------------
+fn add(item1:u8,item2:u8)->&str{
+return item1+item2;
+
+}
+------
+fn add(item1:u8,item2:u8)->String{
+return item1+item2;
+
+}
+=====================================================================
+☑️ Ownership  mostally work on HEAP allocation of memory and manage HEAP data
+
+y = &x;   //y. is.reference to the value of x.  value of x is 5.
+----------------------
+ Move Ownership vs Clone Ownership vs Copy Data
+---------------------
+✍️  if memory managment happed in heap like string or object -
+// two variable cant have ownershisp of same data
+---------------------
+//Move Ownership
+fn main() {
+let name: String=String :: from("Dr. Vipin Classes");
+println! ("Name={}",name);
+let name1=name; //Move Ownership
+println! ("Name1={}",name1);
+println! ("Name={}",name); //name does not have access to data it store
+
+}
+----------------------
+//Clone Ownership  (memory expencive)
+fn main() {
+let mut name: String=String :: from("Dr. Mipin Classes");
+println! ("Name={}",name);
+// let name1=name; //Move Ownership
+let mut name1=name.clone(); //Clone Ownership
+name1=String :: from("Dr. Vipin Kumar");
+println! ("Name1={}",name1);
+name=String :: from("Dr. Vipin Teotia");
+println! ("Name={}",name); //name does not have access to data it store
+----------------------------------------------------------------------------------------
+//Copy Data
+✍️ //if memory managment happed in stack then we will not face Ownership issue 
+
+let num=10;    //scalar data type stack/heap
+println! ("Num={}",num);
+let num1=num;
+num1=20;
+println!("Num1={}",num1);
+println! ("Num={}",num);
+----------------------------------------------------------------------------------------
+✍️  to avoit owner ship  we can use 
+tupel return
+.clone()
+brrowing Pass by Reference in Rust 
+Pass by Reference in Rust 
+
+Type                     | Write? | Read? | How Many?
+-------------------------|--------|-------|-----------------------------
+Immutable reference (&T) |   ❌    |  ✔    | Many (unlimited)
+Mutable reference (&mut) |   ✔    |  ✔    | Only one at a time
+Ownership (value)        |   ✔    |  ✔    | Only one owner
+Slice (&[T], &str)       |   ❌    |  ✔    | Many (immutable borrow)
+Mutable slice (&mut [T]) |   ✔    |  ✔    | Only one (mutable borrow)
+Copy types               |   ✔    |  ✔    | Copied, not moved
+
+---------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+🟦 Ownership & Return Values
+//reference rules:
+    //1. At any given time, you can have either one mutable reference or any number of immutable references, but not both.
+    //2. References must always be valid.
+    
+----------------------------------------------------------------------------------------
+🟦 Ownership & Return Values
+
+🟢Tuple can solve the problem of ownership and transfer but still it is a lot of work to do.
+
+fn main() {
+    let s1 = String::from("hello");
+    let (s2, len) = calculate_length(s1);  // assigne value in tuple
+    println!("The length of '{}' is {}.", s2, len);
+}
+
+fn calculate_length(s: String) -> (String, usize) {
+    let length: usize = s.len();        // len() returns the length of a String
+    (s, length)                         // return the String and its length , expression
+}
+----------------------------------------------------------------------------------------
+🟦 Ownership & Return Values
+🟢 Clone Ownership      (memory expencive)
+    // using clone to duplicate ownership //Clone creates a deep copy of the String
+    // clone is memeory intensive operation, use it when you need to keep both original and duplicate values
+    // move is more efficient, use it when you only need one value and want to transfer ownership
+
+    let mut name: String = String::from("ownership");
+    println!("Name = {}", name);
+
+    // let name1 = name;           // Move ownership
+    let mut name1 = name.clone(); // Clone ownership
+    name1 = String::from("duplicate ownership");
+    println!("Name1 = {}", name1);
+
+    name = String::from("clone to duplicate ownership");
+    println!("Name = {}", name); // 'name' still accessible because we cloned earlier
+
+    //---------------------------------------------------------------------------------
+
+    let s1 = String::from("hello");
+
+    // Clone creates a deep copy of the String
+    let s2 = s1.clone();
+
+    println!("s1 = {}, s2 = {}", s1, s2);
+
+----------------------------------------------------------------------------------------
+🟦 Ownership & Return Values
+🟢In Reference brorrowing
+// In Reference brorrowing we can not modify the original Data, we can only read it. If we want to modify it, we need to use mutable reference (&mut String)
+    let s1: String = String::from("hello");
+
+    // Pass a reference instead of transferring ownership
+    let len: usize = calculate_length_ref(&s1);
+
+    println!("The length of '{}' is {}", s1, len);
+----------------------------------------------------------------------------------------
+🟦 Ownership & Return Values
+🟢Mutable Reference brorrowing
+
+    // no issue to modify the original data using mutable reference, but we can only have one mutable reference to a particular piece of data in a particular scope. This is to prevent
+    // not two or more than two mutable references modifying the same data at the same time, which could lead to data races and undefined behavior. If we try to create a second mutable reference to the same data, the compiler will throw an error.
+    // first finish work with the first mutable reference keep in scope  before creating another one. This ensures that we have a clear and safe way to modify data without risking data corruption or unexpected behavior.
+  
+
+fn main() {
+    let mut s1: String = String::from("hello");
+
+    append_world(&mut s1);
+
+    println!("This is appended s1 {}", s1);
+}
+
+fn append_world(s: &mut String) {
+    s.push_str(" world");
+}
+-----------
+let mut s1:String = String :: from("Hello");
+let w1 = &mut s1;
+println!("r1={}",w1);
+let w2 = &mut s1;
+println!("r2={}",w2);
+//println!("w1={} w2={}",w1,w2);
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------------
+
+
+=====================================================================
+☑️  Referencing in Rust | Borrowing in Rust 
+
+y = &x;   //y. is.reference to the value of x.  value of x is 5.
+----------------------
+fn main() {
+
+let x = 5;
+let y = &x;
+let z = &y;
+
+// Here, x is a variable binding to the value 5
+// Here, y is a reference to the value of x
+// Here, z is a reference to the reference y
+}
+
+let mut x = 5;
+let y = &mut x;
+*y = 50;   // de-reference to reach vakue of y
+--------------------
+
+
+----------------------
+fn main() {
+//let mut x=10;
+//println! ("x = {}",x);
+//let y=&mut x;
+//*y =* y+10;
+
+// println! ("y = {}",y);
+// //println! ("x = {}",x);
+// println! ("y = {}",y);
+let name: String=String :: from("Dr. Vipin Classes");
+display_Message(&name);
+display_Message(&name);
+
+fn display_Message(name:&String){
+println! ("{}",name);
+}
+----------------------
+
+----------------------
+
+=====================================================================
+☑️ de-reference Reference in Rust  dereference
+
+ // dereference
+    //y = &x;   // y is reference to the value of x.  value of x is 5.
+    
+    let mut x = 5;
+
+    x = x + 1; // x = 6
+
+    let y = &mut x; // y is a mutable reference to x 
+
+    *y = *y + 1; // dereference y and modify x → x becomes 7    * means take value  # go to address and get the value stored there
+
+    println!("x = {}", x);
+=====================================================================
+☑️ Call by Value vs Call by Reference  to get data
+
+ ✍️ // call by value example
+ 
+fn main() {
+    let num1: i32 = 10;
+    let num2: i32 = 20;
+    println!("Before (main): num1 = {}, num2 = {}", num1, num2);
+
+    swap_by_value(num1, num2); // passes copies
+
+    println!("After  (main): num1 = {}, num2 = {}", num1, num2);
+}
+
+fn swap_by_value(mut num1: i32, mut num2: i32) {
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+
+    println!("Inside function (by value): num1 = {}, num2 = {}", num1, num2);
+}
+
+-----------------------------------------
+✍️ // same example with call by referance
+fn main() {
+let mut num1: i32=10;
+let mut num2: i32=20;
+println! ("num1={}, num2={}",num1,num2);
+swapbyref(&mut num1, &mut num2);
+println!("num1={}, num2={}",num1,num2);
+
+}
+
+fn swapbyref(num1: &mut i32,num2: &mut i32){
+*num1 =* num1+*num2;
+*num2 =* num1 -* num2;
+*num1 =* num1 -* num2;
+println! ("num1={}, num2={}",num1,num2);
+
+}
+
+=====================================================================
+
+☑️ // Dangling Reference  
+fn main() {
+    let reference_to_nothing = create_string_ref();
+}
+
+fn create_string_ref() -> &String {
+    let s: String = String::from("hello");
+    return &s;  // ← returning a reference to a local variable
+}
+
+--------------------
+s is created inside create_string_ref.
+When the function returns, s is dropped (its memory is freed).
+Returning &s would point to freed memory → dangling reference.
+Rust’s borrow checker rejects this at compile time with an error like:
+
+returns a reference to data owned by the current function
+--------------------
+☑️ Dangling Reference
+--------------------
+//Dangling Reference
+fn main() {
+let reference_to_nothing = create_string_ref();
+
+}
+
+fn create_string_ref()->&String {
+let s:String = String :: from("hello");  //s i local variable , created in function scope. value remove afte scope end. we will get error reference_to_nothing  because nothing is returing 
+return &s;
+
+}
+-------------------
+
+
+=====================================================================
+☑️ Struct in Rust 
+
+--------------------
+struct Student {
+    name: String,
+    sid: i32,
+}
+
+// Tuple struct
+struct Emp(String, i32, f32);
+
+fn main() {
+    let s1 = Student {
+        name: String::from("Dr. Vipin Classes"),
+        sid: 1,
+    };
+
+    println!("Student ID = {}, Student Name = {}", s1.sid, s1.name);
+
+    let s2 = Student {
+        name: String::from("Rust Student"),
+        sid: 2,
+    };
+
+    println!("Student ID = {}, Student Name = {}", s2.sid, s2.name);
+
+    let e1 = Emp(String::from("Dr. Vipin"), 1, 20000.233);
+
+    println!(
+
+-------------------
+#[derive(Debug)]
+struct User {
+    active: bool,
+    username: String,
+    email: String,
+    sign_in_count: u64,
+}
+
+fn main() {
+    let mut user1 = User {
+        active: true,
+        username: String::from("someusername123"),
+        email: String::from("someone@example.com"),
+        sign_in_count: 1,
+    };
+
+    // Assigning a different email
+    user1.email = String::from("anotheremail@example.com");
+
+    // Debug printing
+    println!("User (single-line): {:?}", user1);   // Single-line debug
+    println!("User (pretty): {:#?}", user1);      // Pretty multi-line debug
+
+    let user2 = User {
+        email: String::from("another@example.com"),
+        ..user1
+    };
+
+    println!("User2 (single-line): {:?}", user2);
+    println!("User2 (pretty): {:#?}", user2);
+}
+=====================================================================
+☑️ impl :
++----------------------+-------------------------------+--------------------------------------+
+| Feature              | Methods                       | Associated Functions                  |
++----------------------+-------------------------------+--------------------------------------+
+| Definition           | Within impl, first param self | Within impl, no self parameter        |
++----------------------+-------------------------------+--------------------------------------+
+| Access to Instance   | Yes                           | No                                   |
++----------------------+-------------------------------+--------------------------------------+
+| Syntax for Calling   | instance.method()             | TypeName::function()                 |
++----------------------+-------------------------------+--------------------------------------+
+
+----------
+☑️ impl : Associated Functions
+----------
+Key Characteristics of Associated Function
+
+No self parameter:
+	Unlike methods, associated functions do not take self, &self, or &mut self as their first parameter because they operate on the type, not on an instance of the type.
+
+
+Namespaced by the Type:
+	You call them using the type’s name followed by ::, such as
+	TypeName::function_name().
+Common Use Cases:
+	• Constructors:
+	Functions like new or custom builders that return new instances of the type.
+	• Utility Functions:
+	Functions that perform calculations or operations relevant to the type but don’t need an instance (e.g., String::from).
+------------------------------------------------------
+s
+
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    // Constructor to create a square
+    fn square(size: u32) -> Self {
+        Self {
+            width: size,
+            height: size,
+        }
+    }
+}
+
+fn main() {
+    let sq = Rectangle::square(3);
+
+    println!(
+        "Square: width = {}, height = {}",
+        sq.width, sq.height
+    );
+}
+-------------------------------------------------------
+
+struct Rectangle { width: u32, height: u32 }
+
+impl Rectangle {
+    // Associated function (constructor)
+    fn new(width: u32, height: u32) -> Self {
+        Self { width, height }
+    }
+
+    // Another associated function (specialized constructor)
+    fn square(size: u32) -> Self {
+        Self { width: size, height: size }
+    }
+
+    // A method (note the &self)
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let r = Rectangle::new(10, 20);
+    let s = Rectangle::square(3);
+
+    println!("r area = {}", r.area());
+    println!("s area = {}", s.area());
+}
+
+=====================================================================
+☑️ impl : Method
+
+Method Syntax
+
+Methods are similar to functions: we declare them with the fn keyword and a name, they can have parameters
+and a return value, and they contain some code that's run when the method is called from somewhere else.
+Unlike functions, methods are defined within the context of a struct or an enum, and their first parameter is
+always self, which represents the instance of the struct the method is being called on.
+--------------
+Defined within an impl block:
+
+	Methods are defined in an impl block for a specific type (e.g., struct, enum).
+
+First Parameter is self:
+
+	Methods always take self, &self, or &mut self as the first parameter.
+	This indicates that the method operates on the instance of the type:
+	
+	self: Takes ownership of the instance.
+	&self: Borrows the instance immutably.
+	&mut self: Borrows the instance mutably.
+
+Called using Dot Notation:
+
+	Methods are called using dot syntax:
+	instance.method_name(),
+	which makes them feel intuitive and object‑oriented.
+-------------
+
+
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    /// Calculates the area of the rectangle.
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect = Rectangle {
+        width: 30,
+        height: 50,
+    };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect.area()
+    );
+}
+
+---------------------------------
+🟦   Associated Function and Method 
+struct Circle {
+    radius: f64,
+}
+
+impl Circle {
+    // Associated function (constructor)
+    pub fn new(radius: f64) -> Circle {
+        Circle { radius }
+    }
+
+    // Instance method
+    pub fn area(&self) -> f64 {
+        std::f64::consts::PI * self.radius * self.radius
+    }
+}
+
+fn main() {
+    // Call the associated function `new` to create a `Circle` instance
+    let circle = Circle::new(5.0);
+
+    // Call the instance method `area` on the `Circle` instance
+    println!("The area of the circle is {}", circle.area());
+}
+
+
+
+
+
+=====================================================================
+☑️ Type inference in Rust 
+
+fn main() €
+// Type inference in Rust
+let x = 5; // Compiler infers that x is of type i32
+let y = 5.5; // Compiler infers that y is of type f64
+let z = "Hello, world!"; // Compiler infers that z is of type &str
+
+// Printing the types inferred by the compiler
+println!("Type of x:{}",type_of(&x));
+println!("Type of y: {)",type_of(&y));
+println!("Type of z:{)",type_of(&z));
+--------------------
+
+-------------------
+
+=====================================================================
+☑️ match ( like switch in c# and java)
+
+--------------------
+//match
+fn main(){
+let number = 5;
+
+match number {
+1 =>println! ("Number is one"),
+2 | 4 =>println! ("Number is two or four"),
+5=>println! ("Number is five"),
+_= >println! ("Number is not recongnizible")  // this is default value
+
+}
+-------------------
+✍️ function switch
+}
+
+fn main(){
+
+fn is_even(num:i8)->bool{
+if num%2 == 0{
+return true;
+}
+return false;
+}
+
+let number = 5;
+match number {
+x if is_even(x)=>println!("Even"),
+x if !is_even(x)=>println!("Odd"),
+_= >println! ("Number is not recongnizible")
+
+}
+-------------------
+
+=====================================================================
+
+=====================================================================
+=====================================================================
+
+☑️  enums 
+✏️ enum , option enum and result enum
+--------------------------------------
+enum Color {
+    Red,
+    Yellow,
+    Blue,
+}
+
+fn main() {
+    let color: Color = Color::Yellow;
+
+    match color {
+        Color::Blue => println!("Blue"),
+        Color::Yellow => println!("Yellow"),
+        Color::Red => println!("Red"),
+    }
+}
+
+-------------------------------------------------------
+✏️  using enum IMPL
+------
+#[derive(Debug)]
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+}
+
+impl Shape {
+    fn new_circle(radius: f64) -> Self {
+        Self::Circle(radius)
+    }
+}
+
+fn main() {
+    let circle: Shape = Shape::new_circle(5.0);
+    println!("Circle: {:?}", circle);
+}
+--------------------------------------
+✏️ Enum with variant 
+-----
+enum School {
+    Number(i32),
+    Name(String),
+    Unknown,
+}
+
+fn school_data() {
+    let s: School = School::Unknown;
+
+    match s {
+        School::Number(n) => println!("School roll number is {}", n),
+        School::Name(s) => println!("School name is {}", s),
+        School::Unknown => println!("School location is unknown"),
+    }
+
+    let size = std::mem::size_of::<School>();
+    println!("The size of enum School is {} bytes", size);
+}
+
+fn main() {
+    school_data();
+}
+---------------------------------------
+ ✏️  using enum we can store values
+ 
+ enum Shape {
+    Circle(f64),                 // Variant with radius
+    Rectangle(f64, f64),         // Variant with width and height
+    Triangle(f64, f64, f64),     // Variant with side lengths
+}
+
+impl Shape {
+    fn area(&self) -> f64 {
+        match *self {
+            Shape::Circle(radius) => std::f64::consts::PI * radius * radius,
+
+            Shape::Rectangle(width, height) => width * height,
+
+            Shape::Triangle(a, b, c) => {
+                let s = (a + b + c) / 2.0;   // Semiperimeter
+                (s * (s - a) * (s - b) * (s - c)).sqrt()   // Heron's formula
+            }
+        }
+    }
+}
+
+fn main() {
+    let circle = Shape::Circle(3.0);
+    let rectangle = Shape::Rectangle(2.0, 4.0);
+    let triangle = Shape::Triangle(3.0, 4.0, 5.0);
+
+    println!("Area of the circle: {}", circle.area());
+    println!("Area of the rectangle: {}", rectangle.area());
+    println!("Area of the triangle: {}", triangle.area());
+}
+=====================================================================
+🟢  optional enum
+-------------------
+if any value exist then return some  else none
+-----
+enum  OptionalValue<T> {
+    Some(T),
+    None,
+}
+-------------------
+fn main() {
+    let user_id_1: i32 = 1;
+    let user_id_2: i32 = 2;
+
+    let value: Option<i32> = get_user_phone_number(user_id_1);
+    println!("User 1 phone: {:?}", value);
+
+    let value2: Option<i32> = get_user_phone_number(user_id_2);
+    println!("User 2 phone: {:?}", value2);
+	
+	// another way to access value 
+	match get_user_phone_number(user_id_1) {
+	//Some(mbb_num)
+		Some(data: i32) => println! ("Data:{}", data),
+		None => println! ("User mob num does not exist"),
+	}
+
+//📌 use Option as return type  if we are us Some or None
+fn get_user_phone_number(user_id: i32) -> Option<i32> {
+    let mob_num: i32 = 923233;
+
+    if user_id == 1 { 
+        Some(mob_num)
+    } else {
+        None
+    }
+}
+=====================================================================
+🟢  result enum  (help in error handaling)
+
+enum Result<T, E> {
+0k(T),
+Err(E),
+}
+---------------
+// A function that divides two numbers and returns either the result or an error
+fn divide(x: i32, y: i32) -> Result<i32, String> {
+    if y == 0 {
+        // If the divisor is zero, return an error
+        Err(String::from("Division by zero"))
+    } else {
+        // Otherwise, return the result of division
+        Ok(x / y)
+    }
+}
+
+fn main() {
+    // Try to divide two numbers and handle the result
+    match divide(10, 2) {
+        Ok(result) => {
+            println!("Result of division: {}", result);
+        }
+        Err(error) => {
+            eprintln!("Error: {}", error);
+        }
+    }
+}
+
+---------------
+in divide(x: 132, y: 132) -> Result<i32, ip2> {
+if y == 0 {
+return Err(89);
+} else {
+return Ok(x / y);
+
+}
+
+Run | Debug
+n main() {
+let result: Result<i32, i32> = divide(x: 10, y:0);
+println! ("Result: { :? }", result);
+-------------------
+
+=====================================================================
+☑️ generic Type
+
+use std::fmt::Debug;
+
+fn print_type<T: Debug>(var: T) {
+    println!("Hi, {:?}", var);
+}
+
+fn main() {
+    print_type(5);
+    print_type(true);
+    print_type("hi");
+    print_type(3.14);
+}
+---------
+same code with display
+use std::fmt::Display;
+
+fn print_type<T: Display>(var: T) {
+    println!("Hi, {:?}", var);
+}
+
+fn main() {
+    print_type(5);
+    print_type(true);
+    print_type("hi");
+    print_type(3.14);
+}
+=======================================================================
+☑️ Trait  (interface blue print)
+
+️impl (impliment) in Rust (interface ,method template) in Rust
+
+https://github.com/DrVipinKumar/RUST/blob/main/class26impltraits/src/main.rs
+
+-----------------
+struct Circle {
+    radius: f64,
+}
+
+trait Shape {
+    fn area(&self) -> f64;
+}
+
+impl Shape for Circle {
+    fn area(&self) -> f64 {
+        3.14 * self.radius * self.radius
+    }
+}
+
+fn main() {
+    let circle: Circle = Circle { radius: 5.0 };
+    let area = circle.area();
+    println!("Circle area: {}", area);
+}
+==================
+Another example 
+
+struct Car {
+    name: String,
+}
+
+struct SuperCar {
+    name: String,
+}
+
+trait Speed {
+    fn car_speed(&self);
+}
+
+impl Speed for Car {
+    fn car_speed(&self) {
+        println!("{}'s maximum speed is 102 mph", self.name);
+    }
+}
+
+impl Speed for SuperCar {
+    fn car_speed(&self) {
+        println!("{}'s maximum speed is 249 mph", self.name);
+    }
+}
+
+fn main() {
+    let scorpio = Car {
+        name: String::from("Scorpio"),
+    };
+    scorpio.car_speed();
+
+    let ferrari = SuperCar {
+        name: String::from("Ferrari"),
+    };
+    ferrari.car_speed();
+}
+
+------------------------------
+✏️ Using Default Trait Implementation
+
+struct Car {
+    name: String,
+}
+
+trait Speed {
+    // Default implementation
+    fn car_speed(&self) {
+        println!("Maximum speed is unknown");
+    }
+}
+
+impl Speed for Car {
+    // No method provided here → default from trait is used
+    // fn car_speed(&self) {
+    //     println!("{}'s maximum speed is 102 mph", self.name);
+    // }
+}
+
+fn main() {
+    let scorpio = Car {
+        name: String::from("Scorpio"),
+    };
+
+    scorpio.car_speed();   // Uses the default trait method
+}
+
+-------------------
+Reconstructed Rust Code
+trait Greet {
+    fn say_hello() -> String;
+
+    // Default method
+    fn greet(&self) {
+        println!("Hello from default greet!");
+    }
+}
+
+struct Person;
+
+impl Greet for Person {
+    fn say_hello() -> String {
+        "Hello".to_string()
+    }
+}
+
+struct Student;
+
+impl Greet for Student {
+    fn say_hello() -> String {
+        "Hello".to_string()
+    }
+
+    fn greet(&self) {
+        println!("Hello from Student!");
+    }
+}
+
+fn main() {
+    let p = Person;
+    let s = Student;
+
+    println!("{}", Person::say_hello());
+    p.greet(); // uses default greet()
+
+    println!("{}", Student::say_hello());
+    s.greet(); // overrides greet()
+}
+=====================================================================
+☑️ Smart Box Pointer Smart Pointers
+if we  want to store data in heap insted of stack  then we use smart pointer
+
+Smart Pointers
+
+In Rust, a smart pointer is a data structure that not only acts like a pointer (i.e., it allows access to data) but
+also manages ownership and memory according to specific rules.
+
+fn main() {
+let b: Box<i32> = Box :: new(10); // '10' is stored on the heap
+println! ("b = {}", b);
+}
+
+=====================================================================
+☑️ 'static
+
+'static means: "This thing lives forever - as long as the program runs."So, if something has a ' static lifetime, it will
+never be removed from memory until the program ends.
+
+The 'static lifetime is a special lifetime in Rust that denotes that a reference can live
+for the entire duration of the program.
+------------------
+let s: &'static str = "hello";
+
+
+"hello" is a string literal and of type &'static
+
+It is stored in the program's memory permanently.
+
+This string is not created at runtime. Instead:
+
+Rust puts it directly into the program's compiled file
+(your . exe or binary).
+When you run the program, this string is already there
+in memory.
+It is never deleted until the program ends.
+
+
+=====================================================================
+☑️ Arrays
+
+Rust Array Example (Immutable & Mutable Arrays + Iteration
+----------------------------------------------------------------------------------------
+fn main() {
+    // Immutable array
+    let a1 = [10, 11, 12];
+    println!("a1 length is {}, first element is {}", a1.len(), a1[0]);
+
+    // Mutable array
+    let mut a2 = [10, 11, 12];
+    a2[0] = 9; 
+    println!("a2 length is {}, first element is {}", a2.len(), a2[0]);
+
+    // Iterate through array
+    for elem in a2.iter() {
+        println!(" {}", elem);
+    }
+}
+----------------------------------------------------------------------------------------
+fn main() {
+    // Declare an array a1 of type [i64; 5] without initializing it
+    let mut a1: [i64; 5];
+
+    // Initialize the array a1 with values [10, 11, 12, 13, 14]
+    a1 = [10, 11, 12, 13, 14];
+
+    // Print the debug representation of array a1
+    println!("a1 is {:?}", a1);
+
+    // Declare a mutable array named a2 initialized with [32, 32, 32, 32, 32]
+    let mut a2 = [32; 5];
+
+    // Modify the first element of a2 to 9
+    a2[0] = 9;
+
+    // Print the debug representation of array a2
+    println!("a2 is {:?}", a2);
+}
+``
+----------------------------------------------------------------------------------------
+✏️Reconstructed Rust Code (Borrowing Arrays: Immutable & Mutable) (array read and write)
+fn main() {
+    // A mutable array of &str
+    let mut arr: [&str; 2] = ["Hello", "World"];
+
+    read_arr(&arr);         // immutable borrow
+    write_arr(&mut arr);    // mutable borrow
+
+    println!("{:?}", arr);  // final state
+}
+
+fn read_arr(arr: &[&str; 2]) {
+    println!("{:?}", arr);
+}
+
+fn write_arr(arr: &mut [&str; 2]) {
+    arr[0] = "New";   // modify first element
+}
+
+=====================================================================
+Vector
+☑️ Vector - Dynamic Array
+
+----------------------------------------------------------------------------------------
+Different ways of creating
+vectors.
+let mut v: Vec<i32> = Vec :: new();
+
+let mut v = Vec: : <i32>: :new();
+
+let v1 = vec![1, 2, 3, 4, 5]; // Creates a vector with initial values
+let v2: Vec<i32> = vec![0; 5]; // Creates a vector with 5 elements initialized to 0
+----------------------------------------------------------------------------------------
+--------------------
+//Vector - Dynamic Array
+fn main()
+let mut v:Vec<i32> = Vec :: new();//declaration
+let mut vm = Vec ::< i32> :: new(); //declaration another way
+
+v.push(1);
+v.push(2);
+v.push(3);
+
+println!("Vector v={ :? }",v);
+-------------------
+
+v . push (3);
+let mut v = vec! [1,2,3,4,5];
+v.push(10);
+println!("Vector v={ :? }",v);
+
+----------------------------------------------------------------------------------------
+ Reconstructed Rust Vector Example (Creation, Safe Indexing, Push, Pop, Insert, Iterate)
+fn main() {
+    // Create vectors in different ways
+    let mut v1: Vec<i32> = Vec::new();
+    let mut v2 = Vec::<i32>::new();
+    let mut v3 = vec![100, 101, 102];
+
+    // Index into a vector safely, returning an Option<T>
+    let opt = v3.get(10);
+
+    match opt {
+        Some(value) => println!("Value: {}", value),
+        None => println!("No value"),
+    }
+
+    // Push elements into the vector
+    v3.push(1);
+    v3.push(5);
+
+    // Pop the last element from the vector
+    v3.pop();
+
+    // Insert an element at a specific index
+    v3.insert(0, 99);
+
+    // Iterate over the elements of the vector and print each one
+    for item in &v3 {
+        println!("{}", item);
+    }
+}
+---------------------------------------------------------------------------------------
+✏️ Reconstructed Rust Code (Vector + Immutable & Mutable Borrowing) # vector read and write
+fn main() {
+    let mut vrr: Vec<&str> = vec!["Hello", "World"];
+
+    read_arr(&vrr);        // immutable borrow
+    write_arr(&mut vrr);   // mutable borrow
+
+    println!("{:?}", vrr); // final vector
+}
+
+fn read_arr(vrr: &[&str]) {
+    println!("{:?}", vrr);
+}
+
+fn write_arr(vrr: &mut Vec<&str>) {
+    vrr.push("New");
+}
+
+=====================================================================
+☑️ Here is the fully reconstructed, corrected, and complete Rust code from your screenshot — formatted cleanly and with proper function signatures.
+This example demonstrates:
+✔ Borrowing a vector immutably
+✔ Borrowing a vector mutably
+✔ Nested function calls using the same borrow
+✔ Mutating a vector through multiple functions
+
+
+----------------------------------------------------------------------------------------
+fn main() {
+    let mut vrr: Vec<&str> = vec!["Hello", "World"];
+
+    // Read the original vector
+    read_arr_one(&vrr);
+
+    // Modify the vector
+    write_arr_one(&mut vrr);
+
+    // Print the modified vector
+    println!("{:?}", vrr);
+}
+
+// ---------------- READ FUNCTIONS ------------------
+
+fn read_arr_one(vrr1: &[&str]) {
+    // Print the slice of string references
+    println!("Read Arr One: {:?}", vrr1);
+
+    // Call another function to read the same slice
+    read_arr_two(vrr1);
+}
+
+fn read_arr_two(vrr2: &[&str]) {
+    // Print the slice of string references
+    println!("Read Arr Two: {:?}", vrr2);
+}
+
+// ---------------- WRITE FUNCTIONS ------------------
+
+fn write_arr_one(vrr3: &mut Vec<&str>) {
+    // Add a new string reference to the vector
+    vrr3.push("New");
+
+    // Call another function to modify the vector
+    write_arr_two(vrr3);
+}
+
+fn write_arr_two(vrr4: &mut Vec<&str>) {
+    // Add another new string reference to the vector
+    vrr4.push("Few");
+}
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Iterators
+
+
+Iterators in Rust are a powerful abstraction for working with sequences of data. They provide a
+way to process elements one at a time without requiring manual indexing or loops.
+
+Iterators are lazy by design and are often used with the iterator adapters (e.g., map, filter,
+collect) for functional-style transformations.
+----------------------------------------------------------------------------------------
+Why Iterators?
+
+In Rust, you cannot directly loop through an array using for without explicitly converting it into an
+iterator because Rust enforces strict ownership and borrowing rules. Rust requires an iterator to
+iterate over collections like arrays or vectors. Unlike some languages (e.g., Python, JavaScript)
+----------------------------------------------------------------------------------------
+✏️ conver  arry to Iterator
+
+let arr = [1, 2, 3];
+
+for item in arr {
+println! ("{}", item);
+
+}
+---------
+let mut iter: IntoIter<i32, 3> = arr.into_iter(); //converting array into iterator
+	while let Some(item: i32) = iter.next() {
+	println!("{}", item);
+----------------------------------------------------------------------------------------
+fn main() {
+    let vec: Vec<i32> = vec![1, 2, 3];
+
+    // -------- iter(): iterate by reference (no ownership transfer) --------
+    for item in vec.iter() {
+        // item: &i32
+        println!("{}", item);
+    }
+
+    // vec is still usable because we only borrowed it
+    println!("vec after iter(): {:?}", vec);
+
+    // -------- into_iter(): iterate by value (ownership is moved) --------
+    for item in vec.into_iter() {
+        // item: i32
+        println!("{}", item);
+    }
+
+    // vec is no longer usable here because its ownership was moved by into_iter()
+    // println!("{:?}", vec); // ❌ This would not compile
+}
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+Type        | iter() gives | into_iter() gives | After into_iter() usable?
+------------|--------------|-------------------|----------------------------
+Array       | &T           | T (copied)        | ✔ Yes
+Vec         | &T           | T (moved)         | ❌ No (vector consumed)
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+fn main() {
+    let arr: [i32; 3] = [1, 2, 3];   // stack array — Copy type
+    let vec: Vec<i32> = vec![1, 2, 3]; // heap vector — owns heap data
+
+    // --------------------- iter() for array ---------------------
+    for item in &arr {
+        println!("{}", item); // item: &i32
+    }
+    println!("{:?}", arr); // array still usable
+
+    // --------------------- into_iter() for array ----------------
+    for item in arr.into_iter() {
+        println!("{}", item); // item: i32 (copied)
+    }
+    println!("{:?}", arr); // array STILL usable (important!)
+}
+``
+=====================================================================
+☑️ Error Handaling , Exception Handaling
+------------------------------------
+Error Categories
+------------
+🟢Recoverable Error - A recoverable error, such as if you try to open a file and that operation fails because the
+file doesn't exist, you might want to create the file instead of terminating the process.
+
+🟢Unrecoverable Error - Unrecoverable errors are always symptoms of bugs, such as trying to access a location
+beyond the end of an array, and so we want to immediately stop the program.
+------------
+Note - Most languages don't distinguish between these two kinds of errors and handle both in the same way,
+using mechanisms such as exceptions. Rust doesn't have exceptions. Instead, it has the type Result<T, E> for
+recoverable errors and the panic! macro that stops execution when the program encounters an unrecoverable
+error.
+
+----------------------------------------------------------------------------------------
+✏️ Unrecoverable Errors with panic!
+
+There are two ways to cause a panic in practice: by taking an action that causes our code to panic (such as
+accessing an array past the end) or by explicitly calling the panic! macro.
+
+fn main() {
+panic! ("crash and burn");
+}
+
+---
+fn main() {
+let v = vec! [1, 2, 3];
+
+v[100];
+}
+----------------------------------------------------------------------------------------
+🟢 Recoverable Error 
+---------
+enum Result<T, E> {
+Ok (T),
+Err(E),
+
+}
+---------
+The File: : create function in Rust's
+std: : fs module returns a value of the type
+Result<File, std :: io :: Error>.
+---------
+Err(error) if the operation fails,
+where error is an instance of
+std :: io :: Error.
+----
+Ok(file) if the operation
+succeeds, where file is an
+instance of std :: fs :: File
+----------------------------------------
+Rust Code (Handling File Creation Errors)
+✏️Recoverable Errors with Result
+use std::fs::File;
+
+fn main() {
+    match File::create("invalid\\path/hello.txt") {
+        Ok(_file) => println!("File 'hello.txt' created successfully."),
+        Err(error) => println!("Error creating file: {:?}", error),
+    }
+}
+----------------------------------------
+use std::fs::File;
+
+fn main() {
+    match File::create("hello.txt") {
+        Ok(_file) => println!("File 'hello.txt' created successfully."),
+        Err(error) => println!("Error creating file: {:?}", error),
+    }
+}
+----------------------------------------------------------------------------------------
+🟢  Recoverable Error 
+
+We can use the kind method of the
+std :: io :: Error type to determine the type of
+error. This method returns an ErrorKind
+enum, which provides variants like
+NotFound, PermissionDenied, Invalidlnput,
+etc.
+-------
+error.kind():
+
+This method retrieves the
+ErrorKind of the error, which is
+an enum representing categories
+of I/O errors.
+
+Matching on ErrorKind:
+
+Check if the error is
+ErrorKind :: InvalidInput
+(used for invalid file paths).
+Use the _ or specific variants for
+other types of errors, such as
+PermissionDenied,
+NotFound, etc.
+
+.
+----------
+✏️use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {
+    match File::create("invalid\\path/hello.txt") {
+        Ok(_) => println!("File created successfully."),
+        Err(error) => match error.kind() {
+            ErrorKind::InvalidInput => panic!("Invalid path provided!"),
+            other_error => panic!("An error occurred: {:?}", other_error),
+        },
+    }
+}
+
+
+----------------------------------------------------------------------------------------
+🟢  Recoverable Error     unwrap()  (not good practice  use unwrap or else)
+
+unwrap() with Result, but it will panic if the
+Result is Err. Using unwrap() without
+proper context is generally discouraged in
+production code since it doesn't allow for
+customized error handling or meaningful
+error messages.
+---------------------------------
+How unwrap() Works:
+
+. If the Result is Ok, it extracts the
+value inside.
+. If the Result is Err, it panics with
+a default message showing the
+error.
+---
+use std::fs::File;
+
+fn main() {
+    let file = File::create("invalid\\path/hello.txt").unwrap();
+    println!("File created: {:?}", file);
+}
+
+----------------------------------------------------------------------------------------
+✏️ Recoverable Error   unwrap or else
+
+It allows you to provide a fallback or default value (or perform some logic) when the Option or Result is
+None or Err, respectively, without panicking.
+
+(unwrap_or_else with Option<T>)
+----------------
+
+fn main() {
+    let option: Option<i32> = Some(42);
+    let value: i32 = option.unwrap_or_else(|| 0); 
+    // returns 42
+    println!("value = {}", value);
+
+    let none_option: Option<i32> = None;
+    let value: i32 = none_option.unwrap_or_else(|| 0); 
+    // returns 0, no panic
+    println!("value = {}", value);
+
+    // You can also have custom logic in the closure
+    let none_option: Option<i32> = None;
+    let value: i32 = none_option.unwrap_or_else(|| {
+        println!("No value found!");
+        100 // returns 100 after printing the message
+    });
+    println!("value = {}", value);
+}
+
+----------------------------------------------------------------------------------------
+✏️ Customizable unwrap Error handaling 
+
+The | error | in the unwrap_or_else
+method is a closure in Rust. Closures
+are anonymous functions that can
+capture variables from their surrounding
+scope.
+
+In this specific context, | error | is the
+syntax for a closure that takes one
+argument, error, representing the Err
+value from the Result.
+------------------
+
+Using unwrap_or_else With Error Matching
+
+use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {
+    let _file = File::create("invalid\\path/hello.txt").unwrap_or_else(|error| {
+        if error.kind() == ErrorKind::InvalidInput {
+            panic!("Invalid path provided!");
+        } else {
+            panic!("An unexpected error occurred: {:?}", error);
+        }
+    });
+}
+----------------------------------------------------------------------------------------
+✏️ Error handaling Using Expect (better than unwarp)
+
+the expect method lets us also choose the panic! error message. Using expect instead of unwrap and
+providing good error messages can convey your intent and make tracking down the source of a panic
+easier.
+
+In production-quality code, most Rustaceans choose expect rather than unwrap and give more context
+about why the operation is expected to always succeed.
+----------
+use std::fs::File;
+
+fn main() {
+    let file = File::create("invalid\\path/hello.txt")
+        .expect("file could not be created");
+
+    println!("File created: {:?}", file);
+}
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Error Propagation ( usin question mark)
+
+
+Error propagation allows a function to pass errors to the calling code instead of handling them directly, giving more
+flexibility to the caller.
+-----------------------
+The ? operator propagates the error
+from File: : create to the calling
+function (main) if it fails.
+
+If successful, it returns the File.
+
+----------------------------------------------------------------------------------------
+use std::fs::File;
+use std::io;
+
+fn create_file(file_path: &str) -> Result<File, io::Error> {
+    // Attempt to create a file and propagate errors with `?`
+    let file = File::create(file_path)?;
+    Ok(file)
+}
+
+fn main() {
+    match create_file("invalid\\path/hello.txt") {
+        Ok(_) => println!("File created successfully."),
+        Err(e) => println!("Failed to create file: {:?}", e),
+    }
+}
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Hashmap
+
+Hashmap
+
+In Rust, a HashMap is a key-value store, similar
+to dictionaries in Python or maps in Java.
+
+Key Features:
+
+· Stores data as key-value pairs.
+
+· Fast lookup using a hash function.
+
+· Keys must be unique.
+
+. Provided by Rust's standard library in
+std :: collections.
+----------------------------------------------------------------------------------------
+use std::collections::HashMap;
+
+fn main() {
+    // Create a HashMap<String, u32>
+    let mut students: HashMap<String, u32> = HashMap::new();
+
+    // Insert entries (String keys, u32 values)
+    students.insert("Ravi".to_string(), 100);
+    students.insert("Raju".to_string(), 10);
+    students.insert("Lalu".to_string(), 1);
+
+    // Iterate (borrowed) and print
+    for (student, marks) in &students {
+        println!("Student name: {:<5} marks: {}", student, marks);
+    }
+
+    // Update an existing key: insert returns the old value (if any)
+    // This will update Raju from 10 -> 200
+    if let Some(old) = students.insert("Raju".to_string(), 200) {
+        println!("Updated 'Raju': old marks = {}, new marks = {}", old, students["Raju"]);
+    }
+
+    // Look up a key using get (returns Option<&u32>)
+    match students.get("Raju") {
+        Some(marks) => println!("Found: {}", marks),
+        None => println!("Not Found"),
+    }
+
+    // Alternative: mutate in-place using get_mut
+    if let Some(m) = students.get_mut("Lalu") {
+        *m += 5;
+        println!("After bonus, Lalu = {}", m);
+    }
+
+    // Show final map (order not guaranteed)
+    println!("All students: {:?}", students);
+}
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Lifetimes 🟢 ️✏️
+
+
+----------------------------------------------------------------------------------------
+🟢Lifetime - Three Golden Points
+
+✏️The primary objective of lifetimes in Rust is to avoid dangling references
+
+✏️Rust reject code that could lead to memory safety issues.
+
+✏️When there is a reference, there may be a chance of a dangling reference - and Rust uses lifetimes
+to prevent that.
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+✏️ Dangling Reference
+
+A dangling reference occurs when a program tries to access data that has already been deallocated
+or gone out of scope, leading to undefined behavior and potential memory safety issues.
+
+By tracking the scope for which a reference is valid, Rust's borrow checker can enforce rules at
+compile time, guaranteeing memory safety without runtime overhead.
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Packages & Crates
+
+
+
+---
+
+Packages & Crates
+
+· Package
+. Package is collection of crates
+. Often synonymous with the "project"
+. One or more crates that provide a set of functionality. More often than
+not, you will be dealing with only 1 crate in simple programs.
+. Contains a Cargo.toml file that describes how to build those crates
+· Crate
+. A crate is a single computational unit - either a binary or a library
+. Binary crate (has a fn main, can be compiled into an executable)
+. Library crate (does not have a fn main, cannot be compiled into an
+executable)
+
+----------
+Packages & Crates*
+
+· cargo new <name>
+· creates a new Package with 1 Binary Crate represented by main.rs.
+· This is the option we use most of the time to create a new project
+. cargo new <name> -lib
+. creates a new Package with 1 Library crate represented by lib.rs. There
+is no main.rs created.
+. We use this option to create an external library of code that can be used
+by another project
+----------
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Modules and Use
+
+----------
+.
+
+Modules & Use
+
+Modules
+· Allow for the organization of code into groups for readability and re-use
+· Allow for the grouping of related definitions together
+· Flexibility for controlling the public / private visibility of items (such as
+functions), so as to limit their visibility to outside code
+· Can also hold definitions of other items inside, including other modules
+----------
+Modules & Use
+
+Rust finds the function in this sequence:
+
+within the current file
+
+looks for a '.rs' file with the same name as the module name in the current folder
+
+looks for a folder with the module name and a file mod.rs inside, there it looks for the code.
+=====================================================================
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+
+
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Arrays
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ Display Format
+use std::fmt::Debug;
+use std::fmt::Display;
+
+{} 			#Display (pretty, user-friendly) 	#Display trait
+{:?}		#Debug format						#Debug trait
+{:#?} 		#Pretty Debug (multi-line)			#Debug trait
+{:?} = Debug formatter
+
+It tells Rust:
+
+“Print this value using the Debug trait.”
+✔ When to use {:?}
+Use it when you want to print:
+structs
+enums
+tuples
+vectors/slices
+anything with #[derive(Debug)]
+--------------------------------------------
+#[derive(Debug)]
+struct User {
+    name: String,
+    age: u8,
+}
+
+fn main() {
+    let u = User {
+        name: "Alice".into(),
+        age: 30,
+    };
+
+    println!("{:?}", u);
+}
+``
+---------------------------------------------
+✏️ 
+It prints the memory address, not the value stored inside.
+{:p} formats its argument as a pointer
+a reference &T
+a raw pointer *const T or *mut T
+anything that implements Pointer
+
+
+fn main() {
+    let x = 10;
+    println!("Address of x: {:p}", &x);
+}
+
+println!("{:p}", &10);
+``
+Sample output: Address of x: 0x7ffee7d63a3c
+
+-------------
+
+debugging memory layout
+checking uniqueness of heap allocations
+understanding Box<T>, Rc<T>, Arc<T> internals
+comparing addresses of two references
+
+fn main() {
+    let x = 10;
+    let bx = Box::new(20);
+
+    println!("Stack variable x:  {:p}", &x);
+    println!("Box pointer (stack): {:p}", &bx);
+    println!("Box inner value (heap): {:p}", bx.as_ref());
+}
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+=====================================================================
+☑️ clear and practical explanation of the difference between : and :: in Rust.
+
+Symbol | Meaning
+-------|------------------------------------------------------------
+::     | Path separator: access modules, types, traits, enum variants
+:      | Type annotation, trait bounds, function signatures, fields
+----------
+
+:: is used to access items inside modules, types, enums, and traits.
+std::fs::File
+String::from("hello")
+Vec::new()
+Option::Some(10)
+Result::Ok("done")
+std::f64::consts::PI
+ToString::to_string(&123)
+
+-------------------------------------------------------
+Type annotations
+Rustlet x: i32 = 10;
+
+Function parameter / return type annotations
+fn add(a: i32, b: i32) -> i32 { a + b }
+
+Struct fields
+
+struct Person {
+    name: String,
+    age: u32,
+}
+
+Trait bounds (generics)
+
+fn print<T: std::fmt::Debug>(x: T) {
+    println!("{:?}", x);
+}
+
+
+Elided lifetime syntax (rare but still :)
+for (i, value) in array.iter().enumerate() {
+
+
+
+----------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+
+
 #########################################################################################
 ✏️ del * => terminal command will delete file from folder
 ---
@@ -66,9 +2083,15 @@ We can also use pub to designate structs and enums as public, but there are a fe
 #########################################################################################
 crate is a libarlay
 #########################################################################################
-struct
 
-----------
-{:?}
+questions : 
+--
 
-----------
+
+Macros
+
+
+#########################################################################################
+
+
+#########################################################################################

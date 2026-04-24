@@ -1,11 +1,17 @@
 
-☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️
+☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ️ ❌ ✔ 📌 🎯 🟢 🟥 🔹🔍 🟦
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+
 ======================================================================================================================================
 ✨ Notepad plus plus ✨
 
 ✨ (star)
 ✏️ (Pencil)
 
+========================================================================================================================================
+https://superuser.com/users/401970/digitalnomad
 ========================================================================================================================================
 ☑️ To enable or disable FN function keys in Windows 11,
 you'll typically need to use a combination of the FN key and another key, 
@@ -16,11 +22,27 @@ youtube : https://www.youtube.com/watch?v=8GWjRe-0shk&list=PL1z4RL0Mc_2XuRjFgG8X
 
 what is notepad ++ portable version?
 ========================================================================================================================================
+☑️  create new file : double click on aside of tab 
+
+✏️ view ▶️ distraction free mode
+
+Figlet
+========================================================================================================================================
 ☑️ modify shortcut
 Run >> modify shortcut/delete command
 ========================================================================================================================================
 ☑️ Show Unicode (Special Characters) in Noteapd  , symbol  special char 
-Run >> run >> type CHARMAP  or (save)  (alt+R)
+
+Menu ▶️ Encoding 
+
+✏️ Run >> run >> type CHARMAP  or (save)  (alt+R)
+
+
+Accelerator Key is a Quick Shortcut
+to Open any Windows Application
+Menu item.
+
+ALT + R for Run Menu and C for Charmap)
 ========================================================================================================================================
 ☑️ Insert Line number
 ALT+ C 
@@ -61,11 +83,15 @@ Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
 ----------------------
 Align By Character : Ctrl + Shift + =
 ========================================================================================================================================
-☑️ Insert date
-serch in plugin >> plugin demo >> 
+☑️ Insert date  time  datetime
+serch in plugin >> plugin demo >> Notepad ++ plugin demo (install)
+
+create date time shortcut
 
 short format: Alt + Ctrl + d 
 long format : Alt + Ctrl + Shift + d
+
+## i set if to >> ALT +D
 
 Run >> modify shortcut/delete command
 setting >> shortcut mapper 
@@ -114,6 +140,10 @@ Proper case        : ALT + U
 Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Not...  )
 ----------------------
 Align By Character : Ctrl + Shift + =
+======================================================================================================================================
+☑️ REMOVE DUPLICATE LINES IN NOTEPAD
+  edit ► line operation ► remove duplicate lines
+
 ========================================================================================================================================
 ☑️ how to indent html tags in notepad++  // format code  INDENTATION 
 serch in plugin >> xml tool>>  # (ctrl + Alt + shift + B)
@@ -134,6 +164,13 @@ save document as md file    <filename>.md
 plugin>>Markdown>>  serch mark down in plug in 
 ========================================================================================================================================
 ☑️ BOOK MARK BOOKMARK bookmark
+
+menu > serch > bookmark
+
+
+menu > file >save session
+------
+just ckick in left pannel greay area . you will see blue circle icon
 1. Toggle a bookmark in notepad++       (CTRL + F2)
 2. Go to next bookmark in notepad++     (F2)
 3. Go to previous bookmark in notepad++ (SHIFT + F2)
@@ -141,7 +178,7 @@ plugin>>Markdown>>  serch mark down in plug in
 ARE BOOKMARKS SAVED ON NOTEPAD++ RESTART
 No! But you can use notepad++ sessions to save bookmarks.
 
-Can I see all my bookmarks in the file?
+✏️ Can I see all my bookmarks in the file?
 Yes, using a Bookmark Panel plugin. 
 ========================================================================================================================================
 
@@ -212,8 +249,14 @@ Check "Enable" under clickable link settings.
 If you do not like an underline, check "No Underline" 
 Click Close. 
 Now, if you double click a link, it will open in a web browser.
+
+---------------------------
+Disable Clickable Hyper Links in Notepad++ While Editing HTML File
+
+
 ========================================================================================================================================
-☑️ Settings >> preferences >> backup
+☑️ iscover Top 5 Best Settings for Coding in Notepad++
+Settings >> preferences >> backup
 
 Discover Top 5 Best Settings for Coding in Notepad++
 
@@ -231,7 +274,6 @@ Vertical Edge settings: allows you a visual guide line to see how wide your code
 
 Auto Complete Features: helps you to auto complete the word or functions. It can also auto complete the parenthesis, curly brackets and even html closing tags. 
 
-Setting Theme and Fonts: Change your Notepad++ themes and fonts from Style Configurator. 
 ========================================================================================================================================
 ☑️ How to View HTML File in Firefox, Google Chrome, IE, Edge in Notepad++
 
@@ -300,7 +342,10 @@ Notepad++ allows you to view/edit/compare two files side by side without any plu
 
 3. Drag the file tab and an Option will appear to "Move or Clone the Document"
 
-COMPARING CONTENTS OF TWO FILES SIDE BY SIDE SYNCHRONOUSLY
+✏️ TO  Remove side by side VIEW drag and drop  (right hand tab to left habd main view)
+
+
+✏️ COMPARING CONTENTS OF TWO FILES SIDE BY SIDE SYNCHRONOUSLY (parallel scrolling)(tool bar icon)
 ===========================
 
 You can use "Synchronize Vertical/Horizontal Scrolling" from Toolbar icons. These features allow you to compare the contents of two files since you can synchronize scrolling of two files' content. 
@@ -315,6 +360,10 @@ SELECT MONOSPACED FONT:
 -------------------------------
 COURIER NEW
 CONSOLAS
+
+✏️Change Default Font
+-------------------------------
+Go to Settings ► Preferences ► style configrution ► globle style ► Font Style
 ========================================================================================================================================
  ☑️ EDIT MULTIPLE LINES AT THE SAME TIME IN NOTEPAD
  
@@ -332,9 +381,14 @@ Notepad++ provides multiple ways to edit number of lines at the same time. Here 
    First need to enable MULTI EDITING SETTING.
    
    a. Go to Settings ► Preferences ► Editing.
-   b. Check box to Enable Multi Editing Settings. 
+   b. Check box to Enable Multi Editing Settings.   (mouse or selection)
 ========================================================================================================================================
-☑️ Automate Repetitive Task using Notepad++ Macro  ( like recording)
+☑️ Automate Repetitive Task using Notepad++ Macro  ( like recording) (With 3 Examples)
+
+See Macro  notes and  video  
+
+1]start recording and stop recording 
+
 
 ========================================================================================================================================
 ☑️ remove html or xml tag from text
@@ -358,8 +412,11 @@ remove spaces (find and replace)
 
 ======================================================================================================================================
 
+☑️  tab replace with spaces
 
-☑️  HOW TO CONFIGURE INDENTATION SETTINGS?
+line operation > blank operation
+======================================================================================================================================
+☑️ HOW TO CONFIGURE INDENTATION SETTINGS?
 1. Go to Settings.
 2. Go to Preferences. 
 3. Click on 'Language'.
@@ -381,29 +438,605 @@ From Toolbar, select ICON, that says, 'Indent Guide'
 HOW NOTEPAD++ INDENTATION SETTINGS HELP IN CODE-FOLDING?
 Under 'View' menu, there are many options to 'Fold All', 'Unfold All' etc..
 ======================================================================================================================================
+☑️ NOTEPAD++ CODE ALIGNMENT PLUGIN: How to Use Code Alignment in Notepad++ to Improve Code Readability
+install plugin  code aligment
+
+HOW TO INSTALL CODE ALIGNMENT PLUGIN IN NOTEPAD++
+
+1. Go to Plugins ► Plugins Admin 
+2. Search For 'Code Alignment'
+3. Install the plugin.
+
+HOW TO USE NOTEPAD++ CODE ALIGNMENT PLUGIN
+
+1. From Plugin Menu. 
+2. Using keyboard shortcut, CTRL + SHIFT + = 
+======================================================================================================================================
+☑️  DARK THEMES With Preview: Change Notepad++ Text Color using Themes
+1. Go to Settings.
+2. Click on Style Configurator.
+3. Select Theme from Themes dropdown. And change them to your liking.
+======================================================================================================================================
+
+☑️  FIND AND REPLACE WITH NEW LINE
+choose  extented option
+==============================
+
+SEARCH FOR: any character
+REPACE WITH: \r\n
+
+WHAT IS \r\n (Carriage Return and Line Feed)?
+=============
+\r   : Carriage Return (CR) 
+\n   : Line Feed(LF) - a new line character in Unix/Mac OS X
+\r\n : Used as a new line character in Windows
+======================================================================================================================================
+☑️ Show Symbols Or Special Characters
+COMMON TYPES: NON-ALPHANUMERIC CHARACTERS (HIDDEN)
+==================================================
+Spaces, Tabs, Line Feed (LF), Carriage Return (CR)
+
+HOW TO VIEW THEM
+================
+1. From Menubar View ...Show Symbol ... Show All Characters
+
+2. From the toolbar icon.
 
 ======================================================================================================================================
 
+☑️ How to View HTML File in Firefox, Google Chrome, IE, Edge in Notepad++: NO CUSTOM RUN COMMAND REQD
+All you have to do is to go to 'View' ► View Current File In ► Google Chrome/Mozilla FireFox/Internet Explorer/Microsoft Edge web browsers.
 ======================================================================================================================================
+☑️ REMOVE DUPLICATE LINES IN NOTEPAD
+  edit ► line operation ► remove duplicate lines
+======================================================================================================================================
+☑️ HOW TO INSTALL PLUGINS IN NOTEPAD++ With Explorer, FTP and HTML Preview
+
+TO ADD/INSTALL NOTEPAD++ PLUGINS (EXTENSIONS) 
+=============================================
+1. Go to Plugins ► Plugins Admin. 
+2. Plugin Admin Windows contains three tabs. 
+ 1) Available Plugins 
+ 2) Plugins that need Updates 
+ 3) Installed Plugins
+3. You can select a particular plugin and read its description to know what this plugin does. 
+4. To install plugins in Notepad++, simply Click the Install button.
+5. Notepad++ will restart so make sure you save your unsaved document. 
+6. you can see all your Notepad++ plugins under the plugins menu.
+
+WE WILL INSTALL THREE PLUGINS:
+==============================
+1. Notepad++ Explorer - File Explorer plugin
+2. NppFTP -   Notepad++  FTP plugin to connect to ftp server
+3. Preview HTML - plugin to preview HTML code right from Notepad++ 
+======================================================================================================================================
+☑️ HOW TO SPLIT break LINES IN NOTEPAD++:
+line operation > spit line 
+
+======================================================================================================================================
+☑️ Remember Opened Files using Load and Save Sessions in Notepad++
+LOAD AND SAVE SESSIONS IN NOTEPAD++
+
+- Set of files to be opened with one click
+- Files do not need to be in the same directory or even same drive
+- You can set the extension of session file in 'Preferences > Misc.'
+
+WHAT DOES SESSION SAVE?
+
+- All files currently opened in the Notepad++ session
+- Multi Views (if any)
+- Currently active file
+* Current position in the file
+* Bookmarks in the file
+
+(ADVANCED) HOW DOES SESSION FILE LOOK LIKE?
+
+- Session file looks like an XML file.
+- You can open it using Notepad
+======================================================================================================================================
+☑️ SET DOCUMENT MAP IN NOTEPAD++
+
+Document Map is a section on a sidebar that gives you an overview of your entire
+document in a very small fontsize. It is useful, when
+allows you to quickly move from one section of the document to another,
+
+
+- Moving quickly from one section to another in a large document or code.
+- Gives you a good overview of your functions etc.
+
+MENU>view > document map
+======================================================================================================================================
+☑️ STOPPED USING MOUSE & IMPROVED EFFICIENCY   key bord shortcut
+
+✏️ Line Operations: (   • NOTEPAD++ DUPLICATE TEXT LINES: A Fastest ...  )
+--------------------------
+Duplicate line : ctrl + D (or a word) 
+Move Line Up   : Ctrl + Shift + Up Arrow
+Move Line Down : Ctrl + Shift + Down Arrow
+
+✏️ Search and Replace (Find)
+-------------------------------------------
+Show Find Dialog   : Ctrl + Find
+Search Next Instance : F3
+Search Previous Instance: Shift + F3
+Go to Line Number       : Ctrl + G 
+
+✏️ Column Editing (   • NOTEPAD++ COLUMN EDIT MODE: Edit Multiple ...  )
+------------------------
+Select Columns      : Alt + Shift + Arrow Keys 
+Select Columns      : Alt + Shift + Left Mouse 
+Bring Column Editor : Alt + C 
+
+✏️ Zooming Text (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Notepad+...  )
+----------------------
+Zoom In Text  : CTRL + MOUSE WHEEL UP
+Zoom Out Text : CTRL + MOUSE WHEEL DOWN
+
+✏️ Commenting or Uncommenting: (   • NOTEPAD++ DUPLICATE TEXT LINES: A Fastest ...  )
+--------------------------
+Add Single line comment   : Ctrl + K 
+Remove Single Line Comment : ctrl + Shift + K 
+
+✏️ Bookmarks (Find)
+-------------------------------------------
+Toggle Bookmark On/Off  : Ctrl + F2               
+Go to Next Bookmark  : F2 
+Go to Previous Bookmark : Shift + F2
+
+✏️ Change Text Case to Upper/Lower/Proper Case (   • NOTEPAD++ COLUMN EDIT MODE: Edit Multiple ...  )
+------------------------
+Change Selected Text To Uppercase : Ctrl + Shift + U 
+Change Selected Text to Lowercase : Ctrl + U
+Proper case        : ALT + U
+
+✏️ Code Alignment (   • NOTEPAD++ ZOOM IN/ZOOM OUT: Learn Notepad+...  )
+----------------------
+Align By Character : Ctrl + Shift + =
+
+✏️ Reverse Line order
+----------------------
+Line operation > reverse line order
+
+✏️ Hide Lines
+----------------------
+1. From Menu item: View .... Hide Lines
+2. From Right Click Menu
+3. Using Keyboard Shortcut: ALT + H
+
+
+
+✏️Remove or Delete Empty Lines
+----------------------
+remove empty line or remove spaces (find and replace)
+EDIT >> lineOpration  >> remove empty line    or remove empty line blank characture
+remove spaces (find and replace)
+
+
+
+✏️ Join Lines
+----------------------
+Select all lines 
+EDIT >> lineOpration  
+CTRL+J
+
+✏️ Split Lines
+----------------------
+CTRL+I
+
+✏️ ZOOM IN/ZOOM OUT
+----------------------
+1. From a Toolbar icon
+2. From Top Menu item: View...Zoom...Zoom In/Out 
+3. Using Keyboard/Mouse Combo: CTRL + SCROLL WHEEL 
+======================================================================================================================================
+☑️ FIND IN FILES: How to Search and Replace in Multiple Files (ctrl+shift+F)
+
+You can find files in subfolders (recursive search), 
+you can also search for specific file extensions (such as *.html)
+
+✏️ select filter and add text "*.html"
+✏️ select directory (if you want serch iin directrory)
+
 
 ======================================================================================================================================
 
+☑️ HEMES: 6 Light Themes With HTML, CSS, PHP Previews
+
+https://www.youtube.com/watch?v=Hg7V_0GaFLw&list=PL1z4RL0Mc_2XuRjFgG8Xgjc8XYTZK8QJq&index=32
+
+1. Go to Settings.
+2. Click on Style Configurator.
+3. Select Theme from Themes dropdown. 
+-----------------------------------
+DARK MODE Theme
+preferences > dark mode > enable dark mode
+1. Go to Settings.
+2. Click on Style Configurator.  
+3.select them optins  like vs studio 2019
+-----------------------------------
+view distraction free mode
+
 ======================================================================================================================================
+☑️  12 reasons why you should use Notepad++ as your source code editor. This video gives a quick demonstration in Notepad++. 
+
+1  One Of The Most Popular Source Code Editors Out There!
+2  Totally Free. (vs. cost Lots Of Money, Even Sublime Text)
+3  Large Languages Support
+4  Syntax Highlighting
+5  Extremely Light Weight
+6  Extensible - Plugins Support (Python, HTML, Markdown)
+7  Highly Customizable
+8  Excellent Editing Capabilities, Keyboard Shortcuts, Macros
+9  Supports Regular Expressions 
+10 Powerful Search And Replace Capabilities
+11 No Steep Learning Curve (Like Vim Or Even Sublime Text)
+12 Great Community And Support Online 
+======================================================================================================================================
+
+☑️ Open Notepad++ from CMD (Windows Command Line)
+
+Option 1: Add Notepad++ in the System Path. (Needs Admin Right). Add C:\Program Files (x86)\Notepad++ to your PATH environment variable. You can also use 'notepad++ filename' to open any file in notepad++ from cmd. 
+
+Option 2: Type 'start notepad++'. This option is useful, if you don't have admin rights or if you don't want to clutter your PATH system variable. 
+
+Option 3: Add Notepad++ in the System Path. and Copy Notepad++.exe as npp.exe (Needs Admin Right) This option simplifies the typing of 'notepad++' to just 'npp', saves you some keystrokes!
+======================================================================================================================================
+☑️ Simplify Note Taking: Superfast, Free and Efficient Note-taking using Notepad
+
+HOW TO USE
+[1] Install TakeNotes plugin. 
+[2] Configure the plugin to your liking. 
+======================================================================================================================================
+☑️ NOTEPAD TO PDF Conversion Without Any Software With Single Click
+
+HOW TO USE
+[1] Install MarkdownViwer plugin
+======================================================================================================================================
+☑️ How to Set File READ ONLY MODE in Notepad+
+
+Here is how to do that. 
+1. Right click on the file tab. 
+2. Click on the READ-ONLY in the selection options. 
+======================================================================================================================================
+☑️ 
+
+✏️ Quick Summary of a File
+----------------------
+menu ► view ► summary
+
+
+✏️  Word Wrap
+----------------------
+1. From Menu item: View .... Word Wrap
+2. From Toolbar Icon
+HOW TO IDENTIFY THE WORD WRAP?
+------------------------------
+The wrapped line will not have a line number associated with it. 
+
+
+✏️ Cut/Select All Keyboard Shortcuts
+----------------------
+
+To Select Entire Document: CTRL + A     (Probably stands for ALL)
+To Cut The Text Selection: CTRL + X   
+
+
+✏️ Remove Trailing Spaces
+----------------------
+menu ► view ► Blank line operation
+
+======================================================================================================================================
+☑️ TAB IMPROVE YOUR CODE MANAGEMENT SKILLS with To Tab Management Tricks in Notepad++
+
+✏️ Cloning Tabs
+----------------------
+Right click tab  ► clone to other view
+
+
+✏️ Moving Tabs
+----------------------
+Right click tab  ► open in new instance  (open in new window)
+
+
+✏️ Multi-Line Tabs
+----------------------
+setting > preferance > general > multiline 
+
+
+✏️ Closing Tabs 
+----------------------
+setting > preferance > general >
+
+
+✏️ Read-Only Tabs
+----------------------
+Right click tab  ►Read-Only
+
+✏️ Tab Bar Preferences
+----------------------
+ setting > preferance > general > Tab bar section
+ 
+ 
+✏️ Renaming Tabs, Open folders, CMD, etc
+----------------------
+Right click tab  ► 
+----------------------
+======================================================================================================================================
+☑️ Find and Replace String with New Line
+
+\r\n
+======================================================================================================================================
+☑️ How to Fix You Do Not Have Permission to Open This File with Notepad++ in Windows
+
+https://www.youtube.com/watch?v=zgNOjwMz0pw&list=PL1z4RL0Mc_2U-MDWdJyVNihFAWF_8O2eS&index=28
+======================================================================================================================================
+☑️ Copy and Paste Multiple Times with Notepad
+
+MultiClipboard plugin
+
+ This plugin keeps the history of copy to clipboard items. And allows you to use it later.
+ It is a common windows annoyance that when you copy some text and then copy another text, it forgets (loses) the old copied text.
+======================================================================================================================================
+☑️ Set the Default Language in Notepad
+
+✏️ ► setting > preferance > langualge  (intelli sence )intellisence  (HTML)
+======================================================================================================================================
+
+☑️ Create ASCII Text Banner with Figlet on Windows and in Notepad++  ( text heading)
+✏️ ►https://patorjk.com/software/taag/#p=display&f=Big&t=nitin+santosh&x=none&v=4&h=4&w=80&we=false
+
 
 ======================================================================================================================================
 
+☑️Increase Toolbar Size and Customize Icons
+
+✏️ ►setting > preferance > general > toolbar section 
 ======================================================================================================================================
+
+☑️Copy Code Snippets with Colors and Syntax Highlighting from Text Editor to Word Document
+
+✏️ ► plugin >NPP export >copy to RTF
+======================================================================================================================================
+
+☑️Disable Auto Update Pop Up Settings
+✏️ ►setting > preferance > MISC >disable auto upgrade
+======================================================================================================================================
+
+☑️How to Automatically Reload Modified Files
+✏️ ►Go to Settings ► Preferences ► MISC ► auto update silentaly
+======================================================================================================================================
+
+☑️Remove Space Between Words Using Notepad
+ctrl+shif+f
+
+✏️ ►The regular expression we will use is,
+means one or more time. For example, m+ mean 'm' one or more time
+\t for tabs
+[ ] Square bracket creates a matching list that will match any one of the characters in the list.
+======================================================================================================================================
+
+☑️Remove Specific Lines or Copy or Extract Lines with Specific Text in Notepad++ using Mark Tool
+ctrl+shif+f
+regular expression
+# go to find and replace  ctrl+H  check regular expression in serch option, new line option
+https://www.youtube.com/watch?v=JeDOlpfytYE&list=PL1z4RL0Mc_2UEn-9qHIIT_P1jN0nwde2f&index=2
+
+✏️ Extract / Copy Specific Set of Lines from a Large Text or Log file
+✏️ Remove / Delete Specific Set of Lines from Text File containing a specific text
+✏️ Remove Lines that does not contain specific text or keyword
+✏️ Keep a lines from a large text file that contains specific text
 
 ======================================================================================================================================
 
+☑️Match IP Address with REGEX: Step By Step Regular Expression Tutorial to Validate IPv4
+✏️ ►Here are the rules for valid IPv4 IP addresses.
+
+1. Four integers ranging from zero to 255. 
+2. Any address with more than three dots (.) is not valid.
+3. Any address with number greater than 255 is invalid.
+
+
+Here is a full Regular expression for matching ip address list. 
+
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.
+(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)
+
+Let's break this into smaller pieces:
+
+[0-9][0-9]?   covers 0-99 numbers
+1[0-9][0-9]   covers 100-199 numbers
+2[0-9][0-9] - Will this work? No.
+2[0-9][5]   - How about this? No. 
+2[0-4][0-9] - covers 200 to 249
+25[0-5] - covers 250-25
 ======================================================================================================================================
+
+☑️REGULAR EXPRESSION: Rearrange Lines   Lines in columns
+find and replace
+
+✏️ ►Example
+=======
+line1
+line2
+line3
+...
+line12
+
+FOR TWO COLUMNS
+===============
+SEARCH FOR:   "^(.*)$\r\n^(.*)$"
+REPLACE WITH: "\1 \2" 
+
+FOR THREE COLUMNS
+=================
+SEARCH FOR:   "^(.*)$\r\n^(.*)$\r\n^(.*)$
+REPLACE WITH: "\1 \2 \3"
+======================================================================================================================================
+
+☑️ Text Editing Magic: Learn How to Remove Odd or Even Lines from Your Files with Notepad++ and Regex!
+✏️  By using Regular Expression (Regex) (find and replace)
+✏️ Remove Odd Lines
+✏️ Remove Even Lines
+✏️ CSV File: Remove Odd Even Lines
+✏️ Linux Files: Remove Odd Even Lines
+======================================================================================================================================
+
+☑️HTML Tidy in Notepad++: Beautify and Format HTML5 Code
+      tidy2 plugin 
+HTML tidy is an feature/application that are available in many HTML tools and also online that can really clean up your html code. 
+✏️ ►Beautify The Code
+Indent The Code  
+Format The Html Code To Fix Incorrect Markup.
+Corrects And Fixes Any Invalid Web Html/Html5 Code.
 
 ======================================================================================================================================
 
+☑️How to Reformat JSON in Notepad++ Using JSON Plugin
+✏️ ►In order to install JSTool plugin, go to Plugins Admin and search for JSTool. Install the plugin. 
+
+To reformat the json file, go to Plugins ... JSTool ... JSFormat. 
+
+You can also use JSON viewer to view your JSON file in nice indented tree format. 
 ======================================================================================================================================
+
+☑️Run Python in Notepad++ with Interactive Python Environment using PyPadPlusPlus
+https://www.youtube.com/watch?v=qSwbavkYE3w&list=PL1z4RL0Mc_2WUImD2wg-c6YOaqMfngl7w&index=15
+
+✏️ ►Installation of PyPadPlusPlus
+How to Execute Python scripts
+How to Use Your own Python distribution
+Some more features
+Pros and Cons 
+
+PyPadPlusPlus is a great alternative to Jupyter Notebook, for those who want to continue working in Notepad++. It provides an interactive python shell right from NPP. 
 
 ======================================================================================================================================
 
+☑️How to Open Really Large Text Files in Notepad++ (CSV, JSON) with BigFiles Plugin
+https://www.youtube.com/watch?v=2-iSYdQiZ6g&list=PL1z4RL0Mc_2WUImD2wg-c6YOaqMfngl7w&index=16
+✏️ ►open really really large text files such as JSON or CSV files in Notepad++. These files can be greater than 4 GB. BigFiles plugin allows opening large files very quickly using buffers. 
+We will also look at other alternatives such as GVIM, Sublime text. 
+Solution
+How to use BigFiles Plugin
+Resources to download large files
+Pros and Cons of BigFiles Notepad++ plugin 
+Other Alternatives (Sublime text, Large File Viewer, GVim)
 ======================================================================================================================================
 
+☑️TextFX Plugin for Notepad++ How to Install on 32 bit and 64 bit (or Fix Missing Plugin)
+✏️ ► install if we are working with large files more than 2 gb
 ======================================================================================================================================
+
+☑️How to Use FTP Client in Notepad++ To Upload & Download Files from Server
+✏️ ►  The NppFTP plugin
+
+How to create a FTP server profile.
+How to download a file from FTP server using the plugin (Using a test FTP server).
+How to Upload a file using a plugin (using a free FTP server).
+======================================================================================================================================
+
+☑️NOTEPAD++ CUSTOM SYNTAX HIGHLIGHTING: User Defined Language Tutorial
+✏️ ►Notepad++ supports many programming languages, but there may be some programming languages that it may still not support. Though, notepad++ provides a custom highlighting feature, so that you can define your own language in notepad++. It is very easy to enable user-defined language. 
+
+So, we will generate a new user-defined language for a new language, we will use IDL language which is still not supported in Notepad++. 
+
+1. Let's say our file extension is .idl. So, we will go to Languages and User Defined Languages ► User Defined Language ► Create Your Language. 
+2. Create a new language and give its extension to be idl. 
+3. Now go ahead and select folding, keywords list, comments and numbers, operators, and enter your language's syntax. Also, select Styler for each and select your own color-coding. 
+4. Once, you are happy with the results. You can export it as an XML file and pass it along to your colleagues.
+
+======================================================================================================================================
+
+☑️NOTEPAD++ SELECT LINE RANGE: Select Lines from MySQL Dump or Log File Easily
+✏️ ►https://www.youtube.com/watch?v=JvmZGN8Z1Ng&list=PL1z4RL0Mc_2XSWwOOFvi4W0CRcFAQgeKH
+======================================================================================================================================
+
+☑️SELECT LINE RANGE: Select Lines from MySQL Dump or Log File Easily
+✏️ Menu ► EDIT ► Click on 'Begin/End Select' 
+CASE 1: You have a large MySQL dump file. Let's say you want to copy lines from 0,000 to 20,000.
+
+CASE 2: You have a log file with millions of lines. And You need to delete some fragments of it. Manual selection will be very tedious.
+
+USE NOTEPAD++ "BEGIN/END SELECT" FEATURE:
+
+1. Go to Start Line.
+2. Click on 'Begin/End Select'.
+3. Go to End Line. 
+4. Click on 'Begin/End Select'.
+======================================================================================================================================
+
+☑️NOTEPAD++ TUTORIAL - Six Ways To Sort Lines or Text in Notepad++
+✏️ ► Line oprations 
+NOTEPAD++ TUTORIAL - SIX POWERFUL WAYS TO SORT TEXT/LINES WITH ALPHABETS/NUMBERS/INTEGERS/DECIMALS
+
+OPTIONS
+=======
+1. Sort Text/Lines Alphabetically (Lexicographically)  Ascending/Descending
+2. Sort Text/Lines Alphabetically (Lexicographically  Ascending/Descending (Ignoring Case)
+3. Sort Text/Lines As Integers  Ascending/Descending
+4. Sort Text/Lines As Decimals(Dots)  Ascending/Descending
+5. Sort Text/Lines As Decimals(Comma) Ascending/Descending
+6. Sort Text/Lines Randomly
+======================================================================================================================================
+
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟢 Misc ## Miscellaneous
+
+-----------------------------------------------------
+Find and replace end of line lineend
+find : \r\n 		replace : '),\r\n
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢 
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢 
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢 
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢 
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢 
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢 
+
+-----------------------------------------------------
+
+-----------------------------------------------------
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
