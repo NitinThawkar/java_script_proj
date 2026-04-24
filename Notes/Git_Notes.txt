@@ -281,10 +281,66 @@ if we want to merge some selective commite from feature branch to Main or master
 
 1] switch or checkout Main branch
   git cherry-pick <feature branch CommitId>
- 
-
+  
+---------------------------------------------------- 
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢## git cherry-pick 
+
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Category                   | Command                                       | Description / Example                                       |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | What is git cherry-pick    | git cherry-pick                               | Applies a specific commit from another branch to current     |
+    |                            |                                               | branch (copies the commit)                                  |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Basic usage                | git cherry-pick <commit-hash>                 | Applies the given commit to the current branch               |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Use case (bug fix)         | git cherry-pick abc123                        | Picks a bug-fix commit from another branch                   |
+    |                            |                                               | without merging the entire branch                            |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Cherry-pick multiple       | git cherry-pick abc123 def456                | Applies multiple commits in sequence                         |
+    | commits                    |                                               |                                                             |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Cherry-pick a range        | git cherry-pick abc123..def456               | Applies all commits between abc123 and def456                |
+    |                            |                                               | (excluding abc123)                                           |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Pick single commit from    | git cherry-pick feature-login~2              | Picks a specific commit relative to HEAD                     |
+    | branch history             |                                               |                                                             |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Cherry-pick with conflicts | git cherry-pick abc123                        | Git pauses if conflicts occur                                |
+    |                            |                                               | Resolve conflicts, then continue                             |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Continue after conflict    | git cherry-pick --continue                   | Continues cherry-pick after resolving conflicts              |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Abort cherry-pick          | git cherry-pick --abort                      | Cancels cherry-pick and restores branch state                |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Skip commit                | git cherry-pick --skip                       | Skips the current cherry-pick during conflict resolution     |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | No commit option           | git cherry-pick -n abc123                    | Applies changes but does NOT create a commit                 |
+    |                            | (--no-commit)                                 | Allows manual edit before committing                         |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Record original commit     | git cherry-pick -x abc123                    | Adds reference to original commit hash in message            |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Cherry-pick vs merge       | cherry-pick                                  | Brings specific commits only                                 |
+    |                            | merge                                        | Brings entire branch history                                 |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Cherry-pick vs rebase      | cherry-pick                                  | Copies commits to target branch                              |
+    |                            | rebase                                       | Rewrites commit history                                      |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | When to use                | Bug fixes                                    | Apply hotfix from one branch to another                      |
+    |                            | Selected features                            | Pick only required commits                                   |
+    |                            | Release management                           | Move important commits to release branch                     |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | When NOT to use            | Many dependent commits                       | Prefer merge or rebase                                       |
+    |                            | Shared commit history                        | Cherry-pick may cause duplicate commits                      |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Common workflow            | git checkout main                            | Switch to target branch                                      |
+    |                            | git cherry-pick abc123                       | Apply commit from another branch                             |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Key takeaway               | git cherry-pick                              | Powerful for selective commit transfer                       |
+    |                            |                                               | Use carefully to avoid duplicate history                     |
+    +----------------------------+-----------------------------------------------+-------------------------------------------------------------+
 
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
@@ -372,23 +428,446 @@ git checkout .   #previously used
 git revert <commitid>   
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟢## git show 
 
-🟢## git fetch   # use for remote repository (like on GitHub or GitLab)
-# git fetch => only doenload changes will not merge working branch later we need to merge those changes 
-# git merge origin/master 
+     git show 5b944acd2  => git show <commit id>  # show Commit details 
+	 git show <commit id> --name-only
+	 git show-branch -a \
+	 git show stash@{n}:path/file                 | View full content of a specific file from stash 
+	 git show stash@{0}:src/store/cbm/alarmTrendSlice.ts    >> View full content of a specific file from stash 
+	 git show stash@{0}:.env                                >> View full content of a specific file from stash 
+	 
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢## git diff #shows line-by-line changes between two versions of your code
+
+----------------------------------------------------
+✏️  Show exact content diffs ,Compare what's different in content between branches
+
+  git diff develop..jthawkn_develop
+----------------------------------------------------
+✏️ See changes for a specific file (or directory)
+git diff -- path/to/file
+git diff main..HEAD -- src/
+=========================================
+
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Topic                  | Command / Concept                          | Description / Example                                       |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | What is git diff       | git diff                                   | Shows line-by-line differences between changes               |
+    |                        |                                           | Helps answer: "What changed?"                                |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Why it is important    | Change review                               | Review changes before commit                                 |
+    |                        |                                           | Compare branches or commits                                  |
+    |                        |                                           | Debug unexpected issues                                      |
+    |                        |                                           | Prepare clean PRs                                            |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+	
+	
+	
+	
+
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Topic                       | Command / Concept                                   | Description / Example                                                 |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | What is git diff            | git diff                                             | Shows line-by-line content differences                                |
+    |                             |                                                      | Answers: "What exactly changed?"                                      |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | General usage               | git diff <branchName>                                | Can compare two commits, two branches, two files, and more            |
+    |                             |                                                      | Works for content-level comparison                                    |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Compare branches (content)  | git diff develop..jthawkn_develop                    | Shows exact content differences between two branches                  |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Compare branch file names   | git diff --name-only develop..jthawkn_develop        | Shows ONLY file names that differ                                     |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Compare branch file status  | git diff --name-status develop..jthawkn_develop      | Shows file status (A,M,D) between branches                             |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Detect renames              | git diff -M develop..jthawkn_develop                 | Detects moved/renamed files between branches                           |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Unstaged changes            | git diff                                             | Compares working directory vs staging area                             |
+    |                             |                                                      | + added lines, - removed lines                                         |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Staged changes              | git diff --staged                                    | Compares staging area vs last commit (HEAD)                            |
+    |                             | git diff --cached                                    |                                                                       |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Working tree vs commit      | git diff HEAD                                        | Shows staged + unstaged changes vs last commit                         |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Compare commits             | git diff commit1 commit2                             | Shows differences between two commits                                  |
+    |                             | git diff abc123 def456                               | Useful for debugging and rollback investigation                         |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Compare branches            | git diff main feature-login                          | Shows changes in feature branch not in main                            |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Compare specific file       | git diff main feature-login -- app.js                | Compares a specific file across branches                               |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | File-specific diff          | git diff app.js                                      | Shows unstaged changes for a single file                               |
+    |                             | git diff --staged app.js                              | Shows staged changes for that file                                     |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Summary view                | git diff --stat                                      | Shows list of files with insertions/deletions count                    |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Ignore whitespace           | git diff -w                                          | Ignores spaces, tabs, and line endings                                 |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Word-level diff             | git diff --word-diff                                 | Shows word-by-word differences                                         |
+    |                             |                                                      | Best for text/config/docs                                               |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Diff output meaning         | + line added                                         | Indicates added content                                                |
+    |                             | - line removed                                       | Indicates removed content                                              |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Diff vs status              | git status                                           | Shows WHICH files changed                                              |
+    |                             | git diff                                             | Shows WHAT changed inside files                                        |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Stash diff (latest)         | git stash show -p                                    | Shows detailed diff of latest stash                                    |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Stash diff (specific)       | git stash show -p stash@{n}                          | Shows detailed diff of stash index n                                   |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Checkout commit for diff    | git checkout <commit-hash>                           | Switch to commit; new branch can be created from there                 |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Diff work vs staging        | git diff                                             | Working area vs staging area                                           |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Diff staging vs repo        | git diff --staged                                    | Staging area vs repository (HEAD)                                      |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Diff work vs repo           | git diff HEAD                                        | Working area vs repository                                             |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Case sensitivity note       | Branch names on Windows                              | Git is case-sensitive, Windows file system is not                      |
+    |                             |                                                      | bugfix/branch and Bugfix/branch may cause conflicts                     |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+    | Case conflict example       | bugfix/branch-name1 vs Bugfix/branch-name1           | Git throws error due to filesystem limitations                          |
+    +-----------------------------+------------------------------------------------------+-----------------------------------------------------------------------+
+
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | When to use            | Before git add                             | Review changes                                                 |
+    |                        | Before git commit                          | Ensure clean commits                                          |
+    |                        | Before git merge                           | Review incoming changes                                      |
+    |                        | During code review                         | Understand modifications                                     |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | When NOT to use        | Undo changes                               | Use git restore                                               |
+    |                        | View history                               | Use git log or git show                                       |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Cheat sheet            | git diff                                   | Unstaged changes                                              |
+    |                        | git diff --staged                          | Staged changes                                                |
+    |                        | git diff HEAD                              | All changes vs last commit                                    |
+    |                        | git diff main feature-login               | Compare branches                                              |
+    |                        | git diff --stat                           | Summary only                                                  |
+    |                        | git diff app.js                            | File-specific diff                                            |
+    |                        | git diff -w                                | Ignore whitespace                                             |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Key takeaway           | git diff                                   | Essential command to see exactly what changed                 |
+    |                        |                                           | Critical for clean commits and safe merges                    |
+    +------------------------+-------------------------------------------+-------------------------------------------------------------+
+
+ 
+
++----+-------------------------------------------+-------------------------------------------+--------------------------------------------------------------+
+| #  | Use case                                  | What it compares                          | Command                                                      |
++----+-------------------------------------------+-------------------------------------------+--------------------------------------------------------------+
+| 1  | Show unstaged changes                     | Working tree vs staging area (index)      | git diff                                                     |
+| 2  | Show staged changes                       | Staging area (index) vs last commit       | git diff --cached                                             |
+| 3  | Show staged changes (alias)               | Staging area (index) vs last commit       | git diff --staged                                             |
+| 4  | Show all local changes since last commit  | Working tree vs last commit (HEAD)        | git diff HEAD                                                 |
+| 5  | Compare two branches                      | Branch A vs Branch B                      | git diff main..feature/login                                  |
+| 6  | Compare branch vs current HEAD            | Given branch vs current commit            | git diff main..HEAD                                           |
+| 7  | Compare your branch vs remote main        | Merge-base..HEAD (what your branch adds)  | git fetch origin && git diff origin/main...HEAD               |
+| 8  | Compare two commits                       | Commit A vs Commit B                      | git diff <sha1>..<sha2>                                       |
+| 9  | Compare two tags/releases                 | Tag A vs Tag B                            | git diff v1.2.0..v1.3.0                                       |
+| 10 | Diff a single file (unstaged)             | Working tree vs index (for that file)     | git diff -- path/to/file                                      |
+| 11 | Diff a file between two refs              | Ref A vs Ref B (for that file)            | git diff main..HEAD -- path/to/file                           |
+| 12 | Diff a directory between two refs         | Ref A vs Ref B (for that directory)       | git diff main..HEAD -- src/                                   |
+| 13 | List changed files only                   | Names of changed files                     | git diff --name-only                                          |
+| 14 | Show summary stats                        | Per-file insertions/deletions              | git diff --stat                                               |
+| 15 | Ignore all whitespace changes             | Same as chosen diff, ignoring whitespace   | git diff -w                                                   |
+| 16 | Ignore end-of-line whitespace             | Same as chosen diff, ignore EOL space      | git diff --ignore-space-at-eol                                |
+| 17 | Ignore space changes (more specific)      | Same as chosen diff, ignore spacing        | git diff --ignore-space-change                                |
+| 18 | Word-level diff                           | Same as chosen diff, word granularity      | git diff --word-diff                                          |
+| 19 | Check if diff exists (script-friendly)    | Any differences? (no output)               | git diff --quiet                                              |
+| 20 | Show diff with minimal context lines      | Same as chosen diff, less surrounding text | git diff -U1                                                  |
+| 21 | Show diff with more context lines         | Same as chosen diff, more surrounding text | git diff -U10                                                 |
+| 22 | Compare specific paths only               | Same as chosen diff, limited to paths      | git diff main..HEAD -- path1 path2                            |
+| 23 | Compare against a specific commit (unstaged)| Working tree vs that commit               | git diff <sha>                                                |
+| 24 | Compare staged content against a commit   | Index vs that commit                        | git diff --cached <sha>                                       |
++----+-------------------------------------------+-------------------------------------------+--------------------------------------------------------------+
 
 
 
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟢## git branch
 
+
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Category               | Command                                       | Description                                                 |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | List Local Branches    | git branch                                    | Shows local branch names (* indicates current branch)        |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Detailed Branch Info   | git branch -v                                 | Shows last commit ID and message for each branch             |
+    |                        | git branch -vv / git branch -vva               | Shows local & remote tracking branch details                 |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | List Remote Branches   | git branch -r                                 | Shows all remote branch names                                |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | List All Branches      | git branch -a                                 | Shows both local and remote branches                         |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Create Branch          | git branch <branchname>                       | Creates a new branch without switching                       |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Rename Branch          | git branch -m <new-name>                      | Renames current branch                                       |
+    |                        | git branch -m <old-name> <new-name>           | Renames specified branch                                     |
+    |                        | git branch -M <new-name>                      | Force rename (even if name exists)                           |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Switch Branch          | git checkout <branchname>                    | Switches to another branch (legacy)                          |
+    |                        | git switch <branchname>                       | Switches branch (modern & recommended)                       |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Create & Switch        | git checkout -b <new-branch>                 | Creates and switches to new branch                            |
+    |                        | git checkout -b <new-branch> main            | Creates branch from main and switches                         |
+    |                        | git switch -C <new-branch>                   | Force create and switch to new branch                         |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Discard Changes        | git checkout .                                | Discards ALL local changes in current branch                 |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Delete Local Branch    | git branch -d <branchname>                   | Deletes branch ONLY if merged                                 |
+    |                        | git branch -D <branchname>                   | Force delete (without merge)   (if branch not merged with any other branch
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Delete Remote Branch   | git push origin --delete <branchname>         | Deletes branch from remote repository                         |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | List Merged Branches   | git branch --merged                          | Lists branches already merged                                 |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Cleanup Merged Branches| git branch --merged | grep -v "main" |        | Deletes all merged branches except main                      |
+    |                        | xargs git branch -D                          |                                                             |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Reference              | https://www.nobledesktop.com/learn/git/git-branches |
+    |                        |                                               | Official learning reference                                   |
+    +------------------------+-----------------------------------------------+-------------------------------------------------------------+
+
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢## git switch
+
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Topic                | Command / Concept                          | Explanation / Example                                       |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | What is git switch   | git switch                                | Command introduced in Git 2.23 to switch branches only       |
+    |                      |                                           | Simpler and safer alternative to git checkout                |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Purpose              | Branch operations only                    | Used ONLY for switching or creating branches                 |
+    |                      |                                           | Does NOT restore or discard files                            |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Why introduced       | git checkout confusion                    | checkout mixed branch switching, file restore, discard       |
+    |                      |                                           | git switch focuses on ONE job: switching branches            |
+	+----------------------+-------------------------------------------+-------------------------------------------------------------+
+	
+	
+	
+	
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Basic syntax         | git switch <branch-name>                 | Switches to the specified branch                             |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Switch branch        | git switch develop                       | Switches from current branch to develop                      |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Create & switch      | git switch -c feature-login              | Creates new branch and switches to it                        |
+    | (new feature)        |                                           | Replaces: git checkout -b feature-login                      |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Create from main     | git switch -c feature-payment main        | Creates feature-payment branch from main and switches        |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Force create switch  | git switch -C feature-login               | Recreates branch and switches to it                          |
+    |                      |                                           | Resets branch to current HEAD (use carefully)                |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Switch remote branch | git switch feature-login                  | Creates local branch if origin/feature-login exists          |
+    |                      |                                           | Automatically sets upstream tracking                         |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Switch previous      | git switch -                              | Toggles between last two branches                            |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Clean tree check     | git switch main                           | Blocks switch if uncommitted changes conflict                |
+    |                      |                                           | Options: commit, stash, or discard changes                   |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Comparison           | git switch vs git checkout                | switch = branch only, checkout = branch + files              |
+    |                      |                                           | git switch is recommended modern practice                   |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | When to use          | Branch switching                          | Daily development branch navigation                          |
+    |                      | Branch creation                           | Cleaner, safer Git workflow                                  |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | When NOT to use      | Discard file changes                      | Use git restore instead                                      |
+    |                      | Restore files                             | git switch cannot handle files                               |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Alternative command  | git restore                               | Used for discarding or restoring file changes                |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Cheat sheet          | git switch main                           | Switch to main branch                                        |
+    |                      | git switch develop                       | Switch to develop branch                                     |
+    |                      | git switch -c feature-login              | Create & switch to feature branch                            |
+    |                      | git switch -c feature-payment main        | Create from main                                             |
+    |                      | git switch -C feature-login              | Force recreate branch                                        |
+    |                      | git switch -                              | Switch to previous branch                                    |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+    | Key takeaway         | git switch = branch-only command           | Cleaner, safer, recommended over git checkout for branching  |
+    +----------------------+-------------------------------------------+-------------------------------------------------------------+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟢## git Remote
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹==========🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟥🟥🟥Working with Remote Remote repository 🟥🟥🟥
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+Remote workflow diagram (fetch vs pull vs push)
+
+
+
+
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Category                      | Command / Concept                                            | Uses / Explanation / Examples                                         |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Remote Repository              | Remote repo (GitHub/GitLab)                                 | Central/shared repository for collaboration                            |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | View remotes                  | git remote                                                   | Shows remote names (e.g., origin)                                      |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | View remote URLs              | git remote -v                                                | Shows fetch & push URLs of remotes                                     |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Add remote                    | git remote add origin <repo-url>                              | Links local repo with remote                                           |
+    |                                | git remote add origin https://github.com/user/repo.git       | Example                                                                |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Rename remote                 | git remote rename origin <new-name>                           | Renames remote reference                                               |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Remove remote                 | git remote rm origin                                         | Deletes remote reference (not remote repo)                             |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Clone repo                    | git clone <repo-url>                                         | Creates local copy of remote repository                                |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Fetch (basic)                 | git fetch                                                    | Downloads remote changes                                               |
+    |                                |                                                             | DOES NOT merge into working branch                                     |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Why use fetch                 | git fetch                                                    | Safe way to review remote changes before merging                        |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Fetch from origin             | git fetch origin                                             | Fetches all branches from origin                                       |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Fetch all remotes             | git fetch --all                                              | Fetches from all configured remotes                                    |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Fetch specific branch         | git fetch origin main                                        | Fetches only main branch                                                |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Fetch + prune                 | git fetch --prune / git fetch -p                             | Removes local references of deleted remote branches                     |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Remote prune                  | git remote prune origin                                     | Cleans stale remote-tracking branches                                  |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Auto prune config             | git config --global fetch.prune true                         | Always prune when running git fetch                                    |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Pull (fetch + merge)          | git pull origin main                                         | Fetches changes and merges into local branch                            |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Pull use case                 | git pull                                                     | Used to get latest code from remote                                    |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Pull vs fetch                 | fetch                                                        | Downloads only (safe)                                                   |
+    |                                | pull                                                         | Downloads + merges                                                      |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Push changes                  | git push origin <branch>                                     | Sends local commits to remote server (GitHub/GitLab)                   |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Push new branch               | git push -u origin <branch>                                  | Pushes branch and sets upstream tracking                                |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Why -u used                   | git push -u                                                  | Allows future git push / pull without specifying branch                |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Working flow                  | Working → Staging → Commit → Push                            | git add → git commit → git push                                        |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Delete remote branch          | git push origin --delete <branch-name>                       | Removes branch from remote repository                                  |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | List remote branches          | git branch -r                                                | Shows remote branches only                                             |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | List all branches             | git branch -a                                                | Shows local + remote branches                                          |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Detailed branch info          | git branch -vv / git branch -vva                             | Shows tracking branch, commit IDs, and status                           |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Create local from remote      | git checkout -b feature origin/feature                       | Creates local branch from remote                                       |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Broken refs error             | refs/remotes/origin/master broken                            | Happens due to stale references                                        |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Fix broken refs               | git remote prune origin                                     | Cleans invalid remote references                                       |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Manual cleanup (rare)         | rm .git/refs/remotes/origin/main                             | Manual fix (not recommended normally)                                  |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Branch name case issue        | bugfix/branch vs Bugfix/branch                               | Git is case-sensitive; Windows file system is not                      |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Case conflict result          | Same name diff case                                          | Can cause errors on Windows                                            |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Merge remote code             | git pull                                                     | One way to merge                                                       |
+    |                                | Pull Request                                                 | Second way (GitHub/GitLab UI)                                          |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Submodule update              | git submodule update                                         | Resets submodule to recorded commit                                   |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Stale branch cleanup reason   | Deleted remote branch                                        | Use prune to sync local refs                                           |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | When changes affect remote    | git push                                                     | Only push updates remote repository                                   |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Common issues                 | Non-fast-forward error                                      | Run git pull or rebase first                                           |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+    | Key takeaway                  | fetch / pull / push / prune                                 | Core commands for working with remote repositories                     |
+    +-------------------------------+-------------------------------------------------------------+-----------------------------------------------------------------------+
+
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+🟢## prune 
+
+git prune physically deletes unreachable objects
+Powerful but dangerous if misused
+Prefer:
+
+git fetch --prune (remote cleanup)
+git gc (safe repository maintenance)
+
+git prune vs git fetch --prune vs git gc (comparison table)
+
+
+------------------------------------------------------------------
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Category                  | Command / Concept                             | Description / Uses / Examples                               |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | What is git prune         | git prune                                     | Removes unreachable Git objects from local repository       |
+    |                           |                                               | (old commits, blobs, trees not referenced anymore)          |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Purpose                   | Repository cleanup                            | Frees disk space and cleans dangling objects                |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Important note            | Internal / low-level command                  | Usually NOT run directly by users                           |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Recommended alternative  | git gc                                        | Safer high-level command that runs prune internally          |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Recommended alternative  | git fetch --prune                             | Cleans stale remote-tracking branches (safe & common)       |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | What it removes           | Unreachable objects                           | Objects not referenced by any branch, tag, or reflog        |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | What it does NOT remove   | Local branches                                | Does NOT delete local working branches                      |
+    |                           |                                               | Does NOT delete reachable commits                           |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Basic usage               | git prune                                     | Deletes unreachable objects immediately                     |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Dry run                   | git prune -n                                  | Shows what would be removed (no deletion)                   |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Verbose mode              | git prune -v                                  | Shows detailed output of pruned objects                     |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Expire time               | git prune --expire <time>                     | Removes objects older than specified time                   |
+    |                           | git prune --expire=now                        | Removes all unreachable objects immediately                 |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Practical use case        | After deleting branches                       | Cleans objects left behind by removed branches              |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Remote branch cleanup     | git fetch --prune                             | Removes stale remote-tracking branches (origin/xyz)         |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Remote-only pruning       | git remote prune origin                       | Cleans local references of deleted remote branches          |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Difference from fetch     | git fetch                                    | Downloads updates only                                      |
+    |                           | git fetch --prune                             | Downloads + removes stale remote refs                       |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Difference from gc        | git gc                                       | Runs prune + compresses repo (recommended)                  |
+    |                           | git prune                                     | Only removes unreachable objects                            |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Safety warning            | Manual execution                              | Can permanently delete objects                              |
+    |                           |                                               | Use -n before running                                       |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | When to use               | Repository maintenance                       | Disk cleanup, corruption issues, stale objects              |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | When NOT to use           | Daily workflow                                | Prefer git gc or git fetch --prune                          |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+    | Key takeaway              | git prune                                     | Low-level cleanup tool; powerful but risky                  |
+    |                           |                                               | Prefer safer alternatives for normal usage                 |
+    +---------------------------+-----------------------------------------------+-------------------------------------------------------------+
+
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 🟢##MISC
 	 git config --global alias.lt 'log -p -1' =>  making log command as lt   => type git lt , it will execute 'git log -p -1' command
 	 git prune: This low-level command deletes objects in your local database that are no longer referenced by any branch, tag, or the reflog (Git's internal history log). It is primarily a child command of git gc (garbage collector) and rarely needed for standalone use by a casual user.
 
 ----------------------------------------------------
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 
+🟢## Combined commands
 
+git branch -- merged | grep -v "main" | xargs git branch -D
 ----------------------------------------------------
 
 
