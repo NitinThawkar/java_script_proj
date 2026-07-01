@@ -3,7 +3,10 @@
 ✍️ (Person writing)
 ✒️ (Black pen)
 ✍️ (Writing hand)
-----------------------------------------------------------------------------
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟥========================================================================================
+
 ✨ IntelliJ Java keybord short cut ✨   ☑️️
 
 ALT + ENTER => on code line AI Copilote and etc
@@ -33,7 +36,7 @@ remove vertical line =>setting =>serch warp => uncheck box
 ----------------------------------------------------------------------------
 
 
-======================================================================================================
+🟥========================================================================================
 ✨ VS CODE ✨
 
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
@@ -87,17 +90,28 @@ click on json view and add following lines
 ------------------
 and  change formatOnSave to true 
 formatOnSave": true
-======================================================================================================
+
+--------------------------------------------------------------------------------------------------
+====🔹====🔹====🔹====🔹====🔹====
+.md md files view md file
+Open VS Code
+Click File → Open File (or Ctrl + O)
+Select your .md files
+Press Ctrl + Shift + V
+
+====🔹====🔹====🔹====🔹====🔹====
+
+🟥========================================================================================
 ✨ REACT ✨
 
 ES 6 => type  command "rafce"  in component file , create blank react component  (es 6 plugin requied)
 ES 6 => type  command "rfce"  in component file , create blank react component  (es 6 plugin requied)
 
 
-======================================================================================================
+🟥========================================================================================
 ✨ Emoji ✨
 emoji => press Window + . (dot) => special symbol char character
-======================================================================================================
+🟥========================================================================================
 ✨ Git Copilot ✨
 https://code.visualstudio.com/docs/copilot/chat/getting-started-chat#:~:text=Open%20the%20app.,the%20code%20in%20the%20editor.
 on VS Code => CTRL+ I  => On code line will open Git Copilot
@@ -117,14 +131,14 @@ Ctrl+Shift+Alt+L : Opens the Quick Chat to ask Copilot a quick question.
 •	Type # to refer to code you want to include.
 •	Use the Alt + / shortcut to open the inline chat and refine code in the editor.
 
-======================================================================================================
+🟥========================================================================================
 ✨ WINDOWS os operating sysytem ✨
 https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
 
 Windows key  + E =>  Open File Explorer.
 Windows key  + Ctrl + D  => Create another desktop.
 
-======================================================================================================
+🟥========================================================================================
 ✨ JUPYTER LAB ✨
 
 1. Using the Command Palette:
@@ -176,11 +190,11 @@ Ctrl + Home - goes to the cell start,
 Ctrl + End - goes to the cell end,
 Ctrl + Right - goes one word right,
 Ctrl + Left - goes one word left,
-======================================================================================================
+🟥========================================================================================
 
 
 
-======================================================================================================
+🟥========================================================================================
 ✨ Notepad ++ notepad plus plus ✨
 
 -------------------------------------------------------
@@ -223,16 +237,16 @@ UPPERCASE	ctrl + shift + u
 lowercase	ctrl + u
 Proper Case	alt + u    => example : Cursor Position Goes To Start Of First Line Page
 Proper Case (blend)	alt + shift + u
-======================================================================================================
+🟥========================================================================================
 ✨ ANGULAR angular✨
 -g means globalr. we can access out side of folder else it will local access inside folder only
 install angular  => npm install -g @angular/cli
-======================================================================================================
+🟥========================================================================================
 ✨ Other Short Cut✨
 
 Node : check node version  : node --version
 npm  :check npm version : nom -v
-======================================================================================================
+🟥========================================================================================
 EXCEL
 Ctrl+G (or F5): Go To
 Ctrl+End: Go to the last used cell
@@ -267,9 +281,9 @@ Ctrl + -                 =>>  =>> select cell first >> delete  row
 Ctrl + Shift + Plus (+)
 --------------------------
 Ctrl + Shift + L    : Apply filter or clear filter
-======================================================================================================
+🟥========================================================================================
 
-======================================================================================================
+🟥========================================================================================
 
 
 

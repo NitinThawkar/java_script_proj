@@ -168,7 +168,8 @@ commit 1 id + commit (new changes)=  commit 1 with merge it will not create new 
 -----------------------------------------------------
 ✏️empty commit (retrigger ci pipeline )
 
- git commit -- allow-empty -m "dummy"
+ git commit --allow-empty -m "dummy"
+ git commit --allow-empty -m "Trigger pipeline"
 ----------------------------------------------------
 
 # show Commit details 
@@ -187,6 +188,8 @@ Stash retrieve, show, list, delete & save
 Command                                      | Description
 ---------------------------------------------|---------------------------------------------------------------
 git stash                                    | Stash tracked modified files
+git stash push  file1.txt path/to/file2.js   | If you only want to stash a subset of your modified files, list them after the command: 
+
 git stash --keep-index                       | Stash only untracked files; keep staged files intact
 git stash --include-untracked                | Stash tracked + untracked files
 git stash list                               | Show all stash entries
@@ -224,10 +227,29 @@ git stash show stash@{n}
 ===###===================###===================###===================###===================###================
 ----------------------------------------------------
 git stash - Stash your changes
-git stash push -m "message" - Stash with a message
+-----------------
+git stash push -m "message" - Stash with a message use for multiple files
+git stash push -m "work on feature A" file1.txt file2.js  # With a message: It is highly recommended to add a message so you can identify the stash later using the -m flag.
+
+Include untracked files:
+By default, stashing only covers tracked files. Use -u (or --include-untracked) to include new files you haven't added to Git yet
+
+git stash push -u file1.txt file2.js
+---------------
 git stash list - List all stashes
 git stash branch <branchname> - Create a branch from a stash
 
+---------------
+Other Ways to Manage Multiple Files
+Interactive Stashing: If you want to choose specific changes (hunks) within files, use the interactive patch mode.
+bash
+git stash push -p
+Use code with caution.
+-------
+Stash All Changes: To stash every modified and staged file in your current directory at once, simply run:
+bash
+git stash
+-------
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 🟢## git merge
 

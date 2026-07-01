@@ -237,7 +237,11 @@ ORDER BY table_name;"
 	
     <tr>
          <td></td>
-        <td></td>
+        <td>🟢List of table from database
+"SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'tenant_shell' --AND table_type = 'BASE TABLE'
+ORDER BY table_name;"</td>
         <td></td>
         <td></td>
         <td></td>
@@ -246,9 +250,38 @@ ORDER BY table_name;"
     </tr>
 	
     <tr>
-         <td></td>
-        <td></td>
-        <td></td>
+         <td>🟢
+I want to write postgre query name that are present in Names_List and Names_Search.
+
+A] select Names_List from ('nit','san','asd','abc')
+B] select Names_Search from ('nit','san','qwe')</td>
+        <td>If those are just in-memory lists (no tables)
+----
+WITH
+names_list(name) AS (
+  VALUES ('nit'), ('san'), ('asd'), ('abc')
+),
+names_search(name) AS (
+  VALUES ('nit'), ('san'), ('qwe')
+)
+SELECT name
+FROM names_list
+INTERSECT
+SELECT name
+FROM names_search;
+</td>
+        <td>Alternative (equivalent): JOIN
+---
+WITH
+names_list(name) AS (
+  VALUES ('nit'), ('san'), ('asd'), ('abc')
+),
+names_search(name) AS (
+  VALUES ('nit'), ('san'), ('qwe')
+)
+SELECT l.name
+FROM names_list l
+JOIN names_search s ON s.name = l.name;</td>
         <td></td>
         <td></td>
         <td></td>

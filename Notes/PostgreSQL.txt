@@ -267,12 +267,31 @@ WHERE NOT EXISTS (
   WHERE s.name = l.name
 );
 ------------------------------------------------------------------------------
+WITH
+names_list(name) AS (
+  VALUES ('nit'), ('san'), ('asd'), ('abc')
+)
+SELECT name
+FROM names_list order by name ;
+
+
+------------------------------------------------------------------------------
 
 
 
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 
-🟢
+🟢selet value from one tabele and update another table 
+
+UPDATE tenant_test.widget_data_config wdc
+SET tag_id = m.tag_id
+FROM tenant_test.metrics m
+WHERE wdc.metric_id = m.id;
+
+UPDATE tenant_test.widget_data_config wdc
+SET comment = m.metric
+FROM tenant_test.metrics m
+WHERE wdc.metric_id = m.id;
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 
 🟢
