@@ -3,7 +3,11 @@
 ✍️ (Person writing)
 ✒️ (Black pen)
 ✍️ (Writing hand)
-----------------------------------------------------------------------------
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟥===========================🟥===========================🟥===========================🟥
+
+
 ✨ IntelliJ Java keybord short cut ✨   ☑️️
 
 ALT + ENTER => on code line AI Copilote and etc
@@ -12,6 +16,7 @@ ctrl + shif + f => serch anywhere in project
 ctrl + shif + A => search any command  => type duplicate , serch etc
 ctrl + Alt + L => indentation, formating the code
 ctrl + Alt + T => wrap code in if,try,for block etc
+
 sout => System.out.println();
 
 
@@ -21,10 +26,18 @@ Go to File  => Ctrl+Shift+N
 
 Recent Files  => Ctrl+E
 
+Recently Edited Files: Ctrl + Shift + E
+
+Last Edit Location: Ctrl + Shift + Backspace
+
+
 Navigation Bar  => Alt+Home
-
-
-
+--------------------------------------
+In IntelliJ IDEA, the shortcut to go back to the previous file/location is
+Ctrl + Alt + Left Arrow
+To go forward again:
+Ctrl + Alt + Right Arrow
+--------------------------------------
 ----------------------------------------------------------------------------
 ✨IntelliJ plugin ✨ 
 rainbow bracket	
@@ -33,7 +46,8 @@ remove vertical line =>setting =>serch warp => uncheck box
 ----------------------------------------------------------------------------
 
 
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ VS CODE ✨
 
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
@@ -87,17 +101,42 @@ click on json view and add following lines
 ------------------
 and  change formatOnSave to true 
 formatOnSave": true
-======================================================================================================
+
+--------------------------------------------------------------------------------------------------
+====🔹====🔹====🔹====🔹====🔹====
+.md md files view md file
+Open VS Code
+Click File → Open File (or Ctrl + O)
+Select your .md files
+Press Ctrl + Shift + V
+
+====🔹====🔹====🔹====🔹====🔹====
+VS copilot
+
+Action											Shortcut (Windows/Linux)						Shortcut (Mac)
+Accept Copilot Suggestion						Tab	    											Tab
+See Next Suggestion								Alt + ]	         									Option + ]
+See Previous Suggestion							Alt + [	     										Option + [
+Trigger Copilot Suggestion Manually				Ctrl + Enter										Cmd + Enter
+Open Copilot Chat								Ctrl + i											Cmd + i
+Generate Function from Comment					Write Comment - Tab									Write Comment - Tab
+
+
+
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ REACT ✨
 
 ES 6 => type  command "rafce"  in component file , create blank react component  (es 6 plugin requied)
 ES 6 => type  command "rfce"  in component file , create blank react component  (es 6 plugin requied)
 
 
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ Emoji ✨
 emoji => press Window + . (dot) => special symbol char character
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ Git Copilot ✨
 https://code.visualstudio.com/docs/copilot/chat/getting-started-chat#:~:text=Open%20the%20app.,the%20code%20in%20the%20editor.
 on VS Code => CTRL+ I  => On code line will open Git Copilot
@@ -117,14 +156,16 @@ Ctrl+Shift+Alt+L : Opens the Quick Chat to ask Copilot a quick question.
 •	Type # to refer to code you want to include.
 •	Use the Alt + / shortcut to open the inline chat and refine code in the editor.
 
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ WINDOWS os operating sysytem ✨
 https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec
 
 Windows key  + E =>  Open File Explorer.
 Windows key  + Ctrl + D  => Create another desktop.
 
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ JUPYTER LAB ✨
 
 1. Using the Command Palette:
@@ -176,11 +217,9 @@ Ctrl + Home - goes to the cell start,
 Ctrl + End - goes to the cell end,
 Ctrl + Right - goes one word right,
 Ctrl + Left - goes one word left,
-======================================================================================================
 
+🟥===========================🟥===========================🟥===========================🟥
 
-
-======================================================================================================
 ✨ Notepad ++ notepad plus plus ✨
 
 -------------------------------------------------------
@@ -223,16 +262,19 @@ UPPERCASE	ctrl + shift + u
 lowercase	ctrl + u
 Proper Case	alt + u    => example : Cursor Position Goes To Start Of First Line Page
 Proper Case (blend)	alt + shift + u
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ ANGULAR angular✨
 -g means globalr. we can access out side of folder else it will local access inside folder only
 install angular  => npm install -g @angular/cli
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 ✨ Other Short Cut✨
 
 Node : check node version  : node --version
 npm  :check npm version : nom -v
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
 EXCEL
 Ctrl+G (or F5): Go To
 Ctrl+End: Go to the last used cell
@@ -261,15 +303,225 @@ Shift + plus + plus : insert row  =>select entire row
 Ctrl + - (Minus sign) : delete row after selecting the row 
 
 --------------------------
-Ctrl + shifft +(plus)      =>> select cell first >> insert row
-Ctrl + -                 =>>  =>> select cell first >> delete  row
+Ctrl + Shift + + (plus key)      	=>> select cell first >> insert row add new Row MS Excel insert a new row
+Ctrl + -                 			=>>  =>> select cell first >> delete  row   , Remove Row
 
 Ctrl + Shift + Plus (+)
 --------------------------
 Ctrl + Shift + L    : Apply filter or clear filter
-======================================================================================================
 
-======================================================================================================
+🟥===========================🟥===========================🟥===========================🟥
+
+
+`mvn clean install` is one of the most commonly used Maven commands in Java projects. It performs **two lifecycle phases sequentially**: `clean` and `install`.
+
+## Command
+
+```bash
+mvn clean install
+```
+
+## What `clean` Does
+
+The `clean` phase removes all files generated from previous builds, typically deleting the `target` directory.
+
+Example:
+
+```text
+project/
+ ├── src/
+ ├── pom.xml
+ └── target/    ← deleted by mvn clean
+```
+
+### Why use `clean`?
+
+* Removes old compiled classes.
+* Prevents issues caused by stale artifacts.
+* Ensures a fresh build.
+
+***
+
+## What `install` Does
+
+The `install` phase executes the full Maven build lifecycle up to `install`.
+
+When you run:
+
+```bash
+mvn install
+```
+
+Maven performs these phases:
+
+```text
+validate
+compile
+test
+package
+verify
+install
+```
+
+### Step-by-Step
+
+#### 1. Validate
+
+Checks if the project structure and `pom.xml` are correct.
+
+#### 2. Compile
+
+```bash
+javac
+```
+
+Compiles Java source code from:
+
+```text
+src/main/java
+```
+
+into:
+
+```text
+target/classes
+```
+
+#### 3. Test
+
+Runs unit tests from:
+
+```text
+src/test/java
+```
+
+using frameworks like JUnit or TestNG.
+
+#### 4. Package
+
+Creates the deployable artifact.
+
+Example:
+
+```text
+target/my-app-1.0.jar
+```
+
+or
+
+```text
+target/my-app-1.0.war
+```
+
+#### 5. Verify
+
+Runs additional checks such as integration tests or quality validations.
+
+#### 6. Install
+
+Copies the generated artifact into your local Maven repository:
+
+```text
+~/.m2/repository
+```
+
+Example:
+
+```text
+~/.m2/repository/com/company/my-app/1.0/
+```
+
+This allows other local Maven projects to use it as a dependency.
+
+***
+
+## Example
+
+Suppose Project B depends on Project A.
+
+### Project A
+
+```xml
+<groupId>com.company</groupId>
+<artifactId>common-library</artifactId>
+<version>1.0</version>
+```
+
+Run:
+
+```bash
+mvn clean install
+```
+
+The JAR gets installed in:
+
+```text
+~/.m2/repository/com/company/common-library/1.0/
+```
+
+### Project B
+
+```xml
+<dependency>
+    <groupId>com.company</groupId>
+    <artifactId>common-library</artifactId>
+    <version>1.0</version>
+</dependency>
+```
+
+Now Maven can find the dependency locally.
+
+***
+
+## Common Variations
+
+### Skip Tests
+
+```bash
+mvn clean install -DskipTests
+```
+
+Compiles test classes but does not execute them.
+
+### Skip Test Compilation and Execution
+
+```bash
+mvn clean install -Dmaven.test.skip=true
+```
+
+Skips both test compilation and execution.
+
+### Multi-threaded Build
+
+```bash
+mvn clean install -T 4
+```
+
+Uses 4 threads for faster builds.
+
+***
+
+## Difference Between Commands
+
+| Command             | Purpose                                                  |
+| ------------------- | -------------------------------------------------------- |
+| `mvn clean`         | Delete previous build artifacts                          |
+| `mvn compile`       | Compile source code                                      |
+| `mvn test`          | Run tests                                                |
+| `mvn package`       | Create JAR/WAR                                           |
+| `mvn install`       | Package and copy to local Maven repository               |
+| `mvn clean install` | Fresh build and install to local repository              |
+| `mvn deploy`        | Upload artifact to remote repository (Nexus/Artifactory) |
+
+***
+
+## Interview Answer (Short)
+
+> `mvn clean install` first removes old build artifacts by deleting the `target` directory (`clean` phase), then compiles the code, runs tests, packages the application into a JAR/WAR, and installs the generated artifact into the local Maven repository (`~/.m2/repository`) so it can be used by other local projects.
+
+
+🟥===========================🟥===========================🟥===========================🟥
+
 
 
 
