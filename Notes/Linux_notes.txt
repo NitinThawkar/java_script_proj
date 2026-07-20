@@ -85,7 +85,7 @@ man         — Access manual pages for all Linux commands
 uname         — Linux command to get basic information about the OS
 whoami         — Get the active username
 tar         — Command to extract and compress files in Linux
-grep         — Search for a string within an output
+grep         — Search for a string within an output ( global regular expression print)
 head         — Return the specified number of lines from the top
 tail         — Return the specified number of lines from the bottom
 diff         — Find the difference between two files
@@ -566,7 +566,7 @@ Ctrl + \ - Replace a string
 ▶️ ls -lh | sort -k5h   (combine ls and sort command)
 ▶️ ls -lh | sort -k5h | head 10  
 #########################################################################################
-☑️☑️ grep (search in terminal) (search pattern)
+☑️☑️ grep   serch content or keyword in side files (search in terminal) (search pattern)( global regular expression print)
 
 ▶️ man grep
 ▶️ grep "imp"   #search in current dir or file
@@ -577,8 +577,10 @@ Ctrl + \ - Replace a string
 ▶️ grep "tomato" foods.txt -iB2 A2
 ▶️ sort abc.txt
 #########################################################################################
-☑️☑️  find - search for files in a directory hierarchy
+☑️☑️  find - search for files  or folders in a directory hierarchy its exist or not
 ▶️ man find
+
+field <dir> <attribute> "*.java"
 
 $ find /home/ooo/ -name "medi"
 $ find /home/ooo/ -name "medi*"
@@ -590,6 +592,9 @@ find -iname " *. pdf"
  
 find -type f -iname "*important"   -f for file and -d for folder
 
+
+find . -type d
+find . -type f
 -----------
 find /path -size +100M # for files larger than 100 MB
 find /path -size -50k # for files smaller than 50 KB

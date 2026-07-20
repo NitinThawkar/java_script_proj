@@ -2,7 +2,16 @@
 ☑️✨✏️✍️✒️✍️ ✅ 📝 🧾 ▶️ ️ ❌ ✔ 📌 🎯 🟢 🟥 🔹🔍 🟦
 ------------------------------------------------------------
 Postgre
-=============================================================
+🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟥========================================================================================
+
+
+
+🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+
+
+🟥===========================🟥===========================🟥===========================🟥
 
 
 ✨ Postgre Database ✨
@@ -267,21 +276,116 @@ WHERE NOT EXISTS (
   WHERE s.name = l.name
 );
 ------------------------------------------------------------------------------
-
-
-
-====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
-🟢
-====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
-
-🟢
-------------------------------------------------------------------------------
+WITH
+names_list(name) AS (
+  VALUES ('nit'), ('san'), ('asd'), ('abc')
+)
+SELECT name
+FROM names_list order by name ;
 
 
 ------------------------------------------------------------------------------
 
 
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢selet value from one tabele and update another table 
+
+UPDATE tenant_test.widget_data_config wdc
+SET tag_id = m.tag_id
+FROM tenant_test.metrics m
+WHERE wdc.metric_id = m.id;
+
+UPDATE tenant_test.widget_data_config wdc
+SET comment = m.metric
+FROM tenant_test.metrics m
+WHERE wdc.metric_id = m.id;
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
+
+🟢
+🟥===========================🟥===========================🟥===========================🟥
+
+In PostgreSQL, you can concatenate columns using either || or the CONCAT() function.
+
+
+Using ||
+
+SELECT first_name || ' ' || last_name AS full_name
+FROM employee;
+
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹
+
+Using CONCAT()
+
+SELECT CONCAT(first_name, ' ', last_name) AS full_name
+FROM employee;
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹
+Find duplicates using concatenated columns
+For example, duplicates based on device_name and tenant_id together:
+
+SELECT device_name || '-' || tenant_id AS device_key,
+       COUNT(*)
+FROM device
+GROUP BY device_name || '-' || tenant_id
+HAVING COUNT(*) > 1;
+
+--------------------------------
+SELECT CONCAT(device_name, '-', tenant_id) AS device_key,
+       COUNT(*)
+FROM device
+GROUP BY CONCAT(device_name, '-', tenant_id)
+HAVING COUNT(*) > 1;
+
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹
+Display duplicate records with concatenated values
+
+SELECT *,
+       CONCAT(name, '-', tenant_id) AS unique_key
+FROM device
+WHERE CONCAT(name, '-', tenant_id) IN (
+    SELECT CONCAT(name, '-', tenant_id)
+    FROM device
+    GROUP BY CONCAT(name, '-', tenant_id)
+    HAVING COUNT(*) > 1
+);
+
+If you're trying to find the duplicate causing findByName(), 
+share the table columns and I can write the exact PostgreSQL query.
+====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹
+
+
+🟥===========================🟥===========================🟥===========================🟥
+Duplicate Record
+
+--To find duplicate records in PostgreSQL based on the name column:
+SELECT name, COUNT(*)
+FROM tenant_test.devices
+GROUP BY name
+HAVING COUNT(*) > 1;
+
+--Get complete duplicate records
+SELECT *
+FROM tenant_test.devices
+WHERE name IN (
+    SELECT name
+    FROM tenant_test.devices
+    GROUP BY name
+    HAVING COUNT(*) > 1
+)
+ORDER BY name;
+
+---Find duplicates with IDs
+SELECT name,
+       COUNT(*) AS duplicate_count,
+       ARRAY_AGG(id) AS ids
+FROM tenant_test.devices
+GROUP BY name
+HAVING COUNT(*) > 1;
+
+🟥===========================🟥===========================🟥===========================🟥
 ====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹====🔹======
 🟢
 

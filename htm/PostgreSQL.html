@@ -237,17 +237,11 @@ ORDER BY table_name;"
 	
     <tr>
          <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-	
-    <tr>
-         <td></td>
-        <td></td>
+        <td>🟢List of table from database
+"SELECT table_name
+FROM information_schema.tables
+WHERE table_schema = 'tenant_shell' --AND table_type = 'BASE TABLE'
+ORDER BY table_name;"</td>
         <td></td>
         <td></td>
         <td></td>
@@ -256,9 +250,38 @@ ORDER BY table_name;"
     </tr>
 	
     <tr>
-         <td></td>
-        <td></td>
-        <td></td>
+         <td>🟢
+I want to write postgre query name that are present in Names_List and Names_Search.
+
+A] select Names_List from ('nit','san','asd','abc')
+B] select Names_Search from ('nit','san','qwe')</td>
+        <td>If those are just in-memory lists (no tables)
+----
+WITH
+names_list(name) AS (
+  VALUES ('nit'), ('san'), ('asd'), ('abc')
+),
+names_search(name) AS (
+  VALUES ('nit'), ('san'), ('qwe')
+)
+SELECT name
+FROM names_list
+INTERSECT
+SELECT name
+FROM names_search;
+</td>
+        <td>Alternative (equivalent): JOIN
+---
+WITH
+names_list(name) AS (
+  VALUES ('nit'), ('san'), ('asd'), ('abc')
+),
+names_search(name) AS (
+  VALUES ('nit'), ('san'), ('qwe')
+)
+SELECT l.name
+FROM names_list l
+JOIN names_search s ON s.name = l.name;</td>
         <td></td>
         <td></td>
         <td></td>
@@ -266,8 +289,68 @@ ORDER BY table_name;"
     </tr>
 	
     <tr>
-         <td></td>
+        <td>nultiple updates into a single PostgreSQL statement using a CASE expression</td>
+        <td>
+		UPDATE tenant_shell.metrics
+SET unit = CASE tag_id
+    WHEN 'FL_FR'      THEN 'm³/hr'
+    WHEN 'FR_MASS'    THEN 'kg/hr'
+    WHEN 'FR_GVOL'    THEN 'm³/hr'
+    WHEN 'FR_SVOL'    THEN 'Sm³'   
+    WHEN 'ST_LUMF'    THEN '%'
+END
+WHERE tag_id IN (
+    'FL_FR',
+    'FR_MASS',
+    'FR_GVOL',
+    'FR_SVOL',
+    'FR_ENGY',
+    'ST_LUMF'
+);</td>
+        <td>duplicate record</td>
+        <td>
+--To find duplicate records in PostgreSQL based on the name column:
+SELECT name, COUNT(*)
+FROM tenant_test.devices
+GROUP BY name
+HAVING COUNT(*) > 1;
+
+--Get complete duplicate records
+SELECT *
+FROM tenant_test.devices
+WHERE name IN (
+    SELECT name
+    FROM tenant_test.devices
+    GROUP BY name
+    HAVING COUNT(*) > 1
+)
+ORDER BY name;
+
+---Find duplicates with IDs
+SELECT name,
+       COUNT(*) AS duplicate_count,
+       ARRAY_AGG(id) AS ids
+FROM tenant_test.devices
+GROUP BY name
+HAVING COUNT(*) > 1;
+</td>
         <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+	
+    <tr>
+         <td></td>
+        <td>Using ||
+		<br>
+		SELECT first_name || ' ' || last_name AS full_name
+FROM employee;
+
+<br>
+SELECT CONCAT(first_name, ' ', last_name) AS full_name
+FROM employee;
+		
+		</td>
         <td></td>
         <td></td>
         <td></td>
